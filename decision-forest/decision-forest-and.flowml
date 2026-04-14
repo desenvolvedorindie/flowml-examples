@@ -1,0 +1,733 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "ad1631df-3774-4d40-bae3-a0b4a1514000",
+    "27fa7733-e37a-431f-806b-3eaad1ab0098",
+    "ba97268d-2924-4dd9-abf9-17c5d439aed4",
+    "d70410c9-fb2e-4eba-9799-dacc3a12c1b4",
+    "c9d8e3c7-c96a-41ee-bdcb-b3eb23ffa795",
+    "3c279e88-38ff-47d9-aeb8-64f4f33c4d4b",
+    "7047be31-28a3-4522-86f7-7f2eade455a1",
+    "dad3009c-31ab-49a1-b52c-54baacc35e8c",
+    "2a22fe6a-5cf8-45a2-8bef-1b05c45da8f9",
+    "1da7f7c5-da7c-4100-bfb4-7e6896bd9f30"
+  ],
+  "nodes": [
+    [
+      "tensor-data",
+      {
+        "type": "tensor-data",
+        "label": "Data1",
+        "datasetId": "AND",
+        "output": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        "shape": [
+          4,
+          3
+        ],
+        "dtype": "float32"
+      },
+      60,
+      300,
+      -1,
+      null
+    ],
+    [
+      "dataset-node",
+      {
+        "label": "Dataset",
+        "type": "dataset-node",
+        "datasetId": "AND",
+        "trainingOutput": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        "output": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        "_hasTrainingEdge": true,
+        "_hasValidationEdge": true,
+        "_hasTestEdge": true,
+        "labels": [
+          "X1",
+          "X2",
+          "Y"
+        ],
+        "validationOutput": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        "testOutput": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1
+        ]
+      },
+      460,
+      180,
+      -1,
+      null
+    ],
+    [
+      "input",
+      {
+        "type": "input",
+        "label": "x1",
+        "output": -1,
+        "maxInputs": 0,
+        "value": 0
+      },
+      -200,
+      -60,
+      -1,
+      null
+    ],
+    [
+      "input",
+      {
+        "type": "input",
+        "label": "x2",
+        "output": 1,
+        "maxInputs": 0,
+        "value": 0
+      },
+      -200,
+      80,
+      -1,
+      null
+    ],
+    [
+      "decision",
+      {
+        "type": "decision",
+        "label": "Decision",
+        "featureId": "x1",
+        "rule": "=",
+        "value": 1,
+        "invertLogic": false,
+        "output": [
+          1,
+          0
+        ],
+        "gini": 0.375
+      },
+      200,
+      -20,
+      -1,
+      null
+    ],
+    [
+      "decision",
+      {
+        "type": "decision",
+        "label": "Decision",
+        "featureId": "x2",
+        "rule": "=",
+        "value": 1,
+        "output": [
+          1,
+          0
+        ],
+        "gini": 0.5
+      },
+      520,
+      -80,
+      -1,
+      null
+    ],
+    [
+      "output",
+      {
+        "type": "output",
+        "label": "y",
+        "output": 1,
+        "maxInputs": 1,
+        "maxOutputs": 0,
+        "target": 1,
+        "gini": 0
+      },
+      800,
+      -120,
+      -1,
+      null
+    ],
+    [
+      "output",
+      {
+        "type": "output",
+        "label": "y",
+        "output": 0,
+        "maxInputs": 1,
+        "maxOutputs": 0,
+        "target": 0,
+        "gini": 0
+      },
+      800,
+      0,
+      -1,
+      null
+    ],
+    [
+      "output",
+      {
+        "type": "output",
+        "label": "y",
+        "output": 0,
+        "maxInputs": 1,
+        "maxOutputs": 0,
+        "target": 0,
+        "gini": 0
+      },
+      480,
+      60,
+      -1,
+      null
+    ],
+    [
+      "decision-forest",
+      {
+        "label": "Decision Forest",
+        "output": 0,
+        "type": "decision-forest",
+        "algorithm": "GRADIENT_BOOSTED_TREES",
+        "maxDepth": 3,
+        "numTrees": 1,
+        "growingStrategy": "BEST_FIRST_GLOBAL",
+        "minExamples": 1
+      },
+      0,
+      20,
+      -1,
+      null
+    ]
+  ],
+  "edges": [
+    [
+      -1,
+      -1,
+      0.1549,
+      "out",
+      "training",
+      "simple",
+      "02f3f327-be62-48d2-894b-7b09ff6d7066",
+      {
+        "preSynaptic": {
+          "id": "ad1631df-3774-4d40-bae3-a0b4a1514000",
+          "type": "tensor-data",
+          "label": "Data1",
+          "datasetId": "NOT",
+          "output": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "shape": [
+            2,
+            2
+          ],
+          "dtype": "float32"
+        },
+        "postSynaptic": {
+          "id": "27fa7733-e37a-431f-806b-3eaad1ab0098",
+          "label": "Dataset",
+          "type": "dataset-node",
+          "datasetId": "NOT",
+          "trainingOutput": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "output": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "_hasTrainingEdge": true,
+          "_hasValidationEdge": false,
+          "_hasTestEdge": false,
+          "labels": [
+            "X1",
+            "Y"
+          ]
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      -0.8771,
+      "true",
+      "input",
+      "simple",
+      "5baacbb1-4296-4026-b7aa-eba3ea3ad757",
+      {
+        "preSynaptic": {
+          "id": "c9d8e3c7-c96a-41ee-bdcb-b3eb23ffa795",
+          "type": "decision",
+          "label": "Decision",
+          "featureId": "x1",
+          "rule": "=",
+          "value": 1,
+          "invertLogic": false,
+          "output": [
+            0
+          ]
+        },
+        "postSynaptic": {
+          "id": "3c279e88-38ff-47d9-aeb8-64f4f33c4d4b",
+          "type": "decision",
+          "label": "Decision",
+          "featureId": "x2",
+          "rule": "=",
+          "value": 1,
+          "output": [
+            0
+          ]
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      -0.7575,
+      "true",
+      "input",
+      "weighted",
+      "d6f8a90c-3fbf-443c-88eb-3b870b8359e2",
+      {
+        "preSynaptic": {
+          "id": "3c279e88-38ff-47d9-aeb8-64f4f33c4d4b",
+          "type": "decision",
+          "label": "Decision",
+          "featureId": "x2",
+          "rule": "=",
+          "value": 1,
+          "output": [
+            0
+          ]
+        },
+        "postSynaptic": {
+          "id": "7047be31-28a3-4522-86f7-7f2eade455a1",
+          "type": "output",
+          "label": "out1",
+          "output": 0,
+          "maxInputs": 1,
+          "maxOutputs": 0
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      0.307,
+      "false",
+      "input",
+      "weighted",
+      "b373aa69-c831-4f10-bd79-e933fd55c5ed",
+      {
+        "preSynaptic": {
+          "id": "3c279e88-38ff-47d9-aeb8-64f4f33c4d4b",
+          "type": "decision",
+          "label": "Decision",
+          "featureId": "x2",
+          "rule": "=",
+          "value": 1,
+          "output": [
+            0
+          ]
+        },
+        "postSynaptic": {
+          "id": "dad3009c-31ab-49a1-b52c-54baacc35e8c",
+          "type": "output",
+          "label": "out2",
+          "output": 0,
+          "maxInputs": 1,
+          "maxOutputs": 0
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      -0.207,
+      "false",
+      "input",
+      "weighted",
+      "4c839f58-cda1-43de-b5ec-7281f4a236a2",
+      {
+        "preSynaptic": {
+          "id": "c9d8e3c7-c96a-41ee-bdcb-b3eb23ffa795",
+          "type": "decision",
+          "label": "Decision",
+          "featureId": "x1",
+          "rule": "=",
+          "value": 1,
+          "invertLogic": false,
+          "output": [
+            0
+          ]
+        },
+        "postSynaptic": {
+          "id": "2a22fe6a-5cf8-45a2-8bef-1b05c45da8f9",
+          "type": "output",
+          "label": "out3",
+          "output": 0,
+          "maxInputs": 1,
+          "maxOutputs": 0
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      0.3882,
+      "out",
+      "test",
+      "simple",
+      "23af8f9b-2938-4e33-8816-3ee64563b81c",
+      {
+        "preSynaptic": {
+          "id": "ad1631df-3774-4d40-bae3-a0b4a1514000",
+          "type": "tensor-data",
+          "label": "Data1",
+          "datasetId": "AND",
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "shape": [
+            4,
+            3
+          ],
+          "dtype": "float32",
+          "position": {
+            "x": 160,
+            "y": 620
+          }
+        },
+        "postSynaptic": {
+          "id": "27fa7733-e37a-431f-806b-3eaad1ab0098",
+          "label": "Dataset",
+          "type": "dataset-node",
+          "datasetId": "AND",
+          "trainingOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "_hasTrainingEdge": true,
+          "_hasValidationEdge": false,
+          "_hasTestEdge": false,
+          "labels": [
+            "X1",
+            "X2",
+            "Y"
+          ],
+          "position": {
+            "x": 560,
+            "y": 600
+          },
+          "validationOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "testOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ]
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      -0.094,
+      "out",
+      "validation",
+      "simple",
+      "98ead33c-d077-4c3f-aba8-840aef77082f",
+      {
+        "preSynaptic": {
+          "id": "ad1631df-3774-4d40-bae3-a0b4a1514000",
+          "type": "tensor-data",
+          "label": "Data1",
+          "datasetId": "AND",
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "shape": [
+            4,
+            3
+          ],
+          "dtype": "float32",
+          "position": {
+            "x": 160,
+            "y": 620
+          }
+        },
+        "postSynaptic": {
+          "id": "27fa7733-e37a-431f-806b-3eaad1ab0098",
+          "label": "Dataset",
+          "type": "dataset-node",
+          "datasetId": "AND",
+          "trainingOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "_hasTrainingEdge": true,
+          "_hasValidationEdge": false,
+          "_hasTestEdge": false,
+          "labels": [
+            "X1",
+            "X2",
+            "Y"
+          ],
+          "position": {
+            "x": 560,
+            "y": 600
+          },
+          "validationOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "testOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ]
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      null,
+      "input",
+      "simple",
+      "3da7a79e-8717-49d9-a920-9376a52d6780",
+      {
+        "preSynaptic": {
+          "id": "ba97268d-2924-4dd9-abf9-17c5d439aed4",
+          "type": "input",
+          "label": "x1",
+          "output": -1,
+          "maxInputs": 0,
+          "value": 0,
+          "position": {
+            "x": -200,
+            "y": -60
+          }
+        },
+        "postSynaptic": {
+          "id": "1da7f7c5-da7c-4100-bfb4-7e6896bd9f30",
+          "label": "Decision Forest",
+          "output": 0,
+          "type": "decision-forest",
+          "algorithm": "GRADIENT_BOOSTED_TREES",
+          "maxDepth": 3,
+          "numTrees": 1,
+          "growingStrategy": "BEST_FIRST_GLOBAL",
+          "minExamples": 1
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      null,
+      "input",
+      "simple",
+      "b72d5d25-ef95-4c85-8706-c74b218d374a",
+      {
+        "preSynaptic": {
+          "id": "d70410c9-fb2e-4eba-9799-dacc3a12c1b4",
+          "type": "input",
+          "label": "x2",
+          "output": 1,
+          "maxInputs": 0,
+          "value": 0,
+          "position": {
+            "x": -200,
+            "y": 80
+          }
+        },
+        "postSynaptic": {
+          "id": "1da7f7c5-da7c-4100-bfb4-7e6896bd9f30",
+          "label": "Decision Forest",
+          "output": 0,
+          "type": "decision-forest",
+          "algorithm": "GRADIENT_BOOSTED_TREES",
+          "maxDepth": 3,
+          "numTrees": 1,
+          "growingStrategy": "BEST_FIRST_GLOBAL",
+          "minExamples": 1
+        }
+      }
+    ]
+  ]
+}

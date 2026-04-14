@@ -1,0 +1,555 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "ad1631df-3774-4d40-bae3-a0b4a1514000",
+    "27fa7733-e37a-431f-806b-3eaad1ab0098",
+    "c9d8e3c7-c96a-41ee-bdcb-b3eb23ffa795",
+    "2a22fe6a-5cf8-45a2-8bef-1b05c45da8f9",
+    "7047be31-28a3-4522-86f7-7f2eade455a1",
+    "984cb511-1730-49e8-89b8-e6ba6ce94b30",
+    "1cf2a7c0-49bf-4a47-9752-cf2efd0d9a84"
+  ],
+  "nodes": [
+    [
+      "tensor-data",
+      {
+        "type": "tensor-data",
+        "label": "Data1",
+        "datasetId": "NOT",
+        "output": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "shape": [
+          2,
+          2
+        ],
+        "dtype": "float32"
+      },
+      -60,
+      320,
+      -1,
+      null
+    ],
+    [
+      "dataset-node",
+      {
+        "label": "Dataset",
+        "type": "dataset-node",
+        "datasetId": "NOT",
+        "trainingOutput": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "output": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "_hasTrainingEdge": true,
+        "_hasValidationEdge": true,
+        "_hasTestEdge": true,
+        "labels": [
+          "X1",
+          "Y"
+        ],
+        "validationOutput": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "testOutput": [
+          0,
+          1,
+          1,
+          0
+        ]
+      },
+      360,
+      200,
+      -1,
+      null
+    ],
+    [
+      "decision",
+      {
+        "type": "decision",
+        "label": "Decision",
+        "featureId": "x1",
+        "rule": "!=",
+        "value": 1,
+        "invertLogic": false,
+        "output": [
+          0,
+          1
+        ],
+        "gini": 0.5
+      },
+      200,
+      -20.25,
+      -1,
+      null
+    ],
+    [
+      "output",
+      {
+        "type": "output",
+        "label": "y",
+        "output": 1,
+        "maxInputs": 1,
+        "maxOutputs": 0,
+        "target": 0,
+        "gini": 0
+      },
+      480,
+      60,
+      -1,
+      null
+    ],
+    [
+      "output",
+      {
+        "type": "output",
+        "label": "y",
+        "output": 0,
+        "maxInputs": 1,
+        "maxOutputs": 0,
+        "target": 0,
+        "gini": 0
+      },
+      480,
+      -60,
+      -1,
+      null
+    ],
+    [
+      "input",
+      {
+        "type": "input",
+        "label": "x1",
+        "output": 1,
+        "maxInputs": 0,
+        "value": 0
+      },
+      -280,
+      0,
+      -1,
+      null
+    ],
+    [
+      "decision-forest",
+      {
+        "label": "Decision Forest",
+        "output": 0,
+        "type": "decision-forest",
+        "algorithm": "GRADIENT_BOOSTED_TREES",
+        "maxDepth": 3,
+        "numTrees": 1,
+        "growingStrategy": "BEST_FIRST_GLOBAL",
+        "minExamples": 1
+      },
+      -30,
+      0,
+      -1,
+      null
+    ]
+  ],
+  "edges": [
+    [
+      -1,
+      -1,
+      1.2564,
+      "out",
+      "training",
+      "simple",
+      "02f3f327-be62-48d2-894b-7b09ff6d7066",
+      {
+        "preSynaptic": {
+          "id": "ad1631df-3774-4d40-bae3-a0b4a1514000",
+          "type": "tensor-data",
+          "label": "Data1",
+          "datasetId": "NOT",
+          "output": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "shape": [
+            2,
+            2
+          ],
+          "dtype": "float32"
+        },
+        "postSynaptic": {
+          "id": "27fa7733-e37a-431f-806b-3eaad1ab0098",
+          "label": "Dataset",
+          "type": "dataset-node",
+          "datasetId": "NOT",
+          "trainingOutput": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "output": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "_hasTrainingEdge": true,
+          "_hasValidationEdge": false,
+          "_hasTestEdge": false,
+          "labels": [
+            "X1",
+            "Y"
+          ]
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      1,
+      "false",
+      "input",
+      "weighted",
+      "4c839f58-cda1-43de-b5ec-7281f4a236a2",
+      {
+        "preSynaptic": {
+          "id": "c9d8e3c7-c96a-41ee-bdcb-b3eb23ffa795",
+          "type": "decision",
+          "label": "Decision",
+          "featureId": "x1",
+          "rule": "=",
+          "value": 1,
+          "invertLogic": false,
+          "output": [
+            0
+          ]
+        },
+        "postSynaptic": {
+          "id": "2a22fe6a-5cf8-45a2-8bef-1b05c45da8f9",
+          "type": "output",
+          "label": "out3",
+          "output": 0,
+          "maxInputs": 1,
+          "maxOutputs": 0
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "test",
+      "simple",
+      "23af8f9b-2938-4e33-8816-3ee64563b81c",
+      {
+        "preSynaptic": {
+          "id": "ad1631df-3774-4d40-bae3-a0b4a1514000",
+          "type": "tensor-data",
+          "label": "Data1",
+          "datasetId": "AND",
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "shape": [
+            4,
+            3
+          ],
+          "dtype": "float32",
+          "position": {
+            "x": 160,
+            "y": 620
+          }
+        },
+        "postSynaptic": {
+          "id": "27fa7733-e37a-431f-806b-3eaad1ab0098",
+          "label": "Dataset",
+          "type": "dataset-node",
+          "datasetId": "AND",
+          "trainingOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "_hasTrainingEdge": true,
+          "_hasValidationEdge": false,
+          "_hasTestEdge": false,
+          "labels": [
+            "X1",
+            "X2",
+            "Y"
+          ],
+          "position": {
+            "x": 560,
+            "y": 600
+          },
+          "validationOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "testOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ]
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "validation",
+      "simple",
+      "98ead33c-d077-4c3f-aba8-840aef77082f",
+      {
+        "preSynaptic": {
+          "id": "ad1631df-3774-4d40-bae3-a0b4a1514000",
+          "type": "tensor-data",
+          "label": "Data1",
+          "datasetId": "AND",
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "shape": [
+            4,
+            3
+          ],
+          "dtype": "float32",
+          "position": {
+            "x": 160,
+            "y": 620
+          }
+        },
+        "postSynaptic": {
+          "id": "27fa7733-e37a-431f-806b-3eaad1ab0098",
+          "label": "Dataset",
+          "type": "dataset-node",
+          "datasetId": "AND",
+          "trainingOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "_hasTrainingEdge": true,
+          "_hasValidationEdge": false,
+          "_hasTestEdge": false,
+          "labels": [
+            "X1",
+            "X2",
+            "Y"
+          ],
+          "position": {
+            "x": 560,
+            "y": 600
+          },
+          "validationOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "testOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ]
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      1,
+      "true",
+      "input",
+      "weighted",
+      "61f274a7-a973-4cd6-90d3-f6d13d9e9a83",
+      {
+        "preSynaptic": {
+          "id": "c9d8e3c7-c96a-41ee-bdcb-b3eb23ffa795",
+          "type": "decision",
+          "label": "Decision",
+          "featureId": "x1",
+          "rule": "!=",
+          "value": 1,
+          "invertLogic": false,
+          "output": [
+            1,
+            0
+          ],
+          "position": {
+            "x": 200,
+            "y": -20.25
+          },
+          "gini": 0
+        },
+        "postSynaptic": {
+          "id": "7047be31-28a3-4522-86f7-7f2eade455a1",
+          "type": "output",
+          "label": "y",
+          "output": 1,
+          "maxInputs": 1,
+          "maxOutputs": 0,
+          "position": {
+            "x": 480,
+            "y": -40
+          },
+          "target": 0
+        },
+        "sourceIndex": 0
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      null,
+      "input",
+      "simple",
+      "676f3d7e-3a50-4357-b6b2-04e34b8f953f",
+      {
+        "preSynaptic": {
+          "id": "984cb511-1730-49e8-89b8-e6ba6ce94b30",
+          "type": "input",
+          "label": "x1",
+          "output": 1,
+          "maxInputs": 0,
+          "position": {
+            "x": -280,
+            "y": 0
+          },
+          "value": 0
+        },
+        "postSynaptic": {
+          "id": "1cf2a7c0-49bf-4a47-9752-cf2efd0d9a84",
+          "label": "Decision Forest",
+          "output": 0,
+          "type": "decision-forest",
+          "algorithm": "GRADIENT_BOOSTED_TREES",
+          "maxDepth": 3,
+          "numTrees": 1,
+          "growingStrategy": "BEST_FIRST_GLOBAL",
+          "minExamples": 1
+        }
+      }
+    ]
+  ]
+}

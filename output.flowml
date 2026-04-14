@@ -1,0 +1,128 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "91cb47dc-472e-481b-a7a3-99ff41bfa1f0",
+    "07b4619f-c6eb-410b-86cc-c92481f468fb",
+    "0ec92899-6adf-48df-9d2e-d0b1a1c46463",
+    "6483f795-5c24-49f4-8bcc-19fcf2bd01a9"
+  ],
+  "nodes": [
+    [
+      "input",
+      {
+        "label": "Input",
+        "output": 1,
+        "type": "input",
+        "maxInputs": 0
+      },
+      -470,
+      -300,
+      -1,
+      null
+    ],
+    [
+      "output",
+      {
+        "label": "Output",
+        "output": 1,
+        "type": "output",
+        "maxInputs": 1,
+        "maxOutputs": 0
+      },
+      -210,
+      -300,
+      -1,
+      null
+    ],
+    [
+      "output",
+      {
+        "label": "Output",
+        "output": 1,
+        "type": "output",
+        "maxInputs": 1,
+        "maxOutputs": 0
+      },
+      -200,
+      -420,
+      -1,
+      null
+    ],
+    [
+      "bias",
+      {
+        "label": "Bias",
+        "output": 1,
+        "type": "bias",
+        "description": "Constant input node (always outputs 1)"
+      },
+      -440,
+      -420,
+      -1,
+      null
+    ]
+  ],
+  "edges": [
+    [
+      -1,
+      -1,
+      1,
+      null,
+      "input",
+      "weighted",
+      "d7ce42ac-301b-443c-aac1-bc49c4b7e5fb",
+      {
+        "pre": {
+          "id": "6483f795-5c24-49f4-8bcc-19fcf2bd01a9",
+          "label": "Bias",
+          "output": 1,
+          "type": "bias",
+          "description": "Constant input node (always outputs 1)"
+        },
+        "post": {
+          "id": "0ec92899-6adf-48df-9d2e-d0b1a1c46463",
+          "label": "Output",
+          "output": 1,
+          "type": "output",
+          "maxInputs": 1,
+          "maxOutputs": 0
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      1,
+      null,
+      "input",
+      "weighted",
+      "8125e6c0-dfac-4b84-bffc-a11104ec9b71",
+      {
+        "pre": {
+          "label": "Input",
+          "output": 2,
+          "type": "input",
+          "maxInputs": 0,
+          "id": "91cb47dc-472e-481b-a7a3-99ff41bfa1f0",
+          "position": {
+            "x": -470,
+            "y": -300
+          }
+        },
+        "post": {
+          "label": "Output",
+          "output": 2,
+          "type": "output",
+          "maxInputs": 1,
+          "maxOutputs": 0,
+          "id": "07b4619f-c6eb-410b-86cc-c92481f468fb",
+          "position": {
+            "x": -210,
+            "y": -300
+          }
+        }
+      }
+    ]
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "BOSTON_HOUSING",
+  "name": "Boston Housing Dataset",
+  "read_only": true,
+  "format": "npz",
+  "files": {
+    "archive": "boston_housing.npz"
+  },
+  "inputs": [
+    "CRIM",
+    "ZN",
+    "INDUS",
+    "CHAS",
+    "NOX",
+    "RM",
+    "AGE",
+    "DIS",
+    "RAD",
+    "TAX",
+    "PTRATIO",
+    "B",
+    "LSTAT"
+  ],
+  "outputs": [
+    "MEDV"
+  ]
+}

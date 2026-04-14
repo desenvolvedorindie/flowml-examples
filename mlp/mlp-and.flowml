@@ -1,0 +1,1081 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "fee90c6a-d67a-420e-89e5-7a533e9312e6",
+    "60dea9a8-304d-4cc7-9a17-e3ee88491667",
+    "87a8956b-552c-434d-afe6-5b80b8938067",
+    "f498d36b-6f77-4923-bd8e-a73348d1d84e",
+    "7fae9c87-057e-4448-85d6-0924b3007d12",
+    "3eba7ac2-073f-4814-9111-3bc9841e419a",
+    "fa8e584a-bbad-4de8-a130-5404ba05d848",
+    "80172130-e410-47f4-8ebf-d159efcdb6c9",
+    "c5c15c63-5baa-4d00-b1ca-af8528b9be3f",
+    "cdff38ce-de80-474d-b25b-679d6da44d02",
+    "c2241fb6-fdfa-47c4-be5f-965d64bbf851",
+    "5c283b43-b699-4a96-95c2-548ad1afb227",
+    "5b727b3a-31aa-4b49-a9f2-7a0f1b291209",
+    "5290e731-c934-4201-9e06-292375b89a31"
+  ],
+  "nodes": [
+    [
+      "input",
+      {
+        "type": "input",
+        "label": "x1",
+        "output": 1,
+        "maxInputs": 0,
+        "supportedLearningRules": [],
+        "supportedActivationFunctions": [],
+        "value": 0
+      },
+      -620,
+      -140,
+      -1,
+      null
+    ],
+    [
+      "bias",
+      {
+        "type": "bias",
+        "label": "Bias",
+        "output": 1,
+        "supportedLearningRules": [],
+        "supportedActivationFunctions": []
+      },
+      -200,
+      -460,
+      -1,
+      null
+    ],
+    [
+      "output",
+      {
+        "type": "output",
+        "label": "y",
+        "output": 0.9984956383705139,
+        "target": 1,
+        "maxInputs": 1,
+        "maxOutputs": 0,
+        "supportedLearningRules": [],
+        "supportedActivationFunctions": [],
+        "bias": -37.800000567734244,
+        "netInput": 0.9984956383705139
+      },
+      520,
+      -220,
+      -1,
+      null
+    ],
+    [
+      "tensor-data",
+      {
+        "type": "tensor-data",
+        "label": "Data",
+        "datasetId": "AND",
+        "output": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        "shape": [
+          4,
+          3
+        ],
+        "dtype": "float32"
+      },
+      300,
+      440,
+      -1,
+      null
+    ],
+    [
+      "dataset-node",
+      {
+        "label": "Dataset",
+        "type": "dataset-node",
+        "datasetId": "AND",
+        "trainingOutput": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        "testOutput": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        "output": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        "_hasTrainingEdge": true,
+        "_hasValidationEdge": false,
+        "_hasTestEdge": true,
+        "labels": [
+          "X1",
+          "X2",
+          "Y"
+        ]
+      },
+      880,
+      460,
+      -1,
+      null
+    ],
+    [
+      "input",
+      {
+        "type": "input",
+        "label": "x2",
+        "output": 1,
+        "maxInputs": 0,
+        "supportedLearningRules": [],
+        "supportedActivationFunctions": [],
+        "value": 0
+      },
+      -620,
+      20,
+      -1,
+      null
+    ],
+    [
+      "non-linear",
+      {
+        "type": "non-linear",
+        "label": "MLP",
+        "bias": -4.617239322233949,
+        "output": 0.9984956383705139,
+        "netInput": 6.497865518091556,
+        "activationFunction": "sigmoid",
+        "learningRule": {
+          "name": "backpropagation",
+          "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+        },
+        "gradient": 0.1481388402156094
+      },
+      60,
+      -420,
+      -1,
+      null
+    ],
+    [
+      "bias",
+      {
+        "type": "bias",
+        "label": "Bias",
+        "output": 1,
+        "supportedLearningRules": [],
+        "supportedActivationFunctions": []
+      },
+      -600,
+      -360,
+      -1,
+      null
+    ],
+    [
+      "response-surface",
+      {
+        "type": "response-surface",
+        "label": "Response Surface",
+        "resolution": 1,
+        "zoom": 0.25,
+        "output": [
+          0.5958455204963684
+        ],
+        "xAxisSynapseId": "fee90c6a-d67a-420e-89e5-7a533e9312e6"
+      },
+      -20,
+      200,
+      -1,
+      null
+    ],
+    [
+      "response-surface",
+      {
+        "type": "response-surface",
+        "label": "Response Surface",
+        "resolution": 1,
+        "zoom": 0.25,
+        "output": []
+      },
+      580,
+      -920,
+      -1,
+      null
+    ],
+    [
+      "response-surface",
+      {
+        "type": "response-surface",
+        "label": "Response Surface",
+        "resolution": 1,
+        "zoom": 0.25,
+        "output": [
+          0.4960237443447113
+        ],
+        "xAxisSynapseId": "fee90c6a-d67a-420e-89e5-7a533e9312e6"
+      },
+      580,
+      60,
+      -1,
+      null
+    ],
+    [
+      "response-surface",
+      {
+        "label": "Response Surface",
+        "output": [
+          0.5958455204963684
+        ],
+        "type": "response-surface",
+        "resolution": 1,
+        "zoom": 0.25
+      },
+      180,
+      -900,
+      -1,
+      null
+    ],
+    [
+      "mlp",
+      {
+        "label": "MLP",
+        "output": 0,
+        "netInput": -0.0023704535092545775,
+        "bias": 1,
+        "gradient": 0,
+        "activationFunction": "relu",
+        "learningRule": {
+          "name": "backpropagation",
+          "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+        },
+        "type": "mlp",
+        "description": "Neuron with continuous, non-linear activation functions (Sigmoid, Tanh, ReLU, GELU)"
+      },
+      -320,
+      0,
+      -1,
+      null
+    ],
+    [
+      "mlp",
+      {
+        "label": "MLP",
+        "output": 3.2181334495544434,
+        "netInput": 3.2181335657762733,
+        "bias": 1,
+        "gradient": 0.005320594559737074,
+        "activationFunction": "relu",
+        "learningRule": {
+          "name": "backpropagation",
+          "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+        },
+        "type": "mlp",
+        "description": "Neuron with continuous, non-linear activation functions (Sigmoid, Tanh, ReLU, GELU)"
+      },
+      -320,
+      -240,
+      -1,
+      null
+    ]
+  ],
+  "edges": [
+    [
+      -1,
+      -1,
+      0.4513,
+      "out",
+      "training",
+      "simple",
+      "97389acc-fa27-4820-98dd-d2cf97e14687",
+      {
+        "preSynaptic": {
+          "id": "f498d36b-6f77-4923-bd8e-a73348d1d84e",
+          "type": "tensor-data",
+          "label": "Data",
+          "datasetId": "AND",
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "shape": [
+            4,
+            3
+          ],
+          "dtype": "float32"
+        },
+        "postSynaptic": {
+          "id": "7fae9c87-057e-4448-85d6-0924b3007d12",
+          "label": "Dataset",
+          "type": "dataset-node",
+          "datasetId": "AND",
+          "trainingOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "testOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "_hasTrainingEdge": true,
+          "_hasValidationEdge": false,
+          "_hasTestEdge": true,
+          "labels": [
+            "X1",
+            "X2",
+            "Y"
+          ]
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      0.5246,
+      "out",
+      "test",
+      "simple",
+      "9a0007ba-305a-4810-a6d6-be13963de7e4",
+      {
+        "preSynaptic": {
+          "id": "f498d36b-6f77-4923-bd8e-a73348d1d84e",
+          "type": "tensor-data",
+          "label": "Data",
+          "datasetId": "AND",
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "shape": [
+            4,
+            3
+          ],
+          "dtype": "float32"
+        },
+        "postSynaptic": {
+          "id": "7fae9c87-057e-4448-85d6-0924b3007d12",
+          "label": "Dataset",
+          "type": "dataset-node",
+          "datasetId": "AND",
+          "trainingOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "testOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "_hasTrainingEdge": true,
+          "_hasValidationEdge": false,
+          "_hasTestEdge": true,
+          "labels": [
+            "X1",
+            "X2",
+            "Y"
+          ]
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      -4.617239322233949,
+      null,
+      "bias",
+      "weighted",
+      "e87e7511-1043-4902-adf4-39fbe7d1a323",
+      {
+        "preSynaptic": {
+          "id": "60dea9a8-304d-4cc7-9a17-e3ee88491667",
+          "type": "bias",
+          "label": "Bias",
+          "output": 1,
+          "supportedLearningRules": [],
+          "supportedActivationFunctions": []
+        },
+        "postSynaptic": {
+          "id": "fa8e584a-bbad-4de8-a130-5404ba05d848",
+          "type": "non-linear",
+          "label": "Non Linear",
+          "bias": 1,
+          "output": 0,
+          "netInput": 0,
+          "activationFunction": "sigmoid",
+          "learningRule": {
+            "name": "backpropagation",
+            "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+          }
+        },
+        "label": "b1"
+      }
+    ],
+    [
+      -1,
+      -1,
+      0.2744,
+      null,
+      "input",
+      "weighted",
+      "649d17ea-56b0-4166-8ff4-03c188494d64",
+      {
+        "preSynaptic": {
+          "id": "fa8e584a-bbad-4de8-a130-5404ba05d848",
+          "type": "non-linear",
+          "label": "Non Linear",
+          "bias": 1,
+          "output": 0,
+          "netInput": 0,
+          "activationFunction": "sigmoid",
+          "learningRule": {
+            "name": "backpropagation",
+            "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+          }
+        },
+        "postSynaptic": {
+          "id": "87a8956b-552c-434d-afe6-5b80b8938067",
+          "type": "output",
+          "label": "y",
+          "output": 1,
+          "target": 1,
+          "maxInputs": 1,
+          "maxOutputs": 0,
+          "supportedLearningRules": [],
+          "supportedActivationFunctions": [],
+          "bias": -37.800000567734244,
+          "netInput": 1
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      -0.3886,
+      null,
+      "input",
+      "simple",
+      "1d62a41d-0d9f-4a6a-9a5e-44d2f9c44ecc",
+      {
+        "preSynaptic": {
+          "id": "fa8e584a-bbad-4de8-a130-5404ba05d848",
+          "type": "non-linear",
+          "label": "Non Linear",
+          "bias": -0.7053442067061827,
+          "output": 0.33138203620910645,
+          "netInput": -0.7019408785795423,
+          "activationFunction": "sigmoid",
+          "learningRule": {
+            "name": "backpropagation",
+            "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+          },
+          "position": {
+            "x": 60,
+            "y": -420
+          },
+          "gradient": 0.1481388402156094
+        },
+        "postSynaptic": {
+          "id": "c2241fb6-fdfa-47c4-be5f-965d64bbf851",
+          "type": "response-surface",
+          "label": "Response Surface",
+          "resolution": 1,
+          "zoom": 0.25,
+          "output": [
+            0.4960237443447113
+          ]
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      0.0307,
+      "out",
+      "dataset",
+      "simple",
+      "458b971f-498d-4b19-9e01-ae32fde5b2b2",
+      {
+        "preSynaptic": {
+          "id": "f498d36b-6f77-4923-bd8e-a73348d1d84e",
+          "type": "tensor-data",
+          "label": "Data",
+          "datasetId": "AND",
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "shape": [
+            4,
+            3
+          ],
+          "dtype": "float32",
+          "position": {
+            "x": 300,
+            "y": 440
+          }
+        },
+        "postSynaptic": {
+          "id": "c2241fb6-fdfa-47c4-be5f-965d64bbf851",
+          "type": "response-surface",
+          "label": "Response Surface",
+          "resolution": 1,
+          "zoom": 0.25,
+          "output": [
+            0.4960237443447113
+          ]
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      -2.8330088770297683,
+      null,
+      "input",
+      "weighted",
+      "041b84a6-48dd-4865-b0d4-c4b73e65709a",
+      {
+        "preSynaptic": {
+          "id": "3eba7ac2-073f-4814-9111-3bc9841e419a",
+          "type": "input",
+          "label": "x2",
+          "output": 1,
+          "maxInputs": 0,
+          "supportedLearningRules": [],
+          "supportedActivationFunctions": [],
+          "value": 0,
+          "position": {
+            "x": -620,
+            "y": 20
+          }
+        },
+        "postSynaptic": {
+          "id": "5b727b3a-31aa-4b49-a9f2-7a0f1b291209",
+          "label": "MLP",
+          "output": 0,
+          "netInput": -0.03641702993017226,
+          "bias": 1,
+          "gradient": 0,
+          "activationFunction": "relu",
+          "learningRule": {
+            "name": "backpropagation",
+            "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+          },
+          "type": "mlp",
+          "description": "Neuron with continuous, non-linear activation functions (Sigmoid, Tanh, ReLU, GELU)"
+        },
+        "label": "w1"
+      }
+    ],
+    [
+      -1,
+      -1,
+      -0.1207,
+      null,
+      "input",
+      "simple",
+      "1651e831-046c-4b8f-86e1-59da5c28cc81",
+      {
+        "preSynaptic": {
+          "id": "5b727b3a-31aa-4b49-a9f2-7a0f1b291209",
+          "label": "MLP",
+          "output": 0,
+          "netInput": -0.03641702993017226,
+          "bias": 1,
+          "gradient": 0,
+          "activationFunction": "relu",
+          "learningRule": {
+            "name": "backpropagation",
+            "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+          },
+          "type": "mlp",
+          "description": "Neuron with continuous, non-linear activation functions (Sigmoid, Tanh, ReLU, GELU)"
+        },
+        "postSynaptic": {
+          "id": "c5c15c63-5baa-4d00-b1ca-af8528b9be3f",
+          "type": "response-surface",
+          "label": "Response Surface",
+          "resolution": 1,
+          "zoom": 0.25,
+          "output": [
+            0.5958455204963684
+          ],
+          "position": {
+            "x": -20,
+            "y": 200
+          }
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      -3.3221627260289774,
+      null,
+      "input",
+      "weighted",
+      "1f72076f-eba3-44ce-923c-e2c411fd294d",
+      {
+        "preSynaptic": {
+          "id": "5b727b3a-31aa-4b49-a9f2-7a0f1b291209",
+          "label": "MLP",
+          "output": 0,
+          "netInput": -0.03641702993017226,
+          "bias": 1,
+          "gradient": 0,
+          "activationFunction": "relu",
+          "learningRule": {
+            "name": "backpropagation",
+            "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+          },
+          "type": "mlp",
+          "description": "Neuron with continuous, non-linear activation functions (Sigmoid, Tanh, ReLU, GELU)"
+        },
+        "postSynaptic": {
+          "id": "fa8e584a-bbad-4de8-a130-5404ba05d848",
+          "type": "non-linear",
+          "label": "MLP",
+          "bias": 4.6981726128268075,
+          "output": 0.9909703731536865,
+          "netInput": 4.6981726128268075,
+          "activationFunction": "sigmoid",
+          "learningRule": {
+            "name": "backpropagation",
+            "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+          },
+          "position": {
+            "x": 60,
+            "y": -420
+          },
+          "gradient": 0.1481388402156094
+        },
+        "label": "w2"
+      }
+    ],
+    [
+      -1,
+      -1,
+      0.8688596555755741,
+      null,
+      "input",
+      "weighted",
+      "218b25a8-e5ad-43f9-9e46-5969ba7d41eb",
+      {
+        "preSynaptic": {
+          "id": "fee90c6a-d67a-420e-89e5-7a533e9312e6",
+          "type": "input",
+          "label": "x1",
+          "output": 1,
+          "maxInputs": 0,
+          "supportedLearningRules": [],
+          "supportedActivationFunctions": [],
+          "value": 0,
+          "position": {
+            "x": -620,
+            "y": -120
+          }
+        },
+        "postSynaptic": {
+          "id": "5b727b3a-31aa-4b49-a9f2-7a0f1b291209",
+          "label": "MLP",
+          "output": 0,
+          "netInput": -0.03641702993017226,
+          "bias": 1,
+          "gradient": 0,
+          "activationFunction": "relu",
+          "learningRule": {
+            "name": "backpropagation",
+            "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+          },
+          "type": "mlp",
+          "description": "Neuron with continuous, non-linear activation functions (Sigmoid, Tanh, ReLU, GELU)"
+        },
+        "label": "w3"
+      }
+    ],
+    [
+      -1,
+      -1,
+      3.233379152761058,
+      null,
+      "input",
+      "weighted",
+      "abc6eb37-1102-4ff2-8fcf-a2e92a7d4d7c",
+      {
+        "preSynaptic": {
+          "id": "fee90c6a-d67a-420e-89e5-7a533e9312e6",
+          "type": "input",
+          "label": "x1",
+          "output": 1,
+          "maxInputs": 0,
+          "supportedLearningRules": [],
+          "supportedActivationFunctions": [],
+          "value": 0,
+          "position": {
+            "x": -620,
+            "y": -120
+          }
+        },
+        "postSynaptic": {
+          "id": "5290e731-c934-4201-9e06-292375b89a31",
+          "label": "MLP",
+          "output": 0,
+          "netInput": -0.03875548550638097,
+          "bias": 1,
+          "gradient": 0,
+          "activationFunction": "relu",
+          "learningRule": {
+            "name": "backpropagation",
+            "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+          },
+          "type": "mlp",
+          "description": "Neuron with continuous, non-linear activation functions (Sigmoid, Tanh, ReLU, GELU)"
+        },
+        "label": "w4"
+      }
+    ],
+    [
+      -1,
+      -1,
+      3.453898048219353,
+      null,
+      "input",
+      "weighted",
+      "195a1ad7-92c1-4fc0-a5b7-89943a8135c6",
+      {
+        "preSynaptic": {
+          "id": "5290e731-c934-4201-9e06-292375b89a31",
+          "label": "MLP",
+          "output": 0,
+          "netInput": -0.03875548550638097,
+          "bias": 1,
+          "gradient": 0,
+          "activationFunction": "relu",
+          "learningRule": {
+            "name": "backpropagation",
+            "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+          },
+          "type": "mlp",
+          "description": "Neuron with continuous, non-linear activation functions (Sigmoid, Tanh, ReLU, GELU)"
+        },
+        "postSynaptic": {
+          "id": "fa8e584a-bbad-4de8-a130-5404ba05d848",
+          "type": "non-linear",
+          "label": "MLP",
+          "bias": 4.6981726128268075,
+          "output": 0.9909703731536865,
+          "netInput": 4.6981726128268075,
+          "activationFunction": "sigmoid",
+          "learningRule": {
+            "name": "backpropagation",
+            "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+          },
+          "position": {
+            "x": 60,
+            "y": -420
+          },
+          "gradient": 0.1481388402156094
+        },
+        "label": "w5"
+      }
+    ],
+    [
+      -1,
+      -1,
+      0.1533,
+      null,
+      "input",
+      "simple",
+      "c57e4c79-ec34-4038-82f7-350574c95163",
+      {
+        "preSynaptic": {
+          "id": "5290e731-c934-4201-9e06-292375b89a31",
+          "label": "MLP",
+          "output": 0,
+          "netInput": -0.03875548550638097,
+          "bias": 1,
+          "gradient": 0,
+          "activationFunction": "relu",
+          "learningRule": {
+            "name": "backpropagation",
+            "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+          },
+          "type": "mlp",
+          "description": "Neuron with continuous, non-linear activation functions (Sigmoid, Tanh, ReLU, GELU)"
+        },
+        "postSynaptic": {
+          "id": "5c283b43-b699-4a96-95c2-548ad1afb227",
+          "label": "Response Surface",
+          "output": [
+            0.5958455204963684
+          ],
+          "type": "response-surface",
+          "resolution": 1,
+          "zoom": 0.25
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      1.232927507666147,
+      null,
+      "input",
+      "weighted",
+      "f9110a2d-a476-4051-b7a9-ff258b00d60b",
+      {
+        "preSynaptic": {
+          "id": "3eba7ac2-073f-4814-9111-3bc9841e419a",
+          "type": "input",
+          "label": "x2",
+          "output": 1,
+          "maxInputs": 0,
+          "supportedLearningRules": [],
+          "supportedActivationFunctions": [],
+          "value": 0,
+          "position": {
+            "x": -620,
+            "y": 20
+          }
+        },
+        "postSynaptic": {
+          "id": "5290e731-c934-4201-9e06-292375b89a31",
+          "label": "MLP",
+          "output": 0,
+          "netInput": -0.03875548550638097,
+          "bias": 1,
+          "gradient": 0,
+          "activationFunction": "relu",
+          "learningRule": {
+            "name": "backpropagation",
+            "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+          },
+          "type": "mlp",
+          "description": "Neuron with continuous, non-linear activation functions (Sigmoid, Tanh, ReLU, GELU)"
+        },
+        "label": "w6"
+      }
+    ],
+    [
+      -1,
+      -1,
+      -1.2481730946509315,
+      null,
+      "bias",
+      "weighted",
+      "4aa94fbc-c92d-4257-83e8-4fb15eca6100",
+      {
+        "preSynaptic": {
+          "id": "80172130-e410-47f4-8ebf-d159efcdb6c9",
+          "type": "bias",
+          "label": "Bias",
+          "output": 1,
+          "supportedLearningRules": [],
+          "supportedActivationFunctions": [],
+          "position": {
+            "x": -600,
+            "y": -360
+          }
+        },
+        "postSynaptic": {
+          "id": "5290e731-c934-4201-9e06-292375b89a31",
+          "label": "MLP",
+          "output": 3.2181334495544434,
+          "netInput": 3.2181335657762733,
+          "bias": 1,
+          "gradient": 0.005320594559737074,
+          "activationFunction": "relu",
+          "learningRule": {
+            "name": "backpropagation",
+            "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+          },
+          "type": "mlp",
+          "description": "Neuron with continuous, non-linear activation functions (Sigmoid, Tanh, ReLU, GELU)",
+          "position": {
+            "x": -320,
+            "y": -240
+          }
+        },
+        "label": "b2"
+      }
+    ],
+    [
+      -1,
+      -1,
+      1.9617787679449397,
+      null,
+      "bias",
+      "weighted",
+      "51fc7029-1779-4cd8-be8d-7038717be8d3",
+      {
+        "preSynaptic": {
+          "id": "80172130-e410-47f4-8ebf-d159efcdb6c9",
+          "type": "bias",
+          "label": "Bias",
+          "output": 1,
+          "supportedLearningRules": [],
+          "supportedActivationFunctions": [],
+          "position": {
+            "x": -600,
+            "y": -360
+          }
+        },
+        "postSynaptic": {
+          "id": "5b727b3a-31aa-4b49-a9f2-7a0f1b291209",
+          "label": "MLP",
+          "output": 0,
+          "netInput": -0.0023704535092545775,
+          "bias": 1,
+          "gradient": 0,
+          "activationFunction": "relu",
+          "learningRule": {
+            "name": "backpropagation",
+            "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+          },
+          "type": "mlp",
+          "description": "Neuron with continuous, non-linear activation functions (Sigmoid, Tanh, ReLU, GELU)",
+          "position": {
+            "x": -320,
+            "y": 0
+          }
+        },
+        "label": "b3"
+      }
+    ]
+  ]
+}

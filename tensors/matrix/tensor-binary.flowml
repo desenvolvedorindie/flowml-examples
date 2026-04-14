@@ -1,0 +1,465 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "c363968e-2983-485b-b72e-51c762c3cd7d",
+    "8285b4d6-aee0-4097-9ee9-30b19ff6055a",
+    "bb07ee4c-3ffb-4c06-84cc-54e361c8fbe8",
+    "d7187c60-7301-4ea8-a033-901aacb6527a"
+  ],
+  "nodes": [
+    [
+      "tensor-binary",
+      {
+        "type": "tensor-binary",
+        "label": "Binary",
+        "output": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "operationType": "add",
+        "shape": [
+          3,
+          3
+        ],
+        "dtype": "float32"
+      },
+      -1040,
+      100,
+      -1,
+      null
+    ],
+    [
+      "tensor-print",
+      {
+        "type": "tensor-print",
+        "label": "Print",
+        "output": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "shape": [
+          3,
+          3
+        ],
+        "verbose": false,
+        "dtype": "float32"
+      },
+      -820,
+      60,
+      -1,
+      null
+    ],
+    [
+      "tensor",
+      {
+        "type": "tensor",
+        "label": "Tensor",
+        "order": 2,
+        "shape": [
+          3,
+          3
+        ],
+        "output": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "dtype": "float32",
+        "expanded": false
+      },
+      -1400,
+      -80,
+      -1,
+      null
+    ],
+    [
+      "tensor",
+      {
+        "type": "tensor",
+        "label": "Tensor",
+        "order": 0,
+        "shape": [],
+        "output": [
+          1
+        ],
+        "dtype": "float32",
+        "expanded": false
+      },
+      -1400,
+      160,
+      -1,
+      null
+    ]
+  ],
+  "edges": [
+    [
+      -1,
+      -1,
+      null,
+      "tensor-out",
+      "input",
+      "simple",
+      "73879338-ac5f-4eee-b9c3-6e9364155ed3",
+      {
+        "preSynaptic": {
+          "id": "c363968e-2983-485b-b72e-51c762c3cd7d",
+          "type": "tensor-binary",
+          "label": "Binary",
+          "output": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "operationType": "add",
+          "shape": [
+            3,
+            3
+          ],
+          "dtype": "float32",
+          "position": {
+            "x": -1040,
+            "y": 160
+          }
+        },
+        "postSynaptic": {
+          "id": "8285b4d6-aee0-4097-9ee9-30b19ff6055a",
+          "type": "tensor-print",
+          "label": "Print 11",
+          "output": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "shape": [
+            3,
+            3
+          ],
+          "verbose": true,
+          "dtype": "float32",
+          "position": {
+            "x": -440,
+            "y": 80
+          }
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "input-a",
+      "simple",
+      "e0df3394-fdb2-4214-a539-d6233ad742f9",
+      {
+        "preSynaptic": {
+          "id": "bb07ee4c-3ffb-4c06-84cc-54e361c8fbe8",
+          "type": "tensor",
+          "label": "Tensor",
+          "order": 2,
+          "shape": [
+            3,
+            3
+          ],
+          "output": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "dtype": "float32"
+        },
+        "postSynaptic": {
+          "id": "c363968e-2983-485b-b72e-51c762c3cd7d",
+          "type": "tensor-binary",
+          "label": "Binary",
+          "output": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "operationType": "add",
+          "shape": [
+            3,
+            3
+          ],
+          "dtype": "float32",
+          "position": {
+            "x": -1040,
+            "y": 160
+          }
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "input-b",
+      "simple",
+      "1e61520c-2aaa-43ce-935d-d37bb471092a",
+      {
+        "preSynaptic": {
+          "id": "d7187c60-7301-4ea8-a033-901aacb6527a",
+          "type": "tensor",
+          "label": "Tensor",
+          "order": 0,
+          "shape": [],
+          "output": [
+            1
+          ],
+          "dtype": "float32"
+        },
+        "postSynaptic": {
+          "id": "c363968e-2983-485b-b72e-51c762c3cd7d",
+          "type": "tensor-binary",
+          "label": "Binary",
+          "output": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "operationType": "add",
+          "shape": [
+            3,
+            3
+          ],
+          "dtype": "float32",
+          "position": {
+            "x": -1040,
+            "y": 160
+          }
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "input-a",
+      "simple",
+      "0f23d505-7da1-4a33-94be-8d21a9e4a6ab",
+      {
+        "pre": {
+          "type": "tensor",
+          "label": "Tensor",
+          "order": 2,
+          "shape": [
+            3,
+            3
+          ],
+          "output": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "dtype": "float32",
+          "id": "bb07ee4c-3ffb-4c06-84cc-54e361c8fbe8",
+          "position": {
+            "x": -1400,
+            "y": -100
+          }
+        },
+        "post": {
+          "type": "tensor-binary",
+          "label": "Binary",
+          "output": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "operationType": "add",
+          "shape": [
+            3,
+            3
+          ],
+          "dtype": "float32",
+          "id": "c363968e-2983-485b-b72e-51c762c3cd7d",
+          "position": {
+            "x": -1040,
+            "y": 160
+          }
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "input-b",
+      "simple",
+      "cae39270-4383-476d-9082-5d220b048bb6",
+      {
+        "pre": {
+          "type": "tensor",
+          "label": "Tensor",
+          "order": 0,
+          "shape": [],
+          "output": [
+            1
+          ],
+          "dtype": "float32",
+          "id": "d7187c60-7301-4ea8-a033-901aacb6527a",
+          "position": {
+            "x": -1400,
+            "y": 220
+          }
+        },
+        "post": {
+          "type": "tensor-binary",
+          "label": "Binary",
+          "output": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "operationType": "add",
+          "shape": [
+            3,
+            3
+          ],
+          "dtype": "float32",
+          "id": "c363968e-2983-485b-b72e-51c762c3cd7d",
+          "position": {
+            "x": -1040,
+            "y": 160
+          }
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "tensor-out",
+      "input",
+      "simple",
+      "e30f2eac-a3c2-46b4-8910-c7a646e22c1a",
+      {
+        "pre": {
+          "type": "tensor-binary",
+          "label": "Binary",
+          "output": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "operationType": "add",
+          "shape": [
+            3,
+            3
+          ],
+          "dtype": "float32",
+          "id": "c363968e-2983-485b-b72e-51c762c3cd7d",
+          "position": {
+            "x": -1040,
+            "y": 160
+          }
+        },
+        "post": {
+          "type": "tensor-print",
+          "label": "Print 11",
+          "output": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "shape": [
+            3,
+            3
+          ],
+          "verbose": true,
+          "dtype": "float32",
+          "id": "8285b4d6-aee0-4097-9ee9-30b19ff6055a",
+          "position": {
+            "x": -820,
+            "y": 100
+          }
+        }
+      }
+    ]
+  ]
+}

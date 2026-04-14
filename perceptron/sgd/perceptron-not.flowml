@@ -1,0 +1,737 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "023e299b-40ba-48a9-96be-f7502247bfad",
+    "4d4796d0-1f0b-4924-8867-ca1febb1fcd4",
+    "46342763-7ee7-4b66-9cc6-5f082f7d6462",
+    "ee9846d2-fa4b-4744-b0f4-c111455d2ca4",
+    "Decision Surface",
+    "560e0a4f-d116-4f33-a882-d2d1b3689009",
+    "480dab9d-f64f-4887-b106-59e4c59d3946"
+  ],
+  "nodes": [
+    [
+      "perceptron",
+      {
+        "type": "perceptron",
+        "label": "Perceptron",
+        "bias": -0.12683591521009555,
+        "output": 0,
+        "netInput": -0.0004999935626983643,
+        "activationFunction": "step",
+        "learningRule": {
+          "name": "rosenblatt"
+        },
+        "supportedLearningRules": [
+          "rosenblatt",
+          "hebb",
+          "widrow-hoff",
+          "oja",
+          "pocket"
+        ]
+      },
+      -1800,
+      -460,
+      -1,
+      null
+    ],
+    [
+      "bias",
+      {
+        "type": "bias",
+        "label": "Bias",
+        "output": 1
+      },
+      -2020,
+      -560,
+      -1,
+      null
+    ],
+    [
+      "input",
+      {
+        "type": "input",
+        "label": "x1",
+        "output": 1,
+        "maxInputs": 0,
+        "value": 0
+      },
+      -2120,
+      -440,
+      -1,
+      null
+    ],
+    [
+      "output",
+      {
+        "type": "output",
+        "label": "y",
+        "output": 0,
+        "maxInputs": 1,
+        "maxOutputs": 0,
+        "target": 0,
+        "netInput": 0
+      },
+      -1400,
+      -500,
+      -1,
+      null
+    ],
+    [
+      "decision-surface",
+      {
+        "type": "decision-surface",
+        "label": "Decision Surface",
+        "output": [
+          0.3083
+        ]
+      },
+      -1300,
+      -380,
+      -1,
+      null
+    ],
+    [
+      "dataset-node",
+      {
+        "label": "Dataset",
+        "type": "dataset-node",
+        "datasetId": "NOT",
+        "trainingOutput": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "output": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "_hasTrainingEdge": true,
+        "_hasValidationEdge": false,
+        "_hasTestEdge": false,
+        "labels": [
+          "X1",
+          "Y"
+        ]
+      },
+      -1560,
+      -260,
+      -1,
+      null
+    ],
+    [
+      "data-node",
+      {
+        "label": "Data",
+        "datasetId": "NOT",
+        "dynamicInputColumns": [
+          "[Input] X1",
+          "[Output] Y"
+        ]
+      },
+      -2000,
+      -220,
+      -1,
+      null
+    ]
+  ],
+  "edges": [
+    [
+      -1,
+      -1,
+      0.2598,
+      null,
+      "bias",
+      "weighted",
+      "99ec01ee-fd12-47cd-b83e-de417c53e0c6",
+      {
+        "preSynaptic": {
+          "id": "4d4796d0-1f0b-4924-8867-ca1febb1fcd4",
+          "type": "bias",
+          "label": "Bias",
+          "output": 1
+        },
+        "postSynaptic": {
+          "id": "023e299b-40ba-48a9-96be-f7502247bfad",
+          "type": "perceptron",
+          "label": "Perceptron",
+          "bias": 1,
+          "output": 1,
+          "netInput": 1,
+          "activationFunction": "step",
+          "learningRule": {
+            "name": "rosenblatt"
+          },
+          "supportedLearningRules": [
+            "rosenblatt",
+            "hebb",
+            "widrow-hoff",
+            "oja",
+            "pocket"
+          ]
+        },
+        "label": "b1"
+      }
+    ],
+    [
+      -1,
+      -1,
+      -0.2484,
+      null,
+      "input",
+      "weighted",
+      "0f0086ba-6581-4e0e-9b88-2e749a673ae9",
+      {
+        "preSynaptic": {
+          "id": "46342763-7ee7-4b66-9cc6-5f082f7d6462",
+          "type": "input",
+          "label": "x1",
+          "output": 0,
+          "maxInputs": 0
+        },
+        "postSynaptic": {
+          "id": "023e299b-40ba-48a9-96be-f7502247bfad",
+          "type": "perceptron",
+          "label": "Perceptron",
+          "bias": 1,
+          "output": 1,
+          "netInput": 1,
+          "activationFunction": "step",
+          "learningRule": {
+            "name": "rosenblatt"
+          },
+          "supportedLearningRules": [
+            "rosenblatt",
+            "hebb",
+            "widrow-hoff",
+            "oja",
+            "pocket"
+          ]
+        },
+        "label": "w1"
+      }
+    ],
+    [
+      -1,
+      -1,
+      0.2881,
+      null,
+      "input",
+      "weighted",
+      "e43e9df4-b84c-40c4-a520-3f963c2fcd09",
+      {
+        "preSynaptic": {
+          "id": "023e299b-40ba-48a9-96be-f7502247bfad",
+          "type": "perceptron",
+          "label": "Perceptron",
+          "bias": 1,
+          "output": 1,
+          "netInput": 1,
+          "activationFunction": "step",
+          "learningRule": {
+            "name": "rosenblatt"
+          },
+          "supportedLearningRules": [
+            "rosenblatt",
+            "hebb",
+            "widrow-hoff",
+            "oja",
+            "pocket"
+          ]
+        },
+        "postSynaptic": {
+          "id": "ee9846d2-fa4b-4744-b0f4-c111455d2ca4",
+          "type": "output",
+          "label": "y",
+          "output": 1,
+          "maxInputs": 1,
+          "maxOutputs": 0
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      -0.4498,
+      null,
+      "input",
+      "weighted",
+      "3c069bea-75d3-46dc-9f7b-5d65bdb32b9a",
+      {
+        "preSynaptic": {
+          "id": "023e299b-40ba-48a9-96be-f7502247bfad",
+          "type": "perceptron",
+          "label": "Perceptron",
+          "bias": 1,
+          "output": 1,
+          "netInput": 1,
+          "activationFunction": "step",
+          "learningRule": {
+            "name": "rosenblatt"
+          },
+          "supportedLearningRules": [
+            "rosenblatt",
+            "hebb",
+            "widrow-hoff",
+            "oja",
+            "pocket"
+          ]
+        },
+        "postSynaptic": {
+          "id": "Decision Surface",
+          "type": "decision-surface",
+          "label": "Decision Surface",
+          "output": [
+            1
+          ]
+        },
+        "label": "w2"
+      }
+    ],
+    [
+      -1,
+      -1,
+      0.677,
+      "out",
+      "training",
+      "weighted",
+      "0c4c6f9e-1474-487f-83b6-b20e5aa7a633",
+      {
+        "preSynaptic": {
+          "id": "9c5f803a-81e3-43e3-bfa6-75be66799124",
+          "type": "tensor-data",
+          "label": "Data",
+          "datasetId": "NOT",
+          "output": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "shape": [
+            2,
+            2
+          ]
+        },
+        "postSynaptic": {
+          "id": "560e0a4f-d116-4f33-a882-d2d1b3689009",
+          "label": "Dataset",
+          "type": "dataset-node",
+          "datasetId": "NOT",
+          "trainingOutput": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "output": [],
+          "_hasTrainingEdge": true,
+          "_hasValidationEdge": false,
+          "_hasTestEdge": false,
+          "labels": [
+            "X1",
+            "Y"
+          ]
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      -0.5451,
+      "out",
+      "test",
+      "weighted",
+      "e4d643c9-a228-4beb-99f8-c0bbde994598",
+      {
+        "preSynaptic": {
+          "id": "9c5f803a-81e3-43e3-bfa6-75be66799124",
+          "type": "tensor-data",
+          "label": "Data",
+          "datasetId": "NOT",
+          "output": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "shape": [
+            2,
+            2
+          ],
+          "position": {
+            "x": -2280,
+            "y": -140
+          }
+        },
+        "postSynaptic": {
+          "id": "560e0a4f-d116-4f33-a882-d2d1b3689009",
+          "label": "Dataset",
+          "type": "dataset-node",
+          "datasetId": "NOT",
+          "trainingOutput": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "output": [],
+          "_hasTrainingEdge": true,
+          "_hasValidationEdge": false,
+          "_hasTestEdge": false,
+          "labels": [
+            "X1",
+            "Y"
+          ],
+          "position": {
+            "x": -1960,
+            "y": -200
+          },
+          "testOutput": [
+            0,
+            1,
+            1,
+            0
+          ]
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      -0.0619,
+      "out",
+      "dataset",
+      "simple",
+      "5f843133-8504-4e5f-a6a0-7da96cd95163",
+      {
+        "preSynaptic": {
+          "id": "9c5f803a-81e3-43e3-bfa6-75be66799124",
+          "type": "tensor-data",
+          "label": "Data",
+          "datasetId": "NOT",
+          "output": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "shape": [
+            2,
+            2
+          ],
+          "position": {
+            "x": -2080,
+            "y": -220
+          },
+          "dtype": "float32"
+        },
+        "postSynaptic": {
+          "id": "Decision Surface",
+          "type": "decision-surface",
+          "label": "Decision Surface",
+          "output": [
+            0.0928
+          ],
+          "position": {
+            "x": -1300,
+            "y": -380
+          }
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      0.2715,
+      null,
+      "input",
+      "weighted",
+      "e48efaec-4bba-4cfd-8b12-24775ef87139",
+      {
+        "pre": {
+          "type": "perceptron",
+          "label": "Perceptron",
+          "bias": -0.12683591521009555,
+          "output": 0,
+          "netInput": -0.0004999935626983643,
+          "activationFunction": "step",
+          "learningRule": {
+            "name": "rosenblatt"
+          },
+          "supportedLearningRules": [
+            "rosenblatt",
+            "hebb",
+            "widrow-hoff",
+            "oja",
+            "pocket"
+          ],
+          "id": "023e299b-40ba-48a9-96be-f7502247bfad",
+          "position": {
+            "x": -1800,
+            "y": -460
+          }
+        },
+        "post": {
+          "type": "output",
+          "label": "y",
+          "output": 0,
+          "maxInputs": 1,
+          "maxOutputs": 0,
+          "target": 0,
+          "id": "ee9846d2-fa4b-4744-b0f4-c111455d2ca4",
+          "position": {
+            "x": -1400,
+            "y": -500
+          },
+          "netInput": 0
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      0.08379999999999972,
+      null,
+      "bias",
+      "weighted",
+      "5f36ad06-21d2-4fc8-b381-d517226b50cf",
+      {
+        "pre": {
+          "type": "bias",
+          "label": "Bias",
+          "output": 1,
+          "id": "4d4796d0-1f0b-4924-8867-ca1febb1fcd4",
+          "position": {
+            "x": -2020,
+            "y": -560
+          }
+        },
+        "post": {
+          "type": "perceptron",
+          "label": "Perceptron",
+          "bias": -0.12683591521009555,
+          "output": 0,
+          "netInput": -0.0004999935626983643,
+          "activationFunction": "step",
+          "learningRule": {
+            "name": "rosenblatt"
+          },
+          "supportedLearningRules": [
+            "rosenblatt",
+            "hebb",
+            "widrow-hoff",
+            "oja",
+            "pocket"
+          ],
+          "id": "023e299b-40ba-48a9-96be-f7502247bfad",
+          "position": {
+            "x": -1800,
+            "y": -460
+          }
+        },
+        "label": "b2"
+      }
+    ],
+    [
+      -1,
+      -1,
+      -0.08430000000000017,
+      null,
+      "input",
+      "weighted",
+      "1b42c473-6b28-4ca7-b91a-9111b6099362",
+      {
+        "pre": {
+          "type": "input",
+          "label": "x1",
+          "output": 1,
+          "maxInputs": 0,
+          "value": 0,
+          "id": "46342763-7ee7-4b66-9cc6-5f082f7d6462",
+          "position": {
+            "x": -2120,
+            "y": -440
+          }
+        },
+        "post": {
+          "type": "perceptron",
+          "label": "Perceptron",
+          "bias": -0.12683591521009555,
+          "output": 0,
+          "netInput": -0.0004999935626983643,
+          "activationFunction": "step",
+          "learningRule": {
+            "name": "rosenblatt"
+          },
+          "supportedLearningRules": [
+            "rosenblatt",
+            "hebb",
+            "widrow-hoff",
+            "oja",
+            "pocket"
+          ],
+          "id": "023e299b-40ba-48a9-96be-f7502247bfad",
+          "position": {
+            "x": -1800,
+            "y": -460
+          }
+        },
+        "label": "w3"
+      }
+    ],
+    [
+      -1,
+      -1,
+      -0.5512,
+      null,
+      "input",
+      "simple",
+      "b7ee74f6-9db7-4365-bbee-898879799a2f",
+      {
+        "pre": {
+          "type": "perceptron",
+          "label": "Perceptron",
+          "bias": -0.12683591521009555,
+          "output": 0,
+          "netInput": -0.0004999935626983643,
+          "activationFunction": "step",
+          "learningRule": {
+            "name": "rosenblatt"
+          },
+          "supportedLearningRules": [
+            "rosenblatt",
+            "hebb",
+            "widrow-hoff",
+            "oja",
+            "pocket"
+          ],
+          "id": "023e299b-40ba-48a9-96be-f7502247bfad",
+          "position": {
+            "x": -1800,
+            "y": -460
+          }
+        },
+        "post": {
+          "type": "decision-surface",
+          "label": "Decision Surface",
+          "output": [
+            0.3083
+          ],
+          "id": "Decision Surface",
+          "position": {
+            "x": -1300,
+            "y": -380
+          }
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      0.2587,
+      "out",
+      "training",
+      "simple",
+      "f722e0c5-4bfb-42c0-a005-70bbafa813e1",
+      {
+        "pre": {
+          "id": "480dab9d-f64f-4887-b106-59e4c59d3946",
+          "label": "Data",
+          "datasetId": "NOT",
+          "output": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "shape": [
+            2,
+            2
+          ],
+          "type": "data-node",
+          "dynamicInputColumns": [
+            "[Input] X1",
+            "[Output] Y"
+          ]
+        },
+        "post": {
+          "label": "Dataset",
+          "type": "dataset-node",
+          "datasetId": "NOT",
+          "trainingOutput": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "output": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "_hasTrainingEdge": true,
+          "_hasValidationEdge": false,
+          "_hasTestEdge": false,
+          "labels": [
+            "X1",
+            "Y"
+          ],
+          "id": "560e0a4f-d116-4f33-a882-d2d1b3689009",
+          "position": {
+            "x": -1660,
+            "y": -320
+          }
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      0.3754,
+      "out",
+      "dataset",
+      "simple",
+      "197dfca0-a9e2-4fc2-9466-09e2f8b4f0b4",
+      {
+        "pre": {
+          "id": "480dab9d-f64f-4887-b106-59e4c59d3946",
+          "label": "Data",
+          "datasetId": "NOT",
+          "output": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "shape": [
+            2,
+            2
+          ],
+          "type": "data-node",
+          "dynamicInputColumns": [
+            "[Input] X1",
+            "[Output] Y"
+          ]
+        },
+        "post": {
+          "type": "decision-surface",
+          "label": "Decision Surface",
+          "output": [
+            0.3083
+          ],
+          "id": "Decision Surface",
+          "position": {
+            "x": -1300,
+            "y": -380
+          }
+        }
+      }
+    ]
+  ]
+}

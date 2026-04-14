@@ -1,0 +1,1116 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "981d3c39-2ea0-4baa-8aef-3a734a36ea98",
+    "de0e68e3-1e85-46fc-860b-4b97920a7fb2",
+    "bbb46867-fa32-4387-916b-7894b591ee39",
+    "832a2ed2-23b3-4d8c-8b1f-2826a6451d5a",
+    "5b5d2768-5375-4635-9ec5-6ff4eea0ee57",
+    "a5ea2ca0-efce-4714-8112-c4cd7f5e52c4",
+    "01712469-7a49-4369-890d-836565370ef3",
+    "940fc58e-4c43-4723-b487-d25a836cc5bf",
+    "3574198e-226f-4dd7-94b4-52db5868bca8",
+    "e73a64cd-4d4d-40d6-9b66-55ebea5be8ab",
+    "8744c186-1ac4-4633-8c5f-e4d7d5b6ca3f",
+    "0669a0df-64df-4814-bab2-98d3a5c2046c",
+    "969c29ff-f285-4ce1-be86-5a27451c9ddb"
+  ],
+  "nodes": [
+    [
+      "input",
+      {
+        "type": "input",
+        "label": "x1",
+        "output": 1,
+        "maxInputs": 0,
+        "supportedLearningRules": [],
+        "supportedActivationFunctions": [],
+        "value": 0
+      },
+      -580,
+      -100,
+      -1,
+      null
+    ],
+    [
+      "bias",
+      {
+        "type": "bias",
+        "label": "Bias",
+        "output": 1,
+        "supportedLearningRules": [],
+        "supportedActivationFunctions": []
+      },
+      -160,
+      -420,
+      -1,
+      null
+    ],
+    [
+      "output",
+      {
+        "type": "output",
+        "label": "y",
+        "output": 0.02528347447514534,
+        "target": 0,
+        "maxInputs": 1,
+        "maxOutputs": 0,
+        "supportedLearningRules": [],
+        "supportedActivationFunctions": [],
+        "bias": -37.800000567734244,
+        "netInput": 0.023646464571356773
+      },
+      560,
+      -180,
+      -1,
+      null
+    ],
+    [
+      "tensor-data",
+      {
+        "type": "tensor-data",
+        "label": "Data",
+        "datasetId": "XOR",
+        "output": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        "shape": [
+          4,
+          3
+        ],
+        "dtype": "float32"
+      },
+      340,
+      480,
+      -1,
+      null
+    ],
+    [
+      "dataset-node",
+      {
+        "label": "Dataset",
+        "type": "dataset-node",
+        "datasetId": "XOR",
+        "trainingOutput": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        "testOutput": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        "output": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        "_hasTrainingEdge": true,
+        "_hasValidationEdge": false,
+        "_hasTestEdge": true,
+        "labels": [
+          "X1",
+          "X2",
+          "Y"
+        ]
+      },
+      920,
+      500,
+      -1,
+      null
+    ],
+    [
+      "input",
+      {
+        "type": "input",
+        "label": "x2",
+        "output": 1,
+        "maxInputs": 0,
+        "supportedLearningRules": [],
+        "supportedActivationFunctions": [],
+        "value": 0
+      },
+      -580,
+      60,
+      -1,
+      null
+    ],
+    [
+      "decision-surface",
+      {
+        "type": "decision-surface",
+        "label": "Decision Surface",
+        "resolution": 1,
+        "zoom": 0.25,
+        "output": [
+          -0.014856569601595402
+        ],
+        "yAxisSynapseId": "a5ea2ca0-efce-4714-8112-c4cd7f5e52c4",
+        "xAxisSynapseId": "981d3c39-2ea0-4baa-8aef-3a734a36ea98"
+      },
+      700,
+      0,
+      -1,
+      null
+    ],
+    [
+      "non-linear",
+      {
+        "type": "non-linear",
+        "label": "Non Linear",
+        "bias": 3.1456193147925107,
+        "output": 0.02528347447514534,
+        "netInput": -3.6519956588745117,
+        "gradient": 0.13920510193975488,
+        "activationFunction": "sigmoid",
+        "learningRule": {
+          "name": "backpropagation",
+          "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+        }
+      },
+      140,
+      -160,
+      -1,
+      null
+    ],
+    [
+      "non-linear",
+      {
+        "type": "non-linear",
+        "label": "Non Linear",
+        "bias": 0.2650615344470426,
+        "output": -0.020055871456861496,
+        "netInput": -2.005587100982666,
+        "gradient": 0,
+        "activationFunction": "relu",
+        "learningRule": {
+          "name": "backpropagation",
+          "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+        }
+      },
+      -240,
+      -260,
+      -1,
+      null
+    ],
+    [
+      "non-linear",
+      {
+        "type": "non-linear",
+        "label": "Non Linear",
+        "bias": 0.28009128167560937,
+        "output": 2.0189640522003174,
+        "netInput": 2.0189640522003174,
+        "gradient": 0.0018829114841509415,
+        "activationFunction": "relu",
+        "learningRule": {
+          "name": "backpropagation",
+          "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+        }
+      },
+      -240,
+      40,
+      -1,
+      null
+    ],
+    [
+      "bias",
+      {
+        "type": "bias",
+        "label": "Bias",
+        "output": 1,
+        "supportedLearningRules": [],
+        "supportedActivationFunctions": []
+      },
+      -560,
+      -320,
+      -1,
+      null
+    ],
+    [
+      "decision-surface",
+      {
+        "type": "decision-surface",
+        "label": "Response Surface",
+        "resolution": 1,
+        "zoom": 0.25,
+        "output": [
+          -0.007464795356243848
+        ]
+      },
+      500,
+      -800,
+      -1,
+      null
+    ],
+    [
+      "decision-surface",
+      {
+        "type": "decision-surface",
+        "label": "Response Surface",
+        "resolution": 1,
+        "zoom": 0.25,
+        "output": [
+          -1.1477810636758805
+        ],
+        "yAxisSynapseId": "a5ea2ca0-efce-4714-8112-c4cd7f5e52c4",
+        "xAxisSynapseId": "981d3c39-2ea0-4baa-8aef-3a734a36ea98"
+      },
+      40,
+      300,
+      -1,
+      null
+    ]
+  ],
+  "edges": [
+    [
+      -1,
+      -1,
+      -0.1286,
+      "out",
+      "training",
+      "simple",
+      "39d88ab7-d052-465b-99fc-0396e6764ce2",
+      {
+        "preSynaptic": {
+          "id": "832a2ed2-23b3-4d8c-8b1f-2826a6451d5a",
+          "type": "tensor-data",
+          "label": "Data",
+          "datasetId": "AND",
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "shape": [
+            4,
+            3
+          ],
+          "dtype": "float32"
+        },
+        "postSynaptic": {
+          "id": "5b5d2768-5375-4635-9ec5-6ff4eea0ee57",
+          "label": "Dataset",
+          "type": "dataset-node",
+          "datasetId": "AND",
+          "trainingOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "testOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "_hasTrainingEdge": true,
+          "_hasValidationEdge": false,
+          "_hasTestEdge": true,
+          "labels": [
+            "X1",
+            "X2",
+            "Y"
+          ]
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      -0.4601,
+      "out",
+      "test",
+      "simple",
+      "0699eee6-344f-4e1a-aee7-90491d37cdbe",
+      {
+        "preSynaptic": {
+          "id": "832a2ed2-23b3-4d8c-8b1f-2826a6451d5a",
+          "type": "tensor-data",
+          "label": "Data",
+          "datasetId": "AND",
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "shape": [
+            4,
+            3
+          ],
+          "dtype": "float32"
+        },
+        "postSynaptic": {
+          "id": "5b5d2768-5375-4635-9ec5-6ff4eea0ee57",
+          "label": "Dataset",
+          "type": "dataset-node",
+          "datasetId": "AND",
+          "trainingOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "testOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "_hasTrainingEdge": true,
+          "_hasValidationEdge": false,
+          "_hasTestEdge": true,
+          "labels": [
+            "X1",
+            "X2",
+            "Y"
+          ]
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      -0.1238,
+      "out",
+      "dataset",
+      "simple",
+      "a5821251-df79-497e-89b0-49de771ab735",
+      {
+        "preSynaptic": {
+          "id": "832a2ed2-23b3-4d8c-8b1f-2826a6451d5a",
+          "type": "tensor-data",
+          "label": "Data",
+          "datasetId": "AND",
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "shape": [
+            4,
+            3
+          ],
+          "dtype": "float32"
+        },
+        "postSynaptic": {
+          "id": "01712469-7a49-4369-890d-836565370ef3",
+          "type": "decision-surface",
+          "label": "Decision Surface",
+          "resolution": 1,
+          "zoom": 0.25,
+          "output": [
+            -0.08445908875018358
+          ]
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      3.1456193147925107,
+      null,
+      "bias",
+      "weighted",
+      "6dc359d4-e08d-4817-912a-e9d4784f2981",
+      {
+        "preSynaptic": {
+          "id": "de0e68e3-1e85-46fc-860b-4b97920a7fb2",
+          "type": "bias",
+          "label": "Bias",
+          "output": 1,
+          "supportedLearningRules": [],
+          "supportedActivationFunctions": []
+        },
+        "postSynaptic": {
+          "id": "940fc58e-4c43-4723-b487-d25a836cc5bf",
+          "type": "non-linear",
+          "label": "Non Linear",
+          "bias": -1.09111262329333,
+          "output": 0.242777019739151,
+          "netInput": -1.1375143239399148,
+          "gradient": 0.13920510193975488,
+          "activationFunction": "sigmoid",
+          "learningRule": {
+            "name": "backpropagation",
+            "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+          }
+        },
+        "label": "b1"
+      }
+    ],
+    [
+      -1,
+      -1,
+      -0.0655,
+      null,
+      "input",
+      "weighted",
+      "3580a549-db0a-4a01-945c-b62c941218d3",
+      {
+        "preSynaptic": {
+          "id": "940fc58e-4c43-4723-b487-d25a836cc5bf",
+          "type": "non-linear",
+          "label": "Non Linear",
+          "bias": -1.09111262329333,
+          "output": 0.242777019739151,
+          "netInput": -1.1375143239399148,
+          "gradient": 0.13920510193975488,
+          "activationFunction": "sigmoid",
+          "learningRule": {
+            "name": "backpropagation",
+            "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+          }
+        },
+        "postSynaptic": {
+          "id": "bbb46867-fa32-4387-916b-7894b591ee39",
+          "type": "output",
+          "label": "y",
+          "output": 0.242777019739151,
+          "target": 1,
+          "maxInputs": 1,
+          "maxOutputs": 0,
+          "supportedLearningRules": [],
+          "supportedActivationFunctions": [],
+          "bias": -37.800000567734244,
+          "netInput": 0.242777019739151
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      -3.400868502068532,
+      null,
+      "input",
+      "weighted",
+      "c72807b4-7ccc-4477-a40e-a15e7ac8222f",
+      {
+        "preSynaptic": {
+          "id": "e73a64cd-4d4d-40d6-9b66-55ebea5be8ab",
+          "type": "non-linear",
+          "label": "Non Linear",
+          "bias": 0.28009128167560937,
+          "output": 0,
+          "netInput": -0.7639,
+          "gradient": 0,
+          "activationFunction": "relu",
+          "learningRule": {
+            "name": "backpropagation",
+            "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+          }
+        },
+        "postSynaptic": {
+          "id": "940fc58e-4c43-4723-b487-d25a836cc5bf",
+          "type": "non-linear",
+          "label": "Non Linear",
+          "bias": -1.09111262329333,
+          "output": 0.242777019739151,
+          "netInput": -1.1375143239399148,
+          "gradient": 0.13920510193975488,
+          "activationFunction": "sigmoid",
+          "learningRule": {
+            "name": "backpropagation",
+            "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+          }
+        },
+        "label": "w1"
+      }
+    ],
+    [
+      -1,
+      -1,
+      -3.4212411409821155,
+      null,
+      "input",
+      "weighted",
+      "d69bf1e3-9270-48c5-baff-40bc6852f3cd",
+      {
+        "preSynaptic": {
+          "id": "3574198e-226f-4dd7-94b4-52db5868bca8",
+          "type": "non-linear",
+          "label": "Non Linear",
+          "bias": 0.2650615344470426,
+          "output": 0,
+          "netInput": -0.3798,
+          "gradient": 0,
+          "activationFunction": "relu",
+          "learningRule": {
+            "name": "backpropagation",
+            "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+          }
+        },
+        "postSynaptic": {
+          "id": "940fc58e-4c43-4723-b487-d25a836cc5bf",
+          "type": "non-linear",
+          "label": "Non Linear",
+          "bias": -1.09111262329333,
+          "output": 0.242777019739151,
+          "netInput": -1.1375143239399148,
+          "gradient": 0.13920510193975488,
+          "activationFunction": "sigmoid",
+          "learningRule": {
+            "name": "backpropagation",
+            "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+          }
+        },
+        "label": "w2"
+      }
+    ],
+    [
+      -1,
+      -1,
+      -2.0041758107902927,
+      null,
+      "input",
+      "weighted",
+      "a6e5a82b-72d0-425f-a2be-fc23ee50e976",
+      {
+        "preSynaptic": {
+          "id": "981d3c39-2ea0-4baa-8aef-3a734a36ea98",
+          "type": "input",
+          "label": "x1",
+          "output": 1,
+          "maxInputs": 0,
+          "supportedLearningRules": [],
+          "supportedActivationFunctions": [],
+          "value": 0
+        },
+        "postSynaptic": {
+          "id": "3574198e-226f-4dd7-94b4-52db5868bca8",
+          "type": "non-linear",
+          "label": "Non Linear",
+          "bias": 0.2650615344470426,
+          "output": 0,
+          "netInput": -0.3798,
+          "gradient": 0,
+          "activationFunction": "relu",
+          "learningRule": {
+            "name": "backpropagation",
+            "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+          }
+        },
+        "label": "w3"
+      }
+    ],
+    [
+      -1,
+      -1,
+      2.0181490850667307,
+      null,
+      "input",
+      "weighted",
+      "fa33edcd-6e49-42d1-840e-38a6fb927b45",
+      {
+        "preSynaptic": {
+          "id": "a5ea2ca0-efce-4714-8112-c4cd7f5e52c4",
+          "type": "input",
+          "label": "x2",
+          "output": 1,
+          "maxInputs": 0,
+          "supportedLearningRules": [],
+          "supportedActivationFunctions": [],
+          "value": 0
+        },
+        "postSynaptic": {
+          "id": "e73a64cd-4d4d-40d6-9b66-55ebea5be8ab",
+          "type": "non-linear",
+          "label": "Non Linear",
+          "bias": 0.28009128167560937,
+          "output": 0,
+          "netInput": -0.7639,
+          "gradient": 0,
+          "activationFunction": "relu",
+          "learningRule": {
+            "name": "backpropagation",
+            "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+          }
+        },
+        "label": "w4"
+      }
+    ],
+    [
+      -1,
+      -1,
+      -2.0050915655476635,
+      null,
+      "input",
+      "weighted",
+      "aa4c8cc1-b928-4bd9-b03e-25dbd94fb15a",
+      {
+        "preSynaptic": {
+          "id": "a5ea2ca0-efce-4714-8112-c4cd7f5e52c4",
+          "type": "input",
+          "label": "x2",
+          "output": 1,
+          "maxInputs": 0,
+          "supportedLearningRules": [],
+          "supportedActivationFunctions": [],
+          "value": 0
+        },
+        "postSynaptic": {
+          "id": "3574198e-226f-4dd7-94b4-52db5868bca8",
+          "type": "non-linear",
+          "label": "Non Linear",
+          "bias": 0.2650615344470426,
+          "output": 0,
+          "netInput": -0.3798,
+          "gradient": 0,
+          "activationFunction": "relu",
+          "learningRule": {
+            "name": "backpropagation",
+            "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+          }
+        },
+        "label": "w5"
+      }
+    ],
+    [
+      -1,
+      -1,
+      2.01908502669438,
+      null,
+      "input",
+      "weighted",
+      "56ecd714-511b-46c9-89a1-631e5fff68d0",
+      {
+        "preSynaptic": {
+          "id": "981d3c39-2ea0-4baa-8aef-3a734a36ea98",
+          "type": "input",
+          "label": "x1",
+          "output": 1,
+          "maxInputs": 0,
+          "supportedLearningRules": [],
+          "supportedActivationFunctions": [],
+          "value": 0
+        },
+        "postSynaptic": {
+          "id": "e73a64cd-4d4d-40d6-9b66-55ebea5be8ab",
+          "type": "non-linear",
+          "label": "Non Linear",
+          "bias": 0.28009128167560937,
+          "output": 0,
+          "netInput": -0.7639,
+          "gradient": 0,
+          "activationFunction": "relu",
+          "learningRule": {
+            "name": "backpropagation",
+            "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+          }
+        },
+        "label": "w6"
+      }
+    ],
+    [
+      -1,
+      -1,
+      2.0036807990685754,
+      null,
+      "bias",
+      "weighted",
+      "8483c79c-f45e-4700-ac54-9f03eb9a9875",
+      {
+        "preSynaptic": {
+          "id": "8744c186-1ac4-4633-8c5f-e4d7d5b6ca3f",
+          "type": "bias",
+          "label": "Bias",
+          "output": 1,
+          "supportedLearningRules": [],
+          "supportedActivationFunctions": []
+        },
+        "postSynaptic": {
+          "id": "3574198e-226f-4dd7-94b4-52db5868bca8",
+          "type": "non-linear",
+          "label": "Non Linear",
+          "bias": 0.2650615344470426,
+          "output": 0,
+          "netInput": -0.3798,
+          "gradient": 0,
+          "activationFunction": "relu",
+          "learningRule": {
+            "name": "backpropagation",
+            "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+          }
+        },
+        "label": "b2"
+      }
+    ],
+    [
+      -1,
+      -1,
+      -2.0182703446366563,
+      null,
+      "bias",
+      "weighted",
+      "bc02b1b1-6ae2-45c4-958a-549004bafc18",
+      {
+        "preSynaptic": {
+          "id": "8744c186-1ac4-4633-8c5f-e4d7d5b6ca3f",
+          "type": "bias",
+          "label": "Bias",
+          "output": 1,
+          "supportedLearningRules": [],
+          "supportedActivationFunctions": []
+        },
+        "postSynaptic": {
+          "id": "e73a64cd-4d4d-40d6-9b66-55ebea5be8ab",
+          "type": "non-linear",
+          "label": "Non Linear",
+          "bias": 0.28009128167560937,
+          "output": 0,
+          "netInput": -0.7639,
+          "gradient": 0,
+          "activationFunction": "relu",
+          "learningRule": {
+            "name": "backpropagation",
+            "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+          }
+        },
+        "label": "b3"
+      }
+    ],
+    [
+      -1,
+      -1,
+      -0.5876,
+      null,
+      "input",
+      "simple",
+      "b08412e7-f2b5-44e6-97fb-54d3ad7958ac",
+      {
+        "preSynaptic": {
+          "id": "940fc58e-4c43-4723-b487-d25a836cc5bf",
+          "type": "non-linear",
+          "label": "Non Linear",
+          "bias": -1.09111262329333,
+          "output": 0.242777019739151,
+          "netInput": -1.1375143239399148,
+          "gradient": 0.13920510193975488,
+          "activationFunction": "sigmoid",
+          "learningRule": {
+            "name": "backpropagation",
+            "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+          }
+        },
+        "postSynaptic": {
+          "id": "01712469-7a49-4369-890d-836565370ef3",
+          "type": "decision-surface",
+          "label": "Decision Surface",
+          "resolution": 1,
+          "zoom": 0.25,
+          "output": [
+            -0.08445908875018358
+          ]
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      0.3722,
+      null,
+      "input",
+      "simple",
+      "017a2313-8cbb-4154-bd98-269650d8e743",
+      {
+        "preSynaptic": {
+          "id": "3574198e-226f-4dd7-94b4-52db5868bca8",
+          "type": "non-linear",
+          "label": "Non Linear",
+          "bias": 0.2650615344470426,
+          "output": 0,
+          "netInput": -0.3798,
+          "gradient": 0,
+          "activationFunction": "relu",
+          "learningRule": {
+            "name": "backpropagation",
+            "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+          }
+        },
+        "postSynaptic": {
+          "id": "0669a0df-64df-4814-bab2-98d3a5c2046c",
+          "type": "decision-surface",
+          "label": "Decision Surface",
+          "resolution": 1,
+          "zoom": 0.25,
+          "output": [
+            -0.041389033377170564
+          ]
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      -0.5685,
+      null,
+      "input",
+      "simple",
+      "864c5288-75e8-4e17-a050-a6884dd3931f",
+      {
+        "preSynaptic": {
+          "id": "e73a64cd-4d4d-40d6-9b66-55ebea5be8ab",
+          "type": "non-linear",
+          "label": "Non Linear",
+          "bias": 0.28009128167560937,
+          "output": 0,
+          "netInput": -0.7639,
+          "gradient": 0,
+          "activationFunction": "relu",
+          "learningRule": {
+            "name": "backpropagation",
+            "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+          }
+        },
+        "postSynaptic": {
+          "id": "969c29ff-f285-4ce1-be86-5a27451c9ddb",
+          "type": "decision-surface",
+          "label": "Decision Surface",
+          "resolution": 1,
+          "zoom": 0.25,
+          "output": [
+            0.049636868566274646
+          ]
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "dataset",
+      "simple",
+      "9abd8933-d72f-4210-bbd8-1b03c457f79f",
+      {
+        "preSynaptic": {
+          "id": "832a2ed2-23b3-4d8c-8b1f-2826a6451d5a",
+          "type": "tensor-data",
+          "label": "Data",
+          "datasetId": "XOR",
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            0
+          ],
+          "shape": [
+            4,
+            3
+          ],
+          "dtype": "float32",
+          "position": {
+            "x": 340,
+            "y": 480
+          }
+        },
+        "postSynaptic": {
+          "id": "969c29ff-f285-4ce1-be86-5a27451c9ddb",
+          "type": "decision-surface",
+          "label": "Response Surface",
+          "resolution": 1,
+          "zoom": 0.25,
+          "output": [
+            -1.1477810636758805
+          ],
+          "position": {
+            "x": 40,
+            "y": 300
+          },
+          "yAxisSynapseId": "a5ea2ca0-efce-4714-8112-c4cd7f5e52c4",
+          "xAxisSynapseId": "981d3c39-2ea0-4baa-8aef-3a734a36ea98"
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "dataset",
+      "simple",
+      "5a2cd1e1-0fb0-49a7-9333-a2e50c11984b",
+      {
+        "preSynaptic": {
+          "id": "832a2ed2-23b3-4d8c-8b1f-2826a6451d5a",
+          "type": "tensor-data",
+          "label": "Data",
+          "datasetId": "XOR",
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            0
+          ],
+          "shape": [
+            4,
+            3
+          ],
+          "dtype": "float32",
+          "position": {
+            "x": 340,
+            "y": 480
+          }
+        },
+        "postSynaptic": {
+          "id": "0669a0df-64df-4814-bab2-98d3a5c2046c",
+          "type": "decision-surface",
+          "label": "Response Surface",
+          "resolution": 1,
+          "zoom": 0.25,
+          "output": [
+            -0.007464795356243848
+          ],
+          "position": {
+            "x": 500,
+            "y": -800
+          }
+        }
+      }
+    ]
+  ]
+}

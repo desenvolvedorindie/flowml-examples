@@ -1,0 +1,186 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "36597b81-926d-4aab-8c78-cb57c97dc341",
+    "ad73cd20-9a02-42b7-a140-60be6eabe17c",
+    "078c3b96-86ce-456d-88a2-d7ffca64b816",
+    "09022644-a050-400e-80d9-4768e196cd22"
+  ],
+  "nodes": [
+    [
+      "input",
+      {
+        "type": "input",
+        "label": "Input",
+        "output": 0,
+        "supportedLearningRules": [],
+        "supportedActivationFunctions": []
+      },
+      40,
+      -180,
+      -1,
+      null
+    ],
+    [
+      "mcculloch-pitts",
+      {
+        "type": "mcculloch-pitts",
+        "label": "MCP",
+        "bias": 1,
+        "output": 0,
+        "netInput": 0,
+        "threshold": 1,
+        "supportedLearningRules": [],
+        "supportedActivationFunctions": [
+          "threshold"
+        ]
+      },
+      260,
+      -220,
+      -1,
+      null
+    ],
+    [
+      "output",
+      {
+        "type": "output",
+        "label": "Output",
+        "output": 0,
+        "supportedLearningRules": [],
+        "supportedActivationFunctions": [],
+        "target": 0
+      },
+      580,
+      -100,
+      -1,
+      null
+    ],
+    [
+      "input",
+      {
+        "type": "input",
+        "label": "Input",
+        "output": 0,
+        "supportedLearningRules": [],
+        "supportedActivationFunctions": []
+      },
+      40,
+      -20,
+      -1,
+      null
+    ]
+  ],
+  "edges": [
+    [
+      -1,
+      -1,
+      1,
+      null,
+      "input",
+      "mccullochpitts",
+      "2735a04c-0a0a-49ca-9637-9a18f1e1bca2",
+      {
+        "preSynaptic": {
+          "id": "36597b81-926d-4aab-8c78-cb57c97dc341",
+          "type": "input",
+          "label": "Input",
+          "output": 3,
+          "supportedLearningRules": [],
+          "supportedActivationFunctions": [],
+          "position": {
+            "x": 20,
+            "y": -100
+          }
+        },
+        "postSynaptic": {
+          "id": "ad73cd20-9a02-42b7-a140-60be6eabe17c",
+          "type": "mcculloch-pitts",
+          "label": "MCP",
+          "bias": 1,
+          "output": 0,
+          "netInput": 0,
+          "threshold": 1,
+          "supportedLearningRules": [],
+          "supportedActivationFunctions": [
+            "threshold"
+          ]
+        },
+        "mcpType": "excitatory"
+      }
+    ],
+    [
+      -1,
+      -1,
+      1,
+      null,
+      "input",
+      "weighted",
+      "45a26db9-1240-40c0-92b3-aebe65c3c1c9",
+      {
+        "preSynaptic": {
+          "id": "ad73cd20-9a02-42b7-a140-60be6eabe17c",
+          "type": "mcculloch-pitts",
+          "label": "MCP",
+          "bias": 1,
+          "output": 0,
+          "netInput": 0,
+          "threshold": 1,
+          "supportedLearningRules": [],
+          "supportedActivationFunctions": [
+            "threshold"
+          ],
+          "position": {
+            "x": 260,
+            "y": -100
+          }
+        },
+        "postSynaptic": {
+          "id": "078c3b96-86ce-456d-88a2-d7ffca64b816",
+          "type": "output",
+          "label": "Output",
+          "output": 0,
+          "supportedLearningRules": [],
+          "supportedActivationFunctions": []
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      1,
+      null,
+      "input",
+      "mccullochpitts",
+      "43d03acb-811b-476f-a862-80ee8d27b99b",
+      {
+        "preSynaptic": {
+          "id": "09022644-a050-400e-80d9-4768e196cd22",
+          "type": "input",
+          "label": "Input",
+          "output": 0,
+          "supportedLearningRules": [],
+          "supportedActivationFunctions": []
+        },
+        "postSynaptic": {
+          "id": "ad73cd20-9a02-42b7-a140-60be6eabe17c",
+          "type": "mcculloch-pitts",
+          "label": "MCP",
+          "bias": 1,
+          "output": 0,
+          "netInput": 3,
+          "threshold": 1,
+          "supportedLearningRules": [],
+          "supportedActivationFunctions": [
+            "threshold"
+          ],
+          "position": {
+            "x": 280,
+            "y": -100
+          }
+        },
+        "mcpType": "inhibitory"
+      }
+    ]
+  ]
+}

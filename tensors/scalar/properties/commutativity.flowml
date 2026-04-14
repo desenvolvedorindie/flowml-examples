@@ -1,0 +1,396 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "2fb06ecd-b6aa-4bb4-95b0-c9eb444e69a1",
+    "59d5a992-8224-49dc-a33d-37f16fc69392",
+    "100bb508-f31c-409b-ae41-d0a0886b67cf",
+    "a05764ea-7569-4a4c-96fb-143b015aebe8",
+    "9ab54340-c2cd-467c-8f60-cb23662b5de5",
+    "efec748f-0443-4369-9b1e-a7cac73f43b6",
+    "12a591a5-d8b3-449a-940a-f257d24cc715",
+    "0e4ececb-2c54-4ead-ac5c-e6f4395e2125"
+  ],
+  "nodes": [
+    [
+      "tensor",
+      {
+        "label": "Tensor",
+        "order": 0,
+        "shape": [],
+        "output": [
+          4
+        ],
+        "dtype": "float32",
+        "type": "tensor",
+        "isOutput": false
+      },
+      -1880,
+      100,
+      -1,
+      null
+    ],
+    [
+      "tensor",
+      {
+        "label": "Tensor",
+        "order": 0,
+        "shape": [],
+        "output": [
+          2
+        ],
+        "dtype": "float32",
+        "type": "tensor",
+        "isOutput": false
+      },
+      -1880,
+      320,
+      -1,
+      null
+    ],
+    [
+      "tensor-binary",
+      {
+        "label": "Binary",
+        "output": [
+          6
+        ],
+        "shape": [],
+        "operationType": "add",
+        "type": "tensor-binary",
+        "isOutput": false,
+        "name": "TensorBinary",
+        "description": "Executes binary mathematical operations between two tensors (e.g., Add, Multiply, Subtract).",
+        "dtype": "float32"
+      },
+      -1660,
+      260,
+      -1,
+      null
+    ],
+    [
+      "tensor-print",
+      {
+        "label": "Print",
+        "output": [
+          6
+        ],
+        "type": "tensor-print",
+        "isOutput": false,
+        "description": "Display tensor values",
+        "color": "#d946ef",
+        "verbose": true,
+        "shape": [],
+        "dtype": "float32"
+      },
+      -1480,
+      220,
+      -1,
+      null
+    ],
+    [
+      "tensor",
+      {
+        "label": "Tensor",
+        "order": 0,
+        "shape": [],
+        "output": [
+          2
+        ],
+        "dtype": "float32",
+        "type": "tensor",
+        "isOutput": false
+      },
+      -1280,
+      80,
+      -1,
+      null
+    ],
+    [
+      "tensor",
+      {
+        "label": "Tensor",
+        "order": 0,
+        "shape": [],
+        "output": [
+          4
+        ],
+        "dtype": "float32",
+        "type": "tensor",
+        "isOutput": false
+      },
+      -1280,
+      300,
+      -1,
+      null
+    ],
+    [
+      "tensor-binary",
+      {
+        "label": "Binary",
+        "output": [
+          6
+        ],
+        "shape": [],
+        "operationType": "add",
+        "type": "tensor-binary",
+        "isOutput": false,
+        "name": "TensorBinary",
+        "description": "Executes binary mathematical operations between two tensors (e.g., Add, Multiply, Subtract).",
+        "dtype": "float32"
+      },
+      -1040,
+      240,
+      -1,
+      null
+    ],
+    [
+      "tensor-print",
+      {
+        "label": "Print",
+        "output": [
+          6
+        ],
+        "type": "tensor-print",
+        "isOutput": false,
+        "description": "Display tensor values",
+        "color": "#d946ef",
+        "verbose": true,
+        "shape": [],
+        "dtype": "float32"
+      },
+      -840,
+      200,
+      -1,
+      null
+    ]
+  ],
+  "edges": [
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "input-a",
+      "simple",
+      "2c0fa021-97b3-472f-ac51-f662bd29bb36",
+      {
+        "pre": {
+          "id": "2fb06ecd-b6aa-4bb4-95b0-c9eb444e69a1",
+          "label": "Tensor",
+          "order": 0,
+          "shape": [],
+          "output": [
+            4
+          ],
+          "dtype": "float32",
+          "type": "tensor",
+          "isOutput": false
+        },
+        "post": {
+          "id": "100bb508-f31c-409b-ae41-d0a0886b67cf",
+          "label": "Binary",
+          "output": [
+            6
+          ],
+          "shape": [],
+          "operationType": "add",
+          "type": "tensor-binary",
+          "isOutput": false,
+          "name": "TensorBinary",
+          "description": "Executes binary mathematical operations between two tensors (e.g., Add, Multiply, Subtract).",
+          "dtype": "float32"
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "input-b",
+      "simple",
+      "29b607f3-ccb1-4e71-86ae-c929687df93e",
+      {
+        "pre": {
+          "id": "59d5a992-8224-49dc-a33d-37f16fc69392",
+          "label": "Tensor",
+          "order": 0,
+          "shape": [],
+          "output": [
+            2
+          ],
+          "dtype": "float32",
+          "type": "tensor",
+          "isOutput": false
+        },
+        "post": {
+          "id": "100bb508-f31c-409b-ae41-d0a0886b67cf",
+          "label": "Binary",
+          "output": [
+            6
+          ],
+          "shape": [],
+          "operationType": "add",
+          "type": "tensor-binary",
+          "isOutput": false,
+          "name": "TensorBinary",
+          "description": "Executes binary mathematical operations between two tensors (e.g., Add, Multiply, Subtract).",
+          "dtype": "float32"
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "tensor-out",
+      "input",
+      "simple",
+      "8653ffac-fa4d-4a54-815f-fc4ad2efb8ee",
+      {
+        "pre": {
+          "id": "100bb508-f31c-409b-ae41-d0a0886b67cf",
+          "label": "Binary",
+          "output": [
+            6
+          ],
+          "shape": [],
+          "operationType": "add",
+          "type": "tensor-binary",
+          "isOutput": false,
+          "name": "TensorBinary",
+          "description": "Executes binary mathematical operations between two tensors (e.g., Add, Multiply, Subtract).",
+          "dtype": "float32"
+        },
+        "post": {
+          "id": "a05764ea-7569-4a4c-96fb-143b015aebe8",
+          "label": "Print",
+          "output": [
+            6
+          ],
+          "type": "tensor-print",
+          "isOutput": false,
+          "description": "Display tensor values",
+          "color": "#d946ef",
+          "verbose": true,
+          "shape": [],
+          "dtype": "float32"
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "input-a",
+      "simple",
+      "7de63842-44ae-4e9b-86f4-2db7cd542794",
+      {
+        "pre": {
+          "id": "9ab54340-c2cd-467c-8f60-cb23662b5de5",
+          "label": "Tensor",
+          "order": 0,
+          "shape": [],
+          "output": [
+            2
+          ],
+          "dtype": "float32",
+          "type": "tensor",
+          "isOutput": false
+        },
+        "post": {
+          "id": "12a591a5-d8b3-449a-940a-f257d24cc715",
+          "label": "Binary",
+          "output": [
+            6
+          ],
+          "shape": [],
+          "operationType": "add",
+          "type": "tensor-binary",
+          "isOutput": false,
+          "name": "TensorBinary",
+          "description": "Executes binary mathematical operations between two tensors (e.g., Add, Multiply, Subtract).",
+          "dtype": "float32"
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "input-b",
+      "simple",
+      "ac5013b4-9348-412f-bf8d-b9244fcc0d21",
+      {
+        "pre": {
+          "id": "efec748f-0443-4369-9b1e-a7cac73f43b6",
+          "label": "Tensor",
+          "order": 0,
+          "shape": [],
+          "output": [
+            4
+          ],
+          "dtype": "float32",
+          "type": "tensor",
+          "isOutput": false
+        },
+        "post": {
+          "id": "12a591a5-d8b3-449a-940a-f257d24cc715",
+          "label": "Binary",
+          "output": [
+            6
+          ],
+          "shape": [],
+          "operationType": "add",
+          "type": "tensor-binary",
+          "isOutput": false,
+          "name": "TensorBinary",
+          "description": "Executes binary mathematical operations between two tensors (e.g., Add, Multiply, Subtract).",
+          "dtype": "float32"
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "tensor-out",
+      "input",
+      "simple",
+      "9f58ec79-fade-4946-b990-0ac4f317d613",
+      {
+        "pre": {
+          "id": "12a591a5-d8b3-449a-940a-f257d24cc715",
+          "label": "Binary",
+          "output": [
+            6
+          ],
+          "shape": [],
+          "operationType": "add",
+          "type": "tensor-binary",
+          "isOutput": false,
+          "name": "TensorBinary",
+          "description": "Executes binary mathematical operations between two tensors (e.g., Add, Multiply, Subtract).",
+          "dtype": "float32"
+        },
+        "post": {
+          "id": "0e4ececb-2c54-4ead-ac5c-e6f4395e2125",
+          "label": "Print",
+          "output": [
+            6
+          ],
+          "type": "tensor-print",
+          "isOutput": false,
+          "description": "Display tensor values",
+          "color": "#d946ef",
+          "verbose": true,
+          "shape": [],
+          "dtype": "float32"
+        }
+      }
+    ]
+  ]
+}

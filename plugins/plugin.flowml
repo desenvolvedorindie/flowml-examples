@@ -1,0 +1,123 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "721b2da5-4251-4c08-bd5d-c8a0730ef708",
+    "bb958d23-6ef6-41ca-a1b8-4e760b8e3e27",
+    "d7a03d4a-df9f-40ea-b14b-a90332a3d495"
+  ],
+  "nodes": [
+    [
+      "input",
+      {
+        "type": "input",
+        "label": "Input",
+        "output": 2,
+        "supportedLearningRules": [],
+        "supportedActivationFunctions": []
+      },
+      -100,
+      320,
+      -1,
+      null
+    ],
+    [
+      "output",
+      {
+        "type": "output",
+        "label": "Output",
+        "output": 2,
+        "supportedLearningRules": [],
+        "supportedActivationFunctions": []
+      },
+      440,
+      340,
+      -1,
+      null
+    ],
+    [
+      "example-node",
+      {
+        "type": "example-node",
+        "label": "teste",
+        "activationFunction": "example-leaky",
+        "learningRule": "example-learning-rule",
+        "output": [
+          2
+        ]
+      },
+      140,
+      340,
+      -1,
+      null
+    ]
+  ],
+  "edges": [
+    [
+      -1,
+      -1,
+      null,
+      null,
+      "input",
+      "simple",
+      "9d6b70d2-3bf9-4ff9-8ce8-ef06f97fbd68",
+      {
+        "preSynaptic": {
+          "id": "721b2da5-4251-4c08-bd5d-c8a0730ef708",
+          "type": "input",
+          "label": "Input",
+          "output": 2,
+          "supportedLearningRules": [],
+          "supportedActivationFunctions": [],
+          "position": {
+            "x": -100,
+            "y": 340
+          }
+        },
+        "postSynaptic": {
+          "id": "d7a03d4a-df9f-40ea-b14b-a90332a3d495",
+          "type": "example-node",
+          "label": "teste",
+          "activationFunction": "example-leaky",
+          "learningRule": "example-learning-rule",
+          "output": [
+            2
+          ]
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      1,
+      "output",
+      "input",
+      "weighted",
+      "e9a6bcfd-d755-45bf-971d-3fdb21085ae8",
+      {
+        "preSynaptic": {
+          "id": "d7a03d4a-df9f-40ea-b14b-a90332a3d495",
+          "type": "example-node",
+          "label": "teste",
+          "activationFunction": "example-leaky",
+          "learningRule": "example-learning-rule",
+          "output": [
+            2
+          ]
+        },
+        "postSynaptic": {
+          "id": "bb958d23-6ef6-41ca-a1b8-4e760b8e3e27",
+          "type": "output",
+          "label": "Output",
+          "output": 2,
+          "supportedLearningRules": [],
+          "supportedActivationFunctions": [],
+          "position": {
+            "x": 440,
+            "y": 340
+          }
+        }
+      }
+    ]
+  ]
+}

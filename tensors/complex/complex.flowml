@@ -1,0 +1,736 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "df68f06c-06c8-42d3-a4ed-aec3d0af78a7",
+    "82b36dab-46a1-4bf2-b5e8-8760cef2201c",
+    "eed97538-d0ab-4c16-9448-99bf2891a4f8",
+    "0793c432-b73c-42e5-af43-f56f2605c05c",
+    "e23801c4-3ec2-4115-aa63-5180b97e1cd2",
+    "0285fa09-fbf5-4489-981c-1a17edb6709e",
+    "1c45669b-800d-4e79-942a-6ba48b3ee4fa",
+    "fac7d4e7-b8ba-4e15-8856-1aac18e5f082"
+  ],
+  "nodes": [
+    [
+      "tensor",
+      {
+        "type": "tensor",
+        "label": "Tensor",
+        "order": 0,
+        "shape": [],
+        "output": [
+          3.3
+        ],
+        "dtype": "float32",
+        "expanded": false
+      },
+      -320,
+      260,
+      -1,
+      null
+    ],
+    [
+      "tensor",
+      {
+        "type": "tensor",
+        "label": "Tensor",
+        "order": 0,
+        "shape": [],
+        "output": [
+          4
+        ],
+        "dtype": "float32"
+      },
+      -320,
+      500,
+      -1,
+      null
+    ],
+    [
+      "tensor-complex",
+      {
+        "type": "tensor-complex",
+        "label": "Complex",
+        "output": [
+          3.3,
+          4
+        ],
+        "shape": [],
+        "dtype": "complex64"
+      },
+      -100,
+      440,
+      -1,
+      null
+    ],
+    [
+      "tensor-print",
+      {
+        "type": "tensor-print",
+        "label": "Print",
+        "output": [
+          3.3,
+          4
+        ],
+        "shape": [],
+        "verbose": false,
+        "dtype": "complex64"
+      },
+      120,
+      340,
+      -1,
+      null
+    ],
+    [
+      "tensor-real",
+      {
+        "type": "tensor-real",
+        "label": "Real",
+        "output": [
+          3.3
+        ],
+        "shape": [],
+        "dtype": "boolean"
+      },
+      140,
+      480,
+      -1,
+      null
+    ],
+    [
+      "tensor-imag",
+      {
+        "type": "tensor-imag",
+        "label": "Imag",
+        "output": [
+          4
+        ],
+        "shape": [],
+        "dtype": "float32"
+      },
+      140,
+      660,
+      -1,
+      null
+    ],
+    [
+      "tensor-print",
+      {
+        "type": "tensor-print",
+        "label": "Print 4",
+        "output": [
+          3.3
+        ],
+        "shape": [],
+        "verbose": true,
+        "dtype": "float32"
+      },
+      360,
+      380,
+      -1,
+      null
+    ],
+    [
+      "tensor-print",
+      {
+        "type": "tensor-print",
+        "label": "Print 4",
+        "output": [
+          4
+        ],
+        "shape": [],
+        "verbose": false,
+        "dtype": "float32"
+      },
+      340,
+      640,
+      -1,
+      null
+    ]
+  ],
+  "edges": [
+    [
+      -1,
+      -1,
+      1,
+      "out",
+      "input-a",
+      "weighted",
+      "f2cb789b-9d7a-465f-9557-ecc9676a99e8",
+      {
+        "preSynaptic": {
+          "id": "df68f06c-06c8-42d3-a4ed-aec3d0af78a7",
+          "type": "tensor",
+          "label": "Tensor",
+          "order": 0,
+          "shape": [],
+          "output": [
+            2
+          ]
+        },
+        "postSynaptic": {
+          "id": "eed97538-d0ab-4c16-9448-99bf2891a4f8",
+          "type": "tensor-complex",
+          "label": "Complex",
+          "output": [
+            2,
+            3
+          ],
+          "shape": [],
+          "dtype": "complex64"
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      1,
+      "out",
+      "input-b",
+      "weighted",
+      "9a42fcf5-f610-4c3c-968f-d75ed54e8937",
+      {
+        "preSynaptic": {
+          "id": "82b36dab-46a1-4bf2-b5e8-8760cef2201c",
+          "type": "tensor",
+          "label": "Tensor",
+          "order": 0,
+          "shape": [],
+          "output": [
+            3
+          ]
+        },
+        "postSynaptic": {
+          "id": "eed97538-d0ab-4c16-9448-99bf2891a4f8",
+          "type": "tensor-complex",
+          "label": "Complex",
+          "output": [
+            2,
+            3
+          ],
+          "shape": [],
+          "dtype": "complex64"
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      1,
+      "tensor-out",
+      "input",
+      "weighted",
+      "68945ca5-55fe-45cf-8d66-0074fcd10f0c",
+      {
+        "preSynaptic": {
+          "id": "eed97538-d0ab-4c16-9448-99bf2891a4f8",
+          "type": "tensor-complex",
+          "label": "Complex",
+          "output": [
+            2,
+            3
+          ],
+          "shape": [],
+          "dtype": "complex64"
+        },
+        "postSynaptic": {
+          "id": "0793c432-b73c-42e5-af43-f56f2605c05c",
+          "type": "tensor-print",
+          "label": "Print 4",
+          "output": [
+            2,
+            3
+          ],
+          "shape": [],
+          "verbose": true
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      1,
+      "tensor-out",
+      "input",
+      "weighted",
+      "e76ac66a-5d43-4f79-825f-bdfe974a8773",
+      {
+        "preSynaptic": {
+          "id": "eed97538-d0ab-4c16-9448-99bf2891a4f8",
+          "type": "tensor-complex",
+          "label": "Complex",
+          "output": [
+            2,
+            3
+          ],
+          "shape": [],
+          "dtype": "complex64"
+        },
+        "postSynaptic": {
+          "id": "e23801c4-3ec2-4115-aa63-5180b97e1cd2",
+          "type": "tensor-real",
+          "label": "Real",
+          "output": [
+            2
+          ],
+          "shape": [],
+          "dtype": "float32"
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      1,
+      "tensor-out",
+      "input",
+      "weighted",
+      "0031c54e-316d-4f49-bbd6-be6d88623e2e",
+      {
+        "preSynaptic": {
+          "id": "eed97538-d0ab-4c16-9448-99bf2891a4f8",
+          "type": "tensor-complex",
+          "label": "Complex",
+          "output": [
+            2,
+            3
+          ],
+          "shape": [],
+          "dtype": "complex64"
+        },
+        "postSynaptic": {
+          "id": "0285fa09-fbf5-4489-981c-1a17edb6709e",
+          "type": "tensor-imag",
+          "label": "Imag",
+          "output": [
+            3
+          ],
+          "shape": [],
+          "dtype": "float32"
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      1,
+      "tensor-out",
+      "input",
+      "weighted",
+      "b4605b02-563f-45fb-ac9a-e06fec840c94",
+      {
+        "preSynaptic": {
+          "id": "e23801c4-3ec2-4115-aa63-5180b97e1cd2",
+          "type": "tensor-real",
+          "label": "Real",
+          "output": [
+            2
+          ],
+          "shape": [],
+          "dtype": "float32"
+        },
+        "postSynaptic": {
+          "id": "1c45669b-800d-4e79-942a-6ba48b3ee4fa",
+          "type": "tensor-print",
+          "label": "Print 4",
+          "output": [
+            2
+          ],
+          "shape": [],
+          "verbose": true
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      1,
+      "tensor-out",
+      "input",
+      "weighted",
+      "6e2ff994-10c7-4d92-87b7-eec12265f839",
+      {
+        "preSynaptic": {
+          "id": "0285fa09-fbf5-4489-981c-1a17edb6709e",
+          "type": "tensor-imag",
+          "label": "Imag",
+          "output": [
+            3
+          ],
+          "shape": [],
+          "dtype": "float32"
+        },
+        "postSynaptic": {
+          "id": "fac7d4e7-b8ba-4e15-8856-1aac18e5f082",
+          "type": "tensor-print",
+          "label": "Print 4",
+          "output": [
+            3
+          ],
+          "shape": [],
+          "verbose": true
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      1,
+      "out",
+      "input",
+      "weighted",
+      "93e38460-5923-4a13-ab3c-6567e0dbf9b7",
+      {
+        "preSynaptic": {
+          "id": "df68f06c-06c8-42d3-a4ed-aec3d0af78a7",
+          "type": "tensor",
+          "label": "Tensor",
+          "order": 0,
+          "shape": [],
+          "output": [
+            2
+          ],
+          "position": {
+            "x": -320,
+            "y": 320
+          },
+          "dtype": "float32"
+        },
+        "postSynaptic": {
+          "id": "efc72efa-0d48-4615-9cea-0a75e95b3435",
+          "type": "tensor-print",
+          "label": "Print 4",
+          "output": [
+            2
+          ],
+          "shape": [],
+          "verbose": true,
+          "dtype": "float32"
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      1,
+      "out",
+      "input",
+      "weighted",
+      "80a8dd20-e0bd-4ede-95f4-b40e109c29cc",
+      {
+        "preSynaptic": {
+          "id": "82b36dab-46a1-4bf2-b5e8-8760cef2201c",
+          "type": "tensor",
+          "label": "Tensor",
+          "order": 0,
+          "shape": [],
+          "output": [
+            3
+          ],
+          "position": {
+            "x": -320,
+            "y": 540
+          },
+          "dtype": "float32"
+        },
+        "postSynaptic": {
+          "id": "79cd8b0c-fc1e-4fb8-a0f4-4cb49ebfcfca",
+          "type": "tensor-print",
+          "label": "Print 4",
+          "output": [
+            3
+          ],
+          "shape": [],
+          "verbose": true,
+          "dtype": "float32"
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "input-a",
+      "simple",
+      "4b8b0a44-8441-4573-ad09-5d77f3b386a7",
+      {
+        "pre": {
+          "type": "tensor",
+          "label": "Tensor",
+          "order": 0,
+          "shape": [],
+          "output": [
+            3.3
+          ],
+          "dtype": "float32",
+          "id": "df68f06c-06c8-42d3-a4ed-aec3d0af78a7",
+          "position": {
+            "x": -320,
+            "y": 260
+          },
+          "expanded": false
+        },
+        "post": {
+          "type": "tensor-complex",
+          "label": "Complex",
+          "output": [
+            3.3,
+            4
+          ],
+          "shape": [],
+          "dtype": "complex64",
+          "id": "eed97538-d0ab-4c16-9448-99bf2891a4f8",
+          "position": {
+            "x": -100,
+            "y": 460
+          }
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "input-b",
+      "simple",
+      "3bb30df3-b5ef-44cf-a54d-618bd59ea96b",
+      {
+        "pre": {
+          "type": "tensor",
+          "label": "Tensor",
+          "order": 0,
+          "shape": [],
+          "output": [
+            4
+          ],
+          "dtype": "float32",
+          "id": "82b36dab-46a1-4bf2-b5e8-8760cef2201c",
+          "position": {
+            "x": -320,
+            "y": 500
+          }
+        },
+        "post": {
+          "type": "tensor-complex",
+          "label": "Complex",
+          "output": [
+            3.3,
+            4
+          ],
+          "shape": [],
+          "dtype": "complex64",
+          "id": "eed97538-d0ab-4c16-9448-99bf2891a4f8",
+          "position": {
+            "x": -100,
+            "y": 460
+          }
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "tensor-out",
+      "input",
+      "simple",
+      "5ca9d740-a711-403d-bc38-597cfd6f8481",
+      {
+        "pre": {
+          "type": "tensor-complex",
+          "label": "Complex",
+          "output": [
+            3.3,
+            4
+          ],
+          "shape": [],
+          "dtype": "complex64",
+          "id": "eed97538-d0ab-4c16-9448-99bf2891a4f8",
+          "position": {
+            "x": -100,
+            "y": 460
+          }
+        },
+        "post": {
+          "type": "tensor-real",
+          "label": "Real",
+          "output": [
+            3.3
+          ],
+          "shape": [],
+          "dtype": "float32",
+          "id": "e23801c4-3ec2-4115-aa63-5180b97e1cd2",
+          "position": {
+            "x": 140,
+            "y": 460
+          }
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "tensor-out",
+      "input",
+      "simple",
+      "04d72dff-fbbb-4d99-8d62-36ac6f751f74",
+      {
+        "pre": {
+          "type": "tensor-complex",
+          "label": "Complex",
+          "output": [
+            3.3,
+            4
+          ],
+          "shape": [],
+          "dtype": "complex64",
+          "id": "eed97538-d0ab-4c16-9448-99bf2891a4f8",
+          "position": {
+            "x": -100,
+            "y": 460
+          }
+        },
+        "post": {
+          "type": "tensor-imag",
+          "label": "Imag",
+          "output": [
+            4
+          ],
+          "shape": [],
+          "dtype": "float32",
+          "id": "0285fa09-fbf5-4489-981c-1a17edb6709e",
+          "position": {
+            "x": 140,
+            "y": 580
+          }
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "tensor-out",
+      "input",
+      "simple",
+      "a431ded4-ef0c-4295-b3e6-5fdd4c9046d2",
+      {
+        "pre": {
+          "type": "tensor-complex",
+          "label": "Complex",
+          "output": [
+            3.3,
+            4
+          ],
+          "shape": [],
+          "dtype": "complex64",
+          "id": "eed97538-d0ab-4c16-9448-99bf2891a4f8",
+          "position": {
+            "x": -100,
+            "y": 460
+          }
+        },
+        "post": {
+          "type": "tensor-print",
+          "label": "Print",
+          "output": [
+            3.3,
+            4
+          ],
+          "shape": [],
+          "verbose": false,
+          "dtype": "complex64",
+          "id": "0793c432-b73c-42e5-af43-f56f2605c05c",
+          "position": {
+            "x": 140,
+            "y": 200
+          }
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "tensor-out",
+      "input",
+      "simple",
+      "6ba2c68a-eae2-465c-b6da-a4f4ccdc0e32",
+      {
+        "pre": {
+          "type": "tensor-real",
+          "label": "Real",
+          "output": [
+            3.3
+          ],
+          "shape": [],
+          "dtype": "float32",
+          "id": "e23801c4-3ec2-4115-aa63-5180b97e1cd2",
+          "position": {
+            "x": 140,
+            "y": 460
+          }
+        },
+        "post": {
+          "type": "tensor-print",
+          "label": "Print 4",
+          "output": [
+            3.3
+          ],
+          "shape": [],
+          "verbose": false,
+          "dtype": "float32",
+          "id": "1c45669b-800d-4e79-942a-6ba48b3ee4fa",
+          "position": {
+            "x": 340,
+            "y": 320
+          }
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "tensor-out",
+      "input",
+      "simple",
+      "d8d9eced-0c17-4bb8-8971-9f35a76ae584",
+      {
+        "pre": {
+          "type": "tensor-imag",
+          "label": "Imag",
+          "output": [
+            4
+          ],
+          "shape": [],
+          "dtype": "float32",
+          "id": "0285fa09-fbf5-4489-981c-1a17edb6709e",
+          "position": {
+            "x": 140,
+            "y": 580
+          }
+        },
+        "post": {
+          "type": "tensor-print",
+          "label": "Print 4",
+          "output": [
+            4
+          ],
+          "shape": [],
+          "verbose": false,
+          "dtype": "float32",
+          "id": "fac7d4e7-b8ba-4e15-8856-1aac18e5f082",
+          "position": {
+            "x": 340,
+            "y": 580
+          }
+        }
+      }
+    ]
+  ]
+}

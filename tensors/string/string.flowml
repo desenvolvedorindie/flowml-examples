@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "8d0b551c-41ed-4fdb-a822-8a3b338c9bf9",
+    "59bf1c28-a1cc-4aab-808c-67044f52ae0e"
+  ],
+  "nodes": [
+    [
+      "tensor",
+      {
+        "label": "Tensor",
+        "order": 2,
+        "shape": [
+          3,
+          2
+        ],
+        "output": [
+          "Welsiton",
+          "Ferreira",
+          "Yasmin",
+          "Lira",
+          "Leoardo",
+          "Barbosa"
+        ],
+        "dtype": "string",
+        "type": "tensor",
+        "isOutput": false
+      },
+      60,
+      200,
+      -1,
+      null
+    ],
+    [
+      "tensor-print",
+      {
+        "label": "Print",
+        "output": [
+          "Welsiton",
+          "Ferreira",
+          "Yasmin",
+          "Lira",
+          "Leoardo",
+          "Barbosa"
+        ],
+        "type": "tensor-print",
+        "isOutput": false,
+        "description": "Display tensor values",
+        "color": "#d946ef",
+        "verbose": true,
+        "shape": [
+          3,
+          2
+        ],
+        "dtype": "string"
+      },
+      440,
+      180,
+      -1,
+      null
+    ]
+  ],
+  "edges": [
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "input",
+      "simple",
+      "d9f17a3e-a6fa-48c5-8cd2-ce1fea98c63e",
+      {
+        "pre": {
+          "id": "8d0b551c-41ed-4fdb-a822-8a3b338c9bf9",
+          "label": "Tensor",
+          "order": 2,
+          "shape": [
+            3,
+            2
+          ],
+          "output": [
+            "Welsiton",
+            "Ferreira",
+            "Yasmin",
+            "Lira",
+            "Leoardo",
+            "Barbosa"
+          ],
+          "dtype": "string",
+          "type": "tensor",
+          "isOutput": false
+        },
+        "post": {
+          "id": "59bf1c28-a1cc-4aab-808c-67044f52ae0e",
+          "label": "Print",
+          "output": [
+            "Welsiton",
+            "Ferreira",
+            "Yasmin",
+            "Lira",
+            "Leoardo",
+            "Barbosa"
+          ],
+          "type": "tensor-print",
+          "isOutput": false,
+          "description": "Display tensor values",
+          "color": "#d946ef",
+          "verbose": true,
+          "shape": [
+            3,
+            2
+          ],
+          "dtype": "string"
+        }
+      }
+    ]
+  ]
+}

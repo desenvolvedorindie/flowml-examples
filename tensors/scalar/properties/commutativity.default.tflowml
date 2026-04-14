@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "trainingState": {
+    "trainingData": [],
+    "sectionErrors": {
+      "training": [],
+      "validation": [],
+      "test": [],
+      "trainingLoss": [],
+      "validationLoss": [],
+      "testLoss": [],
+      "datasetTraining": {},
+      "datasetValidation": {},
+      "datasetTest": {},
+      "datasetTrainingLoss": {},
+      "datasetValidationLoss": {},
+      "datasetTestLoss": {},
+      "frameMetrics": []
+    },
+    "trainingEpoch": 0,
+    "currentFrame": 0,
+    "frameStatus": [],
+    "stopReason": null,
+    "trainingBaseEpoch": 0,
+    "weightIds": []
+  },
+  "trainingConfig": {
+    "learningRate": 0.1,
+    "maxEpochs": 100,
+    "targetError": 0.0001,
+    "errorAlgorithm": "mse",
+    "errorParams": {},
+    "metricAlgorithm": "lms",
+    "metricParams": {},
+    "optimizerAlgorithm": "sgd",
+    "optimizerParams": {},
+    "adjustmentMode": "stochastic",
+    "batchSize": 32,
+    "randomizeOnStart": true
+  }
+}

@@ -1,0 +1,573 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "19118b25-e55f-4f1e-bb7d-7f7deb184697",
+    "4a5117f7-a697-4c4e-8b16-e3432a684dcc",
+    "6910bf57-0e9f-4c67-81b5-ff7f6e44ae67",
+    "f35d6781-52fb-47a6-aa29-48b11eb97cc2",
+    "8494e719-b8c6-4a59-b4b5-2ad371a65a1d",
+    "cb44a6f1-a5b8-4add-a3ec-a81d0b935307",
+    "a00f32f4-a974-420a-a234-c1e6565caf6a",
+    "f37daef1-ebaa-41ba-a4be-18b308d58188",
+    "abdd007f-e21a-442f-8eb8-106172bd5918",
+    "7f59677c-2028-4f22-8455-bf5103abf9d7"
+  ],
+  "nodes": [
+    [
+      "input",
+      {
+        "type": "input",
+        "label": "x1",
+        "output": -1,
+        "maxInputs": 0
+      },
+      -240,
+      380,
+      -1,
+      null
+    ],
+    [
+      "hebb-neuron",
+      {
+        "type": "hebb-neuron",
+        "label": "Hebb",
+        "output": 1,
+        "netInput": 10.27739999999998,
+        "bias": -22.000000000000043,
+        "learningRule": "hebb"
+      },
+      40,
+      340,
+      -1,
+      null
+    ],
+    [
+      "output",
+      {
+        "type": "output",
+        "label": "y",
+        "output": 1,
+        "maxInputs": 1,
+        "maxOutputs": 0,
+        "target": 0
+      },
+      360,
+      360,
+      -1,
+      null
+    ],
+    [
+      "tensor-data",
+      {
+        "type": "tensor-data",
+        "label": "Data",
+        "datasetId": "NOT",
+        "output": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "shape": [
+          2,
+          2
+        ],
+        "dtype": "float32"
+      },
+      -480,
+      680,
+      -1,
+      null
+    ],
+    [
+      "decision-surface",
+      {
+        "type": "decision-surface",
+        "label": "Decision Surface",
+        "output": [
+          -0.0849
+        ]
+      },
+      720,
+      540,
+      -1,
+      null
+    ],
+    [
+      "dataset-node",
+      {
+        "label": "Dataset",
+        "type": "dataset-node",
+        "datasetId": "NOT",
+        "trainingOutput": [
+          -1,
+          0,
+          0,
+          -1
+        ],
+        "output": [
+          -1,
+          0,
+          0,
+          -1
+        ],
+        "_hasTrainingEdge": true,
+        "_hasValidationEdge": false,
+        "_hasTestEdge": false,
+        "labels": [
+          "X1",
+          "Y"
+        ]
+      },
+      460,
+      760,
+      -1,
+      null
+    ],
+    [
+      "tensor-binary",
+      {
+        "type": "tensor-binary",
+        "label": "Binary",
+        "output": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "operationType": "mul",
+        "shape": [
+          2,
+          2
+        ],
+        "dtype": "float32"
+      },
+      20,
+      580,
+      -1,
+      null
+    ],
+    [
+      "tensor-binary",
+      {
+        "type": "tensor-binary",
+        "label": "Binary",
+        "output": [
+          -1,
+          0,
+          0,
+          -1
+        ],
+        "operationType": "sub",
+        "shape": [
+          2,
+          2
+        ],
+        "dtype": "float32"
+      },
+      300,
+      620,
+      -1,
+      null
+    ],
+    [
+      "tensor-reduce",
+      {
+        "type": "tensor-reduce",
+        "label": "Reduction",
+        "output": [
+          1
+        ],
+        "operationType": "max",
+        "shape": [],
+        "dtype": "float32"
+      },
+      -160,
+      760,
+      -1,
+      null
+    ],
+    [
+      "tensor",
+      {
+        "type": "tensor",
+        "label": "Tensor",
+        "order": 0,
+        "shape": [],
+        "output": [
+          1
+        ],
+        "dtype": "float32"
+      },
+      100,
+      720,
+      -1,
+      null
+    ]
+  ],
+  "edges": [
+    [
+      -1,
+      -1,
+      -0.0849,
+      null,
+      "input",
+      "simple",
+      "ca4a506a-6879-4dcc-ab34-bd9966194605",
+      {
+        "preSynaptic": {
+          "id": "4a5117f7-a697-4c4e-8b16-e3432a684dcc",
+          "type": "hebb-neuron",
+          "label": "Hebb",
+          "output": 1,
+          "netInput": 0,
+          "bias": 0,
+          "learningRule": {
+            "name": "hebb"
+          }
+        },
+        "postSynaptic": {
+          "id": "8494e719-b8c6-4a59-b4b5-2ad371a65a1d",
+          "type": "decision-surface",
+          "label": "Decision Surface",
+          "output": [
+            1
+          ]
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      0.4547,
+      null,
+      "input",
+      "weighted",
+      "7a5f9164-9215-40dd-b3f7-d917adf594db",
+      {
+        "preSynaptic": {
+          "id": "4a5117f7-a697-4c4e-8b16-e3432a684dcc",
+          "type": "hebb-neuron",
+          "label": "Hebb",
+          "output": 1,
+          "netInput": 0,
+          "bias": 0,
+          "learningRule": {
+            "name": "hebb"
+          }
+        },
+        "postSynaptic": {
+          "id": "6910bf57-0e9f-4c67-81b5-ff7f6e44ae67",
+          "type": "output",
+          "label": "Output",
+          "output": 1,
+          "maxInputs": 1,
+          "maxOutputs": 0
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      -10.27739999999998,
+      null,
+      "input",
+      "weighted",
+      "22018f66-2095-471a-a0fe-9c9ffb11fdb4",
+      {
+        "preSynaptic": {
+          "id": "19118b25-e55f-4f1e-bb7d-7f7deb184697",
+          "type": "input",
+          "label": "Input",
+          "output": 0,
+          "maxInputs": 0
+        },
+        "postSynaptic": {
+          "id": "4a5117f7-a697-4c4e-8b16-e3432a684dcc",
+          "type": "hebb-neuron",
+          "label": "Hebb",
+          "output": 1,
+          "netInput": 0,
+          "bias": 0,
+          "learningRule": {
+            "name": "hebb"
+          }
+        },
+        "label": "w1"
+      }
+    ],
+    [
+      -1,
+      -1,
+      0.8639,
+      "out",
+      "input",
+      "simple",
+      "be00e872-4e00-4c5a-9ba0-04b7a5ab6643",
+      {
+        "preSynaptic": {
+          "id": "f35d6781-52fb-47a6-aa29-48b11eb97cc2",
+          "type": "tensor-data",
+          "label": "Data",
+          "datasetId": "NOT",
+          "output": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "shape": [
+            2,
+            2
+          ],
+          "dtype": "float32",
+          "position": {
+            "x": -300,
+            "y": 640
+          }
+        },
+        "postSynaptic": {
+          "id": "abdd007f-e21a-442f-8eb8-106172bd5918",
+          "type": "tensor-reduce",
+          "label": "Reduction",
+          "output": [
+            1
+          ],
+          "operationType": "max",
+          "shape": [],
+          "dtype": "float32"
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      -0.3845,
+      "tensor-out",
+      "input-b",
+      "simple",
+      "96ecff2c-f5c9-48c9-b1e8-82310950efef",
+      {
+        "preSynaptic": {
+          "id": "abdd007f-e21a-442f-8eb8-106172bd5918",
+          "type": "tensor-reduce",
+          "label": "Reduction",
+          "output": [
+            1
+          ],
+          "operationType": "max",
+          "shape": [],
+          "dtype": "float32"
+        },
+        "postSynaptic": {
+          "id": "a00f32f4-a974-420a-a234-c1e6565caf6a",
+          "type": "tensor-binary",
+          "label": "Binary",
+          "output": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "operationType": "mul",
+          "shape": [
+            2,
+            2
+          ],
+          "dtype": "float32"
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      0.7717,
+      "tensor-out",
+      "input-a",
+      "simple",
+      "3540289b-6486-40f6-b91c-b7d544b38711",
+      {
+        "preSynaptic": {
+          "id": "a00f32f4-a974-420a-a234-c1e6565caf6a",
+          "type": "tensor-binary",
+          "label": "Binary",
+          "output": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "operationType": "mul",
+          "shape": [
+            2,
+            2
+          ],
+          "dtype": "float32"
+        },
+        "postSynaptic": {
+          "id": "f37daef1-ebaa-41ba-a4be-18b308d58188",
+          "type": "tensor-binary",
+          "label": "Binary",
+          "output": [
+            -1,
+            0,
+            0,
+            -1
+          ],
+          "operationType": "sub",
+          "shape": [
+            2,
+            2
+          ],
+          "dtype": "float32"
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      -0.2542,
+      "out",
+      "input-a",
+      "simple",
+      "98ae3be8-4d74-4929-adc5-c3c3ebe26e41",
+      {
+        "preSynaptic": {
+          "id": "f35d6781-52fb-47a6-aa29-48b11eb97cc2",
+          "type": "tensor-data",
+          "label": "Data",
+          "datasetId": "NOT",
+          "output": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "shape": [
+            2,
+            2
+          ],
+          "dtype": "float32",
+          "position": {
+            "x": -300,
+            "y": 640
+          }
+        },
+        "postSynaptic": {
+          "id": "a00f32f4-a974-420a-a234-c1e6565caf6a",
+          "type": "tensor-binary",
+          "label": "Binary",
+          "output": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "operationType": "mul",
+          "shape": [
+            2,
+            2
+          ],
+          "dtype": "float32"
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      -0.4796,
+      "out",
+      "input-b",
+      "simple",
+      "fed9c586-3592-4d14-8414-307844168d3c",
+      {
+        "preSynaptic": {
+          "id": "7f59677c-2028-4f22-8455-bf5103abf9d7",
+          "type": "tensor",
+          "label": "Tensor",
+          "order": 0,
+          "shape": [],
+          "output": [
+            1
+          ],
+          "dtype": "float32"
+        },
+        "postSynaptic": {
+          "id": "f37daef1-ebaa-41ba-a4be-18b308d58188",
+          "type": "tensor-binary",
+          "label": "Binary",
+          "output": [
+            -1,
+            0,
+            0,
+            -1
+          ],
+          "operationType": "sub",
+          "shape": [
+            2,
+            2
+          ],
+          "dtype": "float32"
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      -0.2523,
+      "tensor-out",
+      "training",
+      "simple",
+      "8b7ecdc8-0ef2-4a01-ac75-4604f25faaf8",
+      {
+        "preSynaptic": {
+          "id": "f37daef1-ebaa-41ba-a4be-18b308d58188",
+          "type": "tensor-binary",
+          "label": "Binary",
+          "output": [
+            -1,
+            0,
+            0,
+            -1
+          ],
+          "operationType": "sub",
+          "shape": [
+            2,
+            2
+          ],
+          "dtype": "float32"
+        },
+        "postSynaptic": {
+          "id": "cb44a6f1-a5b8-4add-a3ec-a81d0b935307",
+          "label": "Dataset",
+          "type": "dataset-node",
+          "datasetId": "NOT",
+          "trainingOutput": [
+            -1,
+            0,
+            0,
+            -1
+          ],
+          "output": [
+            -1,
+            0,
+            0,
+            -1
+          ],
+          "_hasTrainingEdge": true,
+          "_hasValidationEdge": false,
+          "_hasTestEdge": false,
+          "labels": [
+            "X1",
+            "Y"
+          ],
+          "position": {
+            "x": 80,
+            "y": 720
+          }
+        }
+      }
+    ]
+  ]
+}

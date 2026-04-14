@@ -1,0 +1,1093 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "c818c3cf-866b-44d3-b792-22d0db93069b",
+    "59c58bc9-fdf9-4398-843a-57a8214096b3",
+    "eaf866df-83aa-405a-9b0c-8a15067e9db9",
+    "0f825f0e-fd42-4599-b0ec-8eda3b656bbb",
+    "6b8d6767-45ab-41df-9447-167e2d4741dc",
+    "189d49c1-155b-4e5e-ac0d-49171321ece7",
+    "e5fe1eee-2786-4e6a-90b9-34110e6386df",
+    "212084e1-75d3-44f0-9f88-d6e9ca6e5af2"
+  ],
+  "nodes": [
+    [
+      "input",
+      {
+        "type": "input",
+        "label": "x1",
+        "output": 0,
+        "supportedLearningRules": [],
+        "supportedActivationFunctions": [],
+        "value": 0
+      },
+      -280,
+      -240,
+      -1,
+      null
+    ],
+    [
+      "perceptron",
+      {
+        "label": "Perceptron",
+        "output": 0,
+        "netInput": -0.36899998784065247,
+        "bias": -0.51341446215843,
+        "activationFunction": "step",
+        "learningRule": "rosenblatt",
+        "type": "perceptron",
+        "supportedLearningRules": [
+          "rosenblatt",
+          "widrow-hoff",
+          "pocket"
+        ],
+        "supportedActivationFunctions": [
+          "step",
+          "sign",
+          "linear"
+        ],
+        "target": 0
+      },
+      20,
+      -240,
+      -1,
+      null
+    ],
+    [
+      "bias",
+      {
+        "type": "bias",
+        "label": "Bias",
+        "output": 1,
+        "supportedLearningRules": [],
+        "supportedActivationFunctions": []
+      },
+      -240,
+      -320,
+      -1,
+      null
+    ],
+    [
+      "output",
+      {
+        "type": "output",
+        "label": "y",
+        "output": 0,
+        "supportedLearningRules": [],
+        "supportedActivationFunctions": [],
+        "target": 0,
+        "bias": -37.800000567734244,
+        "netInput": 0
+      },
+      440,
+      -300,
+      -1,
+      null
+    ],
+    [
+      "dataset-node",
+      {
+        "label": "Dataset",
+        "type": "dataset-node",
+        "datasetId": "AND",
+        "trainingOutput": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        "output": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        "_hasTrainingEdge": true,
+        "_hasValidationEdge": false,
+        "_hasTestEdge": false,
+        "labels": [
+          "X1",
+          "X2",
+          "Y"
+        ],
+        "dynamicInputColumns": [
+          "X1",
+          "X2"
+        ],
+        "dynamicOutputColumns": [
+          "Y"
+        ]
+      },
+      220,
+      200,
+      -1,
+      null
+    ],
+    [
+      "input",
+      {
+        "type": "input",
+        "label": "x2",
+        "output": 0,
+        "maxInputs": 0,
+        "supportedLearningRules": [],
+        "supportedActivationFunctions": [],
+        "value": 0
+      },
+      -280,
+      -100,
+      -1,
+      null
+    ],
+    [
+      "decision-surface",
+      {
+        "type": "decision-surface",
+        "label": "Response Surface",
+        "output": [
+          0
+        ],
+        "resolution": 1,
+        "zoom": 0.25
+      },
+      620,
+      -80,
+      -1,
+      null
+    ],
+    [
+      "data-node",
+      {
+        "label": "Data",
+        "datasetId": "AND",
+        "dynamicInputColumns": [
+          "[Input] X1",
+          "[Input] X2",
+          "[Output] Y"
+        ],
+        "dynamicOutputColumns": [
+          "Y"
+        ]
+      },
+      -220,
+      300,
+      -1,
+      null
+    ]
+  ],
+  "edges": [
+    [
+      -1,
+      -1,
+      0.2987,
+      null,
+      "bias",
+      "weighted",
+      "d94f5882-d2b5-4f8e-af8d-cfbe0ac42a96",
+      {
+        "preSynaptic": {
+          "id": "eaf866df-83aa-405a-9b0c-8a15067e9db9",
+          "type": "bias",
+          "label": "Bias",
+          "output": 1,
+          "supportedLearningRules": [],
+          "supportedActivationFunctions": []
+        },
+        "postSynaptic": {
+          "id": "59c58bc9-fdf9-4398-843a-57a8214096b3",
+          "type": "perceptron",
+          "label": "Perceptron",
+          "bias": 1,
+          "output": 0,
+          "netInput": 0,
+          "learningRule": "rosenblatt",
+          "supportedLearningRules": [
+            "rosenblatt",
+            "widrow-hoff",
+            "pocket"
+          ],
+          "supportedActivationFunctions": [
+            "step",
+            "sign",
+            "linear"
+          ]
+        },
+        "label": "b1"
+      }
+    ],
+    [
+      -1,
+      -1,
+      -0.4622,
+      null,
+      "input",
+      "weighted",
+      "a74713c0-7c62-4bc1-a68a-57f56f1625c8",
+      {
+        "preSynaptic": {
+          "id": "c818c3cf-866b-44d3-b792-22d0db93069b",
+          "type": "input",
+          "label": "Input",
+          "output": 0,
+          "supportedLearningRules": [],
+          "supportedActivationFunctions": [],
+          "position": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "postSynaptic": {
+          "id": "59c58bc9-fdf9-4398-843a-57a8214096b3",
+          "type": "perceptron",
+          "label": "Perceptron",
+          "bias": 1,
+          "output": 0,
+          "netInput": 0,
+          "learningRule": "rosenblatt",
+          "supportedLearningRules": [
+            "rosenblatt",
+            "widrow-hoff",
+            "pocket"
+          ],
+          "supportedActivationFunctions": [
+            "step",
+            "sign",
+            "linear"
+          ],
+          "position": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "label": "w1"
+      }
+    ],
+    [
+      -1,
+      -1,
+      0.2243,
+      null,
+      "input",
+      "weighted",
+      "ab715861-2ea7-43a1-9e65-f3262d887011",
+      {
+        "preSynaptic": {
+          "id": "189d49c1-155b-4e5e-ac0d-49171321ece7",
+          "type": "input",
+          "label": "x2",
+          "output": 1,
+          "maxInputs": 0,
+          "supportedLearningRules": [],
+          "supportedActivationFunctions": []
+        },
+        "postSynaptic": {
+          "id": "59c58bc9-fdf9-4398-843a-57a8214096b3",
+          "type": "perceptron",
+          "label": "Perceptron",
+          "bias": -0.26380000000000003,
+          "output": 1,
+          "netInput": 0.05540001392364502,
+          "learningRule": "rosenblatt",
+          "supportedLearningRules": [
+            "rosenblatt",
+            "widrow-hoff",
+            "pocket"
+          ],
+          "supportedActivationFunctions": [
+            "step",
+            "sign",
+            "linear"
+          ],
+          "position": {
+            "x": 20,
+            "y": -240
+          },
+          "target": 0
+        },
+        "label": "w2"
+      }
+    ],
+    [
+      -1,
+      -1,
+      0.5274,
+      "out",
+      "training",
+      "simple",
+      "39a5b8f9-ce97-464d-bfb0-d9654064378e",
+      {
+        "preSynaptic": {
+          "id": "bb10927f-cd9a-48bd-9a9e-ba5dcf650853",
+          "type": "tensor-data",
+          "label": "Data",
+          "datasetId": "AND",
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "shape": [
+            4,
+            3
+          ],
+          "position": {
+            "x": -280,
+            "y": 340
+          },
+          "dtype": "float32"
+        },
+        "postSynaptic": {
+          "id": "6b8d6767-45ab-41df-9447-167e2d4741dc",
+          "label": "Dataset",
+          "type": "dataset-node",
+          "datasetId": "AND",
+          "trainingOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "_hasTrainingEdge": true,
+          "_hasValidationEdge": false,
+          "_hasTestEdge": true,
+          "labels": [
+            "X1",
+            "X2",
+            "Y"
+          ],
+          "position": {
+            "x": 180,
+            "y": 220
+          },
+          "testOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "validationOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ]
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      -0.1365,
+      "out",
+      "test",
+      "simple",
+      "85b10f13-662f-4d42-b21b-67699b4a8208",
+      {
+        "preSynaptic": {
+          "id": "bb10927f-cd9a-48bd-9a9e-ba5dcf650853",
+          "type": "tensor-data",
+          "label": "Data",
+          "datasetId": "AND",
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "shape": [
+            4,
+            3
+          ],
+          "position": {
+            "x": -280,
+            "y": 340
+          },
+          "dtype": "float32"
+        },
+        "postSynaptic": {
+          "id": "6b8d6767-45ab-41df-9447-167e2d4741dc",
+          "label": "Dataset",
+          "type": "dataset-node",
+          "datasetId": "AND",
+          "trainingOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "_hasTrainingEdge": true,
+          "_hasValidationEdge": false,
+          "_hasTestEdge": true,
+          "labels": [
+            "X1",
+            "X2",
+            "Y"
+          ],
+          "position": {
+            "x": 180,
+            "y": 220
+          },
+          "testOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "validationOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ]
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      0.0361,
+      null,
+      "input",
+      "weighted",
+      "ecc8a802-0776-49f4-96e2-960011cf559a",
+      {
+        "preSynaptic": {
+          "id": "59c58bc9-fdf9-4398-843a-57a8214096b3",
+          "type": "perceptron",
+          "label": "Perceptron",
+          "bias": -0.27549999999999997,
+          "output": 1,
+          "netInput": 0.029499999999999943,
+          "learningRule": "rosenblatt",
+          "supportedLearningRules": [
+            "rosenblatt",
+            "widrow-hoff",
+            "pocket"
+          ],
+          "supportedActivationFunctions": [
+            "step",
+            "sign",
+            "linear"
+          ],
+          "position": {
+            "x": 20,
+            "y": -240
+          },
+          "target": 0
+        },
+        "postSynaptic": {
+          "id": "0f825f0e-fd42-4599-b0ec-8eda3b656bbb",
+          "type": "output",
+          "label": "y",
+          "output": -0.2159,
+          "supportedLearningRules": [],
+          "supportedActivationFunctions": [],
+          "position": {
+            "x": 420,
+            "y": -220
+          },
+          "target": 1
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      0.2458,
+      null,
+      "input",
+      "simple",
+      "d9f3c2d8-7560-41d2-af38-02e8e53c9c1a",
+      {
+        "preSynaptic": {
+          "id": "59c58bc9-fdf9-4398-843a-57a8214096b3",
+          "type": "perceptron",
+          "label": "Perceptron",
+          "bias": -0.08199999999999999,
+          "output": 0,
+          "netInput": -0.05419508367776871,
+          "learningRule": "rosenblatt",
+          "supportedLearningRules": [
+            "rosenblatt",
+            "widrow-hoff",
+            "pocket"
+          ],
+          "supportedActivationFunctions": [
+            "step",
+            "sign",
+            "linear"
+          ],
+          "position": {
+            "x": 20,
+            "y": -240
+          },
+          "target": 0,
+          "activationFunction": "step"
+        },
+        "postSynaptic": {
+          "id": "e5fe1eee-2786-4e6a-90b9-34110e6386df",
+          "type": "decision-surface",
+          "label": "Decision Surface",
+          "output": [
+            0
+          ]
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      0.1065,
+      "out",
+      "dataset",
+      "simple",
+      "998015c3-7b46-4952-81cc-95964818c35e",
+      {
+        "preSynaptic": {
+          "id": "bb10927f-cd9a-48bd-9a9e-ba5dcf650853",
+          "type": "tensor-data",
+          "label": "Data",
+          "datasetId": "AND",
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "shape": [
+            4,
+            3
+          ],
+          "position": {
+            "x": -180,
+            "y": 240
+          },
+          "dtype": "float32"
+        },
+        "postSynaptic": {
+          "id": "e5fe1eee-2786-4e6a-90b9-34110e6386df",
+          "type": "decision-surface",
+          "label": "Decision Surface",
+          "output": [
+            0
+          ]
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      -0.22900000000000006,
+      null,
+      "bias",
+      "weighted",
+      "c2cc6f36-89dd-40d6-a9d0-d01845f6565a",
+      {
+        "pre": {
+          "type": "bias",
+          "label": "Bias",
+          "output": 1,
+          "supportedLearningRules": [],
+          "supportedActivationFunctions": [],
+          "id": "eaf866df-83aa-405a-9b0c-8a15067e9db9",
+          "position": {
+            "x": -240,
+            "y": -320
+          }
+        },
+        "post": {
+          "id": "59c58bc9-fdf9-4398-843a-57a8214096b3",
+          "label": "Perceptron",
+          "output": 1,
+          "netInput": 0.04829999804496765,
+          "bias": -0.29410001639127736,
+          "activationFunction": "step",
+          "learningRule": "rosenblatt",
+          "type": "perceptron",
+          "supportedLearningRules": [
+            "rosenblatt",
+            "widrow-hoff",
+            "pocket"
+          ],
+          "supportedActivationFunctions": [
+            "step",
+            "sign",
+            "linear"
+          ],
+          "target": 0,
+          "position": {
+            "x": 20,
+            "y": -240
+          }
+        },
+        "label": "b2"
+      }
+    ],
+    [
+      -1,
+      -1,
+      0.42179999999999995,
+      null,
+      "input",
+      "weighted",
+      "df33ef80-0cea-4422-a9e4-3cc85c38ec5b",
+      {
+        "pre": {
+          "type": "input",
+          "label": "x1",
+          "output": 1,
+          "supportedLearningRules": [],
+          "supportedActivationFunctions": [],
+          "value": 0,
+          "id": "c818c3cf-866b-44d3-b792-22d0db93069b",
+          "position": {
+            "x": -280,
+            "y": -120
+          }
+        },
+        "post": {
+          "id": "59c58bc9-fdf9-4398-843a-57a8214096b3",
+          "label": "Perceptron",
+          "output": 1,
+          "netInput": 0.04829999804496765,
+          "bias": -0.29410001639127736,
+          "activationFunction": "step",
+          "learningRule": "rosenblatt",
+          "type": "perceptron",
+          "supportedLearningRules": [
+            "rosenblatt",
+            "widrow-hoff",
+            "pocket"
+          ],
+          "supportedActivationFunctions": [
+            "step",
+            "sign",
+            "linear"
+          ],
+          "target": 0,
+          "position": {
+            "x": 20,
+            "y": -240
+          }
+        },
+        "label": "w3"
+      }
+    ],
+    [
+      -1,
+      -1,
+      0.43189999999999995,
+      null,
+      "input",
+      "weighted",
+      "62570f6e-b35c-40f4-b5dd-636e351cefaf",
+      {
+        "pre": {
+          "type": "input",
+          "label": "x2",
+          "output": 1,
+          "maxInputs": 0,
+          "supportedLearningRules": [],
+          "supportedActivationFunctions": [],
+          "value": 0,
+          "id": "189d49c1-155b-4e5e-ac0d-49171321ece7",
+          "position": {
+            "x": -280,
+            "y": 20
+          }
+        },
+        "post": {
+          "id": "59c58bc9-fdf9-4398-843a-57a8214096b3",
+          "label": "Perceptron",
+          "output": 1,
+          "netInput": 0.04829999804496765,
+          "bias": -0.29410001639127736,
+          "activationFunction": "step",
+          "learningRule": "rosenblatt",
+          "type": "perceptron",
+          "supportedLearningRules": [
+            "rosenblatt",
+            "widrow-hoff",
+            "pocket"
+          ],
+          "supportedActivationFunctions": [
+            "step",
+            "sign",
+            "linear"
+          ],
+          "target": 0,
+          "position": {
+            "x": 20,
+            "y": -240
+          }
+        },
+        "label": "w4"
+      }
+    ],
+    [
+      -1,
+      -1,
+      0.4855,
+      "out",
+      "training",
+      "simple",
+      "8e8070b2-0ef6-4984-9809-5da1328c3c2c",
+      {
+        "pre": {
+          "id": "212084e1-75d3-44f0-9f88-d6e9ca6e5af2",
+          "label": "Data",
+          "datasetId": "AND",
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "shape": [
+            4,
+            3
+          ],
+          "type": "data-node",
+          "dynamicInputColumns": [
+            "[Input] X1",
+            "[Input] X2",
+            "[Output] Y"
+          ]
+        },
+        "post": {
+          "label": "Dataset",
+          "type": "dataset-node",
+          "datasetId": "AND",
+          "trainingOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "_hasTrainingEdge": true,
+          "_hasValidationEdge": false,
+          "_hasTestEdge": false,
+          "labels": [
+            "X1",
+            "X2",
+            "Y"
+          ],
+          "id": "6b8d6767-45ab-41df-9447-167e2d4741dc",
+          "position": {
+            "x": 220,
+            "y": 200
+          }
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      0.0305,
+      "out",
+      "dataset",
+      "simple",
+      "9ac820d3-a4f3-48a1-a669-572bc87e9cc9",
+      {
+        "pre": {
+          "id": "212084e1-75d3-44f0-9f88-d6e9ca6e5af2",
+          "label": "Data",
+          "datasetId": "AND",
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "shape": [
+            4,
+            3
+          ],
+          "dynamicInputColumns": [
+            "[Input] X1",
+            "[Input] X2",
+            "[Output] Y"
+          ],
+          "dynamicOutputColumns": [
+            "Y"
+          ],
+          "type": "data-node",
+          "position": {
+            "x": -220,
+            "y": 300
+          }
+        },
+        "post": {
+          "type": "decision-surface",
+          "label": "Decision Surface",
+          "output": [
+            1
+          ],
+          "resolution": 1,
+          "id": "e5fe1eee-2786-4e6a-90b9-34110e6386df",
+          "position": {
+            "x": 620,
+            "y": -80
+          }
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      -0.0913,
+      null,
+      "input",
+      "simple",
+      "cfc94d69-0d08-4f69-85dc-428fe0791c4c",
+      {
+        "pre": {
+          "label": "Perceptron",
+          "output": 0,
+          "netInput": -0.29980000853538513,
+          "bias": -0.33432690642915897,
+          "activationFunction": "step",
+          "learningRule": "rosenblatt",
+          "type": "perceptron",
+          "supportedLearningRules": [
+            "rosenblatt",
+            "widrow-hoff",
+            "pocket"
+          ],
+          "supportedActivationFunctions": [
+            "step",
+            "sign",
+            "linear"
+          ],
+          "target": 0,
+          "id": "59c58bc9-fdf9-4398-843a-57a8214096b3",
+          "position": {
+            "x": 20,
+            "y": -240
+          }
+        },
+        "post": {
+          "type": "decision-surface",
+          "label": "Response Surface",
+          "output": [
+            0
+          ],
+          "resolution": 1,
+          "zoom": 0.25,
+          "id": "e5fe1eee-2786-4e6a-90b9-34110e6386df",
+          "position": {
+            "x": 620,
+            "y": -80
+          }
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      -0.157,
+      null,
+      "input",
+      "weighted",
+      "950dedfb-292d-4d17-b20a-7c4d8d6798e0",
+      {
+        "pre": {
+          "label": "Perceptron",
+          "output": 0,
+          "netInput": -0.29980000853538513,
+          "bias": -0.33432690642915897,
+          "activationFunction": "step",
+          "learningRule": "rosenblatt",
+          "type": "perceptron",
+          "supportedLearningRules": [
+            "rosenblatt",
+            "widrow-hoff",
+            "pocket"
+          ],
+          "supportedActivationFunctions": [
+            "step",
+            "sign",
+            "linear"
+          ],
+          "target": 0,
+          "id": "59c58bc9-fdf9-4398-843a-57a8214096b3",
+          "position": {
+            "x": 20,
+            "y": -240
+          }
+        },
+        "post": {
+          "type": "output",
+          "label": "y",
+          "output": 0,
+          "supportedLearningRules": [],
+          "supportedActivationFunctions": [],
+          "target": 0,
+          "bias": -37.800000567734244,
+          "netInput": 0,
+          "id": "0f825f0e-fd42-4599-b0ec-8eda3b656bbb",
+          "position": {
+            "x": 440,
+            "y": -300
+          }
+        }
+      }
+    ]
+  ]
+}

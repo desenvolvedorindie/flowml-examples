@@ -1,0 +1,260 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "4fee86fb-5638-4ea5-9674-361ff97e39e2",
+    "6b4fa6ab-d097-4bc0-9d97-177b72d611fb",
+    "2823dafc-2636-45a8-9624-972c705569c4",
+    "ec3c4b26-6715-4f2d-908c-979a811df14f"
+  ],
+  "nodes": [
+    [
+      "data-node",
+      {
+        "label": "Data",
+        "datasetId": "XOR",
+        "dynamicInputColumns": [
+          "[Input] X1",
+          "[Input] X2",
+          "[Output] Y"
+        ],
+        "dynamicOutputColumns": [
+          "Y"
+        ]
+      },
+      -1260,
+      -160,
+      -1,
+      null
+    ],
+    [
+      "dataset-node",
+      {
+        "label": "Dataset",
+        "output": [
+          0
+        ],
+        "type": "dataset-node",
+        "datasetId": "XOR",
+        "trainingOutput": [
+          0
+        ],
+        "_hasTrainingEdge": true,
+        "_hasValidationEdge": false,
+        "_hasTestEdge": false,
+        "dynamicInputColumns": [
+          "X1",
+          "X2",
+          "new_feature"
+        ],
+        "dynamicOutputColumns": [
+          "Y"
+        ]
+      },
+      -420,
+      -260,
+      -1,
+      null
+    ],
+    [
+      "feature-node",
+      {
+        "label": "Feature",
+        "featureName": "feature1",
+        "sourceFeatureIndex": 0,
+        "k": 2,
+        "output": [
+          0
+        ],
+        "shape": [
+          0,
+          0
+        ],
+        "type": "feature-node"
+      },
+      -920,
+      -140,
+      -1,
+      null
+    ],
+    [
+      "feature-node",
+      {
+        "label": "Feature",
+        "featureName": "feature2",
+        "sourceFeatureIndex": 0,
+        "k": 2,
+        "output": [
+          0
+        ],
+        "shape": [
+          0,
+          0
+        ],
+        "type": "feature-node"
+      },
+      -680,
+      -140,
+      -1,
+      null
+    ]
+  ],
+  "edges": [
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "in",
+      "simple",
+      "2b5860ff-6ee5-4c25-8fe5-841b94377b44",
+      {
+        "pre": {
+          "id": "4fee86fb-5638-4ea5-9674-361ff97e39e2",
+          "label": "Data",
+          "datasetId": "XOR",
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            0
+          ],
+          "shape": [
+            4,
+            3
+          ],
+          "dynamicInputColumns": [
+            "[Input] X1",
+            "[Input] X2",
+            "[Output] Y"
+          ],
+          "dynamicOutputColumns": [
+            "Y"
+          ],
+          "type": "data-node",
+          "position": {
+            "x": -1220,
+            "y": -160
+          }
+        },
+        "post": {
+          "id": "2823dafc-2636-45a8-9624-972c705569c4",
+          "label": "Feature",
+          "featureName": "feature1",
+          "sourceFeatureIndex": 0,
+          "k": 2,
+          "output": [
+            0
+          ],
+          "shape": [
+            0,
+            0
+          ],
+          "type": "feature-node"
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "in",
+      "simple",
+      "36bb3cc8-76b2-4b76-8776-fcca132e4675",
+      {
+        "pre": {
+          "id": "2823dafc-2636-45a8-9624-972c705569c4",
+          "label": "Feature",
+          "featureName": "feature1",
+          "sourceFeatureIndex": 0,
+          "k": 2,
+          "output": [
+            0
+          ],
+          "shape": [
+            0,
+            0
+          ],
+          "type": "feature-node"
+        },
+        "post": {
+          "id": "ec3c4b26-6715-4f2d-908c-979a811df14f",
+          "label": "Feature",
+          "featureName": "feature2",
+          "sourceFeatureIndex": 0,
+          "k": 2,
+          "output": [
+            0
+          ],
+          "shape": [
+            0,
+            0
+          ],
+          "type": "feature-node"
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "training",
+      "simple",
+      "58e3615c-baa4-477f-a8a2-713b25da1274",
+      {
+        "pre": {
+          "id": "ec3c4b26-6715-4f2d-908c-979a811df14f",
+          "label": "Feature",
+          "featureName": "feature2",
+          "sourceFeatureIndex": 0,
+          "k": 2,
+          "output": [
+            0
+          ],
+          "shape": [
+            0,
+            0
+          ],
+          "type": "feature-node"
+        },
+        "post": {
+          "label": "Dataset",
+          "output": [
+            0
+          ],
+          "type": "dataset-node",
+          "datasetId": "XOR",
+          "trainingOutput": [
+            0
+          ],
+          "_hasTrainingEdge": true,
+          "_hasValidationEdge": false,
+          "_hasTestEdge": false,
+          "dynamicInputColumns": [
+            "X1",
+            "X2",
+            "new_feature"
+          ],
+          "dynamicOutputColumns": [
+            "Y"
+          ],
+          "id": "6b4fa6ab-d097-4bc0-9d97-177b72d611fb",
+          "position": {
+            "x": -500,
+            "y": -260
+          }
+        }
+      }
+    ]
+  ]
+}

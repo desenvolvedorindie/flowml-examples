@@ -1,0 +1,15 @@
+{
+  "id": "MNIST",
+  "name": "MNIST Handwritten Digits",
+  "read_only": true,
+  "format": "idx",
+  "dataType": "image",
+  "shape": [
+    28,
+    28
+  ],
+  "files": {
+    "images": "mnist/train-images.idx3-ubyte",
+    "labels": "mnist/train-labels.idx1-ubyte"
+  }
+}
