@@ -1,0 +1,129 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "4fb251cb-6b9b-4cba-8155-cb5d14c2ba55",
+    "ac1492e5-ed0b-4d55-9079-f0ae0253bf95",
+    "e5f97c89-ea29-4721-9a88-8aa0a3c22c02",
+    "f4e1ea0b-dce6-4562-a286-8bc99a76d1e3",
+    "68ff727a-677e-45c4-8f95-5f2fde97076c",
+    "33762790-b4cd-4f6b-b226-b9488f05abf4"
+  ],
+  "nodes": [
+    [
+      "bias",
+      {
+        "label": "Bias",
+        "output": 1,
+        "type": "bias",
+        "isOutput": false,
+        "description": "Constant input node (always outputs 1)"
+      },
+      22.5,
+      0,
+      -1,
+      null
+    ],
+    [
+      "mcculloch-pitts",
+      {
+        "label": "MCP",
+        "output": 0,
+        "netInput": 0,
+        "bias": 1,
+        "threshold": 1,
+        "type": "mcculloch-pitts",
+        "isOutput": false,
+        "description": "Original 1943 model proposed by Warren McCulloch and Walter Pitts"
+      },
+      0,
+      96,
+      -1,
+      null
+    ],
+    [
+      "perceptron",
+      {
+        "label": "Perceptron",
+        "output": 0,
+        "netInput": 0,
+        "bias": 1,
+        "activationFunction": "step",
+        "learningRule": {
+          "name": "rosenblatt",
+          "description": "Perceptron Rule (Rosenblatt): error is computed AFTER the step function — e = (d − y). If the classification is already correct (y = d), the error is 0 and no update occurs, even if net is close to the boundary."
+        },
+        "type": "perceptron",
+        "isOutput": false,
+        "description": "Original 1958 model proposed by Frank Rosenblatt (step activation function)"
+      },
+      10,
+      270,
+      -1,
+      null
+    ],
+    [
+      "mlp",
+      {
+        "label": "MLP",
+        "output": 0,
+        "netInput": 0,
+        "bias": 1,
+        "gradient": 0,
+        "activationFunction": "sigmoid",
+        "learningRule": {
+          "name": "backpropagation",
+          "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+        },
+        "type": "mlp",
+        "isOutput": false,
+        "description": "Neuron with continuous, non-linear activation functions (Sigmoid, Tanh, ReLU, GELU)"
+      },
+      4,
+      470,
+      -1,
+      null
+    ],
+    [
+      "adaline",
+      {
+        "label": "ADALINE",
+        "output": 0,
+        "netInput": 0,
+        "bias": 0,
+        "learningRule": "widrow-hoff",
+        "supportedLearningRules": [
+          "widrow-hoff"
+        ],
+        "type": "adaline",
+        "isOutput": false,
+        "description": "Adaptive Linear Neuron — linear activation, Widrow-Hoff (LMS) learning rule, has bias"
+      },
+      9.5,
+      670,
+      -1,
+      null
+    ],
+    [
+      "hebb-neuron",
+      {
+        "label": "Hebb",
+        "output": 0,
+        "netInput": 0,
+        "bias": 0,
+        "learningRule": {
+          "name": "hebb",
+          "description": "Proposed by Donald Hebb in his 1949 book \"The Organization of Behavior\". \"Neurons that fire together, wire together\". Strengthens connections when both input and output are active."
+        },
+        "type": "hebb-neuron",
+        "isOutput": false,
+        "description": "Donald Hebb's 1949 model (The Organization of Behavior). Supports Hebb (sign activation) and Oja (linear activation) learning rules."
+      },
+      0,
+      870,
+      -1,
+      null
+    ]
+  ],
+  "edges": []
+}

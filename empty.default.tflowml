@@ -32,28 +32,8 @@
     "errorParams": {},
     "metricAlgorithm": "lms",
     "metricParams": {},
-    "selectedMetrics": [
-      "lms"
-    ],
     "optimizerAlgorithm": "sgd",
-    "optimizerParams": {
-      "momentum": {
-        "learningRate": 0.1,
-        "momentum": 0.9
-      },
-      "sgd": {
-        "learningRate": 0.1
-      },
-      "adagrad": {
-        "learningRate": 0.1
-      },
-      "adadelta": {},
-      "adam": {},
-      "adamax": {},
-      "rmsprop": {
-        "learningRate": 0.1
-      }
-    },
+    "optimizerParams": {},
     "adjustmentMode": "stochastic",
     "batchSize": 32,
     "randomizeOnStart": true

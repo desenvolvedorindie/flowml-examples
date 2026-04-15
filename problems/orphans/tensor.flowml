@@ -1,0 +1,222 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "da644260-f29c-4123-98e6-6ba406f67a12",
+    "dae9504b-5068-499c-8d9c-cec33f1f17b7",
+    "a9e0d115-db57-4eba-b5dc-f1435a52e66d",
+    "329f88ab-d4c6-4974-a734-a24d4412916f",
+    "16266160-8a1f-4291-beb8-8b87fe5e663a",
+    "ae3d3c1a-5ae6-4d64-bfa5-de830794a97d",
+    "a5fd08ae-fd32-4b50-96cd-3583531187e2",
+    "03a512f1-e3e1-43f2-ac07-2fde31b33f58",
+    "bd7d42c6-7a2d-489b-8b04-948f8cfe2448",
+    "246d1719-073b-41cd-ace4-80739c665231",
+    "b07d2bc1-56c8-4591-a0ce-e8aba7086bde",
+    "e5e8929f-6f37-4cbb-b78b-1d91420ccfae",
+    "d03a2c48-aaa7-4feb-97b8-6c64dea7d5a1"
+  ],
+  "nodes": [
+    [
+      "tensor",
+      {
+        "label": "Tensor",
+        "order": 1,
+        "shape": [
+          3
+        ],
+        "output": [
+          0,
+          0,
+          0
+        ],
+        "dtype": "float32",
+        "type": "tensor",
+        "isOutput": false
+      },
+      0,
+      0,
+      -1,
+      null
+    ],
+    [
+      "tensor-unary",
+      {
+        "label": "Unary",
+        "output": [],
+        "type": "tensor-unary",
+        "isOutput": false
+      },
+      44.5,
+      237,
+      -1,
+      null
+    ],
+    [
+      "tensor-binary",
+      {
+        "label": "Binary",
+        "output": [],
+        "shape": [],
+        "operationType": "add",
+        "type": "tensor-binary",
+        "isOutput": false,
+        "name": "TensorBinary",
+        "description": "Executes binary mathematical operations between two tensors (e.g., Add, Multiply, Subtract)."
+      },
+      44.5,
+      364,
+      -1,
+      null
+    ],
+    [
+      "tensor-complex",
+      {
+        "label": "Complex",
+        "output": [],
+        "type": "tensor-complex",
+        "isOutput": false,
+        "shape": []
+      },
+      32,
+      491,
+      -1,
+      null
+    ],
+    [
+      "tensor-real",
+      {
+        "label": "Real",
+        "output": [],
+        "type": "tensor-real",
+        "isOutput": false,
+        "shape": []
+      },
+      44.5,
+      618,
+      -1,
+      null
+    ],
+    [
+      "tensor-imag",
+      {
+        "label": "Imag",
+        "output": [],
+        "type": "tensor-imag",
+        "isOutput": false,
+        "shape": []
+      },
+      44.5,
+      745,
+      -1,
+      null
+    ],
+    [
+      "tensor-matrix-unary",
+      {
+        "label": "Matrix Unary",
+        "output": [],
+        "type": "tensor-matrix-unary",
+        "isOutput": false,
+        "shape": []
+      },
+      31.5,
+      872,
+      -1,
+      null
+    ],
+    [
+      "tensor-reduce",
+      {
+        "label": "Reduction",
+        "output": [],
+        "type": "tensor-reduce",
+        "isOutput": false
+      },
+      44,
+      995,
+      -1,
+      null
+    ],
+    [
+      "tensor-reshape",
+      {
+        "label": "Reshape 9",
+        "output": [],
+        "type": "tensor-reshape",
+        "isOutput": false,
+        "shape": []
+      },
+      44.5,
+      1122,
+      -1,
+      null
+    ],
+    [
+      "tensor-join",
+      {
+        "label": "Join 10",
+        "output": [],
+        "type": "tensor-join",
+        "isOutput": false,
+        "operationParams": {
+          "axis": 0
+        },
+        "operationType": "concat"
+      },
+      44.5,
+      1249,
+      -1,
+      null
+    ],
+    [
+      "tensor-slicing",
+      {
+        "label": "Slicing 11",
+        "output": [],
+        "type": "tensor-slicing",
+        "isOutput": false,
+        "operationParams": {
+          "axis": 0
+        },
+        "operationType": "slice"
+      },
+      44.5,
+      1376,
+      -1,
+      null
+    ],
+    [
+      "tensor-transform",
+      {
+        "label": "Transform 12",
+        "output": [],
+        "type": "tensor-transform",
+        "isOutput": false,
+        "operationType": "reshape"
+      },
+      28,
+      1503,
+      -1,
+      null
+    ],
+    [
+      "tensor-print",
+      {
+        "label": "Print",
+        "output": [],
+        "type": "tensor-print",
+        "isOutput": false,
+        "description": "Display tensor values",
+        "color": "#d946ef",
+        "verbose": false,
+        "shape": []
+      },
+      34.5,
+      1630,
+      -1,
+      null
+    ]
+  ],
+  "edges": []
+}

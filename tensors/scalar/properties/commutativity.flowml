@@ -79,7 +79,7 @@
         "isOutput": false,
         "description": "Display tensor values",
         "color": "#d946ef",
-        "verbose": true,
+        "verbose": false,
         "shape": [],
         "dtype": "float32"
       },
@@ -155,12 +155,12 @@
         "isOutput": false,
         "description": "Display tensor values",
         "color": "#d946ef",
-        "verbose": true,
+        "verbose": false,
         "shape": [],
         "dtype": "float32"
       },
       -840,
-      200,
+      240,
       -1,
       null
     ]

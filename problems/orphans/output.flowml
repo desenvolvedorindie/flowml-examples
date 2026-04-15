@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "7554a12d-5225-4e60-833f-21035e14f521",
+    "ee8cf53f-12a3-4669-a081-4e2ddc7265c6"
+  ],
+  "nodes": [
+    [
+      "output",
+      {
+        "label": "Output",
+        "output": 0,
+        "type": "output",
+        "isOutput": true,
+        "maxInputs": 1,
+        "maxOutputs": 0
+      },
+      41,
+      0,
+      -1,
+      null
+    ],
+    [
+      "response-surface",
+      {
+        "label": "Response Surface",
+        "output": [],
+        "type": "response-surface",
+        "isOutput": true
+      },
+      0,
+      143,
+      -1,
+      null
+    ]
+  ],
+  "edges": []
+}

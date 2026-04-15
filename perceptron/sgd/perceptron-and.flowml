@@ -17,13 +17,13 @@
       {
         "type": "input",
         "label": "x1",
-        "output": 0,
+        "output": 1,
         "supportedLearningRules": [],
         "supportedActivationFunctions": [],
         "value": 0
       },
-      -280,
-      -240,
+      -260,
+      -220,
       -1,
       null
     ],
@@ -31,9 +31,9 @@
       "perceptron",
       {
         "label": "Perceptron",
-        "output": 0,
-        "netInput": -0.36899998784065247,
-        "bias": -0.51341446215843,
+        "output": 1,
+        "netInput": 0.006200000643730164,
+        "bias": -0.025700000000000014,
         "activationFunction": "step",
         "learningRule": "rosenblatt",
         "type": "perceptron",
@@ -47,10 +47,11 @@
           "sign",
           "linear"
         ],
-        "target": 0
+        "target": 0,
+        "expanded": true
       },
-      20,
-      -240,
+      60,
+      -260,
       -1,
       null
     ],
@@ -63,8 +64,8 @@
         "supportedLearningRules": [],
         "supportedActivationFunctions": []
       },
-      -240,
-      -320,
+      -220,
+      -300,
       -1,
       null
     ],
@@ -73,15 +74,15 @@
       {
         "type": "output",
         "label": "y",
-        "output": 0,
+        "output": 1,
         "supportedLearningRules": [],
         "supportedActivationFunctions": [],
-        "target": 0,
+        "target": 1,
         "bias": -37.800000567734244,
-        "netInput": 0
+        "netInput": 1
       },
-      440,
-      -300,
+      460,
+      -280,
       -1,
       null
     ],
@@ -135,8 +136,8 @@
           "Y"
         ]
       },
+      240,
       220,
-      200,
       -1,
       null
     ],
@@ -145,14 +146,14 @@
       {
         "type": "input",
         "label": "x2",
-        "output": 0,
+        "output": 1,
         "maxInputs": 0,
         "supportedLearningRules": [],
         "supportedActivationFunctions": [],
         "value": 0
       },
-      -280,
-      -100,
+      -260,
+      -80,
       -1,
       null
     ],
@@ -162,13 +163,13 @@
         "type": "decision-surface",
         "label": "Response Surface",
         "output": [
-          0
+          -0.0164
         ],
         "resolution": 1,
         "zoom": 0.25
       },
-      620,
-      -80,
+      640,
+      -60,
       -1,
       null
     ],
@@ -186,8 +187,8 @@
           "Y"
         ]
       },
-      -220,
-      300,
+      -200,
+      320,
       -1,
       null
     ]
@@ -196,7 +197,7 @@
     [
       -1,
       -1,
-      0.2987,
+      -0.1284,
       null,
       "bias",
       "weighted",
@@ -235,7 +236,7 @@
     [
       -1,
       -1,
-      -0.4622,
+      -0.0472,
       null,
       "input",
       "weighted",
@@ -282,7 +283,7 @@
     [
       -1,
       -1,
-      0.2243,
+      0.0249,
       null,
       "input",
       "weighted",
@@ -327,7 +328,7 @@
     [
       -1,
       -1,
-      0.5274,
+      -0.1188,
       "out",
       "training",
       "simple",
@@ -441,7 +442,7 @@
     [
       -1,
       -1,
-      -0.1365,
+      -0.0334,
       "out",
       "test",
       "simple",
@@ -555,7 +556,7 @@
     [
       -1,
       -1,
-      0.0361,
+      -0.0271,
       null,
       "input",
       "weighted",
@@ -603,7 +604,7 @@
     [
       -1,
       -1,
-      0.2458,
+      0.0306,
       null,
       "input",
       "simple",
@@ -647,7 +648,7 @@
     [
       -1,
       -1,
-      0.1065,
+      -0.0306,
       "out",
       "dataset",
       "simple",
@@ -695,7 +696,7 @@
     [
       -1,
       -1,
-      -0.22900000000000006,
+      -0.025700000000000014,
       null,
       "bias",
       "weighted",
@@ -744,7 +745,7 @@
     [
       -1,
       -1,
-      0.42179999999999995,
+      0.01920000000000001,
       null,
       "input",
       "weighted",
@@ -794,7 +795,7 @@
     [
       -1,
       -1,
-      0.43189999999999995,
+      0.012700000000000005,
       null,
       "input",
       "weighted",
@@ -845,7 +846,7 @@
     [
       -1,
       -1,
-      0.4855,
+      0.0378,
       "out",
       "training",
       "simple",
@@ -931,7 +932,7 @@
     [
       -1,
       -1,
-      0.0305,
+      0.0222,
       "out",
       "dataset",
       "simple",
@@ -991,7 +992,7 @@
     [
       -1,
       -1,
-      -0.0913,
+      -0.0164,
       null,
       "input",
       "simple",
@@ -1041,7 +1042,7 @@
     [
       -1,
       -1,
-      -0.157,
+      -0.0765,
       null,
       "input",
       "weighted",

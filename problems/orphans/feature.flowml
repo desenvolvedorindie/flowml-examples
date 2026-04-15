@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "76124f1c-5732-49f5-b5d9-8d79ad4ebdbf",
+    "20d4a17d-4448-4788-938f-b0e0f6b8849d",
+    "d711f8ad-6f1f-4c98-9df9-0a0c97edd88a"
+  ],
+  "nodes": [
+    [
+      "feature-node",
+      {
+        "label": "Feature",
+        "featureName": "",
+        "sourceFeatureIndex": 0,
+        "k": 2,
+        "output": [],
+        "shape": [
+          0,
+          0
+        ],
+        "type": "feature-node",
+        "isOutput": false
+      },
+      0,
+      0,
+      -1,
+      null
+    ],
+    [
+      "feature-unary",
+      {
+        "label": "Feature Unary",
+        "featureName": "",
+        "sourceFeatureIndex": 0,
+        "operationType": "abs",
+        "output": [],
+        "shape": [
+          0,
+          0
+        ],
+        "type": "feature-unary",
+        "isOutput": false
+      },
+      0,
+      136,
+      -1,
+      null
+    ],
+    [
+      "feature-binary",
+      {
+        "label": "Feature Binary",
+        "featureName": "",
+        "sourceFeatureIndexA": 0,
+        "sourceFeatureIndexB": 1,
+        "operationType": "add",
+        "output": [],
+        "shape": [
+          0,
+          0
+        ],
+        "type": "feature-binary",
+        "isOutput": false
+      },
+      0,
+      272,
+      -1,
+      null
+    ]
+  ],
+  "edges": []
+}

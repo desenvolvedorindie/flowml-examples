@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "6afa4778-c8eb-40f3-af33-29469728ed20"
+  ],
+  "nodes": [
+    [
+      "linear-regression",
+      {
+        "label": "Linear Regression",
+        "output": 0,
+        "netInput": 0,
+        "bias": 1,
+        "learningRule": {
+          "name": "rosenblatt",
+          "description": "Perceptron Rule (Rosenblatt): error is computed AFTER the step function — e = (d − y). If the classification is already correct (y = d), the error is 0 and no update occurs, even if net is close to the boundary."
+        },
+        "type": "linear-regression",
+        "isOutput": false,
+        "description": "Estimates a linear relationship between input variables and an output variable. Learns via Delta Rule (LMS)."
+      },
+      -130,
+      520,
+      -1,
+      null
+    ]
+  ],
+  "edges": []
+}

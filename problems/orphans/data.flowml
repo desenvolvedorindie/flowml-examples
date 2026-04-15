@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "8e0060e7-104e-4c33-9699-9fc2986fb8e8",
+    "f86ccf34-8b91-4807-89cb-7a1ce89ee9a8",
+    "1acdd51d-4fa6-4c70-9c8c-7832151c9c9d",
+    "25a3680f-e29c-46f8-8038-8c5efd67ec5c"
+  ],
+  "nodes": [
+    [
+      "data-node",
+      {
+        "label": "Data",
+        "datasetId": ""
+      },
+      0,
+      0,
+      -1,
+      null
+    ],
+    [
+      "dataset-node",
+      {
+        "label": "Dataset",
+        "output": [],
+        "type": "dataset-node",
+        "_hasTrainingEdge": false,
+        "_hasValidationEdge": false,
+        "_hasTestEdge": false
+      },
+      25,
+      137,
+      -1,
+      null
+    ],
+    [
+      "microphone-node",
+      {
+        "label": "Microphone",
+        "output": [],
+        "shape": [
+          43,
+          232,
+          1
+        ],
+        "type": "microphone-node",
+        "isOutput": false
+      },
+      30,
+      389,
+      -1,
+      null
+    ],
+    [
+      "tensor-plot",
+      {
+        "label": "Plot 5",
+        "output": [],
+        "isOutput": false,
+        "type": "tensor-plot",
+        "shape": []
+      },
+      0,
+      546,
+      -1,
+      null
+    ]
+  ],
+  "edges": []
+}

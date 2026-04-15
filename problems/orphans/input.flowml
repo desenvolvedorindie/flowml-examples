@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "85734b64-f987-4e81-9d89-98725dfa2677"
+  ],
+  "nodes": [
+    [
+      "input",
+      {
+        "label": "Input",
+        "output": 0,
+        "type": "input",
+        "isOutput": false,
+        "maxInputs": 0
+      },
+      -930,
+      500,
+      -1,
+      null
+    ]
+  ],
+  "edges": []
+}
