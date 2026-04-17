@@ -39,8 +39,6 @@
     "optimizerParams": {},
     "adjustmentMode": "stochastic",
     "batchSize": 32,
-    "randomizeOnStart": true,
-    "shuffleData": false,
-    "shuffleAlgorithm": "fisher-yates"
+    "randomizeOnStart": true
   }
 }

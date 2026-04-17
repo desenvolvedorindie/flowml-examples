@@ -1,0 +1,130 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "ecfd458c-fe07-43c9-8080-d12d21a0a7df",
+    "62a3ced2-62f3-4421-9d14-3dc661ce6115"
+  ],
+  "nodes": [
+    [
+      "data-node",
+      {
+        "label": "Data",
+        "datasetId": "AND"
+      },
+      0,
+      47.5,
+      -1,
+      null
+    ],
+    [
+      "dataset-node",
+      {
+        "label": "Dataset",
+        "output": [],
+        "type": "dataset-node",
+        "trainingOutput": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        "_hasTrainingEdge": true,
+        "_hasValidationEdge": false,
+        "_hasTestEdge": false,
+        "_augInputCols": [
+          "X1",
+          "X2"
+        ],
+        "_augOutputCols": [
+          "Y"
+        ]
+      },
+      380,
+      -40,
+      -1,
+      null
+    ]
+  ],
+  "edges": [
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "training",
+      "simple",
+      "caa8075f-93df-4cc7-aff6-96c9feb3c146",
+      {
+        "pre": {
+          "id": "ecfd458c-fe07-43c9-8080-d12d21a0a7df",
+          "label": "Data",
+          "datasetId": "AND",
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "shape": [
+            4,
+            3
+          ],
+          "type": "data-node",
+          "isOutput": false,
+          "_hasTrainingEdge": false,
+          "_hasValidationEdge": false,
+          "_hasTestEdge": false
+        },
+        "post": {
+          "id": "62a3ced2-62f3-4421-9d14-3dc661ce6115",
+          "label": "Dataset",
+          "output": [],
+          "type": "dataset-node",
+          "trainingOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "_hasTrainingEdge": true,
+          "_hasValidationEdge": false,
+          "_hasTestEdge": false,
+          "_augInputCols": [
+            "X1",
+            "X2"
+          ],
+          "_augOutputCols": [
+            "Y"
+          ]
+        }
+      }
+    ]
+  ],
+  "columnLabelOverrides": {},
+  "testOverrides": {}
+}

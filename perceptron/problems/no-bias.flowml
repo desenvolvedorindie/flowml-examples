@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "4c6776c2-3d9c-49eb-bfc7-1a1cdd0a85dd",
+    "f363cfba-f925-4dee-a44c-159a4e4e581e"
+  ],
+  "nodes": [
+    [
+      "input",
+      {
+        "label": "Input",
+        "output": 0,
+        "type": "input",
+        "isOutput": false,
+        "maxInputs": 0
+      },
+      180,
+      400,
+      -1,
+      null
+    ],
+    [
+      "perceptron",
+      {
+        "label": "Perceptron",
+        "output": 0,
+        "netInput": 0,
+        "bias": 1,
+        "activationFunction": "step",
+        "learningRule": {
+          "name": "rosenblatt",
+          "description": "Perceptron Rule (Rosenblatt): error is computed AFTER the step function — e = (d − y). If the classification is already correct (y = d), the error is 0 and no update occurs, even if net is close to the boundary."
+        },
+        "type": "perceptron",
+        "isOutput": false,
+        "description": "Original 1958 model proposed by Frank Rosenblatt (step activation function)"
+      },
+      520,
+      360,
+      -1,
+      null
+    ]
+  ],
+  "edges": [
+    [
+      -1,
+      -1,
+      1,
+      null,
+      "input",
+      "weighted",
+      "99764521-3f01-4402-8771-06ed975177ce",
+      {
+        "pre": {
+          "id": "4c6776c2-3d9c-49eb-bfc7-1a1cdd0a85dd",
+          "label": "Input",
+          "output": 0,
+          "type": "input",
+          "isOutput": false,
+          "maxInputs": 0
+        },
+        "post": {
+          "id": "f363cfba-f925-4dee-a44c-159a4e4e581e",
+          "label": "Perceptron",
+          "output": 0,
+          "netInput": 0,
+          "bias": 1,
+          "activationFunction": "step",
+          "learningRule": {
+            "name": "rosenblatt",
+            "description": "Perceptron Rule (Rosenblatt): error is computed AFTER the step function — e = (d − y). If the classification is already correct (y = d), the error is 0 and no update occurs, even if net is close to the boundary."
+          },
+          "type": "perceptron",
+          "isOutput": false,
+          "description": "Original 1958 model proposed by Frank Rosenblatt (step activation function)"
+        },
+        "label": "w1"
+      }
+    ]
+  ],
+  "columnLabelOverrides": {},
+  "testOverrides": {}
+}

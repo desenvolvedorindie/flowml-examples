@@ -32,8 +32,8 @@
       {
         "label": "Perceptron",
         "output": 1,
-        "netInput": 0.006200000643730164,
-        "bias": -0.025700000000000014,
+        "netInput": 0.031700000166893005,
+        "bias": -0.15939387458010343,
         "activationFunction": "step",
         "learningRule": "rosenblatt",
         "type": "perceptron",
@@ -89,23 +89,9 @@
     [
       "dataset-node",
       {
-        "label": "Dataset",
+        "label": "DATASET2",
         "type": "dataset-node",
         "datasetId": "AND",
-        "trainingOutput": [
-          0,
-          0,
-          0,
-          0,
-          1,
-          0,
-          1,
-          0,
-          0,
-          1,
-          1,
-          1
-        ],
         "output": [
           0,
           0,
@@ -128,16 +114,30 @@
           "X2",
           "Y"
         ],
-        "dynamicInputColumns": [
+        "trainingOutput": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        "_augInputCols": [
           "X1",
           "X2"
         ],
-        "dynamicOutputColumns": [
+        "_augOutputCols": [
           "Y"
         ]
       },
+      280,
       240,
-      220,
       -1,
       null
     ],
@@ -163,7 +163,7 @@
         "type": "decision-surface",
         "label": "Response Surface",
         "output": [
-          -0.0164
+          0
         ],
         "resolution": 1,
         "zoom": 0.25
@@ -177,15 +177,7 @@
       "data-node",
       {
         "label": "Data",
-        "datasetId": "AND",
-        "dynamicInputColumns": [
-          "[Input] X1",
-          "[Input] X2",
-          "[Output] Y"
-        ],
-        "dynamicOutputColumns": [
-          "Y"
-        ]
+        "datasetId": "AND"
       },
       -200,
       320,
@@ -197,7 +189,7 @@
     [
       -1,
       -1,
-      -0.1284,
+      -0.0072,
       null,
       "bias",
       "weighted",
@@ -236,7 +228,7 @@
     [
       -1,
       -1,
-      -0.0472,
+      0.0118,
       null,
       "input",
       "weighted",
@@ -283,7 +275,7 @@
     [
       -1,
       -1,
-      0.0249,
+      0.0192,
       null,
       "input",
       "weighted",
@@ -328,7 +320,7 @@
     [
       -1,
       -1,
-      -0.1188,
+      0.0059,
       "out",
       "training",
       "simple",
@@ -442,7 +434,7 @@
     [
       -1,
       -1,
-      -0.0334,
+      0.0432,
       "out",
       "test",
       "simple",
@@ -556,7 +548,7 @@
     [
       -1,
       -1,
-      -0.0271,
+      -0.0314,
       null,
       "input",
       "weighted",
@@ -604,7 +596,7 @@
     [
       -1,
       -1,
-      0.0306,
+      0.0752,
       null,
       "input",
       "simple",
@@ -648,7 +640,7 @@
     [
       -1,
       -1,
-      -0.0306,
+      -0.0028,
       "out",
       "dataset",
       "simple",
@@ -696,7 +688,7 @@
     [
       -1,
       -1,
-      -0.025700000000000014,
+      -0.0635,
       null,
       "bias",
       "weighted",
@@ -739,13 +731,13 @@
             "y": -240
           }
         },
-        "label": "b2"
+        "label": "b1"
       }
     ],
     [
       -1,
       -1,
-      0.01920000000000001,
+      0.0349,
       null,
       "input",
       "weighted",
@@ -789,13 +781,13 @@
             "y": -240
           }
         },
-        "label": "w3"
+        "label": "w1"
       }
     ],
     [
       -1,
       -1,
-      0.012700000000000005,
+      0.060300000000000006,
       null,
       "input",
       "weighted",
@@ -840,159 +832,13 @@
             "y": -240
           }
         },
-        "label": "w4"
+        "label": "w2"
       }
     ],
     [
       -1,
       -1,
-      0.0378,
-      "out",
-      "training",
-      "simple",
-      "8e8070b2-0ef6-4984-9809-5da1328c3c2c",
-      {
-        "pre": {
-          "id": "212084e1-75d3-44f0-9f88-d6e9ca6e5af2",
-          "label": "Data",
-          "datasetId": "AND",
-          "output": [
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            1,
-            0,
-            0,
-            1,
-            1,
-            1
-          ],
-          "shape": [
-            4,
-            3
-          ],
-          "type": "data-node",
-          "dynamicInputColumns": [
-            "[Input] X1",
-            "[Input] X2",
-            "[Output] Y"
-          ]
-        },
-        "post": {
-          "label": "Dataset",
-          "type": "dataset-node",
-          "datasetId": "AND",
-          "trainingOutput": [
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            1,
-            0,
-            0,
-            1,
-            1,
-            1
-          ],
-          "output": [
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            1,
-            0,
-            0,
-            1,
-            1,
-            1
-          ],
-          "_hasTrainingEdge": true,
-          "_hasValidationEdge": false,
-          "_hasTestEdge": false,
-          "labels": [
-            "X1",
-            "X2",
-            "Y"
-          ],
-          "id": "6b8d6767-45ab-41df-9447-167e2d4741dc",
-          "position": {
-            "x": 220,
-            "y": 200
-          }
-        }
-      }
-    ],
-    [
-      -1,
-      -1,
-      0.0222,
-      "out",
-      "dataset",
-      "simple",
-      "9ac820d3-a4f3-48a1-a669-572bc87e9cc9",
-      {
-        "pre": {
-          "id": "212084e1-75d3-44f0-9f88-d6e9ca6e5af2",
-          "label": "Data",
-          "datasetId": "AND",
-          "output": [
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            1,
-            0,
-            0,
-            1,
-            1,
-            1
-          ],
-          "shape": [
-            4,
-            3
-          ],
-          "dynamicInputColumns": [
-            "[Input] X1",
-            "[Input] X2",
-            "[Output] Y"
-          ],
-          "dynamicOutputColumns": [
-            "Y"
-          ],
-          "type": "data-node",
-          "position": {
-            "x": -220,
-            "y": 300
-          }
-        },
-        "post": {
-          "type": "decision-surface",
-          "label": "Decision Surface",
-          "output": [
-            1
-          ],
-          "resolution": 1,
-          "id": "e5fe1eee-2786-4e6a-90b9-34110e6386df",
-          "position": {
-            "x": 620,
-            "y": -80
-          }
-        }
-      }
-    ],
-    [
-      -1,
-      -1,
-      -0.0164,
+      -0.0345,
       null,
       "input",
       "simple",
@@ -1042,7 +888,7 @@
     [
       -1,
       -1,
-      -0.0765,
+      -0.0137,
       null,
       "input",
       "weighted",
@@ -1089,6 +935,139 @@
           }
         }
       }
+    ],
+    [
+      -1,
+      -1,
+      0.0528,
+      "out",
+      "training",
+      "simple",
+      "40c4e24c-dccf-494d-8537-ef48e20c731a",
+      {
+        "pre": {
+          "id": "212084e1-75d3-44f0-9f88-d6e9ca6e5af2",
+          "label": "Data",
+          "datasetId": "AND",
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "shape": [
+            4,
+            3
+          ],
+          "type": "data-node",
+          "position": {
+            "x": -200,
+            "y": 320
+          },
+          "_hasTrainingEdge": false,
+          "_hasValidationEdge": false,
+          "_hasTestEdge": false
+        },
+        "post": {
+          "label": "DATASET2",
+          "type": "dataset-node",
+          "datasetId": "AND",
+          "output": [],
+          "_hasTrainingEdge": true,
+          "_hasValidationEdge": false,
+          "_hasTestEdge": false,
+          "labels": [
+            "X1",
+            "X2",
+            "Y"
+          ],
+          "id": "6b8d6767-45ab-41df-9447-167e2d4741dc",
+          "position": {
+            "x": 240,
+            "y": 220
+          },
+          "trainingOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ]
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      0.011,
+      "out",
+      "dataset",
+      "simple",
+      "78b5464a-bb3e-4c84-82b3-03d2ae4a6d69",
+      {
+        "pre": {
+          "id": "212084e1-75d3-44f0-9f88-d6e9ca6e5af2",
+          "label": "Data",
+          "datasetId": "AND",
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "shape": [
+            4,
+            3
+          ],
+          "type": "data-node",
+          "position": {
+            "x": -200,
+            "y": 320
+          },
+          "_hasTrainingEdge": false,
+          "_hasValidationEdge": false,
+          "_hasTestEdge": false
+        },
+        "post": {
+          "type": "decision-surface",
+          "label": "Response Surface",
+          "output": [
+            0
+          ],
+          "resolution": 1,
+          "zoom": 0.25,
+          "id": "e5fe1eee-2786-4e6a-90b9-34110e6386df",
+          "position": {
+            "x": 640,
+            "y": -60
+          }
+        }
+      }
     ]
-  ]
+  ],
+  "columnLabelOverrides": {},
+  "testOverrides": {}
 }

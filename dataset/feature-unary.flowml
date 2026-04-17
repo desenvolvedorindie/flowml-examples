@@ -1,0 +1,345 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "6b4fa6ab-d097-4bc0-9d97-177b72d611fb",
+    "4fee86fb-5638-4ea5-9674-361ff97e39e2",
+    "27caf03e-f383-4a13-bf79-b58339096f9b",
+    "29eafaad-5ad4-466e-844b-ed9082a29411"
+  ],
+  "nodes": [
+    [
+      "dataset-node",
+      {
+        "label": "Dataset",
+        "output": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0,
+          0.8813735842704773,
+          1,
+          1,
+          1,
+          0.8813735842704773,
+          0
+        ],
+        "type": "dataset-node",
+        "datasetId": "XOR",
+        "_hasTrainingEdge": true,
+        "_hasValidationEdge": false,
+        "_hasTestEdge": false,
+        "trainingOutput": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0,
+          0.8813735842704773,
+          1,
+          1,
+          1,
+          0.8813735842704773,
+          0
+        ],
+        "dynamicInputColumns": [
+          "X1",
+          "X2",
+          "asinh_0"
+        ],
+        "dynamicOutputColumns": [
+          "Y"
+        ]
+      },
+      -220,
+      -240,
+      -1,
+      null
+    ],
+    [
+      "data-node",
+      {
+        "label": "Data",
+        "datasetId": "XOR",
+        "dynamicInputColumns": [
+          "X1",
+          "X2",
+          "Y"
+        ],
+        "dynamicOutputColumns": [
+          "Y"
+        ]
+      },
+      -1260,
+      -160,
+      -1,
+      null
+    ],
+    [
+      "input",
+      {
+        "label": "X1*X2",
+        "output": 0,
+        "type": "input",
+        "isOutput": false,
+        "maxInputs": 0
+      },
+      -700,
+      80,
+      -1,
+      null
+    ],
+    [
+      "feature-unary",
+      {
+        "label": "Feature Unary",
+        "featureName": "",
+        "featureType": "input",
+        "sourceFeatureIndex": 0,
+        "operationType": "abs",
+        "type": "feature-unary",
+        "isOutput": false,
+        "output": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0,
+          0.8813735842704773,
+          1,
+          1,
+          1,
+          0.8813735842704773,
+          0
+        ],
+        "dynamicInputColumns": [
+          "X1",
+          "X2",
+          "asinh_0"
+        ],
+        "dynamicOutputColumns": [
+          "Y"
+        ]
+      },
+      -770,
+      -160,
+      -1,
+      null
+    ]
+  ],
+  "edges": [
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "in",
+      "simple",
+      "dcf94fa0-381a-44b0-ade8-2af9e91e4ad6",
+      {
+        "pre": {
+          "id": "4fee86fb-5638-4ea5-9674-361ff97e39e2",
+          "label": "Data",
+          "datasetId": "XOR",
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            0
+          ],
+          "shape": [
+            4,
+            3
+          ],
+          "dynamicInputColumns": [
+            "X1",
+            "X2"
+          ],
+          "dynamicOutputColumns": [
+            "Y"
+          ],
+          "type": "data-node",
+          "position": {
+            "x": -1260,
+            "y": -160
+          }
+        },
+        "post": {
+          "id": "29eafaad-5ad4-466e-844b-ed9082a29411",
+          "label": "Feature Unary",
+          "featureName": "",
+          "featureType": "input",
+          "sourceFeatureIndex": 0,
+          "operationType": "abs",
+          "type": "feature-unary",
+          "isOutput": false,
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0.8813735842704773,
+            1,
+            1,
+            1,
+            0.8813735842704773,
+            0
+          ],
+          "dynamicInputColumns": [
+            "X1",
+            "X2",
+            "asinh_0"
+          ],
+          "dynamicOutputColumns": [
+            "Y"
+          ]
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "training",
+      "simple",
+      "92b61242-7b18-4c0c-8fe2-d5aa1b161625",
+      {
+        "pre": {
+          "id": "29eafaad-5ad4-466e-844b-ed9082a29411",
+          "label": "Feature Unary",
+          "featureName": "",
+          "featureType": "input",
+          "sourceFeatureIndex": 0,
+          "operationType": "abs",
+          "type": "feature-unary",
+          "isOutput": false,
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0.8813735842704773,
+            1,
+            1,
+            1,
+            0.8813735842704773,
+            0
+          ],
+          "dynamicInputColumns": [
+            "X1",
+            "X2",
+            "asinh_0"
+          ],
+          "dynamicOutputColumns": [
+            "Y"
+          ]
+        },
+        "post": {
+          "label": "Dataset",
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0.8813735842704773,
+            1,
+            1,
+            1,
+            0.8813735842704773,
+            0
+          ],
+          "type": "dataset-node",
+          "datasetId": "XOR",
+          "_hasTrainingEdge": true,
+          "_hasValidationEdge": false,
+          "_hasTestEdge": false,
+          "id": "6b4fa6ab-d097-4bc0-9d97-177b72d611fb",
+          "position": {
+            "x": -220,
+            "y": -240
+          },
+          "trainingOutput": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0.8813735842704773,
+            1,
+            1,
+            1,
+            0.8813735842704773,
+            0
+          ],
+          "dynamicInputColumns": [
+            "X1",
+            "X2",
+            "asinh_0"
+          ],
+          "dynamicOutputColumns": [
+            "Y"
+          ]
+        }
+      }
+    ]
+  ],
+  "columnLabelOverrides": {
+    "6b4fa6ab-d097-4bc0-9d97-177b72d611fb": {
+      "inputs": [
+        null,
+        null,
+        null
+      ],
+      "outputs": []
+    }
+  },
+  "testOverrides": {}
+}
