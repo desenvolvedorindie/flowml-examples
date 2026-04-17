@@ -1,0 +1,165 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "08ad1389-74a2-401d-a356-4d8888fda5fa",
+    "3212ed8c-552a-4548-81f7-99cb54ad24c1",
+    "6c0ace02-8e2f-4fbe-89b6-9f387a157790"
+  ],
+  "nodes": [
+    [
+      "tensor",
+      {
+        "label": "Tensor",
+        "order": 2,
+        "shape": [
+          3,
+          3
+        ],
+        "output": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "dtype": "float32",
+        "type": "tensor",
+        "isOutput": false
+      },
+      130,
+      420,
+      -1,
+      null
+    ],
+    [
+      "tensor-reduce",
+      {
+        "label": "Reduction",
+        "output": [
+          45
+        ],
+        "type": "tensor-reduce",
+        "isOutput": false,
+        "operationType": "sum",
+        "shape": [],
+        "dtype": "float32"
+      },
+      440,
+      480,
+      -1,
+      null
+    ],
+    [
+      "tensor-print",
+      {
+        "label": "Print",
+        "output": [
+          45
+        ],
+        "type": "tensor-print",
+        "isOutput": false,
+        "description": "Display tensor values",
+        "color": "#d946ef",
+        "verbose": false,
+        "shape": [],
+        "dtype": "float32"
+      },
+      700,
+      460,
+      -1,
+      null
+    ]
+  ],
+  "edges": [
+    [
+      -1,
+      -1,
+      null,
+      "tensor-out",
+      "input",
+      "simple",
+      "ef82d517-ec9b-415f-a4e2-73f07ebcc7e8",
+      {
+        "pre": {
+          "id": "3212ed8c-552a-4548-81f7-99cb54ad24c1",
+          "label": "Reduction",
+          "output": [
+            45
+          ],
+          "type": "tensor-reduce",
+          "isOutput": false,
+          "operationType": "sum",
+          "shape": [],
+          "dtype": "float32"
+        },
+        "post": {
+          "id": "6c0ace02-8e2f-4fbe-89b6-9f387a157790",
+          "label": "Print",
+          "output": [
+            45
+          ],
+          "type": "tensor-print",
+          "isOutput": false,
+          "description": "Display tensor values",
+          "color": "#d946ef",
+          "verbose": false,
+          "shape": [],
+          "dtype": "float32"
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "input",
+      "simple",
+      "9b55c9ea-e871-498e-8620-44f3fa86f06b",
+      {
+        "pre": {
+          "id": "08ad1389-74a2-401d-a356-4d8888fda5fa",
+          "label": "Tensor",
+          "order": 2,
+          "shape": [
+            3,
+            3
+          ],
+          "output": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "dtype": "float32",
+          "type": "tensor",
+          "isOutput": false
+        },
+        "post": {
+          "id": "3212ed8c-552a-4548-81f7-99cb54ad24c1",
+          "label": "Reduction",
+          "output": [
+            45
+          ],
+          "type": "tensor-reduce",
+          "isOutput": false,
+          "operationType": "sum",
+          "shape": [],
+          "dtype": "float32"
+        }
+      }
+    ]
+  ],
+  "columnLabelOverrides": {},
+  "testOverrides": {}
+}

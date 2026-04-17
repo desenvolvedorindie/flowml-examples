@@ -1,0 +1,224 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "257205db-61e0-4fdf-b872-ca76c0f5920d",
+    "2c2ddfcd-b79c-4375-9be5-57f20305c567",
+    "0fe30cef-eaf9-47d1-8d79-997e415dd3a2"
+  ],
+  "nodes": [
+    [
+      "tensor",
+      {
+        "label": "Tensor",
+        "order": 2,
+        "shape": [
+          3,
+          3
+        ],
+        "output": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "dtype": "float32",
+        "type": "tensor",
+        "isOutput": false
+      },
+      -1560,
+      100,
+      -1,
+      null
+    ],
+    [
+      "tensor-print",
+      {
+        "label": "Print",
+        "output": [
+          -1,
+          -2,
+          -3,
+          -4,
+          -5,
+          -6,
+          -7,
+          -8,
+          -9
+        ],
+        "type": "tensor-print",
+        "isOutput": false,
+        "description": "Display tensor values",
+        "color": "#d946ef",
+        "verbose": false,
+        "shape": [
+          3,
+          3
+        ],
+        "dtype": "float32"
+      },
+      -1100,
+      140,
+      -1,
+      null
+    ],
+    [
+      "tensor-unary",
+      {
+        "label": "Unary",
+        "output": [
+          -1,
+          -2,
+          -3,
+          -4,
+          -5,
+          -6,
+          -7,
+          -8,
+          -9
+        ],
+        "type": "tensor-unary",
+        "isOutput": false,
+        "shape": [
+          3,
+          3
+        ],
+        "dtype": "float32",
+        "operationType": "tanh"
+      },
+      -1320,
+      160,
+      -1,
+      null
+    ]
+  ],
+  "edges": [
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "input",
+      "simple",
+      "50dd3cb1-f2d5-4f36-97a0-335d575b7cac",
+      {
+        "pre": {
+          "id": "257205db-61e0-4fdf-b872-ca76c0f5920d",
+          "label": "Tensor",
+          "order": 2,
+          "shape": [
+            3,
+            3
+          ],
+          "output": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "dtype": "float32",
+          "type": "tensor",
+          "isOutput": false,
+          "position": {
+            "x": -1390,
+            "y": 140
+          }
+        },
+        "post": {
+          "id": "0fe30cef-eaf9-47d1-8d79-997e415dd3a2",
+          "label": "Unary",
+          "output": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "type": "tensor-unary",
+          "isOutput": false,
+          "shape": [
+            3,
+            3
+          ],
+          "dtype": "float32",
+          "operationType": "abs"
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "tensor-out",
+      "input",
+      "simple",
+      "a70103e6-a3f2-4e0e-949a-154f04efb725",
+      {
+        "pre": {
+          "id": "0fe30cef-eaf9-47d1-8d79-997e415dd3a2",
+          "label": "Unary",
+          "output": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "type": "tensor-unary",
+          "isOutput": false,
+          "shape": [
+            3,
+            3
+          ],
+          "dtype": "float32",
+          "operationType": "abs"
+        },
+        "post": {
+          "id": "2c2ddfcd-b79c-4375-9be5-57f20305c567",
+          "label": "Print",
+          "output": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "type": "tensor-print",
+          "isOutput": false,
+          "description": "Display tensor values",
+          "color": "#d946ef",
+          "verbose": false,
+          "shape": [
+            3,
+            3
+          ],
+          "dtype": "float32"
+        }
+      }
+    ]
+  ],
+  "columnLabelOverrides": {},
+  "testOverrides": {}
+}

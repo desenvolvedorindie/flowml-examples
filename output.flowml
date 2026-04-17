@@ -11,7 +11,7 @@
     [
       "input",
       {
-        "label": "Input",
+        "label": "INPUT2",
         "output": 1,
         "type": "input",
         "maxInputs": 0
@@ -124,5 +124,7 @@
         }
       }
     ]
-  ]
+  ],
+  "columnLabelOverrides": {},
+  "testOverrides": {}
 }

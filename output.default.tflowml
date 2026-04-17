@@ -32,10 +32,15 @@
     "errorParams": {},
     "metricAlgorithm": "lms",
     "metricParams": {},
+    "selectedMetrics": [
+      "lms"
+    ],
     "optimizerAlgorithm": "sgd",
     "optimizerParams": {},
     "adjustmentMode": "stochastic",
     "batchSize": 32,
-    "randomizeOnStart": true
+    "randomizeOnStart": true,
+    "shuffleData": false,
+    "shuffleAlgorithm": "fisher-yates"
   }
 }
