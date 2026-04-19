@@ -4,8 +4,8 @@
   "nodeIds": [
     "6b4fa6ab-d097-4bc0-9d97-177b72d611fb",
     "4fee86fb-5638-4ea5-9674-361ff97e39e2",
-    "27caf03e-f383-4a13-bf79-b58339096f9b",
-    "c613805c-36be-41fc-83fb-89b454366f7e"
+    "c613805c-36be-41fc-83fb-89b454366f7e",
+    "27caf03e-f383-4a13-bf79-b58339096f9b"
   ],
   "nodes": [
     [
@@ -19,15 +19,15 @@
           0,
           0,
           1,
+          1,
+          1,
+          1,
           0,
           1,
           1,
-          0,
-          0,
           1,
           1,
-          1,
-          1,
+          2,
           0
         ],
         "type": "dataset-node",
@@ -39,15 +39,15 @@
           0,
           0,
           1,
+          1,
+          1,
+          1,
           0,
           1,
           1,
-          0,
-          0,
           1,
           1,
-          1,
-          1,
+          2,
           0
         ],
         "_hasTrainingEdge": true,
@@ -87,20 +87,6 @@
       null
     ],
     [
-      "input",
-      {
-        "label": "X1*X2",
-        "output": 0,
-        "type": "input",
-        "isOutput": false,
-        "maxInputs": 0
-      },
-      -700,
-      80,
-      -1,
-      null
-    ],
-    [
       "feature-binary",
       {
         "label": "Feature Binary",
@@ -108,7 +94,7 @@
         "featureType": "input",
         "sourceFeatureIndexA": 0,
         "sourceFeatureIndexB": 1,
-        "operationType": "minimum",
+        "operationType": "div",
         "tensorPosition": "B",
         "type": "feature-binary",
         "isOutput": false,
@@ -119,15 +105,15 @@
           0,
           0,
           1,
+          1,
+          1,
+          1,
           0,
           1,
           1,
-          0,
-          0,
           1,
           1,
-          1,
-          1,
+          2,
           0
         ],
         "dynamicInputColumns": [
@@ -141,6 +127,20 @@
       },
       -710,
       -180,
+      -1,
+      null
+    ],
+    [
+      "input",
+      {
+        "label": "X1*X2",
+        "output": 0,
+        "type": "input",
+        "isOutput": false,
+        "maxInputs": 0
+      },
+      -700,
+      80,
       -1,
       null
     ]
@@ -211,7 +211,7 @@
       "out",
       "training",
       "simple",
-      "9aa0cf68-43ab-4707-8f92-c957dfe3e922",
+      "4af417d6-7acc-4786-8c82-9325144705bf",
       {
         "pre": {
           "id": "c613805c-36be-41fc-83fb-89b454366f7e",
@@ -220,9 +220,40 @@
           "featureType": "input",
           "sourceFeatureIndexA": 0,
           "sourceFeatureIndexB": 1,
-          "operationType": "add",
+          "operationType": "div",
+          "tensorPosition": "B",
           "type": "feature-binary",
-          "isOutput": false
+          "isOutput": false,
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            2,
+            0
+          ],
+          "dynamicInputColumns": [
+            "X1",
+            "X2",
+            "X1*X2"
+          ],
+          "dynamicOutputColumns": [
+            "Y"
+          ],
+          "position": {
+            "x": -710,
+            "y": -180
+          }
         },
         "post": {
           "label": "Dataset",
@@ -251,6 +282,8 @@
             0,
             0,
             0,
+            0,
+            1,
             1,
             1,
             1,
@@ -258,11 +291,29 @@
             1,
             1,
             1,
+            1,
+            2,
             0
           ],
           "_hasTrainingEdge": true,
           "_hasValidationEdge": false,
           "_hasTestEdge": false,
+          "_augInputCols": [
+            "X1",
+            "X2",
+            "X1*X2"
+          ],
+          "_augOutputCols": [
+            "Y"
+          ],
+          "dynamicInputColumns": [
+            "X1",
+            "X2",
+            "X1*X2"
+          ],
+          "dynamicOutputColumns": [
+            "Y"
+          ],
           "id": "6b4fa6ab-d097-4bc0-9d97-177b72d611fb",
           "position": {
             "x": -220,

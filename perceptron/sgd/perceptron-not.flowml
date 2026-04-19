@@ -16,9 +16,9 @@
       {
         "type": "perceptron",
         "label": "Perceptron",
-        "bias": -0.12683591521009555,
+        "bias": -1.687003999037,
         "output": 0,
-        "netInput": -0.0004999935626983643,
+        "netInput": -0.002300000051036477,
         "activationFunction": "step",
         "learningRule": {
           "name": "rosenblatt"
@@ -116,6 +116,12 @@
         "labels": [
           "X1",
           "Y"
+        ],
+        "_augInputCols": [
+          "X1"
+        ],
+        "_augOutputCols": [
+          "Y"
         ]
       },
       -1560,
@@ -127,11 +133,7 @@
       "data-node",
       {
         "label": "Data",
-        "datasetId": "NOT",
-        "dynamicInputColumns": [
-          "[Input] X1",
-          "[Output] Y"
-        ]
+        "datasetId": "NOT"
       },
       -2000,
       -220,
@@ -143,7 +145,7 @@
     [
       -1,
       -1,
-      0.2598,
+      0.0719,
       null,
       "bias",
       "weighted",
@@ -180,7 +182,7 @@
     [
       -1,
       -1,
-      -0.2484,
+      0.0261,
       null,
       "input",
       "weighted",
@@ -218,7 +220,7 @@
     [
       -1,
       -1,
-      0.2881,
+      0.0284,
       null,
       "input",
       "weighted",
@@ -256,7 +258,7 @@
     [
       -1,
       -1,
-      -0.4498,
+      -0.0628,
       null,
       "input",
       "weighted",
@@ -295,7 +297,7 @@
     [
       -1,
       -1,
-      0.677,
+      0.0189,
       "out",
       "training",
       "weighted",
@@ -342,7 +344,7 @@
     [
       -1,
       -1,
-      -0.5451,
+      -0.0085,
       "out",
       "test",
       "weighted",
@@ -403,7 +405,7 @@
     [
       -1,
       -1,
-      -0.0619,
+      -0.0096,
       "out",
       "dataset",
       "simple",
@@ -447,7 +449,7 @@
     [
       -1,
       -1,
-      0.2715,
+      -0.0654,
       null,
       "input",
       "weighted",
@@ -495,7 +497,7 @@
     [
       -1,
       -1,
-      0.08379999999999972,
+      0.0029000000000000007,
       null,
       "bias",
       "weighted",
@@ -540,7 +542,7 @@
     [
       -1,
       -1,
-      -0.08430000000000017,
+      -0.0052000000000000345,
       null,
       "input",
       "weighted",
@@ -587,7 +589,7 @@
     [
       -1,
       -1,
-      -0.5512,
+      0.024,
       null,
       "input",
       "simple",
@@ -633,7 +635,7 @@
     [
       -1,
       -1,
-      0.2587,
+      -0.0064,
       "out",
       "training",
       "simple",
@@ -693,7 +695,7 @@
     [
       -1,
       -1,
-      0.3754,
+      -0.0638,
       "out",
       "dataset",
       "simple",
@@ -733,5 +735,7 @@
         }
       }
     ]
-  ]
+  ],
+  "columnLabelOverrides": {},
+  "testOverrides": {}
 }

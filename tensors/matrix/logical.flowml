@@ -1,5 +1,267 @@
 {
-  "version": "1.0.0",
-  "nodes": [],
-  "connections": []
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "b7100b0b-427f-47ba-9b0c-7f2ad8ae4ecf",
+    "e79b29e1-d086-4861-90a4-b43f0be6cf0b",
+    "28db5e61-5ae4-4b80-9a79-02a0de701567",
+    "435bed29-c988-4af4-aef8-59ee6e04e99a"
+  ],
+  "nodes": [
+    [
+      "tensor-logical",
+      {
+        "label": "Logical Tensor",
+        "output": [
+          1,
+          0,
+          3,
+          4,
+          5,
+          4,
+          3,
+          0,
+          1
+        ],
+        "operationType": "bitwiseAnd",
+        "type": "tensor-logical",
+        "isOutput": false,
+        "shape": [
+          3,
+          3
+        ],
+        "dtype": "float32"
+      },
+      100,
+      400,
+      -1,
+      null
+    ],
+    [
+      "tensor",
+      {
+        "label": "Tensor",
+        "order": 2,
+        "shape": [
+          3,
+          3
+        ],
+        "output": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "dtype": "float32",
+        "type": "tensor",
+        "isOutput": false
+      },
+      -200,
+      240,
+      -1,
+      null
+    ],
+    [
+      "tensor-print",
+      {
+        "label": "Print",
+        "output": [
+          1,
+          0,
+          3,
+          4,
+          5,
+          4,
+          3,
+          0,
+          1
+        ],
+        "type": "tensor-print",
+        "isOutput": false,
+        "description": "Display tensor values",
+        "color": "#d946ef",
+        "verbose": true,
+        "shape": [
+          3,
+          3
+        ],
+        "dtype": "float32"
+      },
+      380,
+      380,
+      -1,
+      null
+    ],
+    [
+      "tensor",
+      {
+        "label": "Tensor",
+        "order": 2,
+        "shape": [
+          3,
+          3
+        ],
+        "output": [
+          9,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        "dtype": "float32",
+        "type": "tensor",
+        "isOutput": false
+      },
+      -200,
+      460,
+      -1,
+      null
+    ]
+  ],
+  "edges": [
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "input-a",
+      "simple",
+      "a90c1325-6a2c-4d5f-b1af-6d85280bc5a6",
+      {
+        "pre": {
+          "id": "e79b29e1-d086-4861-90a4-b43f0be6cf0b",
+          "label": "Tensor",
+          "order": 2,
+          "shape": [
+            3,
+            3
+          ],
+          "output": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "dtype": "float32",
+          "type": "tensor",
+          "isOutput": false
+        },
+        "post": {
+          "id": "b7100b0b-427f-47ba-9b0c-7f2ad8ae4ecf",
+          "label": "Logical Tensor",
+          "output": [],
+          "operationType": "bitwiseAnd",
+          "type": "tensor-logical",
+          "isOutput": false
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "tensor-out",
+      "input",
+      "simple",
+      "30ce2d6a-670c-4353-9781-4cd0688ddef2",
+      {
+        "pre": {
+          "id": "b7100b0b-427f-47ba-9b0c-7f2ad8ae4ecf",
+          "label": "Logical Tensor",
+          "output": [],
+          "operationType": "bitwiseAnd",
+          "type": "tensor-logical",
+          "isOutput": false
+        },
+        "post": {
+          "id": "28db5e61-5ae4-4b80-9a79-02a0de701567",
+          "label": "Print",
+          "output": [],
+          "type": "tensor-print",
+          "isOutput": false,
+          "description": "Display tensor values",
+          "color": "#d946ef",
+          "verbose": true,
+          "shape": []
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "input-b",
+      "simple",
+      "8648b0b3-8e03-4c83-82ab-75d971c4f4cb",
+      {
+        "pre": {
+          "id": "435bed29-c988-4af4-aef8-59ee6e04e99a",
+          "label": "Tensor",
+          "order": 2,
+          "shape": [
+            3,
+            3
+          ],
+          "output": [
+            9,
+            8,
+            7,
+            6,
+            5,
+            4,
+            3,
+            2,
+            1
+          ],
+          "dtype": "float32",
+          "type": "tensor",
+          "isOutput": false
+        },
+        "post": {
+          "label": "Logical Tensor",
+          "output": [
+            1,
+            0,
+            3,
+            4,
+            5,
+            4,
+            3,
+            0,
+            1
+          ],
+          "operationType": "bitwiseAnd",
+          "type": "tensor-logical",
+          "isOutput": false,
+          "id": "b7100b0b-427f-47ba-9b0c-7f2ad8ae4ecf",
+          "position": {
+            "x": 90,
+            "y": 400
+          },
+          "shape": [
+            3,
+            3
+          ],
+          "dtype": "float32"
+        }
+      }
+    ]
+  ],
+  "columnLabelOverrides": {},
+  "testOverrides": {}
 }

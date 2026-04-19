@@ -21,7 +21,20 @@
       "dataset-node",
       {
         "label": "Dataset",
-        "output": [],
+        "output": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
         "type": "dataset-node",
         "trainingOutput": [
           0,
@@ -38,14 +51,42 @@
           1
         ],
         "_hasTrainingEdge": true,
-        "_hasValidationEdge": false,
-        "_hasTestEdge": false,
+        "_hasValidationEdge": true,
+        "_hasTestEdge": true,
         "_augInputCols": [
           "X1",
           "X2"
         ],
         "_augOutputCols": [
           "Y"
+        ],
+        "validationOutput": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        "testOutput": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1
         ]
       },
       380,
@@ -62,7 +103,7 @@
       "out",
       "training",
       "simple",
-      "caa8075f-93df-4cc7-aff6-96c9feb3c146",
+      "32aff894-e9ce-4593-8434-4ace3c38143a",
       {
         "pre": {
           "id": "ecfd458c-fe07-43c9-8080-d12d21a0a7df",
@@ -87,15 +128,30 @@
             3
           ],
           "type": "data-node",
-          "isOutput": false,
+          "position": {
+            "x": 0,
+            "y": 47.5
+          },
           "_hasTrainingEdge": false,
           "_hasValidationEdge": false,
           "_hasTestEdge": false
         },
         "post": {
-          "id": "62a3ced2-62f3-4421-9d14-3dc661ce6115",
           "label": "Dataset",
-          "output": [],
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
           "type": "dataset-node",
           "trainingOutput": [
             0,
@@ -112,14 +168,281 @@
             1
           ],
           "_hasTrainingEdge": true,
-          "_hasValidationEdge": false,
-          "_hasTestEdge": false,
+          "_hasValidationEdge": true,
+          "_hasTestEdge": true,
           "_augInputCols": [
             "X1",
             "X2"
           ],
           "_augOutputCols": [
             "Y"
+          ],
+          "validationOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "id": "62a3ced2-62f3-4421-9d14-3dc661ce6115",
+          "position": {
+            "x": 380,
+            "y": -40
+          },
+          "testOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ]
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "validation",
+      "simple",
+      "c40c2300-085a-4ee6-bb57-453dfd1c416e",
+      {
+        "pre": {
+          "id": "ecfd458c-fe07-43c9-8080-d12d21a0a7df",
+          "label": "Data",
+          "datasetId": "AND",
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "shape": [
+            4,
+            3
+          ],
+          "type": "data-node",
+          "position": {
+            "x": 0,
+            "y": 47.5
+          },
+          "_hasTrainingEdge": false,
+          "_hasValidationEdge": false,
+          "_hasTestEdge": false
+        },
+        "post": {
+          "label": "Dataset",
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "type": "dataset-node",
+          "trainingOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "_hasTrainingEdge": true,
+          "_hasValidationEdge": true,
+          "_hasTestEdge": true,
+          "_augInputCols": [
+            "X1",
+            "X2"
+          ],
+          "_augOutputCols": [
+            "Y"
+          ],
+          "validationOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "id": "62a3ced2-62f3-4421-9d14-3dc661ce6115",
+          "position": {
+            "x": 380,
+            "y": -40
+          },
+          "testOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ]
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "test",
+      "simple",
+      "20c781bb-81ee-47eb-84f4-c6cef4a9fcca",
+      {
+        "pre": {
+          "id": "ecfd458c-fe07-43c9-8080-d12d21a0a7df",
+          "label": "Data",
+          "datasetId": "AND",
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "shape": [
+            4,
+            3
+          ],
+          "type": "data-node",
+          "position": {
+            "x": 0,
+            "y": 47.5
+          },
+          "_hasTrainingEdge": false,
+          "_hasValidationEdge": false,
+          "_hasTestEdge": false
+        },
+        "post": {
+          "label": "Dataset",
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "type": "dataset-node",
+          "trainingOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "_hasTrainingEdge": true,
+          "_hasValidationEdge": true,
+          "_hasTestEdge": true,
+          "_augInputCols": [
+            "X1",
+            "X2"
+          ],
+          "_augOutputCols": [
+            "Y"
+          ],
+          "validationOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "id": "62a3ced2-62f3-4421-9d14-3dc661ce6115",
+          "position": {
+            "x": 380,
+            "y": -40
+          },
+          "testOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
           ]
         }
       }

@@ -18,7 +18,7 @@
       "frameMetrics": []
     },
     "trainingEpoch": 0,
-    "currentFrame": 0,
+    "currentFrame": 3,
     "frameStatus": [],
     "stopReason": null,
     "trainingBaseEpoch": 0,
@@ -38,7 +38,7 @@
     "optimizerAlgorithm": "sgd",
     "optimizerParams": {},
     "adjustmentMode": "stochastic",
-    "batchSize": 32,
+    "batchSize": 4,
     "randomizeOnStart": true,
     "shuffleData": false,
     "shuffleAlgorithm": "fisher-yates"

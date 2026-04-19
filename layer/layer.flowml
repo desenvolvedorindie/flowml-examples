@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "f60aced1-4292-4c19-9b88-426d70dfcdbc"
+  ],
+  "nodes": [
+    [
+      "layer",
+      {
+        "label": "Layer",
+        "constraint": "none",
+        "type": "layer",
+        "isOutput": false
+      },
+      290,
+      480,
+      -1,
+      {
+        "width": 240,
+        "height": 180
+      }
+    ]
+  ],
+  "edges": [],
+  "columnLabelOverrides": {},
+  "testOverrides": {}
+}

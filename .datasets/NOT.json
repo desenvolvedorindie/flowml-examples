@@ -1,0 +1,21 @@
+{
+  "id": "NOT",
+  "name": "Logic Gate: NOT",
+  "read_only": true,
+  "inputs": [
+    "X1"
+  ],
+  "outputs": [
+    "Y"
+  ],
+  "data": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      0
+    ]
+  ]
+}

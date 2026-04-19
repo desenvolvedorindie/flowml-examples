@@ -88,7 +88,7 @@
         "type": "tensor-real",
         "label": "Real",
         "output": [
-          3.3
+          1
         ],
         "shape": [],
         "dtype": "boolean"
@@ -120,11 +120,11 @@
         "type": "tensor-print",
         "label": "Print 4",
         "output": [
-          3.3
+          1
         ],
         "shape": [],
         "verbose": true,
-        "dtype": "float32"
+        "dtype": "boolean"
       },
       360,
       380,
@@ -732,5 +732,7 @@
         }
       }
     ]
-  ]
+  ],
+  "columnLabelOverrides": {},
+  "testOverrides": {}
 }
