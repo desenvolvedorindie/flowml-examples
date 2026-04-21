@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "b2093ac8-be0c-434d-8437-a67f4cfdf078",
+    "98c65c04-36a2-456d-8c4d-b3434d44e030"
+  ],
+  "nodes": [
+    [
+      "input",
+      {
+        "label": "Input",
+        "output": 0,
+        "type": "input",
+        "isOutput": false,
+        "maxInputs": 0
+      },
+      270,
+      280,
+      -1,
+      null
+    ],
+    [
+      "mcculloch-pitts",
+      {
+        "label": "MCP",
+        "output": 0,
+        "netInput": 0,
+        "bias": 1,
+        "threshold": 1,
+        "type": "mcculloch-pitts",
+        "isOutput": false,
+        "description": "Original 1943 model proposed by Warren McCulloch and Walter Pitts"
+      },
+      70,
+      360,
+      -1,
+      null
+    ]
+  ],
+  "edges": [],
+  "columnLabelOverrides": {},
+  "testOverrides": {}
+}
