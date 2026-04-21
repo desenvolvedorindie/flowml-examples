@@ -1,0 +1,110 @@
+{
+  "version": 1,
+  "trainingState": {
+    "trainingData": [
+      [
+        0,
+        0,
+        [],
+        0.1
+      ]
+    ],
+    "sectionErrors": {
+      "training": [
+        0
+      ],
+      "validation": [],
+      "test": [
+        0
+      ],
+      "trainingLoss": [
+        0
+      ],
+      "validationLoss": [],
+      "testLoss": [
+        0
+      ],
+      "datasetTraining": {},
+      "datasetValidation": {},
+      "datasetTest": {},
+      "datasetTrainingLoss": {},
+      "datasetValidationLoss": {},
+      "datasetTestLoss": {},
+      "frameMetrics": [
+        null,
+        [
+          0,
+          0
+        ],
+        null,
+        [
+          0,
+          0
+        ],
+        null,
+        [
+          0,
+          0
+        ],
+        null,
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "epochSampleErrors": [
+        []
+      ],
+      "epochMeta": [
+        [
+          "stochastic",
+          4
+        ]
+      ]
+    },
+    "trainingEpoch": 1,
+    "currentFrame": 9,
+    "frameStatus": [
+      "success",
+      "success",
+      "success",
+      "success",
+      "success",
+      "success",
+      "success",
+      "success",
+      "success",
+      "success",
+      "success",
+      "success",
+      "success",
+      "success"
+    ],
+    "stopReason": "CONVERGED",
+    "trainingBaseEpoch": 0,
+    "weightIds": []
+  },
+  "trainingConfig": {
+    "learningRate": 0.1,
+    "maxEpochs": 100,
+    "targetError": 0.0001,
+    "errorAlgorithm": "mse",
+    "errorParams": {},
+    "metricAlgorithm": "lms",
+    "metricParams": {},
+    "selectedMetrics": [
+      "lms"
+    ],
+    "optimizerAlgorithm": "sgd",
+    "optimizerParams": {},
+    "adjustmentMode": "stochastic",
+    "batchSize": 4,
+    "randomizeOnStart": true,
+    "shuffleData": false,
+    "shuffleAlgorithm": "fisher-yates"
+  }
+}

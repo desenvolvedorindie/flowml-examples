@@ -57,8 +57,8 @@
         "type": "bias",
         "description": "Constant input node (always outputs 1)"
       },
-      -440,
-      -420,
+      -444.5,
+      -412,
       -1,
       null
     ]

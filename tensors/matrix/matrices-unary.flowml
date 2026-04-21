@@ -1,15 +1,111 @@
 {
   "version": 1,
-  "c": 2,
-  "nodeIds": [
-    "50e56308-a158-4f95-9316-49e670232308",
-    "b6fa9a73-9966-4313-acc5-927df85d39e1",
-    "d08984a3-4104-4be4-ad7d-e9adf2298cf6"
-  ],
   "nodes": [
-    [
-      "tensor",
-      {
+    {
+      "label": "Tensor",
+      "order": 2,
+      "shape": [
+        3,
+        3
+      ],
+      "output": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "dtype": "float32",
+      "type": "tensor",
+      "isOutput": false,
+      "id": "50e56308-a158-4f95-9316-49e670232308",
+      "position": {
+        "x": 80,
+        "y": 520
+      }
+    },
+    {
+      "label": "Matrix Unary",
+      "output": [
+        16.881942749023438
+      ],
+      "type": "tensor-matrix-unary",
+      "isOutput": false,
+      "shape": [],
+      "operationType": "norm",
+      "operationParams": {
+        "ord": "2",
+        "axis": "",
+        "keepDims": false
+      },
+      "dtype": "float32",
+      "id": "b6fa9a73-9966-4313-acc5-927df85d39e1",
+      "position": {
+        "x": 340,
+        "y": 620
+      }
+    },
+    {
+      "label": "Print",
+      "output": [
+        16.881942749023438
+      ],
+      "type": "tensor-print",
+      "isOutput": false,
+      "description": "Display tensor values",
+      "color": "#d946ef",
+      "verbose": false,
+      "shape": [],
+      "dtype": "float32",
+      "id": "d08984a3-4104-4be4-ad7d-e9adf2298cf6",
+      "position": {
+        "x": 560,
+        "y": 600
+      }
+    }
+  ],
+  "connections": [
+    {
+      "id": "e88923a8-32fb-4bac-90e4-c93e49b54292",
+      "source": "",
+      "target": "",
+      "pre": {
+        "label": "Matrix Unary",
+        "output": [],
+        "type": "tensor-matrix-unary",
+        "isOutput": false,
+        "shape": [],
+        "id": "b6fa9a73-9966-4313-acc5-927df85d39e1",
+        "position": {
+          "x": 380,
+          "y": 620
+        },
+        "operationType": "norm"
+      },
+      "post": {
+        "id": "d08984a3-4104-4be4-ad7d-e9adf2298cf6",
+        "label": "Print",
+        "output": [],
+        "type": "tensor-print",
+        "isOutput": false,
+        "description": "Display tensor values",
+        "color": "#d946ef",
+        "verbose": false,
+        "shape": []
+      },
+      "sourceHandle": "tensor-out",
+      "targetHandle": "input",
+      "type": "simple"
+    },
+    {
+      "id": "01ec1023-1920-432f-8f7c-f7653f097911",
+      "source": "",
+      "target": "",
+      "pre": {
         "label": "Tensor",
         "order": 2,
         "shape": [
@@ -29,144 +125,53 @@
         ],
         "dtype": "float32",
         "type": "tensor",
-        "isOutput": false
+        "isOutput": false,
+        "id": "50e56308-a158-4f95-9316-49e670232308",
+        "position": {
+          "x": 110,
+          "y": 560
+        }
       },
-      110,
-      560,
-      -1,
-      null
-    ],
-    [
-      "tensor-matrix-unary",
-      {
+      "post": {
         "label": "Matrix Unary",
-        "output": [
-          16.881942749023438
-        ],
+        "output": [],
         "type": "tensor-matrix-unary",
         "isOutput": false,
         "shape": [],
-        "operationType": "norm",
-        "operationParams": {
-          "ord": "2",
-          "axis": "",
-          "keepDims": false
+        "id": "b6fa9a73-9966-4313-acc5-927df85d39e1",
+        "position": {
+          "x": 380,
+          "y": 620
         },
-        "dtype": "float32"
+        "operationType": "norm"
       },
-      340,
-      620,
-      -1,
-      null
-    ],
-    [
-      "tensor-print",
-      {
-        "label": "Print",
-        "output": [
-          16.881942749023438
-        ],
-        "type": "tensor-print",
-        "isOutput": false,
-        "description": "Display tensor values",
-        "color": "#d946ef",
-        "verbose": false,
-        "shape": [],
-        "dtype": "float32"
-      },
-      560,
-      600,
-      -1,
-      null
-    ]
+      "sourceHandle": "out",
+      "targetHandle": "input",
+      "type": "simple"
+    }
   ],
-  "edges": [
-    [
-      -1,
-      -1,
-      null,
-      "tensor-out",
-      "input",
-      "simple",
-      "e88923a8-32fb-4bac-90e4-c93e49b54292",
-      {
-        "pre": {
-          "label": "Matrix Unary",
-          "output": [],
-          "type": "tensor-matrix-unary",
-          "isOutput": false,
-          "shape": [],
-          "id": "b6fa9a73-9966-4313-acc5-927df85d39e1",
-          "position": {
-            "x": 380,
-            "y": 620
-          },
-          "operationType": "norm"
-        },
-        "post": {
-          "id": "d08984a3-4104-4be4-ad7d-e9adf2298cf6",
-          "label": "Print",
-          "output": [],
-          "type": "tensor-print",
-          "isOutput": false,
-          "description": "Display tensor values",
-          "color": "#d946ef",
-          "verbose": false,
-          "shape": []
-        }
+  "layout": [
+    {
+      "id": "50e56308-a158-4f95-9316-49e670232308",
+      "position": {
+        "x": 80,
+        "y": 520
       }
-    ],
-    [
-      -1,
-      -1,
-      null,
-      "out",
-      "input",
-      "simple",
-      "01ec1023-1920-432f-8f7c-f7653f097911",
-      {
-        "pre": {
-          "label": "Tensor",
-          "order": 2,
-          "shape": [
-            3,
-            3
-          ],
-          "output": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9
-          ],
-          "dtype": "float32",
-          "type": "tensor",
-          "isOutput": false,
-          "id": "50e56308-a158-4f95-9316-49e670232308",
-          "position": {
-            "x": 110,
-            "y": 560
-          }
-        },
-        "post": {
-          "label": "Matrix Unary",
-          "output": [],
-          "type": "tensor-matrix-unary",
-          "isOutput": false,
-          "shape": [],
-          "id": "b6fa9a73-9966-4313-acc5-927df85d39e1",
-          "position": {
-            "x": 380,
-            "y": 620
-          },
-          "operationType": "norm"
-        }
+    },
+    {
+      "id": "b6fa9a73-9966-4313-acc5-927df85d39e1",
+      "position": {
+        "x": 340,
+        "y": 620
       }
-    ]
+    },
+    {
+      "id": "d08984a3-4104-4be4-ad7d-e9adf2298cf6",
+      "position": {
+        "x": 560,
+        "y": 600
+      }
+    }
   ],
   "columnLabelOverrides": {},
   "testOverrides": {}

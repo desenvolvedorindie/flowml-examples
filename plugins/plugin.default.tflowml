@@ -5,13 +5,22 @@
     "sectionErrors": {
       "training": [],
       "validation": [],
+      "test": [],
+      "trainingLoss": [],
+      "validationLoss": [],
+      "testLoss": [],
       "datasetTraining": {},
-      "datasetValidation": {}
+      "datasetValidation": {},
+      "datasetTest": {},
+      "datasetTrainingLoss": {},
+      "datasetValidationLoss": {},
+      "datasetTestLoss": {},
+      "frameMetrics": []
     },
     "trainingEpoch": 0,
     "currentFrame": 0,
     "frameStatus": [],
-    "stopReason": "STOPPED",
+    "stopReason": null,
     "trainingBaseEpoch": 0,
     "weightIds": []
   },
@@ -23,8 +32,15 @@
     "errorParams": {},
     "metricAlgorithm": "lms",
     "metricParams": {},
+    "selectedMetrics": [
+      "lms"
+    ],
+    "optimizerAlgorithm": "sgd",
+    "optimizerParams": {},
     "adjustmentMode": "stochastic",
     "batchSize": 32,
-    "randomizeOnStart": true
+    "randomizeOnStart": true,
+    "shuffleData": false,
+    "shuffleAlgorithm": "fisher-yates"
   }
 }

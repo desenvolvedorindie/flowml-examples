@@ -26,7 +26,7 @@
       {
         "type": "output",
         "label": "Output",
-        "output": 2,
+        "output": 0,
         "supportedLearningRules": [],
         "supportedActivationFunctions": []
       },
@@ -119,5 +119,7 @@
         }
       }
     ]
-  ]
+  ],
+  "columnLabelOverrides": {},
+  "testOverrides": {}
 }

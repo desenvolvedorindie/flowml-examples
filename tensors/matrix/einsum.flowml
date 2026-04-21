@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "56aad3e2-65ca-4aa3-b386-ba4b0274f05e"
+  ],
+  "nodes": [
+    [
+      "tensor-einsum",
+      {
+        "label": "Einsum 1",
+        "output": [],
+        "operationType": "einsum",
+        "operationParams": {
+          "equation": "ij,jk->ik"
+        },
+        "type": "tensor-einsum",
+        "isOutput": false
+      },
+      650,
+      560,
+      -1,
+      null
+    ]
+  ],
+  "edges": [],
+  "columnLabelOverrides": {},
+  "testOverrides": {}
+}

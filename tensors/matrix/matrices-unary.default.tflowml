@@ -38,7 +38,7 @@
     "optimizerAlgorithm": "sgd",
     "optimizerParams": {},
     "adjustmentMode": "stochastic",
-    "batchSize": 32,
+    "batchSize": 8,
     "randomizeOnStart": true,
     "shuffleData": false,
     "shuffleAlgorithm": "fisher-yates"

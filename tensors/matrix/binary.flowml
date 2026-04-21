@@ -68,7 +68,7 @@
       "tensor",
       {
         "type": "tensor",
-        "label": "Tensor",
+        "label": "A",
         "order": 2,
         "shape": [
           3,
@@ -97,7 +97,7 @@
       "tensor",
       {
         "type": "tensor",
-        "label": "Tensor",
+        "label": "B",
         "order": 0,
         "shape": [],
         "output": [
@@ -116,7 +116,7 @@
     [
       -1,
       -1,
-      null,
+      0.0873,
       "tensor-out",
       "input",
       "simple",
@@ -179,7 +179,7 @@
     [
       -1,
       -1,
-      null,
+      -0.0833,
       "out",
       "input-a",
       "simple",
@@ -238,7 +238,7 @@
     [
       -1,
       -1,
-      null,
+      -0.0461,
       "out",
       "input-b",
       "simple",
@@ -286,7 +286,7 @@
     [
       -1,
       -1,
-      null,
+      0.0272,
       "out",
       "input-a",
       "simple",
@@ -349,7 +349,7 @@
     [
       -1,
       -1,
-      null,
+      0.0289,
       "out",
       "input-b",
       "simple",
@@ -401,7 +401,7 @@
     [
       -1,
       -1,
-      null,
+      -0.0108,
       "tensor-out",
       "input",
       "simple",

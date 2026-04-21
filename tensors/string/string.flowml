@@ -20,8 +20,8 @@
           "Ferreira",
           "Yasmin",
           "Lira",
-          "Leoardo",
-          "Barbosa"
+          "Willikat",
+          "Bezerra"
         ],
         "dtype": "string",
         "type": "tensor",
@@ -115,5 +115,7 @@
         }
       }
     ]
-  ]
+  ],
+  "columnLabelOverrides": {},
+  "testOverrides": {}
 }

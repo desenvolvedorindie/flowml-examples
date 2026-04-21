@@ -1,0 +1,904 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "8b5d9f65-9096-4130-97d0-0defef4930eb",
+    "20e9eb9f-df77-4388-a491-15ad7b9c533e",
+    "b5d3e5f0-8f60-4e26-ad4e-137d612a5ec5",
+    "0648d5df-2323-40a1-9566-5b7d5c36426d",
+    "685d9c69-423a-4ec4-a6d8-d47fc9e8e1dd",
+    "592f08ec-f6fb-4cd8-a877-fd6dd6f6a9e5",
+    "920c0e91-24fe-4e08-ad22-010239cf297a",
+    "9255ea9d-5d14-44ec-b3f3-cd4704297d90",
+    "963abc45-78f7-46b9-93ea-1bf5ba858c77",
+    "55d49d68-8cca-4f24-8df4-ef3a80655265"
+  ],
+  "nodes": [
+    [
+      "input",
+      {
+        "label": "X1",
+        "output": 0,
+        "type": "input",
+        "isOutput": false,
+        "maxInputs": 0
+      },
+      1260,
+      120,
+      -1,
+      null
+    ],
+    [
+      "data-node",
+      {
+        "label": "DATA",
+        "datasetId": "AND"
+      },
+      580,
+      160,
+      -1,
+      null
+    ],
+    [
+      "data-node",
+      {
+        "label": "Data",
+        "datasetId": "OR"
+      },
+      580,
+      420,
+      -1,
+      null
+    ],
+    [
+      "dataset-node",
+      {
+        "label": "AND",
+        "output": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        "type": "dataset-node",
+        "datasetId": "AND",
+        "trainingOutput": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        "validationOutput": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        "testOutput": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        "_hasTrainingEdge": true,
+        "_hasValidationEdge": true,
+        "_hasTestEdge": true,
+        "labels": [
+          "X1",
+          "X2",
+          "Y"
+        ],
+        "dynamicInputColumns": [
+          "X1",
+          "X2"
+        ],
+        "dynamicOutputColumns": [
+          "Y"
+        ],
+        "_augInputCols": [],
+        "_augOutputCols": []
+      },
+      960,
+      100,
+      -1,
+      null
+    ],
+    [
+      "input",
+      {
+        "label": "X2",
+        "output": 0,
+        "type": "input",
+        "isOutput": false,
+        "maxInputs": 0
+      },
+      1260,
+      220,
+      -1,
+      null
+    ],
+    [
+      "input",
+      {
+        "label": "A1",
+        "output": 0,
+        "type": "input",
+        "isOutput": false,
+        "maxInputs": 0
+      },
+      1260,
+      380,
+      -1,
+      null
+    ],
+    [
+      "dataset-node",
+      {
+        "label": "OR",
+        "output": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "type": "dataset-node",
+        "datasetId": "AND",
+        "trainingOutput": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "validationOutput": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "testOutput": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "labels": [
+          "X1",
+          "X2",
+          "Y"
+        ],
+        "_hasTrainingEdge": true,
+        "_hasValidationEdge": true,
+        "_hasTestEdge": true,
+        "dynamicInputColumns": [
+          "X1",
+          "X2"
+        ],
+        "dynamicOutputColumns": [
+          "Y"
+        ],
+        "_augInputCols": [],
+        "_augOutputCols": []
+      },
+      960,
+      360,
+      -1,
+      null
+    ],
+    [
+      "input",
+      {
+        "label": "A2",
+        "output": 0,
+        "type": "input",
+        "isOutput": false,
+        "maxInputs": 0
+      },
+      1260,
+      500,
+      -1,
+      null
+    ],
+    [
+      "output",
+      {
+        "label": "Y",
+        "output": 0,
+        "type": "output",
+        "isOutput": true,
+        "maxInputs": 1,
+        "maxOutputs": 0
+      },
+      1460,
+      160,
+      -1,
+      null
+    ],
+    [
+      "output",
+      {
+        "label": "Z",
+        "output": 0,
+        "type": "output",
+        "isOutput": true,
+        "maxInputs": 1,
+        "maxOutputs": 0
+      },
+      1460,
+      420,
+      -1,
+      null
+    ]
+  ],
+  "edges": [
+    [
+      -1,
+      -1,
+      0.0982,
+      "out",
+      "training",
+      "simple",
+      "5bcbdcc3-149e-4bef-9f52-4dce6182fdec",
+      {
+        "pre": {
+          "id": "20e9eb9f-df77-4388-a491-15ad7b9c533e",
+          "label": "DATA",
+          "datasetId": "AND",
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "shape": [
+            4,
+            3
+          ],
+          "type": "data-node",
+          "isOutput": false,
+          "dynamicInputColumns": [
+            "X1",
+            "X2",
+            "Y"
+          ]
+        },
+        "post": {
+          "id": "0648d5df-2323-40a1-9566-5b7d5c36426d",
+          "label": "Dataset",
+          "output": [],
+          "type": "dataset-node",
+          "datasetId": "AND",
+          "trainingOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "validationOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "testOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "_hasTrainingEdge": true,
+          "_hasValidationEdge": true,
+          "_hasTestEdge": true,
+          "labels": [
+            "X1",
+            "X2",
+            "Y"
+          ]
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      -0.0384,
+      "out",
+      "validation",
+      "simple",
+      "de613301-14ce-4dee-be66-978091aa402e",
+      {
+        "pre": {
+          "id": "20e9eb9f-df77-4388-a491-15ad7b9c533e",
+          "label": "DATA",
+          "datasetId": "AND",
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "shape": [
+            4,
+            3
+          ],
+          "type": "data-node",
+          "isOutput": false,
+          "dynamicInputColumns": [
+            "X1",
+            "X2",
+            "Y"
+          ]
+        },
+        "post": {
+          "id": "0648d5df-2323-40a1-9566-5b7d5c36426d",
+          "label": "Dataset",
+          "output": [],
+          "type": "dataset-node",
+          "datasetId": "AND",
+          "trainingOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "validationOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "testOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "_hasTrainingEdge": true,
+          "_hasValidationEdge": true,
+          "_hasTestEdge": true,
+          "labels": [
+            "X1",
+            "X2",
+            "Y"
+          ]
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      -0.0305,
+      "out",
+      "test",
+      "simple",
+      "5411be5f-b0e5-4ce3-b0a7-abd8542f8feb",
+      {
+        "pre": {
+          "id": "20e9eb9f-df77-4388-a491-15ad7b9c533e",
+          "label": "DATA",
+          "datasetId": "AND",
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "shape": [
+            4,
+            3
+          ],
+          "type": "data-node",
+          "isOutput": false,
+          "dynamicInputColumns": [
+            "X1",
+            "X2",
+            "Y"
+          ]
+        },
+        "post": {
+          "id": "0648d5df-2323-40a1-9566-5b7d5c36426d",
+          "label": "Dataset",
+          "output": [],
+          "type": "dataset-node",
+          "datasetId": "AND",
+          "trainingOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "validationOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "testOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "_hasTrainingEdge": true,
+          "_hasValidationEdge": true,
+          "_hasTestEdge": true,
+          "labels": [
+            "X1",
+            "X2",
+            "Y"
+          ]
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      0.0168,
+      "out",
+      "training",
+      "simple",
+      "2e249077-344c-41e7-9994-23fe30a58044",
+      {
+        "pre": {
+          "id": "b5d3e5f0-8f60-4e26-ad4e-137d612a5ec5",
+          "label": "Data",
+          "datasetId": "OR",
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "shape": [
+            4,
+            3
+          ],
+          "dynamicInputColumns": [
+            "X1",
+            "X2",
+            "Y"
+          ],
+          "type": "data-node",
+          "position": {
+            "x": 580,
+            "y": 380
+          }
+        },
+        "post": {
+          "id": "920c0e91-24fe-4e08-ad22-010239cf297a",
+          "label": "Dataset",
+          "output": [],
+          "type": "dataset-node",
+          "datasetId": "AND",
+          "trainingOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "validationOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "testOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "labels": [
+            "X1",
+            "X2",
+            "Y"
+          ],
+          "_hasTrainingEdge": true,
+          "_hasValidationEdge": true,
+          "_hasTestEdge": true
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      -0.0023,
+      "out",
+      "validation",
+      "simple",
+      "90ef23d4-eeb2-4595-af38-4a5e72ad772b",
+      {
+        "pre": {
+          "id": "b5d3e5f0-8f60-4e26-ad4e-137d612a5ec5",
+          "label": "Data",
+          "datasetId": "OR",
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "shape": [
+            4,
+            3
+          ],
+          "dynamicInputColumns": [
+            "X1",
+            "X2",
+            "Y"
+          ],
+          "type": "data-node",
+          "position": {
+            "x": 580,
+            "y": 380
+          }
+        },
+        "post": {
+          "id": "920c0e91-24fe-4e08-ad22-010239cf297a",
+          "label": "Dataset",
+          "output": [],
+          "type": "dataset-node",
+          "datasetId": "AND",
+          "trainingOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "validationOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "testOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "labels": [
+            "X1",
+            "X2",
+            "Y"
+          ],
+          "_hasTrainingEdge": true,
+          "_hasValidationEdge": true,
+          "_hasTestEdge": true
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      -0.0247,
+      "out",
+      "test",
+      "simple",
+      "45a8332e-072c-4dc1-bb57-1f0a121eb91f",
+      {
+        "pre": {
+          "id": "b5d3e5f0-8f60-4e26-ad4e-137d612a5ec5",
+          "label": "Data",
+          "datasetId": "OR",
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "shape": [
+            4,
+            3
+          ],
+          "dynamicInputColumns": [
+            "X1",
+            "X2",
+            "Y"
+          ],
+          "type": "data-node",
+          "position": {
+            "x": 580,
+            "y": 380
+          }
+        },
+        "post": {
+          "id": "920c0e91-24fe-4e08-ad22-010239cf297a",
+          "label": "Dataset",
+          "output": [],
+          "type": "dataset-node",
+          "datasetId": "AND",
+          "trainingOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "validationOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "testOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "labels": [
+            "X1",
+            "X2",
+            "Y"
+          ],
+          "_hasTrainingEdge": true,
+          "_hasValidationEdge": true,
+          "_hasTestEdge": true
+        }
+      }
+    ]
+  ],
+  "columnLabelOverrides": {
+    "6b4fa6ab-d097-4bc0-9d97-177b72d611fb": {
+      "inputs": [
+        null
+      ],
+      "outputs": []
+    }
+  },
+  "testOverrides": {}
+}
