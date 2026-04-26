@@ -15,8 +15,8 @@
         "isOutput": false,
         "maxInputs": 0
       },
-      180,
-      400,
+      0,
+      35.5,
       -1,
       null
     ],
@@ -36,8 +36,8 @@
         "isOutput": false,
         "description": "Original 1958 model proposed by Frank Rosenblatt (step activation function)"
       },
-      520,
-      360,
+      237,
+      0,
       -1,
       null
     ]

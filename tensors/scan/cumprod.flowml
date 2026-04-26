@@ -1,0 +1,229 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "ef157a5a-f48f-452c-8e37-49e1c5e3465e",
+    "fc4fe4f4-ad24-4557-927d-6ea3d7ea0a1e",
+    "8d3835ce-ce8d-4914-b891-a5f751801346"
+  ],
+  "nodes": [
+    [
+      "tensor",
+      {
+        "label": "Tensor",
+        "order": 2,
+        "shape": [
+          3,
+          3
+        ],
+        "output": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "dtype": "float32",
+        "type": "tensor",
+        "isOutput": false
+      },
+      270,
+      420,
+      -1,
+      null
+    ],
+    [
+      "tensor-scan",
+      {
+        "label": "Scan",
+        "output": [
+          1,
+          2,
+          3,
+          4,
+          10,
+          18,
+          28,
+          80,
+          162
+        ],
+        "operationType": "cumprod",
+        "axis": 1,
+        "exclusive": false,
+        "reverse": false,
+        "type": "tensor-scan",
+        "isOutput": false,
+        "shape": [
+          3,
+          3
+        ],
+        "dtype": "float32"
+      },
+      600,
+      500,
+      -1,
+      null
+    ],
+    [
+      "tensor-print",
+      {
+        "label": "Print",
+        "output": [
+          1,
+          2,
+          3,
+          4,
+          10,
+          18,
+          28,
+          80,
+          162
+        ],
+        "type": "tensor-print",
+        "isOutput": false,
+        "description": "Display tensor values",
+        "color": "#d946ef",
+        "verbose": false,
+        "shape": [
+          3,
+          3
+        ],
+        "dtype": "float32"
+      },
+      850,
+      480,
+      -1,
+      null
+    ]
+  ],
+  "edges": [
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "input",
+      "simple",
+      "d59191d1-8e9a-41be-9cad-b5b8e36af9c3",
+      {
+        "pre": {
+          "id": "ef157a5a-f48f-452c-8e37-49e1c5e3465e",
+          "label": "Tensor",
+          "order": 2,
+          "shape": [
+            3,
+            3
+          ],
+          "output": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "dtype": "float32",
+          "type": "tensor",
+          "isOutput": false
+        },
+        "post": {
+          "id": "fc4fe4f4-ad24-4557-927d-6ea3d7ea0a1e",
+          "label": "Scan",
+          "output": [
+            1,
+            2,
+            3,
+            4,
+            10,
+            18,
+            28,
+            80,
+            162
+          ],
+          "operationType": "cumprod",
+          "axis": 1,
+          "exclusive": false,
+          "reverse": false,
+          "type": "tensor-scan",
+          "isOutput": false,
+          "shape": [
+            3,
+            3
+          ],
+          "dtype": "float32"
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "tensor-out",
+      "input",
+      "simple",
+      "21b92f0a-5285-4353-a4a0-1fc66ab4a3b3",
+      {
+        "pre": {
+          "id": "fc4fe4f4-ad24-4557-927d-6ea3d7ea0a1e",
+          "label": "Scan",
+          "output": [
+            1,
+            2,
+            3,
+            4,
+            10,
+            18,
+            28,
+            80,
+            162
+          ],
+          "operationType": "cumprod",
+          "axis": 1,
+          "exclusive": false,
+          "reverse": false,
+          "type": "tensor-scan",
+          "isOutput": false,
+          "shape": [
+            3,
+            3
+          ],
+          "dtype": "float32"
+        },
+        "post": {
+          "id": "8d3835ce-ce8d-4914-b891-a5f751801346",
+          "label": "Print",
+          "output": [
+            1,
+            2,
+            3,
+            4,
+            10,
+            18,
+            28,
+            80,
+            162
+          ],
+          "type": "tensor-print",
+          "isOutput": false,
+          "description": "Display tensor values",
+          "color": "#d946ef",
+          "verbose": false,
+          "shape": [
+            3,
+            3
+          ],
+          "dtype": "float32"
+        }
+      }
+    ]
+  ],
+  "columnLabelOverrides": {},
+  "testOverrides": {}
+}
