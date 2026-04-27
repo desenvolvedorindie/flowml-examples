@@ -28,12 +28,12 @@
     "learningRate": 0.1,
     "maxEpochs": 100,
     "targetError": 0.0001,
-    "errorAlgorithm": "meanSquaredError",
+    "errorAlgorithm": "mse",
     "errorParams": {},
-    "metricAlgorithm": "meanSquaredError",
+    "metricAlgorithm": "lms",
     "metricParams": {},
     "selectedMetrics": [
-      "meanSquaredError"
+      "lms"
     ],
     "optimizerAlgorithm": "sgd",
     "optimizerParams": {},

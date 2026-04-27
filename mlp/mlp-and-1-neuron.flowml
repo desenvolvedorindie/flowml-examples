@@ -5,11 +5,11 @@
     "fee90c6a-d67a-420e-89e5-7a533e9312e6",
     "60dea9a8-304d-4cc7-9a17-e3ee88491667",
     "87a8956b-552c-434d-afe6-5b80b8938067",
-    "f498d36b-6f77-4923-bd8e-a73348d1d84e",
     "7fae9c87-057e-4448-85d6-0924b3007d12",
     "3eba7ac2-073f-4814-9111-3bc9841e419a",
     "5fc0f7b2-3ebe-4579-9572-927d1406f595",
-    "fa8e584a-bbad-4de8-a130-5404ba05d848"
+    "70049f3d-663d-4eb3-8b21-6ac54a67144e",
+    "89311f3c-4f17-42b6-86ac-8434ac84ff3b"
   ],
   "nodes": [
     [
@@ -23,8 +23,8 @@
         "supportedActivationFunctions": [],
         "value": 0
       },
-      -380,
-      -200,
+      0,
+      653.5,
       -1,
       null
     ],
@@ -37,8 +37,8 @@
         "supportedLearningRules": [],
         "supportedActivationFunctions": []
       },
-      -200,
-      -460,
+      8.5,
+      426.5,
       -1,
       null
     ],
@@ -47,7 +47,7 @@
       {
         "type": "output",
         "label": "y",
-        "output": -2.458194186307584,
+        "output": 0.7310585975646973,
         "target": 0,
         "maxInputs": 1,
         "maxOutputs": 0,
@@ -56,39 +56,8 @@
         "bias": -37.800000567734244,
         "netInput": 0.6543766260147095
       },
-      520,
-      -220,
-      -1,
-      null
-    ],
-    [
-      "tensor-data",
-      {
-        "type": "tensor-data",
-        "label": "Data",
-        "datasetId": "AND",
-        "output": [
-          0,
-          0,
-          0,
-          0,
-          1,
-          0,
-          1,
-          0,
-          0,
-          1,
-          1,
-          1
-        ],
-        "shape": [
-          4,
-          3
-        ],
-        "dtype": "float32"
-      },
-      320,
-      300,
+      685.5,
+      799,
       -1,
       null
     ],
@@ -126,31 +95,42 @@
           1,
           1
         ],
-        "output": [
-          0,
-          0,
-          0,
-          0,
-          1,
-          0,
-          1,
-          0,
-          0,
-          1,
-          1,
-          1
-        ],
+        "output": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 1,
+          "5": 0,
+          "6": 1,
+          "7": 0,
+          "8": 0,
+          "9": 1,
+          "10": 1,
+          "11": 1
+        },
         "_hasTrainingEdge": true,
         "_hasValidationEdge": false,
-        "_hasTestEdge": true,
+        "_hasTestEdge": false,
         "labels": [
           "X1",
           "X2",
           "Y"
-        ]
+        ],
+        "_augInputCols": [],
+        "_augOutputCols": [],
+        "validationOutput": [],
+        "dynamicInputColumns": [
+          "X1",
+          "X2"
+        ],
+        "dynamicOutputColumns": [
+          "Y"
+        ],
+        "_datasetId": "AND"
       },
-      680,
-      440,
+      617,
+      0,
       -1,
       null
     ],
@@ -165,8 +145,8 @@
         "supportedActivationFunctions": [],
         "value": 0
       },
-      -380,
-      -20,
+      0,
+      522.5,
       -1,
       null
     ],
@@ -176,34 +156,54 @@
         "type": "decision-surface",
         "label": "Response Surface ",
         "resolution": 1,
-        "output": [
-          0.2416404885140355
-        ],
+        "output": {
+          "0": 0
+        },
         "zoom": 0.25
       },
-      660,
-      -40,
+      627,
+      317,
       -1,
       null
     ],
     [
-      "non-linear",
+      "data-node",
       {
-        "type": "non-linear",
-        "label": "MLP",
-        "bias": -2.458194186307584,
-        "output": [
-          -2.458194186307584
+        "label": "Data",
+        "datasetId": "AND",
+        "dynamicInputColumns": [
+          "X1",
+          "X2",
+          "Y"
         ],
-        "netInput": 0.6383332920956861,
+        "dynamicOutputColumns": [
+          "Y"
+        ]
+      },
+      237,
+      47,
+      -1,
+      null
+    ],
+    [
+      "mlp",
+      {
+        "label": "MLP",
+        "output": 0.7310585975646973,
+        "netInput": 1,
+        "bias": 1,
+        "gradient": 0,
         "activationFunction": "sigmoid",
         "learningRule": {
           "name": "backpropagation",
           "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
-        }
+        },
+        "type": "mlp",
+        "isOutput": false,
+        "description": "Neuron with continuous, non-linear activation functions (Sigmoid, Tanh, ReLU, GELU)"
       },
-      60,
-      -420,
+      298.5,
+      488,
       -1,
       null
     ]
@@ -634,6 +634,601 @@
         },
         "label": "w2"
       }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "dataset",
+      "simple",
+      "1916b011-a780-4392-bf57-cb20443297f5",
+      {
+        "pre": {
+          "id": "70049f3d-663d-4eb3-8b21-6ac54a67144e",
+          "label": "Data",
+          "datasetId": "AND",
+          "output": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 1,
+            "5": 0,
+            "6": 1,
+            "7": 0,
+            "8": 0,
+            "9": 1,
+            "10": 1,
+            "11": 1
+          },
+          "shape": [
+            4,
+            3
+          ],
+          "type": "data-node",
+          "isOutput": false,
+          "dynamicInputColumns": [
+            "X1",
+            "X2"
+          ],
+          "dynamicOutputColumns": [
+            "Y"
+          ]
+        },
+        "post": {
+          "type": "decision-surface",
+          "label": "Response Surface ",
+          "resolution": 1,
+          "output": {
+            "0": 0
+          },
+          "zoom": 0.25,
+          "id": "5fc0f7b2-3ebe-4579-9572-927d1406f595",
+          "position": {
+            "x": 660,
+            "y": -40
+          }
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "training",
+      "simple",
+      "2f7f9d8f-fb98-4854-93cf-2faa99de657c",
+      {
+        "pre": {
+          "id": "70049f3d-663d-4eb3-8b21-6ac54a67144e",
+          "label": "Data",
+          "datasetId": "AND",
+          "output": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 1,
+            "5": 0,
+            "6": 1,
+            "7": 0,
+            "8": 0,
+            "9": 1,
+            "10": 1,
+            "11": 1
+          },
+          "shape": [
+            4,
+            3
+          ],
+          "type": "data-node",
+          "isOutput": false,
+          "dynamicInputColumns": [
+            "X1",
+            "X2"
+          ],
+          "dynamicOutputColumns": [
+            "Y"
+          ]
+        },
+        "post": {
+          "label": "Dataset",
+          "type": "dataset-node",
+          "datasetId": "AND",
+          "trainingOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "testOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "output": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 1,
+            "5": 0,
+            "6": 1,
+            "7": 0,
+            "8": 0,
+            "9": 1,
+            "10": 1,
+            "11": 1
+          },
+          "_hasTrainingEdge": false,
+          "_hasValidationEdge": false,
+          "_hasTestEdge": false,
+          "labels": [
+            "X1",
+            "X2",
+            "Y"
+          ],
+          "id": "7fae9c87-057e-4448-85d6-0924b3007d12",
+          "position": {
+            "x": 680,
+            "y": 440
+          },
+          "_augInputCols": [],
+          "_augOutputCols": [],
+          "validationOutput": [],
+          "dynamicInputColumns": [
+            "X1",
+            "X2"
+          ],
+          "dynamicOutputColumns": [
+            "Y"
+          ]
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      0,
+      null,
+      "input",
+      "weighted",
+      "8ebd8d2d-b81f-4d43-bb8d-a362264df0da",
+      {
+        "pre": {
+          "type": "input",
+          "label": "x1",
+          "output": 0,
+          "maxInputs": 0,
+          "supportedLearningRules": [],
+          "supportedActivationFunctions": [],
+          "value": 0,
+          "id": "fee90c6a-d67a-420e-89e5-7a533e9312e6",
+          "position": {
+            "x": -380,
+            "y": -200
+          }
+        },
+        "post": {
+          "id": "89311f3c-4f17-42b6-86ac-8434ac84ff3b",
+          "label": "MLP",
+          "output": 0.7310585975646973,
+          "netInput": 1,
+          "bias": 1,
+          "gradient": 0,
+          "activationFunction": "sigmoid",
+          "learningRule": {
+            "name": "backpropagation",
+            "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+          },
+          "type": "mlp",
+          "isOutput": false,
+          "description": "Neuron with continuous, non-linear activation functions (Sigmoid, Tanh, ReLU, GELU)"
+        },
+        "label": "w1"
+      }
+    ],
+    [
+      -1,
+      -1,
+      0,
+      null,
+      "input",
+      "weighted",
+      "303769b0-7817-45d0-b8a7-809983dc9880",
+      {
+        "pre": {
+          "type": "input",
+          "label": "x2",
+          "output": 0,
+          "maxInputs": 0,
+          "supportedLearningRules": [],
+          "supportedActivationFunctions": [],
+          "value": 0,
+          "id": "3eba7ac2-073f-4814-9111-3bc9841e419a",
+          "position": {
+            "x": -380,
+            "y": -20
+          }
+        },
+        "post": {
+          "id": "89311f3c-4f17-42b6-86ac-8434ac84ff3b",
+          "label": "MLP",
+          "output": 0.7310585975646973,
+          "netInput": 1,
+          "bias": 1,
+          "gradient": 0,
+          "activationFunction": "sigmoid",
+          "learningRule": {
+            "name": "backpropagation",
+            "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+          },
+          "type": "mlp",
+          "isOutput": false,
+          "description": "Neuron with continuous, non-linear activation functions (Sigmoid, Tanh, ReLU, GELU)"
+        },
+        "label": "w2"
+      }
+    ],
+    [
+      -1,
+      -1,
+      0,
+      null,
+      "bias",
+      "weighted",
+      "f955dfc0-e4b6-499c-a28f-bcc9509bdb90",
+      {
+        "pre": {
+          "type": "bias",
+          "label": "Bias",
+          "output": 1,
+          "supportedLearningRules": [],
+          "supportedActivationFunctions": [],
+          "id": "60dea9a8-304d-4cc7-9a17-e3ee88491667",
+          "position": {
+            "x": -200,
+            "y": -460
+          }
+        },
+        "post": {
+          "id": "89311f3c-4f17-42b6-86ac-8434ac84ff3b",
+          "label": "MLP",
+          "output": 0.7310585975646973,
+          "netInput": 1,
+          "bias": 1,
+          "gradient": 0,
+          "activationFunction": "sigmoid",
+          "learningRule": {
+            "name": "backpropagation",
+            "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+          },
+          "type": "mlp",
+          "isOutput": false,
+          "description": "Neuron with continuous, non-linear activation functions (Sigmoid, Tanh, ReLU, GELU)"
+        },
+        "label": "b"
+      }
+    ],
+    [
+      -1,
+      -1,
+      1,
+      null,
+      "input",
+      "weighted",
+      "9c12d5f4-cf72-4167-b3fd-5148b490e9e9",
+      {
+        "pre": {
+          "id": "89311f3c-4f17-42b6-86ac-8434ac84ff3b",
+          "label": "MLP",
+          "output": 0.7310585975646973,
+          "netInput": 1,
+          "bias": 1,
+          "gradient": 0,
+          "activationFunction": "sigmoid",
+          "learningRule": {
+            "name": "backpropagation",
+            "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+          },
+          "type": "mlp",
+          "isOutput": false,
+          "description": "Neuron with continuous, non-linear activation functions (Sigmoid, Tanh, ReLU, GELU)"
+        },
+        "post": {
+          "type": "output",
+          "label": "y",
+          "output": 0.7310585975646973,
+          "target": 0,
+          "maxInputs": 1,
+          "maxOutputs": 0,
+          "supportedLearningRules": [],
+          "supportedActivationFunctions": [],
+          "bias": -37.800000567734244,
+          "netInput": 0.6543766260147095,
+          "id": "87a8956b-552c-434d-afe6-5b80b8938067",
+          "position": {
+            "x": 520,
+            "y": -220
+          }
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      null,
+      "input",
+      "simple",
+      "849242f1-f980-4d4b-83f6-e05c7b6265ea",
+      {
+        "pre": {
+          "id": "89311f3c-4f17-42b6-86ac-8434ac84ff3b",
+          "label": "MLP",
+          "output": 0.7310585975646973,
+          "netInput": 1,
+          "bias": 1,
+          "gradient": 0,
+          "activationFunction": "sigmoid",
+          "learningRule": {
+            "name": "backpropagation",
+            "description": "Backpropagation / Gradient Descent: Updates weights by moving in the direction of the negative gradient of the error surface, propagated backward through the network layers using the chain rule."
+          },
+          "type": "mlp",
+          "isOutput": false,
+          "description": "Neuron with continuous, non-linear activation functions (Sigmoid, Tanh, ReLU, GELU)",
+          "position": {
+            "x": 451.5,
+            "y": 601
+          }
+        },
+        "post": {
+          "type": "decision-surface",
+          "label": "Response Surface ",
+          "resolution": 1,
+          "output": {
+            "0": 0
+          },
+          "zoom": 0.25,
+          "id": "5fc0f7b2-3ebe-4579-9572-927d1406f595",
+          "position": {
+            "x": 390,
+            "y": 317
+          }
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "validation",
+      "simple",
+      "60cc1353-3bb8-420d-a53f-67f6caf75d6c",
+      {
+        "pre": {
+          "id": "70049f3d-663d-4eb3-8b21-6ac54a67144e",
+          "label": "Data",
+          "datasetId": "AND",
+          "output": [],
+          "shape": [
+            4,
+            3
+          ],
+          "dynamicInputColumns": [
+            "X1",
+            "X2",
+            "Y"
+          ],
+          "dynamicOutputColumns": [
+            "Y"
+          ],
+          "type": "data-node",
+          "position": {
+            "x": 237,
+            "y": 47
+          }
+        },
+        "post": {
+          "label": "Dataset",
+          "type": "dataset-node",
+          "datasetId": "AND",
+          "trainingOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "testOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "output": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 1,
+            "5": 0,
+            "6": 1,
+            "7": 0,
+            "8": 0,
+            "9": 1,
+            "10": 1,
+            "11": 1
+          },
+          "_hasTrainingEdge": true,
+          "_hasValidationEdge": false,
+          "_hasTestEdge": false,
+          "labels": [
+            "X1",
+            "X2",
+            "Y"
+          ],
+          "_augInputCols": [],
+          "_augOutputCols": [],
+          "validationOutput": [],
+          "dynamicInputColumns": [
+            "X1",
+            "X2"
+          ],
+          "dynamicOutputColumns": [
+            "Y"
+          ],
+          "_datasetId": "AND",
+          "id": "7fae9c87-057e-4448-85d6-0924b3007d12",
+          "position": {
+            "x": 617,
+            "y": 0
+          }
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "test",
+      "simple",
+      "89618193-3df7-40d0-a92a-d67be9084198",
+      {
+        "pre": {
+          "id": "70049f3d-663d-4eb3-8b21-6ac54a67144e",
+          "label": "Data",
+          "datasetId": "AND",
+          "output": [],
+          "shape": [
+            4,
+            3
+          ],
+          "dynamicInputColumns": [
+            "X1",
+            "X2",
+            "Y"
+          ],
+          "dynamicOutputColumns": [
+            "Y"
+          ],
+          "type": "data-node",
+          "position": {
+            "x": 237,
+            "y": 47
+          }
+        },
+        "post": {
+          "label": "Dataset",
+          "type": "dataset-node",
+          "datasetId": "AND",
+          "trainingOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "testOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "output": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 1,
+            "5": 0,
+            "6": 1,
+            "7": 0,
+            "8": 0,
+            "9": 1,
+            "10": 1,
+            "11": 1
+          },
+          "_hasTrainingEdge": true,
+          "_hasValidationEdge": false,
+          "_hasTestEdge": false,
+          "labels": [
+            "X1",
+            "X2",
+            "Y"
+          ],
+          "_augInputCols": [],
+          "_augOutputCols": [],
+          "validationOutput": [],
+          "dynamicInputColumns": [
+            "X1",
+            "X2"
+          ],
+          "dynamicOutputColumns": [
+            "Y"
+          ],
+          "_datasetId": "AND",
+          "id": "7fae9c87-057e-4448-85d6-0924b3007d12",
+          "position": {
+            "x": 617,
+            "y": 0
+          }
+        }
+      }
     ]
-  ]
+  ],
+  "columnLabelOverrides": {},
+  "testOverrides": {}
 }

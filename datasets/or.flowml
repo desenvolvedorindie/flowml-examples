@@ -10,7 +10,12 @@
       "data-node",
       {
         "label": "Data",
-        "datasetId": "AND"
+        "datasetId": "AND",
+        "dynamicInputColumns": [
+          "X1",
+          "X2",
+          "Y"
+        ]
       },
       0,
       47.5,
@@ -53,13 +58,8 @@
         "_hasTrainingEdge": true,
         "_hasValidationEdge": true,
         "_hasTestEdge": true,
-        "_augInputCols": [
-          "X1",
-          "X2"
-        ],
-        "_augOutputCols": [
-          "Y"
-        ],
+        "_augInputCols": [],
+        "_augOutputCols": [],
         "validationOutput": [
           0,
           0,
@@ -87,7 +87,8 @@
           1,
           1,
           1
-        ]
+        ],
+        "_datasetId": "OR"
       },
       380,
       -40,
