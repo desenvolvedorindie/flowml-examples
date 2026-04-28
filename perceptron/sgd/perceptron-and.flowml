@@ -9,7 +9,12 @@
     "6b8d6767-45ab-41df-9447-167e2d4741dc",
     "189d49c1-155b-4e5e-ac0d-49171321ece7",
     "e5fe1eee-2786-4e6a-90b9-34110e6386df",
-    "212084e1-75d3-44f0-9f88-d6e9ca6e5af2"
+    "212084e1-75d3-44f0-9f88-d6e9ca6e5af2",
+    "92b05303-b9c1-4ed8-84f8-bf93bfdc479c",
+    "93ab17bc-44b8-4fe2-b894-cad2ac1dd989",
+    "ac170bfd-c3bd-42e7-92c5-6ab4e3a324b9",
+    "9282495d-3a10-4694-b013-8884f22be482",
+    "c0c5017f-851e-4422-aaad-e4a9b2f6e677"
   ],
   "nodes": [
     [
@@ -135,7 +140,8 @@
           1
         ],
         "_augInputCols": [],
-        "_augOutputCols": []
+        "_augOutputCols": [],
+        "_datasetId": "AND"
       },
       280,
       240,
@@ -181,10 +187,93 @@
       "data-node",
       {
         "label": "Data",
-        "datasetId": "AND"
+        "datasetId": "AND",
+        "dynamicInputColumns": [
+          "X1",
+          "X2",
+          "Y"
+        ]
       },
       -200,
       320,
+      -1,
+      null
+    ],
+    [
+      "input",
+      {
+        "label": "Input",
+        "output": 0,
+        "type": "input",
+        "isOutput": false,
+        "maxInputs": 0
+      },
+      -190,
+      860,
+      -1,
+      null
+    ],
+    [
+      "input",
+      {
+        "label": "Input",
+        "output": 0,
+        "type": "input",
+        "isOutput": false,
+        "maxInputs": 0
+      },
+      -230,
+      1000,
+      -1,
+      null
+    ],
+    [
+      "perceptron",
+      {
+        "label": "Perceptron",
+        "output": 0,
+        "netInput": 0,
+        "bias": 1,
+        "activationFunction": "step",
+        "learningRule": {
+          "name": "rosenblatt",
+          "description": "Perceptron Rule (Rosenblatt): error is computed AFTER the step function — e = (d − y). If the classification is already correct (y = d), the error is 0 and no update occurs, even if net is close to the boundary."
+        },
+        "type": "perceptron",
+        "isOutput": false,
+        "description": "Original 1958 model proposed by Frank Rosenblatt (step activation function)"
+      },
+      230,
+      940,
+      -1,
+      null
+    ],
+    [
+      "bias",
+      {
+        "label": "Bias",
+        "output": 1,
+        "type": "bias",
+        "isOutput": false,
+        "description": "Constant input node (always outputs 1)"
+      },
+      -150,
+      680,
+      -1,
+      null
+    ],
+    [
+      "output",
+      {
+        "label": "Output",
+        "output": 0,
+        "type": "output",
+        "isOutput": true,
+        "maxInputs": 1,
+        "maxOutputs": 0
+      },
+      790,
+      920,
       -1,
       null
     ]
@@ -943,6 +1032,191 @@
     [
       -1,
       -1,
+      null,
+      "out",
+      "training",
+      "simple",
+      "4e9a4d84-0d21-4c27-8b0a-a92e5470fd74",
+      {
+        "pre": {
+          "id": "212084e1-75d3-44f0-9f88-d6e9ca6e5af2",
+          "label": "Data",
+          "datasetId": "AND",
+          "output": [],
+          "shape": [
+            4,
+            3
+          ],
+          "type": "data-node",
+          "position": {
+            "x": -200,
+            "y": 320
+          },
+          "dynamicInputColumns": [
+            "X1",
+            "X2",
+            "Y"
+          ]
+        },
+        "post": {
+          "label": "DATASET2",
+          "type": "dataset-node",
+          "datasetId": "AND",
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "_hasTrainingEdge": true,
+          "_hasValidationEdge": false,
+          "_hasTestEdge": false,
+          "labels": [
+            "X1",
+            "X2",
+            "Y"
+          ],
+          "trainingOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "_augInputCols": [],
+          "_augOutputCols": [],
+          "id": "6b8d6767-45ab-41df-9447-167e2d4741dc",
+          "position": {
+            "x": 280,
+            "y": 240
+          },
+          "_datasetId": "AND"
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      1,
+      null,
+      "bias",
+      "weighted",
+      "b1484e11-b622-46fb-8022-0371b53400a8",
+      {
+        "pre": {
+          "id": "9282495d-3a10-4694-b013-8884f22be482",
+          "label": "Bias",
+          "output": 1,
+          "type": "bias",
+          "isOutput": false,
+          "description": "Constant input node (always outputs 1)"
+        },
+        "post": {
+          "id": "ac170bfd-c3bd-42e7-92c5-6ab4e3a324b9",
+          "label": "Perceptron",
+          "output": 0,
+          "netInput": 0,
+          "bias": 1,
+          "activationFunction": "step",
+          "learningRule": {
+            "name": "rosenblatt",
+            "description": "Perceptron Rule (Rosenblatt): error is computed AFTER the step function — e = (d − y). If the classification is already correct (y = d), the error is 0 and no update occurs, even if net is close to the boundary."
+          },
+          "type": "perceptron",
+          "isOutput": false,
+          "description": "Original 1958 model proposed by Frank Rosenblatt (step activation function)"
+        },
+        "label": "b3"
+      }
+    ],
+    [
+      -1,
+      -1,
+      1,
+      null,
+      "input",
+      "weighted",
+      "63f586f7-5fe7-4ffe-9ff8-bfc6f71ffab6",
+      {
+        "pre": {
+          "id": "92b05303-b9c1-4ed8-84f8-bf93bfdc479c",
+          "label": "Input",
+          "output": 0,
+          "type": "input",
+          "isOutput": false,
+          "maxInputs": 0
+        },
+        "post": {
+          "id": "ac170bfd-c3bd-42e7-92c5-6ab4e3a324b9",
+          "label": "Perceptron",
+          "output": 0,
+          "netInput": 0,
+          "bias": 1,
+          "activationFunction": "step",
+          "learningRule": {
+            "name": "rosenblatt",
+            "description": "Perceptron Rule (Rosenblatt): error is computed AFTER the step function — e = (d − y). If the classification is already correct (y = d), the error is 0 and no update occurs, even if net is close to the boundary."
+          },
+          "type": "perceptron",
+          "isOutput": false,
+          "description": "Original 1958 model proposed by Frank Rosenblatt (step activation function)"
+        },
+        "label": "w5"
+      }
+    ],
+    [
+      -1,
+      -1,
+      1,
+      null,
+      "input",
+      "weighted",
+      "e8d7619f-6966-49a8-bfcc-c0da37c4639e",
+      {
+        "pre": {
+          "id": "93ab17bc-44b8-4fe2-b894-cad2ac1dd989",
+          "label": "Input",
+          "output": 0,
+          "type": "input",
+          "isOutput": false,
+          "maxInputs": 0
+        },
+        "post": {
+          "id": "ac170bfd-c3bd-42e7-92c5-6ab4e3a324b9",
+          "label": "Perceptron",
+          "output": 0,
+          "netInput": 0,
+          "bias": 1,
+          "activationFunction": "step",
+          "learningRule": {
+            "name": "rosenblatt",
+            "description": "Perceptron Rule (Rosenblatt): error is computed AFTER the step function — e = (d − y). If the classification is already correct (y = d), the error is 0 and no update occurs, even if net is close to the boundary."
+          },
+          "type": "perceptron",
+          "isOutput": false,
+          "description": "Original 1958 model proposed by Frank Rosenblatt (step activation function)"
+        },
+        "label": "w6"
+      }
+    ],
+    [
+      -1,
+      -1,
       -0.0054,
       "out",
       "dataset",
@@ -992,101 +1266,6 @@
           "position": {
             "x": 640,
             "y": -60
-          }
-        }
-      }
-    ],
-    [
-      -1,
-      -1,
-      0.0196,
-      "out",
-      "training",
-      "simple",
-      "2a9bea15-5dda-4619-a34a-e0e07b049c92",
-      {
-        "pre": {
-          "id": "212084e1-75d3-44f0-9f88-d6e9ca6e5af2",
-          "label": "Data",
-          "datasetId": "AND",
-          "output": [
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            1,
-            0,
-            0,
-            1,
-            1,
-            1
-          ],
-          "shape": [
-            0,
-            3
-          ],
-          "type": "data-node",
-          "position": {
-            "x": -200,
-            "y": 320
-          },
-          "_hasTrainingEdge": false,
-          "_hasValidationEdge": false,
-          "_hasTestEdge": false
-        },
-        "post": {
-          "label": "DATASET2",
-          "type": "dataset-node",
-          "datasetId": "AND",
-          "output": [
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            1,
-            0,
-            0,
-            1,
-            1,
-            1
-          ],
-          "_hasTrainingEdge": true,
-          "_hasValidationEdge": false,
-          "_hasTestEdge": false,
-          "labels": [
-            "X1",
-            "X2",
-            "Y"
-          ],
-          "trainingOutput": [
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            1,
-            0,
-            0,
-            1,
-            1,
-            1
-          ],
-          "_augInputCols": [
-            "X1",
-            "X2"
-          ],
-          "_augOutputCols": [
-            "Y"
-          ],
-          "id": "6b8d6767-45ab-41df-9447-167e2d4741dc",
-          "position": {
-            "x": 280,
-            "y": 240
           }
         }
       }

@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "9fa7e66a-ffd9-4f60-b5eb-494c91cc73ab",
+    "dfc08d02-b95a-4b2b-884a-00b6bf8935a3"
+  ],
+  "nodes": [
+    [
+      "output",
+      {
+        "label": "Output",
+        "output": 1,
+        "type": "output",
+        "isOutput": true,
+        "maxInputs": 1,
+        "maxOutputs": 0
+      },
+      -160,
+      -380,
+      -1,
+      null
+    ],
+    [
+      "bias",
+      {
+        "label": "Bias",
+        "output": 1,
+        "type": "bias",
+        "isOutput": false,
+        "description": "Constant input node (always outputs 1)"
+      },
+      -404.5,
+      -372,
+      -1,
+      null
+    ]
+  ],
+  "edges": [
+    [
+      -1,
+      -1,
+      1,
+      null,
+      "input",
+      "weighted",
+      "ad922a35-bac0-45f9-ab9a-0d1f9d902980",
+      {
+        "pre": {
+          "id": "dfc08d02-b95a-4b2b-884a-00b6bf8935a3",
+          "label": "Bias",
+          "output": 1,
+          "type": "bias",
+          "isOutput": false,
+          "description": "Constant input node (always outputs 1)",
+          "position": {
+            "x": -444.5,
+            "y": -412
+          }
+        },
+        "post": {
+          "id": "9fa7e66a-ffd9-4f60-b5eb-494c91cc73ab",
+          "label": "Output",
+          "output": 1,
+          "type": "output",
+          "isOutput": true,
+          "maxInputs": 1,
+          "maxOutputs": 0,
+          "position": {
+            "x": -200,
+            "y": -420
+          }
+        }
+      }
+    ]
+  ],
+  "columnLabelOverrides": {},
+  "testOverrides": {}
+}

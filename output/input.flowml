@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "91cb47dc-472e-481b-a7a3-99ff41bfa1f0",
+    "07b4619f-c6eb-410b-86cc-c92481f468fb"
+  ],
+  "nodes": [
+    [
+      "input",
+      {
+        "label": "INPUT",
+        "output": 2,
+        "type": "input",
+        "maxInputs": 0
+      },
+      -470,
+      -300,
+      -1,
+      null
+    ],
+    [
+      "output",
+      {
+        "label": "Output",
+        "output": 2,
+        "type": "output",
+        "maxInputs": 1,
+        "maxOutputs": 0
+      },
+      -210,
+      -300,
+      -1,
+      null
+    ]
+  ],
+  "edges": [
+    [
+      -1,
+      -1,
+      1,
+      null,
+      "input",
+      "weighted",
+      "8125e6c0-dfac-4b84-bffc-a11104ec9b71",
+      {
+        "pre": {
+          "label": "Input",
+          "output": 2,
+          "type": "input",
+          "maxInputs": 0,
+          "id": "91cb47dc-472e-481b-a7a3-99ff41bfa1f0",
+          "position": {
+            "x": -470,
+            "y": -300
+          }
+        },
+        "post": {
+          "label": "Output",
+          "output": 2,
+          "type": "output",
+          "maxInputs": 1,
+          "maxOutputs": 0,
+          "id": "07b4619f-c6eb-410b-86cc-c92481f468fb",
+          "position": {
+            "x": -210,
+            "y": -300
+          }
+        }
+      }
+    ]
+  ],
+  "columnLabelOverrides": {},
+  "testOverrides": {}
+}

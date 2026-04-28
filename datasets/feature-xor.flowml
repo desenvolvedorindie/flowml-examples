@@ -68,7 +68,8 @@
         ],
         "dynamicOutputColumns": [
           "Y"
-        ]
+        ],
+        "_datasetId": "XOR"
       },
       -220,
       -240,
@@ -79,7 +80,12 @@
       "data-node",
       {
         "label": "Data",
-        "datasetId": "XOR"
+        "datasetId": "XOR",
+        "dynamicInputColumns": [
+          "X1",
+          "X2",
+          "Y"
+        ]
       },
       -1260,
       -160,
@@ -134,7 +140,7 @@
       "input",
       {
         "label": "X1*X2",
-        "output": 3,
+        "output": 0,
         "type": "input",
         "isOutput": false,
         "maxInputs": 0
@@ -314,6 +320,244 @@
           "dynamicOutputColumns": [
             "Y"
           ],
+          "id": "6b4fa6ab-d097-4bc0-9d97-177b72d611fb",
+          "position": {
+            "x": -220,
+            "y": -240
+          }
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "validation",
+      "simple",
+      "4b999cf6-fd17-4409-9159-4b06b6e78958",
+      {
+        "pre": {
+          "id": "c613805c-36be-41fc-83fb-89b454366f7e",
+          "label": "Feature Binary",
+          "featureName": "X1*X2",
+          "featureType": "input",
+          "sourceFeatureIndexA": 0,
+          "sourceFeatureIndexB": 1,
+          "operationType": "mul",
+          "tensorPosition": "B",
+          "type": "feature-binary",
+          "isOutput": false,
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "dynamicInputColumns": [
+            "X1",
+            "X2",
+            "X1*X2"
+          ],
+          "dynamicOutputColumns": [
+            "Y"
+          ],
+          "position": {
+            "x": -710,
+            "y": -180
+          }
+        },
+        "post": {
+          "label": "Dataset",
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "type": "dataset-node",
+          "datasetId": "XOR",
+          "trainingOutput": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "_hasTrainingEdge": true,
+          "_hasValidationEdge": false,
+          "_hasTestEdge": false,
+          "_augInputCols": [
+            "X1",
+            "X2",
+            "X1*X2"
+          ],
+          "_augOutputCols": [
+            "Y"
+          ],
+          "dynamicInputColumns": [
+            "X1",
+            "X2",
+            "X1*X2"
+          ],
+          "dynamicOutputColumns": [
+            "Y"
+          ],
+          "_datasetId": "XOR",
+          "id": "6b4fa6ab-d097-4bc0-9d97-177b72d611fb",
+          "position": {
+            "x": -220,
+            "y": -240
+          }
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "test",
+      "simple",
+      "26847fac-ee60-43ed-80d3-a6eb764999cd",
+      {
+        "pre": {
+          "id": "c613805c-36be-41fc-83fb-89b454366f7e",
+          "label": "Feature Binary",
+          "featureName": "X1*X2",
+          "featureType": "input",
+          "sourceFeatureIndexA": 0,
+          "sourceFeatureIndexB": 1,
+          "operationType": "mul",
+          "tensorPosition": "B",
+          "type": "feature-binary",
+          "isOutput": false,
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "dynamicInputColumns": [
+            "X1",
+            "X2",
+            "X1*X2"
+          ],
+          "dynamicOutputColumns": [
+            "Y"
+          ],
+          "position": {
+            "x": -710,
+            "y": -180
+          }
+        },
+        "post": {
+          "label": "Dataset",
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "type": "dataset-node",
+          "datasetId": "XOR",
+          "trainingOutput": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "_hasTrainingEdge": true,
+          "_hasValidationEdge": false,
+          "_hasTestEdge": false,
+          "_augInputCols": [
+            "X1",
+            "X2",
+            "X1*X2"
+          ],
+          "_augOutputCols": [
+            "Y"
+          ],
+          "dynamicInputColumns": [
+            "X1",
+            "X2",
+            "X1*X2"
+          ],
+          "dynamicOutputColumns": [
+            "Y"
+          ],
+          "_datasetId": "XOR",
           "id": "6b4fa6ab-d097-4bc0-9d97-177b72d611fb",
           "position": {
             "x": -220,
