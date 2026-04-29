@@ -17,10 +17,14 @@
       {
         "type": "input",
         "label": "X1",
-        "output": 0,
+        "output": 1,
         "supportedLearningRules": [],
         "supportedActivationFunctions": [],
-        "value": 0
+        "value": 0,
+        "target": 0,
+        "netInput": 0,
+        "gradient": 0,
+        "bias": 0
       },
       71.5,
       0,
@@ -32,9 +36,9 @@
       {
         "type": "perceptron",
         "label": "Perceptron",
-        "bias": 0.0690000074505806,
-        "output": 0,
-        "netInput": -0.15479999780654907,
+        "bias": 0.0005168475909158587,
+        "output": 1,
+        "netInput": 0.0014672104734927416,
         "learningRule": "rosenblatt",
         "supportedLearningRules": [
           "rosenblatt",
@@ -47,7 +51,8 @@
           "linear"
         ],
         "target": 0,
-        "activationFunction": "threshold"
+        "activationFunction": "threshold",
+        "gradient": 0
       },
       461,
       96.5,
@@ -61,7 +66,11 @@
         "label": "Bias",
         "output": 1,
         "supportedLearningRules": [],
-        "supportedActivationFunctions": []
+        "supportedActivationFunctions": [],
+        "target": 0,
+        "netInput": 0,
+        "gradient": 0,
+        "bias": 0
       },
       80,
       264,
@@ -73,11 +82,13 @@
       {
         "type": "output",
         "label": "y",
-        "output": 0,
+        "output": 1,
         "supportedLearningRules": [],
         "supportedActivationFunctions": [],
         "target": 0,
-        "netInput": 0
+        "netInput": 1,
+        "gradient": 0,
+        "bias": 0
       },
       838,
       115.5,
@@ -89,11 +100,15 @@
       {
         "type": "input",
         "label": "X2",
-        "output": 0,
+        "output": 1,
         "maxInputs": 0,
         "supportedLearningRules": [],
         "supportedActivationFunctions": [],
-        "value": 0
+        "value": 0,
+        "target": 0,
+        "netInput": 0,
+        "gradient": 0,
+        "bias": 0
       },
       71.5,
       132,
@@ -110,7 +125,11 @@
         "resolution": 1,
         "output": [
           0.0192
-        ]
+        ],
+        "target": 0,
+        "netInput": 0,
+        "gradient": 0,
+        "bias": 0
       },
       780,
       280.5,
@@ -134,11 +153,21 @@
         "label": "XOR Dataset",
         "output": [],
         "type": "dataset-node",
-        "_hasTrainingEdge": false,
+        "_hasTrainingEdge": true,
         "_hasValidationEdge": false,
         "_hasTestEdge": false,
-        "_augInputCols": [],
-        "_augOutputCols": []
+        "_augInputCols": [
+          "X1",
+          "X2"
+        ],
+        "_augOutputCols": [
+          "Y"
+        ],
+        "_datasetId": "XOR",
+        "target": 0,
+        "netInput": 0,
+        "gradient": 0,
+        "bias": 0
       },
       380,
       311.5,
@@ -150,7 +179,7 @@
     [
       -1,
       -1,
-      0.0236,
+      -0.0145,
       null,
       "bias",
       "weighted",
@@ -189,7 +218,7 @@
     [
       -1,
       -1,
-      0.007,
+      0.002,
       null,
       "input",
       "weighted",
@@ -236,7 +265,7 @@
     [
       -1,
       -1,
-      -0.0104,
+      -0.0235,
       null,
       "input",
       "weighted",
@@ -281,7 +310,7 @@
     [
       -1,
       -1,
-      0.0651,
+      -0.0553,
       "out",
       "training",
       "simple",
@@ -395,7 +424,7 @@
     [
       -1,
       -1,
-      -0.0158,
+      0.058,
       "out",
       "test",
       "simple",
@@ -509,7 +538,7 @@
     [
       -1,
       -1,
-      -0.0354,
+      -0.013,
       null,
       "input",
       "weighted",
@@ -557,7 +586,7 @@
     [
       -1,
       -1,
-      -0.0273,
+      -0.011,
       null,
       "input",
       "simple",
@@ -603,7 +632,7 @@
     [
       -1,
       -1,
-      -0.112,
+      -0.0268,
       "out",
       "dataset",
       "simple",
@@ -654,7 +683,7 @@
     [
       -1,
       -1,
-      0.0499,
+      0.00047117858775891364,
       null,
       "input",
       "weighted",
@@ -698,13 +727,13 @@
             "y": -240
           }
         },
-        "label": "w3"
+        "label": "w1"
       }
     ],
     [
       -1,
       -1,
-      0.0315,
+      0.00047918432392179966,
       null,
       "input",
       "weighted",
@@ -749,13 +778,13 @@
             "y": -240
           }
         },
-        "label": "w4"
+        "label": "w2"
       }
     ],
     [
       -1,
       -1,
-      0.0529,
+      0.0005168475909158587,
       null,
       "bias",
       "weighted",
@@ -798,13 +827,13 @@
             "y": -240
           }
         },
-        "label": "b2"
+        "label": "b"
       }
     ],
     [
       -1,
       -1,
-      0.0902,
+      -0.008500000461935997,
       null,
       "input",
       "weighted",
@@ -854,7 +883,7 @@
     [
       -1,
       -1,
-      0.1034,
+      0.11029999703168869,
       "out",
       "training",
       "simple",
@@ -888,7 +917,7 @@
     [
       -1,
       -1,
-      -0.1235,
+      0.07989999651908875,
       null,
       "input",
       "simple",
@@ -939,7 +968,7 @@
     [
       -1,
       -1,
-      -0.0386,
+      -0.06679999828338623,
       "out",
       "dataset",
       "simple",
@@ -975,6 +1004,30 @@
       }
     ]
   ],
+  "trainingConfig": {
+    "learningRate": 0.1,
+    "maxEpochs": 100,
+    "targetError": 0.0001,
+    "errorAlgorithm": "meanSquaredError",
+    "errorParams": {},
+    "metricAlgorithm": "meanSquaredError",
+    "metricParams": {},
+    "selectedMetrics": [
+      "meanSquaredError"
+    ],
+    "selectedMetricsTest": [
+      "meanSquaredError"
+    ],
+    "optimizerAlgorithm": "adam",
+    "optimizerParams": {},
+    "adjustmentMode": "batch",
+    "batchSize": 4,
+    "randomizeOnStart": true,
+    "shuffleData": false,
+    "shuffleAlgorithm": "fisher-yates",
+    "shuffleSeed": 1777444224145,
+    "enableVerbose": true
+  },
   "columnLabelOverrides": {},
   "testOverrides": {}
 }

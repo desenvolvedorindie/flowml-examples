@@ -16,9 +16,9 @@
       {
         "type": "perceptron",
         "label": "Perceptron",
-        "bias": -0.0699421473423285,
+        "bias": -2.4612514972686768,
         "output": 1,
-        "netInput": 0.01000000536441803,
+        "netInput": 2.4611074924468994,
         "activationFunction": "step",
         "learningRule": {
           "name": "rosenblatt"
@@ -29,7 +29,9 @@
           "widrow-hoff",
           "oja",
           "pocket"
-        ]
+        ],
+        "target": 0,
+        "gradient": 0
       },
       -1740,
       -620,
@@ -41,7 +43,11 @@
       {
         "type": "bias",
         "label": "Bias",
-        "output": 1
+        "output": 1,
+        "target": 0,
+        "netInput": 0,
+        "gradient": 0,
+        "bias": 0
       },
       -2000,
       -700,
@@ -55,7 +61,11 @@
         "label": "x1",
         "output": 1,
         "maxInputs": 0,
-        "value": 0
+        "value": 0,
+        "target": 0,
+        "netInput": 0,
+        "gradient": 0,
+        "bias": 0
       },
       -2040,
       -460,
@@ -71,7 +81,9 @@
         "maxInputs": 1,
         "maxOutputs": 0,
         "target": 1,
-        "netInput": 1
+        "netInput": 1,
+        "gradient": 0,
+        "bias": 0
       },
       -1300,
       -480,
@@ -84,9 +96,13 @@
         "type": "decision-surface",
         "label": "Decision Surface",
         "output": [
-          0.1125
+          0.7018
         ],
-        "zoom": 0.25
+        "zoom": 0.25,
+        "target": 0,
+        "netInput": 0,
+        "gradient": 0,
+        "bias": 0
       },
       -1300,
       -380,
@@ -117,7 +133,18 @@
         "labels": [
           "X1",
           "Y"
-        ]
+        ],
+        "_augInputCols": [
+          "X1"
+        ],
+        "_augOutputCols": [
+          "Y"
+        ],
+        "_datasetId": "BUFFER",
+        "target": 0,
+        "netInput": 0,
+        "gradient": 0,
+        "bias": 0
       },
       -1560,
       -200,
@@ -144,7 +171,7 @@
     [
       -1,
       -1,
-      -0.4867,
+      -0.0102,
       null,
       "bias",
       "weighted",
@@ -181,7 +208,7 @@
     [
       -1,
       -1,
-      0.0214,
+      -0.151,
       null,
       "input",
       "weighted",
@@ -219,7 +246,7 @@
     [
       -1,
       -1,
-      0.3337,
+      -0.0064,
       null,
       "input",
       "weighted",
@@ -257,7 +284,7 @@
     [
       -1,
       -1,
-      -0.0405,
+      -0.0185,
       "out",
       "training",
       "weighted",
@@ -304,7 +331,7 @@
     [
       -1,
       -1,
-      0.2132,
+      -0.0045,
       "out",
       "test",
       "weighted",
@@ -365,7 +392,7 @@
     [
       -1,
       -1,
-      0.4126,
+      0.1278,
       "out",
       "dataset",
       "simple",
@@ -409,7 +436,7 @@
     [
       -1,
       -1,
-      0.0332,
+      0.0073,
       null,
       "input",
       "simple",
@@ -455,7 +482,7 @@
     [
       -1,
       -1,
-      -0.16429999999999978,
+      -2.4612514972686768,
       null,
       "bias",
       "weighted",
@@ -500,7 +527,7 @@
     [
       -1,
       -1,
-      0.17430000000000004,
+      4.922358989715576,
       null,
       "input",
       "weighted",
@@ -547,7 +574,7 @@
     [
       -1,
       -1,
-      0.0459,
+      0.03220000118017197,
       null,
       "input",
       "weighted",
@@ -595,7 +622,7 @@
     [
       -1,
       -1,
-      -0.0372,
+      -0.07840000092983246,
       "out",
       "training",
       "simple",
@@ -655,7 +682,7 @@
     [
       -1,
       -1,
-      0.2886,
+      -0.05469999834895134,
       "out",
       "dataset",
       "simple",
@@ -699,7 +726,7 @@
     [
       -1,
       -1,
-      -0.3051,
+      -0.020099999383091927,
       null,
       "input",
       "simple",
@@ -743,5 +770,31 @@
         }
       }
     ]
-  ]
+  ],
+  "trainingConfig": {
+    "learningRate": 0.1,
+    "maxEpochs": 100,
+    "targetError": 0.0001,
+    "errorAlgorithm": "meanSquaredError",
+    "errorParams": {},
+    "metricAlgorithm": "meanSquaredError",
+    "metricParams": {},
+    "selectedMetrics": [
+      "meanSquaredError"
+    ],
+    "selectedMetricsTest": [
+      "meanSquaredError"
+    ],
+    "optimizerAlgorithm": "adam",
+    "optimizerParams": {},
+    "adjustmentMode": "batch",
+    "batchSize": 4,
+    "randomizeOnStart": true,
+    "shuffleData": false,
+    "shuffleAlgorithm": "fisher-yates",
+    "shuffleSeed": 1777444224145,
+    "enableVerbose": true
+  },
+  "columnLabelOverrides": {},
+  "testOverrides": {}
 }
