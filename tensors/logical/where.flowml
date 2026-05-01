@@ -1,5 +1,400 @@
 {
-  "version": "1.0.0",
-  "nodes": [],
-  "connections": []
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "0b268046-0ebe-4558-9436-beb0ebdaf23a",
+    "cf670ed2-978a-43a8-8d0c-edb2b1026e6e",
+    "a05a34a3-a24a-44e1-b86a-e2e9f3427ac0",
+    "6bacdd47-eab0-482a-a925-2c3cef566377",
+    "d9bb6f15-e323-4159-bc4e-bae36584fbaf"
+  ],
+  "nodes": [
+    [
+      "tensor",
+      {
+        "label": "Tensor",
+        "order": 2,
+        "shape": [
+          3,
+          3
+        ],
+        "output": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "dtype": "float32",
+        "type": "tensor",
+        "isOutput": false
+      },
+      0,
+      0,
+      -1,
+      null
+    ],
+    [
+      "tensor-print",
+      {
+        "label": "Print",
+        "output": {
+          "0": 9,
+          "1": 8,
+          "2": 7,
+          "3": 6,
+          "4": 5,
+          "5": 4,
+          "6": 3,
+          "7": 2,
+          "8": 1
+        },
+        "type": "tensor-print",
+        "isOutput": false,
+        "description": "Display tensor values",
+        "color": "#d946ef",
+        "verbose": false,
+        "shape": [
+          3,
+          3
+        ],
+        "dtype": "float32"
+      },
+      628,
+      318,
+      -1,
+      null
+    ],
+    [
+      "tensor-where",
+      {
+        "label": "Where",
+        "output": {
+          "0": 9,
+          "1": 8,
+          "2": 7,
+          "3": 6,
+          "4": 5,
+          "5": 4,
+          "6": 3,
+          "7": 2,
+          "8": 1
+        },
+        "operationType": "where",
+        "type": "tensor-where",
+        "isOutput": false,
+        "shape": [
+          3,
+          3
+        ],
+        "dtype": "float32"
+      },
+      361,
+      304.5,
+      -1,
+      null
+    ],
+    [
+      "tensor",
+      {
+        "label": "Tensor",
+        "order": 2,
+        "shape": [
+          3,
+          3
+        ],
+        "output": [
+          9,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        "dtype": "float32",
+        "type": "tensor",
+        "isOutput": false
+      },
+      0,
+      259,
+      -1,
+      null
+    ],
+    [
+      "tensor",
+      {
+        "label": "Tensor",
+        "order": 0,
+        "shape": [
+          1
+        ],
+        "output": [
+          0
+        ],
+        "dtype": "float32",
+        "type": "tensor",
+        "isOutput": false
+      },
+      340,
+      -60,
+      -1,
+      null
+    ]
+  ],
+  "edges": [
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "input-a",
+      "simple",
+      "ee9e5dda-2825-41c3-9207-127ab73e04ab",
+      {
+        "pre": {
+          "id": "0b268046-0ebe-4558-9436-beb0ebdaf23a",
+          "label": "Tensor",
+          "order": 2,
+          "shape": [
+            3,
+            3
+          ],
+          "output": {
+            "0": 1,
+            "1": 2,
+            "2": 3,
+            "3": 4,
+            "4": 5,
+            "5": 6,
+            "6": 7,
+            "7": 8,
+            "8": 9
+          },
+          "dtype": "float32",
+          "type": "tensor",
+          "isOutput": false
+        },
+        "post": {
+          "id": "a05a34a3-a24a-44e1-b86a-e2e9f3427ac0",
+          "label": "Where",
+          "output": {
+            "0": 9,
+            "1": 8,
+            "2": 7,
+            "3": 6,
+            "4": 5,
+            "5": 4,
+            "6": 3,
+            "7": 2,
+            "8": 1
+          },
+          "operationType": "where",
+          "type": "tensor-where",
+          "isOutput": false,
+          "shape": [
+            3,
+            3
+          ],
+          "dtype": "float32"
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "input-b",
+      "simple",
+      "548a9f0f-2879-4a37-9e8d-65b504d45192",
+      {
+        "pre": {
+          "id": "6bacdd47-eab0-482a-a925-2c3cef566377",
+          "label": "Tensor",
+          "order": 2,
+          "shape": [
+            3,
+            3
+          ],
+          "output": {
+            "0": 9,
+            "1": 8,
+            "2": 7,
+            "3": 6,
+            "4": 5,
+            "5": 4,
+            "6": 3,
+            "7": 2,
+            "8": 1
+          },
+          "dtype": "float32",
+          "type": "tensor",
+          "isOutput": false
+        },
+        "post": {
+          "id": "a05a34a3-a24a-44e1-b86a-e2e9f3427ac0",
+          "label": "Where",
+          "output": {
+            "0": 9,
+            "1": 8,
+            "2": 7,
+            "3": 6,
+            "4": 5,
+            "5": 4,
+            "6": 3,
+            "7": 2,
+            "8": 1
+          },
+          "operationType": "where",
+          "type": "tensor-where",
+          "isOutput": false,
+          "shape": [
+            3,
+            3
+          ],
+          "dtype": "float32"
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "condition",
+      "simple",
+      "017609e9-1eb9-4b52-a32e-75e9c098b8d5",
+      {
+        "pre": {
+          "id": "d9bb6f15-e323-4159-bc4e-bae36584fbaf",
+          "label": "Tensor",
+          "order": 0,
+          "shape": [
+            1
+          ],
+          "output": {
+            "0": 0
+          },
+          "dtype": "float32",
+          "type": "tensor",
+          "isOutput": false
+        },
+        "post": {
+          "id": "a05a34a3-a24a-44e1-b86a-e2e9f3427ac0",
+          "label": "Where",
+          "output": {
+            "0": 9,
+            "1": 8,
+            "2": 7,
+            "3": 6,
+            "4": 5,
+            "5": 4,
+            "6": 3,
+            "7": 2,
+            "8": 1
+          },
+          "operationType": "where",
+          "type": "tensor-where",
+          "isOutput": false,
+          "shape": [
+            3,
+            3
+          ],
+          "dtype": "float32"
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "tensor-out",
+      "input",
+      "simple",
+      "a6b5f154-1608-4b56-8498-b29b9221b3eb",
+      {
+        "pre": {
+          "id": "a05a34a3-a24a-44e1-b86a-e2e9f3427ac0",
+          "label": "Where",
+          "output": {
+            "0": 9,
+            "1": 8,
+            "2": 7,
+            "3": 6,
+            "4": 5,
+            "5": 4,
+            "6": 3,
+            "7": 2,
+            "8": 1
+          },
+          "operationType": "where",
+          "type": "tensor-where",
+          "isOutput": false,
+          "shape": [
+            3,
+            3
+          ],
+          "dtype": "float32"
+        },
+        "post": {
+          "id": "cf670ed2-978a-43a8-8d0c-edb2b1026e6e",
+          "label": "Print",
+          "output": {
+            "0": 9,
+            "1": 8,
+            "2": 7,
+            "3": 6,
+            "4": 5,
+            "5": 4,
+            "6": 3,
+            "7": 2,
+            "8": 1
+          },
+          "type": "tensor-print",
+          "isOutput": false,
+          "description": "Display tensor values",
+          "color": "#d946ef",
+          "verbose": false,
+          "shape": [
+            3,
+            3
+          ],
+          "dtype": "float32"
+        }
+      }
+    ]
+  ],
+  "trainingConfig": {
+    "learningRate": 0.1,
+    "maxEpochs": 100,
+    "targetError": 0.0001,
+    "errorAlgorithm": "meanSquaredError",
+    "errorParams": {},
+    "metricAlgorithm": "meanSquaredError",
+    "metricParams": {},
+    "selectedMetrics": [
+      "meanSquaredError"
+    ],
+    "selectedMetricsTest": [
+      "meanSquaredError"
+    ],
+    "optimizerAlgorithm": "adam",
+    "optimizerParams": {},
+    "adjustmentMode": "batch",
+    "batchSize": 4,
+    "randomizeOnStart": true,
+    "shuffleData": false,
+    "shuffleAlgorithm": "fisher-yates",
+    "shuffleSeed": 1777444224145,
+    "enableVerbose": true
+  },
+  "columnLabelOverrides": {},
+  "testOverrides": {}
 }

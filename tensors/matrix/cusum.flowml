@@ -1,0 +1,253 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "d1639376-4ff9-463d-8304-f42c8edb97e9",
+    "13f44c21-1aec-48d8-84f3-cac66ec183d2",
+    "9ebdc48a-7c62-47ca-9f7e-cf0eb57cdb39"
+  ],
+  "nodes": [
+    [
+      "tensor-scan",
+      {
+        "label": "Scan",
+        "output": {
+          "0": 1,
+          "1": 2,
+          "2": 3,
+          "3": 5,
+          "4": 7,
+          "5": 9,
+          "6": 12,
+          "7": 15,
+          "8": 18
+        },
+        "operationType": "cumsum",
+        "axis": 2,
+        "exclusive": false,
+        "reverse": false,
+        "type": "tensor-scan",
+        "isOutput": false,
+        "shape": [
+          3,
+          3
+        ],
+        "dtype": "float32"
+      },
+      110,
+      20,
+      -1,
+      null
+    ],
+    [
+      "tensor-print",
+      {
+        "label": "Print",
+        "output": {
+          "0": 1,
+          "1": 2,
+          "2": 3,
+          "3": 5,
+          "4": 7,
+          "5": 9,
+          "6": 12,
+          "7": 15,
+          "8": 18
+        },
+        "type": "tensor-print",
+        "isOutput": false,
+        "description": "Display tensor values",
+        "color": "#d946ef",
+        "verbose": false,
+        "shape": [
+          3,
+          3
+        ],
+        "dtype": "float32"
+      },
+      310,
+      20,
+      -1,
+      null
+    ],
+    [
+      "tensor",
+      {
+        "label": "Tensor",
+        "order": 2,
+        "shape": [
+          3,
+          3
+        ],
+        "output": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "dtype": "float32",
+        "type": "tensor",
+        "isOutput": false
+      },
+      -220,
+      -40,
+      -1,
+      null
+    ]
+  ],
+  "edges": [
+    [
+      -1,
+      -1,
+      null,
+      "tensor-out",
+      "input",
+      "simple",
+      "644e22cb-1fb1-4ca2-88ba-045544969431",
+      {
+        "pre": {
+          "id": "d1639376-4ff9-463d-8304-f42c8edb97e9",
+          "label": "Scan",
+          "output": {
+            "0": 1,
+            "1": 2,
+            "2": 3,
+            "3": 5,
+            "4": 7,
+            "5": 9,
+            "6": 12,
+            "7": 15,
+            "8": 18
+          },
+          "operationType": "cumsum",
+          "axis": 2,
+          "exclusive": false,
+          "reverse": false,
+          "type": "tensor-scan",
+          "isOutput": false,
+          "shape": [
+            3,
+            3
+          ],
+          "dtype": "float32"
+        },
+        "post": {
+          "id": "13f44c21-1aec-48d8-84f3-cac66ec183d2",
+          "label": "Print",
+          "output": {
+            "0": 1,
+            "1": 2,
+            "2": 3,
+            "3": 5,
+            "4": 7,
+            "5": 9,
+            "6": 12,
+            "7": 15,
+            "8": 18
+          },
+          "type": "tensor-print",
+          "isOutput": false,
+          "description": "Display tensor values",
+          "color": "#d946ef",
+          "verbose": false,
+          "shape": [
+            3,
+            3
+          ],
+          "dtype": "float32"
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "input",
+      "simple",
+      "152d890d-2198-4c38-b8e2-5f355b80dbb1",
+      {
+        "pre": {
+          "id": "9ebdc48a-7c62-47ca-9f7e-cf0eb57cdb39",
+          "label": "Tensor",
+          "order": 2,
+          "shape": [
+            3,
+            3
+          ],
+          "output": {
+            "0": 1,
+            "1": 2,
+            "2": 3,
+            "3": 4,
+            "4": 5,
+            "5": 6,
+            "6": 7,
+            "7": 8,
+            "8": 9
+          },
+          "dtype": "float32",
+          "type": "tensor",
+          "isOutput": false
+        },
+        "post": {
+          "id": "d1639376-4ff9-463d-8304-f42c8edb97e9",
+          "label": "Scan",
+          "output": {
+            "0": 1,
+            "1": 2,
+            "2": 3,
+            "3": 5,
+            "4": 7,
+            "5": 9,
+            "6": 12,
+            "7": 15,
+            "8": 18
+          },
+          "operationType": "cumsum",
+          "axis": 2,
+          "exclusive": false,
+          "reverse": false,
+          "type": "tensor-scan",
+          "isOutput": false,
+          "shape": [
+            3,
+            3
+          ],
+          "dtype": "float32"
+        }
+      }
+    ]
+  ],
+  "trainingConfig": {
+    "learningRate": 0.1,
+    "maxEpochs": 100,
+    "targetError": 0.0001,
+    "errorAlgorithm": "meanSquaredError",
+    "errorParams": {},
+    "metricAlgorithm": "meanSquaredError",
+    "metricParams": {},
+    "selectedMetrics": [
+      "meanSquaredError"
+    ],
+    "selectedMetricsTest": [
+      "meanSquaredError"
+    ],
+    "optimizerAlgorithm": "adam",
+    "optimizerParams": {},
+    "adjustmentMode": "batch",
+    "batchSize": 4,
+    "randomizeOnStart": true,
+    "shuffleData": false,
+    "shuffleAlgorithm": "fisher-yates",
+    "shuffleSeed": 1777444224145,
+    "enableVerbose": true
+  },
+  "columnLabelOverrides": {},
+  "testOverrides": {}
+}

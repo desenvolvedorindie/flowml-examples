@@ -18,9 +18,11 @@
         "type": "tensor",
         "label": "Tensor",
         "order": 0,
-        "shape": [],
+        "shape": [
+          1
+        ],
         "output": [
-          2
+          1
         ],
         "dtype": "float32",
         "expanded": false
@@ -36,9 +38,11 @@
         "type": "tensor",
         "label": "Tensor",
         "order": 0,
-        "shape": [],
+        "shape": [
+          1
+        ],
         "output": [
-          3
+          2
         ],
         "dtype": "float32"
       },
@@ -53,10 +57,12 @@
         "type": "tensor-complex",
         "label": "Complex",
         "output": {
-          "0": 2,
-          "1": 3
+          "0": 1,
+          "1": 2
         },
-        "shape": [],
+        "shape": [
+          1
+        ],
         "dtype": "complex64"
       },
       -100,
@@ -70,10 +76,12 @@
         "type": "tensor-print",
         "label": "Print",
         "output": {
-          "0": 2,
-          "1": 3
+          "0": 1,
+          "1": 2
         },
-        "shape": [],
+        "shape": [
+          1
+        ],
         "verbose": false,
         "dtype": "complex64"
       },
@@ -90,7 +98,9 @@
         "output": {
           "0": 1
         },
-        "shape": [],
+        "shape": [
+          1
+        ],
         "dtype": "boolean"
       },
       140,
@@ -104,9 +114,11 @@
         "type": "tensor-imag",
         "label": "Imag",
         "output": {
-          "0": 3
+          "0": 2
         },
-        "shape": [],
+        "shape": [
+          1
+        ],
         "dtype": "float32"
       },
       140,
@@ -122,7 +134,9 @@
         "output": {
           "0": 1
         },
-        "shape": [],
+        "shape": [
+          1
+        ],
         "verbose": false,
         "dtype": "boolean"
       },
@@ -137,9 +151,11 @@
         "type": "tensor-print",
         "label": "Print 4",
         "output": {
-          "0": 3
+          "0": 2
         },
-        "shape": [],
+        "shape": [
+          1
+        ],
         "verbose": false,
         "dtype": "float32"
       },
@@ -733,6 +749,30 @@
       }
     ]
   ],
+  "trainingConfig": {
+    "learningRate": 0.1,
+    "maxEpochs": 100,
+    "targetError": 0.0001,
+    "errorAlgorithm": "meanSquaredError",
+    "errorParams": {},
+    "metricAlgorithm": "meanSquaredError",
+    "metricParams": {},
+    "selectedMetrics": [
+      "meanSquaredError"
+    ],
+    "selectedMetricsTest": [
+      "meanSquaredError"
+    ],
+    "optimizerAlgorithm": "adam",
+    "optimizerParams": {},
+    "adjustmentMode": "batch",
+    "batchSize": 4,
+    "randomizeOnStart": true,
+    "shuffleData": false,
+    "shuffleAlgorithm": "fisher-yates",
+    "shuffleSeed": 1777444224145,
+    "enableVerbose": true
+  },
   "columnLabelOverrides": {},
   "testOverrides": {}
 }

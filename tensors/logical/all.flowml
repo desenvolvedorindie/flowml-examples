@@ -11,14 +11,18 @@
       "tensor-reduce",
       {
         "label": "Reduction",
-        "output": [
-          1
-        ],
-        "operationParams": {},
+        "output": {
+          "0": 0
+        },
+        "operationParams": {
+          "keepDims": false
+        },
         "operationType": "all",
         "type": "tensor-reduce",
         "isOutput": false,
-        "shape": [],
+        "shape": [
+          1
+        ],
         "dtype": "float32"
       },
       270,
@@ -52,15 +56,17 @@
       "tensor-print",
       {
         "label": "Print",
-        "output": [
-          1
-        ],
+        "output": {
+          "0": 0
+        },
         "type": "tensor-print",
         "isOutput": false,
         "description": "Display tensor values",
         "color": "#d946ef",
         "verbose": false,
-        "shape": [],
+        "shape": [
+          1
+        ],
         "dtype": "float32"
       },
       530,
@@ -149,6 +155,30 @@
       }
     ]
   ],
+  "trainingConfig": {
+    "learningRate": 0.1,
+    "maxEpochs": 100,
+    "targetError": 0.0001,
+    "errorAlgorithm": "meanSquaredError",
+    "errorParams": {},
+    "metricAlgorithm": "meanSquaredError",
+    "metricParams": {},
+    "selectedMetrics": [
+      "meanSquaredError"
+    ],
+    "selectedMetricsTest": [
+      "meanSquaredError"
+    ],
+    "optimizerAlgorithm": "adam",
+    "optimizerParams": {},
+    "adjustmentMode": "batch",
+    "batchSize": 4,
+    "randomizeOnStart": true,
+    "shuffleData": false,
+    "shuffleAlgorithm": "fisher-yates",
+    "shuffleSeed": 1777444224145,
+    "enableVerbose": true
+  },
   "columnLabelOverrides": {},
   "testOverrides": {}
 }

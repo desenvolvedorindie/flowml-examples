@@ -8,7 +8,8 @@
     "da1d6ba1-aed0-4b37-84db-8fe1f7f9319a",
     "7d9dc83d-ed31-4dec-93a0-0ea6f9abfd77",
     "77509c22-6c68-4e32-940f-a9ae9d3507c5",
-    "ac25c69c-8067-4120-9432-df951a502fd8"
+    "ac25c69c-8067-4120-9432-df951a502fd8",
+    "1d90c80e-5533-4e31-9044-1a61f809ccdd"
   ],
   "nodes": [
     [
@@ -17,15 +18,17 @@
         "type": "tensor",
         "label": "Tensor",
         "order": 0,
-        "shape": [],
+        "shape": [
+          1
+        ],
         "output": [
           1
         ],
         "dtype": "float32",
         "expanded": false
       },
-      -320,
-      300,
+      0,
+      0,
       -1,
       null
     ],
@@ -35,14 +38,16 @@
         "type": "tensor",
         "label": "Tensor",
         "order": 0,
-        "shape": [],
+        "shape": [
+          1
+        ],
         "output": [
           2
         ],
         "dtype": "float32"
       },
-      -320,
-      460,
+      0,
+      207,
       -1,
       null
     ],
@@ -51,15 +56,17 @@
       {
         "type": "tensor-complex",
         "label": "Complex",
-        "output": [
-          3.3,
-          4
+        "output": {
+          "0": 1,
+          "1": 2
+        },
+        "shape": [
+          1
         ],
-        "shape": [],
         "dtype": "complex64"
       },
-      -120,
-      420,
+      298,
+      16.5,
       -1,
       null
     ],
@@ -68,7 +75,9 @@
       {
         "label": "Tensor",
         "order": 0,
-        "shape": [],
+        "shape": [
+          1
+        ],
         "output": [
           3
         ],
@@ -77,8 +86,8 @@
         "isOutput": false,
         "expanded": false
       },
-      -320,
-      620,
+      0,
+      414,
       -1,
       null
     ],
@@ -87,7 +96,9 @@
       {
         "label": "Tensor",
         "order": 0,
-        "shape": [],
+        "shape": [
+          1
+        ],
         "output": [
           4
         ],
@@ -95,8 +106,8 @@
         "type": "tensor",
         "isOutput": false
       },
-      -320,
-      780,
+      0,
+      621,
       -1,
       null
     ],
@@ -104,17 +115,19 @@
       "tensor-complex",
       {
         "label": "Complex",
-        "output": [
-          3.3,
-          4
-        ],
+        "output": {
+          "0": 3,
+          "1": 4
+        },
         "type": "tensor-complex",
         "isOutput": false,
-        "shape": [],
+        "shape": [
+          1
+        ],
         "dtype": "complex64"
       },
-      -120,
-      740,
+      298,
+      430.5,
       -1,
       null
     ],
@@ -122,16 +135,45 @@
       "tensor-binary",
       {
         "label": "Binary",
-        "output": [],
-        "shape": [],
+        "output": {
+          "0": 4,
+          "1": 6
+        },
+        "shape": [
+          1
+        ],
         "operationType": "add",
         "type": "tensor-binary",
         "isOutput": false,
         "name": "TensorBinary",
-        "description": "Executes binary mathematical operations between two tensors (e.g., Add, Multiply, Subtract)."
+        "description": "Executes binary mathematical operations between two tensors (e.g., Add, Multiply, Subtract).",
+        "dtype": "complex64"
       },
-      180,
-      620,
+      595,
+      16.5,
+      -1,
+      null
+    ],
+    [
+      "tensor-print",
+      {
+        "label": "Print",
+        "output": {
+          "0": 4,
+          "1": 6
+        },
+        "type": "tensor-print",
+        "isOutput": false,
+        "description": "Display tensor values",
+        "color": "#d946ef",
+        "verbose": false,
+        "shape": [
+          1
+        ],
+        "dtype": "complex64"
+      },
+      855,
+      33,
       -1,
       null
     ]
@@ -678,8 +720,81 @@
           "description": "Executes binary mathematical operations between two tensors (e.g., Add, Multiply, Subtract)."
         }
       }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "tensor-out",
+      "input",
+      "simple",
+      "6a8b535f-38f8-4dac-96f7-3eaa7070361b",
+      {
+        "pre": {
+          "label": "Binary",
+          "output": {
+            "0": 4,
+            "1": 6
+          },
+          "shape": [
+            1
+          ],
+          "operationType": "add",
+          "type": "tensor-binary",
+          "isOutput": false,
+          "name": "TensorBinary",
+          "description": "Executes binary mathematical operations between two tensors (e.g., Add, Multiply, Subtract).",
+          "id": "ac25c69c-8067-4120-9432-df951a502fd8",
+          "position": {
+            "x": 180,
+            "y": 620
+          },
+          "dtype": "complex64"
+        },
+        "post": {
+          "id": "1d90c80e-5533-4e31-9044-1a61f809ccdd",
+          "label": "Print",
+          "output": {
+            "0": 4,
+            "1": 6
+          },
+          "type": "tensor-print",
+          "isOutput": false,
+          "description": "Display tensor values",
+          "color": "#d946ef",
+          "verbose": false,
+          "shape": [
+            1
+          ],
+          "dtype": "complex64"
+        }
+      }
     ]
   ],
+  "trainingConfig": {
+    "learningRate": 0.1,
+    "maxEpochs": 100,
+    "targetError": 0.0001,
+    "errorAlgorithm": "meanSquaredError",
+    "errorParams": {},
+    "metricAlgorithm": "meanSquaredError",
+    "metricParams": {},
+    "selectedMetrics": [
+      "meanSquaredError"
+    ],
+    "selectedMetricsTest": [
+      "meanSquaredError"
+    ],
+    "optimizerAlgorithm": "adam",
+    "optimizerParams": {},
+    "adjustmentMode": "batch",
+    "batchSize": 4,
+    "randomizeOnStart": true,
+    "shuffleData": false,
+    "shuffleAlgorithm": "fisher-yates",
+    "shuffleSeed": 1777444224145,
+    "enableVerbose": true
+  },
   "columnLabelOverrides": {},
   "testOverrides": {}
 }

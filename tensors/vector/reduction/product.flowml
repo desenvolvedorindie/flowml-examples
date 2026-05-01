@@ -2,9 +2,9 @@
   "version": 1,
   "c": 2,
   "nodeIds": [
-    "1ccf4bd3-9c8f-4ca0-b865-f162f7dfedd3",
-    "c75417f0-7d71-4936-9ffc-b5809f2a6816",
-    "1885b8da-9ffc-4490-87dd-1050b4fa1e98"
+    "abbe7dcd-bea5-4e59-93f9-93d8400e187d",
+    "a3a9e361-7686-4ca8-8b46-be50bee517d8",
+    "2b9d4f41-8025-442d-8611-35892b45bec6"
   ],
   "nodes": [
     [
@@ -12,10 +12,10 @@
       {
         "label": "Reduction",
         "output": {
-          "0": 0
+          "0": 6
         },
         "operationParams": {},
-        "operationType": "any",
+        "operationType": "prod",
         "type": "tensor-reduce",
         "isOutput": false,
         "shape": [
@@ -23,8 +23,8 @@
         ],
         "dtype": "float32"
       },
-      270,
-      320,
+      310,
+      360,
       -1,
       null
     ],
@@ -36,17 +36,17 @@
         "shape": [
           3
         ],
-        "output": [
-          0,
-          0,
-          0
-        ],
-        "dtype": "boolean",
+        "output": {
+          "0": 1,
+          "1": 2,
+          "2": 3
+        },
+        "dtype": "float32",
         "type": "tensor",
         "isOutput": false
       },
-      0,
-      260,
+      40,
+      300,
       -1,
       null
     ],
@@ -55,7 +55,7 @@
       {
         "label": "Print",
         "output": {
-          "0": 0
+          "0": 6
         },
         "type": "tensor-print",
         "isOutput": false,
@@ -67,8 +67,8 @@
         ],
         "dtype": "float32"
       },
-      530,
-      300,
+      570,
+      340,
       -1,
       null
     ]
@@ -81,34 +81,46 @@
       "tensor-out",
       "input",
       "simple",
-      "b1b380d0-fcbc-4ed4-8575-b6c8714de885",
+      "e5d0d559-5ed4-4651-a9c5-f6aa9efe1219",
       {
         "pre": {
-          "id": "1ccf4bd3-9c8f-4ca0-b865-f162f7dfedd3",
+          "id": "abbe7dcd-bea5-4e59-93f9-93d8400e187d",
           "label": "Reduction",
-          "output": [
-            0
-          ],
+          "output": {
+            "0": 3
+          },
           "operationParams": {},
-          "operationType": "all",
+          "operationType": "max",
           "type": "tensor-reduce",
           "isOutput": false,
-          "shape": [],
-          "dtype": "float32"
+          "shape": [
+            1
+          ],
+          "dtype": "float32",
+          "position": {
+            "x": 270,
+            "y": 320
+          }
         },
         "post": {
-          "id": "1885b8da-9ffc-4490-87dd-1050b4fa1e98",
+          "id": "2b9d4f41-8025-442d-8611-35892b45bec6",
           "label": "Print",
-          "output": [
-            0
-          ],
+          "output": {
+            "0": 3
+          },
           "type": "tensor-print",
           "isOutput": false,
           "description": "Display tensor values",
           "color": "#d946ef",
           "verbose": false,
-          "shape": [],
-          "dtype": "float32"
+          "shape": [
+            1
+          ],
+          "dtype": "float32",
+          "position": {
+            "x": 530,
+            "y": 300
+          }
         }
       }
     ],
@@ -119,36 +131,46 @@
       "out",
       "input",
       "simple",
-      "eea6e735-de9a-46ae-b06a-aa3c2cf06130",
+      "eae4c3d0-eb32-4656-8d2a-b6e2bb10f663",
       {
         "pre": {
-          "id": "c75417f0-7d71-4936-9ffc-b5809f2a6816",
+          "id": "a3a9e361-7686-4ca8-8b46-be50bee517d8",
           "label": "Tensor",
           "order": 1,
           "shape": [
             3
           ],
-          "output": [
-            1,
-            1,
-            1
-          ],
-          "dtype": "boolean",
+          "output": {
+            "0": 1,
+            "1": 2,
+            "2": 3
+          },
+          "dtype": "float32",
           "type": "tensor",
-          "isOutput": false
+          "isOutput": false,
+          "position": {
+            "x": 0,
+            "y": 260
+          }
         },
         "post": {
-          "id": "1ccf4bd3-9c8f-4ca0-b865-f162f7dfedd3",
+          "id": "abbe7dcd-bea5-4e59-93f9-93d8400e187d",
           "label": "Reduction",
-          "output": [
-            0
-          ],
+          "output": {
+            "0": 3
+          },
           "operationParams": {},
-          "operationType": "all",
+          "operationType": "max",
           "type": "tensor-reduce",
           "isOutput": false,
-          "shape": [],
-          "dtype": "float32"
+          "shape": [
+            1
+          ],
+          "dtype": "float32",
+          "position": {
+            "x": 270,
+            "y": 320
+          }
         }
       }
     ]

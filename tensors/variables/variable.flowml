@@ -18,14 +18,14 @@
     "selectedMetricsTest": [
       "meanSquaredError"
     ],
-    "optimizerAlgorithm": "sgd",
+    "optimizerAlgorithm": "adam",
     "optimizerParams": {},
-    "adjustmentMode": "stochastic",
+    "adjustmentMode": "batch",
     "batchSize": 32,
     "randomizeOnStart": true,
     "shuffleData": false,
     "shuffleAlgorithm": "fisher-yates",
-    "shuffleSeed": 1777590584949,
+    "shuffleSeed": 1777505371467,
     "enableVerbose": true
   },
   "columnLabelOverrides": {},

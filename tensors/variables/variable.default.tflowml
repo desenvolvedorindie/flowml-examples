@@ -41,11 +41,11 @@
     "optimizerAlgorithm": "adam",
     "optimizerParams": {},
     "adjustmentMode": "batch",
-    "batchSize": 4,
+    "batchSize": 32,
     "randomizeOnStart": true,
     "shuffleData": false,
     "shuffleAlgorithm": "fisher-yates",
-    "shuffleSeed": 1777444224145,
+    "shuffleSeed": 1777505371467,
     "enableVerbose": true
   }
 }

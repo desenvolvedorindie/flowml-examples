@@ -13,17 +13,17 @@
       {
         "type": "tensor-binary",
         "label": "Binary",
-        "output": [
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
+        "output": {
+          "0": 5,
+          "1": 6,
+          "2": 7,
+          "3": 8,
+          "4": 9,
+          "5": 10,
+          "6": 11,
+          "7": 12,
+          "8": 13
+        },
         "operationType": "add",
         "shape": [
           3,
@@ -31,8 +31,8 @@
         ],
         "dtype": "float32"
       },
-      -1040,
-      160,
+      298,
+      43.5,
       -1,
       null
     ],
@@ -41,17 +41,17 @@
       {
         "type": "tensor-print",
         "label": "Print 11",
-        "output": [
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
+        "output": {
+          "0": 5,
+          "1": 6,
+          "2": 7,
+          "3": 8,
+          "4": 9,
+          "5": 10,
+          "6": 11,
+          "7": 12,
+          "8": 13
+        },
         "shape": [
           3,
           3
@@ -59,8 +59,8 @@
         "verbose": true,
         "dtype": "float32"
       },
-      -440,
-      80,
+      558,
+      0,
       -1,
       null
     ],
@@ -87,8 +87,8 @@
         ],
         "dtype": "float32"
       },
-      -1400,
-      -100,
+      0,
+      1,
       -1,
       null
     ],
@@ -98,14 +98,16 @@
         "type": "tensor",
         "label": "Tensor",
         "order": 0,
-        "shape": [],
-        "output": [
+        "shape": [
           1
+        ],
+        "output": [
+          4
         ],
         "dtype": "float32"
       },
-      -1400,
-      220,
+      0,
+      260,
       -1,
       null
     ]
@@ -280,6 +282,210 @@
           }
         }
       }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "input-a",
+      "simple",
+      "27cc0752-897e-4dfb-b8e0-5603240c5bc9",
+      {
+        "pre": {
+          "type": "tensor",
+          "label": "Tensor",
+          "order": 2,
+          "shape": [
+            3,
+            3
+          ],
+          "output": {
+            "0": 1,
+            "1": 2,
+            "2": 3,
+            "3": 4,
+            "4": 5,
+            "5": 6,
+            "6": 7,
+            "7": 8,
+            "8": 9
+          },
+          "dtype": "float32",
+          "id": "bb07ee4c-3ffb-4c06-84cc-54e361c8fbe8",
+          "position": {
+            "x": -1400,
+            "y": -100
+          }
+        },
+        "post": {
+          "type": "tensor-binary",
+          "label": "Binary",
+          "output": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "operationType": "add",
+          "shape": [
+            3,
+            3
+          ],
+          "dtype": "float32",
+          "id": "c363968e-2983-485b-b72e-51c762c3cd7d",
+          "position": {
+            "x": -1040,
+            "y": 160
+          }
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "input-b",
+      "simple",
+      "36569895-a8d9-4aa5-b939-104f5c49a2b6",
+      {
+        "pre": {
+          "type": "tensor",
+          "label": "Tensor",
+          "order": 0,
+          "shape": [],
+          "output": {
+            "0": 0.9
+          },
+          "dtype": "float32",
+          "id": "d7187c60-7301-4ea8-a033-901aacb6527a",
+          "position": {
+            "x": -1400,
+            "y": 220
+          }
+        },
+        "post": {
+          "type": "tensor-binary",
+          "label": "Binary",
+          "output": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "operationType": "add",
+          "shape": [
+            3,
+            3
+          ],
+          "dtype": "float32",
+          "id": "c363968e-2983-485b-b72e-51c762c3cd7d",
+          "position": {
+            "x": -1040,
+            "y": 160
+          }
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "tensor-out",
+      "input",
+      "simple",
+      "cdc94982-9fcb-44bc-9bdc-930f9445bae6",
+      {
+        "pre": {
+          "type": "tensor-binary",
+          "label": "Binary",
+          "output": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "operationType": "add",
+          "shape": [
+            3,
+            3
+          ],
+          "dtype": "float32",
+          "id": "c363968e-2983-485b-b72e-51c762c3cd7d",
+          "position": {
+            "x": -1040,
+            "y": 160
+          }
+        },
+        "post": {
+          "type": "tensor-print",
+          "label": "Print 11",
+          "output": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "shape": [
+            3,
+            3
+          ],
+          "verbose": true,
+          "dtype": "float32",
+          "id": "8285b4d6-aee0-4097-9ee9-30b19ff6055a",
+          "position": {
+            "x": -440,
+            "y": 80
+          }
+        }
+      }
     ]
-  ]
+  ],
+  "trainingConfig": {
+    "learningRate": 0.1,
+    "maxEpochs": 100,
+    "targetError": 0.0001,
+    "errorAlgorithm": "meanSquaredError",
+    "errorParams": {},
+    "metricAlgorithm": "meanSquaredError",
+    "metricParams": {},
+    "selectedMetrics": [
+      "meanSquaredError"
+    ],
+    "selectedMetricsTest": [
+      "meanSquaredError"
+    ],
+    "optimizerAlgorithm": "adam",
+    "optimizerParams": {},
+    "adjustmentMode": "batch",
+    "batchSize": 4,
+    "randomizeOnStart": true,
+    "shuffleData": false,
+    "shuffleAlgorithm": "fisher-yates",
+    "shuffleSeed": 1777444224145,
+    "enableVerbose": true
+  },
+  "columnLabelOverrides": {},
+  "testOverrides": {}
 }
