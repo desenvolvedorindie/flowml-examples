@@ -441,6 +441,30 @@
       }
     ]
   ],
+  "trainingConfig": {
+    "learningRate": 0.1,
+    "maxEpochs": 100,
+    "targetError": 0.0001,
+    "errorAlgorithm": "meanSquaredError",
+    "errorParams": {},
+    "metricAlgorithm": "meanSquaredError",
+    "metricParams": {},
+    "selectedMetrics": [
+      "meanSquaredError"
+    ],
+    "selectedMetricsTest": [
+      "meanSquaredError"
+    ],
+    "optimizerAlgorithm": "adam",
+    "optimizerParams": {},
+    "adjustmentMode": "batch",
+    "batchSize": 32,
+    "randomizeOnStart": true,
+    "shuffleData": false,
+    "shuffleAlgorithm": "fisher-yates",
+    "shuffleSeed": 1777659211685,
+    "enableVerbose": true
+  },
   "columnLabelOverrides": {},
   "testOverrides": {}
 }

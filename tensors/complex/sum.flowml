@@ -9,7 +9,9 @@
     "7d9dc83d-ed31-4dec-93a0-0ea6f9abfd77",
     "77509c22-6c68-4e32-940f-a9ae9d3507c5",
     "ac25c69c-8067-4120-9432-df951a502fd8",
-    "1d90c80e-5533-4e31-9044-1a61f809ccdd"
+    "1d90c80e-5533-4e31-9044-1a61f809ccdd",
+    "bb5b7019-1373-4354-8e14-31df57b497c2",
+    "ffa665a2-d370-4877-be3a-85c151d1e2a9"
   ],
   "nodes": [
     [
@@ -149,7 +151,7 @@
         "description": "Executes binary mathematical operations between two tensors (e.g., Add, Multiply, Subtract).",
         "dtype": "complex64"
       },
-      595,
+      605,
       16.5,
       -1,
       null
@@ -172,8 +174,54 @@
         ],
         "dtype": "complex64"
       },
-      855,
-      33,
+      875,
+      32,
+      -1,
+      null
+    ],
+    [
+      "tensor-print",
+      {
+        "label": "Print",
+        "output": {
+          "0": 3,
+          "1": 4
+        },
+        "type": "tensor-print",
+        "isOutput": false,
+        "description": "Display tensor values",
+        "color": "#d946ef",
+        "verbose": false,
+        "shape": [
+          1
+        ],
+        "dtype": "complex64"
+      },
+      595,
+      477,
+      -1,
+      null
+    ],
+    [
+      "tensor-print",
+      {
+        "label": "Print",
+        "output": {
+          "0": 1,
+          "1": 2
+        },
+        "type": "tensor-print",
+        "isOutput": false,
+        "description": "Display tensor values",
+        "color": "#d946ef",
+        "verbose": false,
+        "shape": [
+          1
+        ],
+        "dtype": "complex64"
+      },
+      595,
+      336,
       -1,
       null
     ]
@@ -767,6 +815,105 @@
             1
           ],
           "dtype": "complex64"
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "tensor-out",
+      "input",
+      "simple",
+      "82561093-754a-48bb-b771-8a4bbb734477",
+      {
+        "pre": {
+          "label": "Complex",
+          "output": {
+            "0": 3,
+            "1": 4
+          },
+          "type": "tensor-complex",
+          "isOutput": false,
+          "shape": [
+            1
+          ],
+          "dtype": "complex64",
+          "id": "77509c22-6c68-4e32-940f-a9ae9d3507c5",
+          "position": {
+            "x": 298,
+            "y": 430.5
+          }
+        },
+        "post": {
+          "id": "bb5b7019-1373-4354-8e14-31df57b497c2",
+          "label": "Print",
+          "output": {
+            "0": 3,
+            "1": 4
+          },
+          "type": "tensor-print",
+          "isOutput": false,
+          "description": "Display tensor values",
+          "color": "#d946ef",
+          "verbose": false,
+          "shape": [
+            1
+          ],
+          "dtype": "complex64",
+          "position": {
+            "x": 855,
+            "y": 33
+          }
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "tensor-out",
+      "input",
+      "simple",
+      "24a0056a-509a-4245-9d1b-f4596cf0d9d9",
+      {
+        "pre": {
+          "type": "tensor-complex",
+          "label": "Complex",
+          "output": {
+            "0": 1,
+            "1": 2
+          },
+          "shape": [
+            1
+          ],
+          "dtype": "complex64",
+          "id": "eed97538-d0ab-4c16-9448-99bf2891a4f8",
+          "position": {
+            "x": 298,
+            "y": 16.5
+          }
+        },
+        "post": {
+          "id": "ffa665a2-d370-4877-be3a-85c151d1e2a9",
+          "label": "Print",
+          "output": {
+            "0": 1,
+            "1": 2
+          },
+          "type": "tensor-print",
+          "isOutput": false,
+          "description": "Display tensor values",
+          "color": "#d946ef",
+          "verbose": false,
+          "shape": [
+            1
+          ],
+          "dtype": "complex64",
+          "position": {
+            "x": 855,
+            "y": 33
+          }
         }
       }
     ]

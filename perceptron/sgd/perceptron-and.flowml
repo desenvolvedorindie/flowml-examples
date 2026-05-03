@@ -40,7 +40,7 @@
         "label": "Perceptron",
         "output": 1,
         "netInput": 0.7876391410827637,
-        "bias": -2.408540964126587,
+        "bias": -0.5857446789741516,
         "activationFunction": "step",
         "learningRule": "rosenblatt",
         "type": "perceptron",
@@ -108,9 +108,9 @@
         "label": "DATASET2",
         "type": "dataset-node",
         "datasetId": "AND",
-        "output": null,
+        "output": 0,
         "_hasTrainingEdge": true,
-        "_hasValidationEdge": false,
+        "_hasValidationEdge": true,
         "_hasTestEdge": false,
         "labels": [
           "X1",
@@ -181,7 +181,7 @@
       {
         "type": "decision-surface",
         "label": "Response Surface",
-        "output": null,
+        "output": 0,
         "resolution": 1,
         "zoom": 0.25,
         "target": 0,
@@ -218,7 +218,7 @@
     [
       -1,
       -1,
-      -0.0255,
+      0.1255,
       null,
       "bias",
       "weighted",
@@ -257,7 +257,7 @@
     [
       -1,
       -1,
-      0.0002,
+      0.02,
       null,
       "input",
       "weighted",
@@ -304,7 +304,7 @@
     [
       -1,
       -1,
-      -0.0457,
+      -0.0507,
       null,
       "input",
       "weighted",
@@ -349,7 +349,7 @@
     [
       -1,
       -1,
-      0.1041,
+      -0.0564,
       "out",
       "training",
       "simple",
@@ -463,7 +463,7 @@
     [
       -1,
       -1,
-      0.0907,
+      0.0291,
       "out",
       "test",
       "simple",
@@ -577,7 +577,7 @@
     [
       -1,
       -1,
-      0.0127,
+      -0.0198,
       null,
       "input",
       "weighted",
@@ -625,7 +625,7 @@
     [
       -1,
       -1,
-      -0.0199,
+      0.0048,
       null,
       "input",
       "simple",
@@ -669,7 +669,7 @@
     [
       -1,
       -1,
-      0.009,
+      -0.0337,
       "out",
       "dataset",
       "simple",
@@ -717,7 +717,7 @@
     [
       -1,
       -1,
-      1.6032543182373047,
+      0.3800050914287567,
       null,
       "input",
       "weighted",
@@ -768,57 +768,7 @@
     [
       -1,
       -1,
-      0.07069999724626541,
-      null,
-      "input",
-      "simple",
-      "cfc94d69-0d08-4f69-85dc-428fe0791c4c",
-      {
-        "pre": {
-          "label": "Perceptron",
-          "output": 0,
-          "netInput": -0.29980000853538513,
-          "bias": -0.33432690642915897,
-          "activationFunction": "step",
-          "learningRule": "rosenblatt",
-          "type": "perceptron",
-          "supportedLearningRules": [
-            "rosenblatt",
-            "widrow-hoff",
-            "pocket"
-          ],
-          "supportedActivationFunctions": [
-            "step",
-            "sign",
-            "linear"
-          ],
-          "target": 0,
-          "id": "59c58bc9-fdf9-4398-843a-57a8214096b3",
-          "position": {
-            "x": 20,
-            "y": -240
-          }
-        },
-        "post": {
-          "type": "decision-surface",
-          "label": "Response Surface",
-          "output": [
-            0
-          ],
-          "resolution": 1,
-          "zoom": 0.25,
-          "id": "e5fe1eee-2786-4e6a-90b9-34110e6386df",
-          "position": {
-            "x": 620,
-            "y": -80
-          }
-        }
-      }
-    ],
-    [
-      -1,
-      -1,
-      0.037700001150369644,
+      -0.038100000470876694,
       "out",
       "training",
       "simple",
@@ -898,7 +848,7 @@
     [
       -1,
       -1,
-      0.039500001817941666,
+      0.03550000116229057,
       "out",
       "dataset",
       "simple",
@@ -958,59 +908,7 @@
     [
       -1,
       -1,
-      0.05480000004172325,
-      null,
-      "input",
-      "weighted",
-      "1f801be1-93dd-44fd-b59e-7c9df92861fa",
-      {
-        "pre": {
-          "label": "Perceptron",
-          "output": 0.36000001430511475,
-          "netInput": -0.699999988079071,
-          "bias": -0.10565857400079143,
-          "activationFunction": "step",
-          "learningRule": "rosenblatt",
-          "type": "perceptron",
-          "supportedLearningRules": [
-            "rosenblatt",
-            "widrow-hoff",
-            "pocket"
-          ],
-          "supportedActivationFunctions": [
-            "step",
-            "sign",
-            "linear"
-          ],
-          "target": 0,
-          "expanded": true,
-          "id": "59c58bc9-fdf9-4398-843a-57a8214096b3",
-          "position": {
-            "x": 60,
-            "y": -260
-          }
-        },
-        "post": {
-          "type": "output",
-          "label": "y",
-          "output": 0.36000001430511475,
-          "supportedLearningRules": [],
-          "supportedActivationFunctions": [],
-          "target": 0,
-          "bias": -37.800000567734244,
-          "netInput": 1,
-          "id": "0f825f0e-fd42-4599-b0ec-8eda3b656bbb",
-          "position": {
-            "x": 460,
-            "y": -280
-          }
-        }
-      }
-    ],
-    [
-      -1,
-      -1,
-      1.592925786972046,
+      0.3763388991355896,
       null,
       "input",
       "weighted",
@@ -1060,7 +958,7 @@
     [
       -1,
       -1,
-      -2.408540964126587,
+      -0.5857446789741516,
       null,
       "bias",
       "weighted",
@@ -1114,10 +1012,201 @@
         },
         "label": "b2"
       }
+    ],
+    [
+      -1,
+      -1,
+      0.08659999817609787,
+      null,
+      "input",
+      "simple",
+      "cfc94d69-0d08-4f69-85dc-428fe0791c4c",
+      {
+        "pre": {
+          "label": "Perceptron",
+          "output": 0,
+          "netInput": -0.29980000853538513,
+          "bias": -0.33432690642915897,
+          "activationFunction": "step",
+          "learningRule": "rosenblatt",
+          "type": "perceptron",
+          "supportedLearningRules": [
+            "rosenblatt",
+            "widrow-hoff",
+            "pocket"
+          ],
+          "supportedActivationFunctions": [
+            "step",
+            "sign",
+            "linear"
+          ],
+          "target": 0,
+          "id": "59c58bc9-fdf9-4398-843a-57a8214096b3",
+          "position": {
+            "x": 20,
+            "y": -240
+          }
+        },
+        "post": {
+          "type": "decision-surface",
+          "label": "Response Surface",
+          "output": [
+            0
+          ],
+          "resolution": 1,
+          "zoom": 0.25,
+          "id": "e5fe1eee-2786-4e6a-90b9-34110e6386df",
+          "position": {
+            "x": 620,
+            "y": -80
+          }
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "validation",
+      "simple",
+      "ed4c7638-6225-486e-be19-da57997cbf0d",
+      {
+        "pre": {
+          "id": "212084e1-75d3-44f0-9f88-d6e9ca6e5af2",
+          "label": "Data",
+          "datasetId": "AND",
+          "output": [],
+          "shape": [
+            4,
+            3
+          ],
+          "dynamicInputColumns": [
+            "X1",
+            "X2",
+            "Y"
+          ],
+          "dynamicOutputColumns": [
+            "Y"
+          ],
+          "type": "data-node",
+          "position": {
+            "x": -200,
+            "y": 320
+          },
+          "target": 0,
+          "netInput": 0,
+          "gradient": 0,
+          "bias": 0
+        },
+        "post": {
+          "label": "DATASET2",
+          "type": "dataset-node",
+          "datasetId": "AND",
+          "output": 0,
+          "_hasTrainingEdge": true,
+          "_hasValidationEdge": false,
+          "_hasTestEdge": false,
+          "labels": [
+            "X1",
+            "X2",
+            "Y"
+          ],
+          "trainingOutput": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "_augInputCols": [],
+          "_augOutputCols": [],
+          "_datasetId": "AND",
+          "validationOutput": [],
+          "testOutput": [],
+          "dynamicInputColumns": [
+            "X1",
+            "X2"
+          ],
+          "dynamicOutputColumns": [
+            "Y"
+          ],
+          "target": 0,
+          "netInput": 0,
+          "gradient": 0,
+          "bias": 0,
+          "id": "6b8d6767-45ab-41df-9447-167e2d4741dc",
+          "position": {
+            "x": 280,
+            "y": 240
+          }
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      1,
+      null,
+      "input",
+      "weighted",
+      "ab51f63c-4f93-4642-8761-aebefefa8c4d",
+      {
+        "pre": {
+          "label": "Perceptron",
+          "output": 1,
+          "netInput": 0.7876391410827637,
+          "bias": -0.5857446789741516,
+          "activationFunction": "step",
+          "learningRule": "rosenblatt",
+          "type": "perceptron",
+          "supportedLearningRules": [
+            "rosenblatt",
+            "widrow-hoff",
+            "pocket"
+          ],
+          "supportedActivationFunctions": [
+            "step",
+            "sign",
+            "linear"
+          ],
+          "target": 0,
+          "expanded": true,
+          "gradient": 0,
+          "id": "59c58bc9-fdf9-4398-843a-57a8214096b3",
+          "position": {
+            "x": 60,
+            "y": -260
+          }
+        },
+        "post": {
+          "type": "output",
+          "label": "y",
+          "output": 1,
+          "supportedLearningRules": [],
+          "supportedActivationFunctions": [],
+          "target": 1,
+          "bias": -37.79999923706055,
+          "netInput": 1,
+          "gradient": 0,
+          "id": "0f825f0e-fd42-4599-b0ec-8eda3b656bbb",
+          "position": {
+            "x": 460,
+            "y": -280
+          }
+        }
+      }
     ]
   ],
   "trainingConfig": {
-    "learningRate": 0.1,
+    "learningRate": 0.01,
     "maxEpochs": 100,
     "targetError": 0.0001,
     "errorAlgorithm": "meanSquaredError",
@@ -1131,9 +1220,14 @@
       "meanSquaredError"
     ],
     "optimizerAlgorithm": "adam",
-    "optimizerParams": {},
+    "optimizerParams": {
+      "sgd": {
+        "learningRate": 0.01
+      },
+      "adam": {}
+    },
     "adjustmentMode": "batch",
-    "batchSize": 4,
+    "batchSize": 2,
     "randomizeOnStart": true,
     "shuffleData": false,
     "shuffleAlgorithm": "fisher-yates",
