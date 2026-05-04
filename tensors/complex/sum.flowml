@@ -149,7 +149,8 @@
         "isOutput": false,
         "name": "TensorBinary",
         "description": "Executes binary mathematical operations between two tensors (e.g., Add, Multiply, Subtract).",
-        "dtype": "complex64"
+        "dtype": "complex64",
+        "expanded": false
       },
       605,
       16.5,

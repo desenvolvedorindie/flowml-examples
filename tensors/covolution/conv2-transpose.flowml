@@ -1,0 +1,408 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "854a9940-ccfa-4f07-b253-b64a82a85f98",
+    "41b7098c-852e-4119-9186-acb0ef21b90a",
+    "6d531632-7696-4b20-aac1-c01076cccb26",
+    "0e087f0a-a773-4040-b517-6f2803de815f",
+    "c2053f81-9a48-4189-add2-eb151a1ace91"
+  ],
+  "nodes": [
+    [
+      "tensor-print",
+      {
+        "label": "Print",
+        "output": {
+          "0": 1,
+          "1": 4,
+          "2": 7,
+          "3": 6,
+          "4": 7,
+          "5": 23,
+          "6": 33,
+          "7": 24,
+          "8": 19,
+          "9": 53,
+          "10": 63,
+          "11": 42,
+          "12": 21,
+          "13": 52,
+          "14": 59,
+          "15": 36
+        },
+        "type": "tensor-print",
+        "isOutput": false,
+        "description": "Display tensor values",
+        "color": "#d946ef",
+        "verbose": false,
+        "shape": [
+          4,
+          4
+        ],
+        "dtype": "float32"
+      },
+      940,
+      440,
+      -1,
+      null
+    ],
+    [
+      "tensor",
+      {
+        "label": "Tensor",
+        "order": 2,
+        "shape": [
+          3,
+          3
+        ],
+        "output": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "dtype": "float32",
+        "type": "tensor",
+        "isOutput": false
+      },
+      280,
+      320,
+      -1,
+      null
+    ],
+    [
+      "tensor",
+      {
+        "label": "Tensor",
+        "order": 2,
+        "shape": [
+          2,
+          2
+        ],
+        "output": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "dtype": "float32",
+        "type": "tensor",
+        "isOutput": false
+      },
+      280,
+      560,
+      -1,
+      null
+    ],
+    [
+      "convolution-visualizer",
+      {
+        "type": "convolution-visualizer",
+        "label": "Convolution Visualizer 5",
+        "arrayA": [],
+        "arrayB": [],
+        "arrayC": [],
+        "isOutput": false,
+        "output": {
+          "0": 0
+        }
+      },
+      1000,
+      600,
+      -1,
+      null
+    ],
+    [
+      "tensor-conv-conv2dtranspose",
+      {
+        "type": "tensor-conv-conv2dtranspose",
+        "label": "Conv2dTranspose 5",
+        "operationType": "conv2dTranspose",
+        "formula": [
+          "y[i, j] = \\sum_{m} \\sum_{n} x[m, n] \\cdot W[m - i, n - j]"
+        ],
+        "operationParams": {
+          "filter": "[[[1]]]",
+          "outputShape": null,
+          "strides": 1,
+          "pad": "valid",
+          "dimRoundingMode": "floor"
+        },
+        "isOutput": false,
+        "output": {
+          "0": null,
+          "1": null,
+          "2": null,
+          "3": null
+        },
+        "shape": [
+          1
+        ],
+        "dtype": "float32"
+      },
+      580,
+      540,
+      -1,
+      null
+    ]
+  ],
+  "edges": [
+    [
+      -1,
+      -1,
+      null,
+      "output",
+      "in-convolution",
+      "simple",
+      "7135b558-1682-4fd8-9e93-7e9c82906b96",
+      {
+        "pre": {
+          "id": "c2053f81-9a48-4189-add2-eb151a1ace91",
+          "type": "tensor-conv-conv2dtranspose",
+          "label": "Conv2dTranspose 5",
+          "operationType": "conv2dTranspose",
+          "formula": [
+            "y[i, j] = \\sum_{m} \\sum_{n} x[m, n] \\cdot W[m - i, n - j]"
+          ],
+          "operationParams": {
+            "filter": "[[[1]]]",
+            "outputShape": null,
+            "strides": 1,
+            "pad": "valid",
+            "dimRoundingMode": "floor"
+          },
+          "isOutput": false,
+          "output": {
+            "0": 0
+          },
+          "shape": [
+            1
+          ],
+          "dtype": "float32"
+        },
+        "post": {
+          "type": "convolution-visualizer",
+          "label": "Convolution Visualizer 5",
+          "arrayA": [],
+          "arrayB": [],
+          "arrayC": [],
+          "isOutput": false,
+          "output": {
+            "0": null
+          },
+          "id": "0e087f0a-a773-4040-b517-6f2803de815f",
+          "position": {
+            "x": 960,
+            "y": 620
+          }
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "output",
+      "input",
+      "simple",
+      "64c2ebb3-5ec5-46a1-b116-8616fd9c383a",
+      {
+        "pre": {
+          "id": "c2053f81-9a48-4189-add2-eb151a1ace91",
+          "type": "tensor-conv-conv2dtranspose",
+          "label": "Conv2dTranspose 5",
+          "operationType": "conv2dTranspose",
+          "formula": [
+            "y[i, j] = \\sum_{m} \\sum_{n} x[m, n] \\cdot W[m - i, n - j]"
+          ],
+          "operationParams": {
+            "filter": "[[[1]]]",
+            "outputShape": null,
+            "strides": 1,
+            "pad": "valid",
+            "dimRoundingMode": "floor"
+          },
+          "isOutput": false,
+          "output": {
+            "0": 0
+          },
+          "shape": [
+            1
+          ],
+          "dtype": "float32"
+        },
+        "post": {
+          "label": "Print",
+          "output": {
+            "0": 0
+          },
+          "type": "tensor-print",
+          "isOutput": false,
+          "description": "Display tensor values",
+          "color": "#d946ef",
+          "verbose": false,
+          "shape": [
+            1
+          ],
+          "dtype": "float32",
+          "id": "854a9940-ccfa-4f07-b253-b64a82a85f98",
+          "position": {
+            "x": 890,
+            "y": 440
+          }
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "input-x",
+      "simple",
+      "685aeda2-62b8-44eb-9042-785942202d01",
+      {
+        "pre": {
+          "label": "Tensor",
+          "order": 2,
+          "shape": [
+            3,
+            3
+          ],
+          "output": {
+            "0": 1,
+            "1": 2,
+            "2": 3,
+            "3": 4,
+            "4": 5,
+            "5": 6,
+            "6": 7,
+            "7": 8,
+            "8": 9
+          },
+          "dtype": "float32",
+          "type": "tensor",
+          "isOutput": false,
+          "id": "41b7098c-852e-4119-9186-acb0ef21b90a",
+          "position": {
+            "x": 280,
+            "y": 320
+          }
+        },
+        "post": {
+          "id": "c2053f81-9a48-4189-add2-eb151a1ace91",
+          "type": "tensor-conv-conv2dtranspose",
+          "label": "Conv2dTranspose 5",
+          "operationType": "conv2dTranspose",
+          "formula": [
+            "y[i, j] = \\sum_{m} \\sum_{n} x[m, n] \\cdot W[m - i, n - j]"
+          ],
+          "operationParams": {
+            "filter": "[[[1]]]",
+            "outputShape": null,
+            "strides": 1,
+            "pad": "valid",
+            "dimRoundingMode": "floor"
+          },
+          "isOutput": false,
+          "output": {
+            "0": 0
+          },
+          "shape": [
+            1
+          ],
+          "dtype": "float32"
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "input-filter",
+      "simple",
+      "bd995a1a-ba57-4b66-be45-eb6faeb52e35",
+      {
+        "pre": {
+          "label": "Tensor",
+          "order": 2,
+          "shape": [
+            2,
+            2
+          ],
+          "output": {
+            "0": 1,
+            "1": 2,
+            "2": 3,
+            "3": 4
+          },
+          "dtype": "float32",
+          "type": "tensor",
+          "isOutput": false,
+          "id": "6d531632-7696-4b20-aac1-c01076cccb26",
+          "position": {
+            "x": 280,
+            "y": 560
+          }
+        },
+        "post": {
+          "id": "c2053f81-9a48-4189-add2-eb151a1ace91",
+          "type": "tensor-conv-conv2dtranspose",
+          "label": "Conv2dTranspose 5",
+          "operationType": "conv2dTranspose",
+          "formula": [
+            "y[i, j] = \\sum_{m} \\sum_{n} x[m, n] \\cdot W[m - i, n - j]"
+          ],
+          "operationParams": {
+            "filter": "[[[1]]]",
+            "outputShape": null,
+            "strides": 1,
+            "pad": "valid",
+            "dimRoundingMode": "floor"
+          },
+          "isOutput": false,
+          "output": {
+            "0": 0
+          },
+          "shape": [
+            1
+          ],
+          "dtype": "float32"
+        }
+      }
+    ]
+  ],
+  "trainingConfig": {
+    "learningRate": 0.1,
+    "maxEpochs": 100,
+    "targetError": 0.0001,
+    "errorAlgorithm": "meanSquaredError",
+    "errorParams": {},
+    "metricAlgorithm": "meanSquaredError",
+    "metricParams": {},
+    "selectedMetrics": [
+      "meanSquaredError"
+    ],
+    "selectedMetricsTest": [
+      "meanSquaredError"
+    ],
+    "optimizerAlgorithm": "adam",
+    "optimizerParams": {},
+    "adjustmentMode": "batch",
+    "batchSize": 32,
+    "randomizeOnStart": true,
+    "shuffleData": false,
+    "shuffleAlgorithm": "fisher-yates",
+    "shuffleSeed": 1777521615220,
+    "enableVerbose": true
+  },
+  "columnLabelOverrides": {},
+  "testOverrides": {}
+}

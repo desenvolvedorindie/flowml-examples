@@ -38,14 +38,14 @@
     "selectedMetricsTest": [
       "meanSquaredError"
     ],
-    "optimizerAlgorithm": "adam",
+    "optimizerAlgorithm": "sgd",
     "optimizerParams": {},
-    "adjustmentMode": "batch",
+    "adjustmentMode": "stochastic",
     "batchSize": 32,
     "randomizeOnStart": true,
     "shuffleData": false,
     "shuffleAlgorithm": "fisher-yates",
-    "shuffleSeed": 1777521615220,
+    "shuffleSeed": 1777590584949,
     "enableVerbose": true
   }
 }

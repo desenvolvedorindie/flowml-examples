@@ -1,0 +1,376 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "8306ba58-cb59-4225-9f85-166b0c1c03e1",
+    "d9ad05d4-baab-4864-99cb-98fe2109f269",
+    "292affac-af73-40da-8a71-b9e9d37a2147",
+    "cd18bab7-909d-4bc8-90ad-6d2b448ce9f6",
+    "7f639d89-ff87-476e-9569-19f7ab1ae338"
+  ],
+  "nodes": [
+    [
+      "tensor",
+      {
+        "label": "Tensor",
+        "order": 1,
+        "shape": [
+          3
+        ],
+        "output": [
+          1,
+          2,
+          3
+        ],
+        "dtype": "float32",
+        "type": "tensor",
+        "isOutput": false
+      },
+      0,
+      119.5,
+      -1,
+      null
+    ],
+    [
+      "tensor",
+      {
+        "label": "Tensor",
+        "order": 1,
+        "shape": [
+          3
+        ],
+        "output": [
+          4,
+          5,
+          6
+        ],
+        "dtype": "float32",
+        "type": "tensor",
+        "isOutput": false
+      },
+      0,
+      360.5,
+      -1,
+      null
+    ],
+    [
+      "tensor-conv-conv1d",
+      {
+        "type": "tensor-conv-conv1d",
+        "label": "Conv1d 3",
+        "operationType": "conv1d",
+        "formula": [
+          "y[n] = \\sum_{k=-\\infty}^{\\infty} x[k] \\cdot W[n - k]"
+        ],
+        "operationParams": {
+          "filter": "[[[1]]]",
+          "stride": 1,
+          "pad": "same",
+          "dataFormat": "NHWC",
+          "dilation": null,
+          "dimRoundingMode": "floor"
+        },
+        "isOutput": false,
+        "output": {
+          "0": 17,
+          "1": 32,
+          "2": 23
+        },
+        "shape": [
+          1
+        ],
+        "dtype": "float32"
+      },
+      420,
+      240,
+      -1,
+      null
+    ],
+    [
+      "convolution-visualizer",
+      {
+        "type": "convolution-visualizer",
+        "label": "Convolution Visualizer 4",
+        "arrayA": [],
+        "arrayB": [],
+        "arrayC": [],
+        "isOutput": false,
+        "output": {}
+      },
+      860,
+      -40,
+      -1,
+      null
+    ],
+    [
+      "tensor-print",
+      {
+        "label": "Print",
+        "output": {
+          "0": 17,
+          "1": 32,
+          "2": 23
+        },
+        "type": "tensor-print",
+        "isOutput": false,
+        "description": "Display tensor values",
+        "color": "#d946ef",
+        "verbose": false,
+        "shape": [
+          3
+        ],
+        "dtype": "float32"
+      },
+      600,
+      640,
+      -1,
+      null
+    ]
+  ],
+  "edges": [
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "input-x",
+      "simple",
+      "e33d8c39-6084-4f60-97c8-22fce573205c",
+      {
+        "pre": {
+          "id": "8306ba58-cb59-4225-9f85-166b0c1c03e1",
+          "label": "Tensor",
+          "order": 1,
+          "shape": [
+            3
+          ],
+          "output": {
+            "0": 1,
+            "1": 2,
+            "2": 3
+          },
+          "dtype": "float32",
+          "type": "tensor",
+          "isOutput": false,
+          "position": {
+            "x": 0,
+            "y": 119.5
+          }
+        },
+        "post": {
+          "id": "292affac-af73-40da-8a71-b9e9d37a2147",
+          "type": "tensor-conv-conv1d",
+          "label": "Conv1d 3",
+          "operationType": "conv1d",
+          "formula": [
+            "y[n] = \\sum_{k=-\\infty}^{\\infty} x[k] \\cdot W[n - k]"
+          ],
+          "operationParams": {
+            "filter": "[[[1]]]",
+            "stride": 1,
+            "pad": "valid",
+            "dataFormat": "NHWC",
+            "dilation": null,
+            "dimRoundingMode": "floor"
+          },
+          "isOutput": false
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "input-filter",
+      "simple",
+      "4423ca01-e174-4580-b60a-8c7fabe7ea04",
+      {
+        "pre": {
+          "id": "d9ad05d4-baab-4864-99cb-98fe2109f269",
+          "label": "Tensor",
+          "order": 1,
+          "shape": [
+            3
+          ],
+          "output": {
+            "0": 4,
+            "1": 5,
+            "2": 6
+          },
+          "dtype": "float32",
+          "type": "tensor",
+          "isOutput": false,
+          "position": {
+            "x": 0,
+            "y": 360.5
+          }
+        },
+        "post": {
+          "id": "292affac-af73-40da-8a71-b9e9d37a2147",
+          "type": "tensor-conv-conv1d",
+          "label": "Conv1d 3",
+          "operationType": "conv1d",
+          "formula": [
+            "y[n] = \\sum_{k=-\\infty}^{\\infty} x[k] \\cdot W[n - k]"
+          ],
+          "operationParams": {
+            "filter": "[[[1]]]",
+            "stride": 1,
+            "pad": "valid",
+            "dataFormat": "NHWC",
+            "dilation": null,
+            "dimRoundingMode": "floor"
+          },
+          "isOutput": false
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "output",
+      "input",
+      "simple",
+      "66d6003a-119b-4bc4-a8b3-049175ce8c75",
+      {
+        "pre": {
+          "type": "tensor-conv-conv1d",
+          "label": "Conv1d 3",
+          "operationType": "conv1d",
+          "formula": [
+            "y[n] = \\sum_{k=-\\infty}^{\\infty} x[k] \\cdot W[n - k]"
+          ],
+          "operationParams": {
+            "filter": "[[[1]]]",
+            "stride": 1,
+            "pad": "same",
+            "dataFormat": "NHWC",
+            "dilation": null,
+            "dimRoundingMode": "floor"
+          },
+          "isOutput": false,
+          "id": "292affac-af73-40da-8a71-b9e9d37a2147",
+          "position": {
+            "x": 420,
+            "y": 240
+          },
+          "output": {
+            "0": 17,
+            "1": 32,
+            "2": 23
+          },
+          "shape": [
+            1
+          ],
+          "dtype": "float32"
+        },
+        "post": {
+          "label": "Print",
+          "output": {
+            "0": 17,
+            "1": 32,
+            "2": 23
+          },
+          "type": "tensor-print",
+          "isOutput": false,
+          "description": "Display tensor values",
+          "color": "#d946ef",
+          "verbose": false,
+          "shape": [
+            3
+          ],
+          "id": "7f639d89-ff87-476e-9569-19f7ab1ae338",
+          "position": {
+            "x": 900,
+            "y": 660
+          },
+          "dtype": "float32"
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "output",
+      "in-convolution",
+      "simple",
+      "cf640623-9a01-4961-8cdc-f848bbb9c9d2",
+      {
+        "pre": {
+          "type": "tensor-conv-conv1d",
+          "label": "Conv1d 3",
+          "operationType": "conv1d",
+          "formula": [
+            "y[n] = \\sum_{k=-\\infty}^{\\infty} x[k] \\cdot W[n - k]"
+          ],
+          "operationParams": {
+            "filter": "[[[1]]]",
+            "stride": 1,
+            "pad": "same",
+            "dataFormat": "NHWC",
+            "dilation": null,
+            "dimRoundingMode": "floor"
+          },
+          "isOutput": false,
+          "id": "292affac-af73-40da-8a71-b9e9d37a2147",
+          "position": {
+            "x": 420,
+            "y": 240
+          },
+          "output": {
+            "0": 17,
+            "1": 32,
+            "2": 23
+          },
+          "shape": [
+            1
+          ],
+          "dtype": "float32"
+        },
+        "post": {
+          "type": "convolution-visualizer",
+          "label": "Convolution Visualizer 4",
+          "arrayA": [],
+          "arrayB": [],
+          "arrayC": [],
+          "isOutput": false,
+          "id": "cd18bab7-909d-4bc8-90ad-6d2b448ce9f6",
+          "position": {
+            "x": 860,
+            "y": -40
+          },
+          "output": {}
+        }
+      }
+    ]
+  ],
+  "trainingConfig": {
+    "learningRate": 0.1,
+    "maxEpochs": 100,
+    "targetError": 0.0001,
+    "errorAlgorithm": "meanSquaredError",
+    "errorParams": {},
+    "metricAlgorithm": "meanSquaredError",
+    "metricParams": {},
+    "selectedMetrics": [
+      "meanSquaredError"
+    ],
+    "selectedMetricsTest": [
+      "meanSquaredError"
+    ],
+    "optimizerAlgorithm": "adam",
+    "optimizerParams": {},
+    "adjustmentMode": "batch",
+    "batchSize": 32,
+    "randomizeOnStart": true,
+    "shuffleData": false,
+    "shuffleAlgorithm": "fisher-yates",
+    "shuffleSeed": 1777521615220,
+    "enableVerbose": true
+  },
+  "columnLabelOverrides": {},
+  "testOverrides": {}
+}

@@ -1,0 +1,410 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "854a9940-ccfa-4f07-b253-b64a82a85f98",
+    "6ea8e251-c18e-4911-aaad-fd3cfb9f2340",
+    "41b7098c-852e-4119-9186-acb0ef21b90a",
+    "6d531632-7696-4b20-aac1-c01076cccb26",
+    "0e087f0a-a773-4040-b517-6f2803de815f"
+  ],
+  "nodes": [
+    [
+      "tensor-print",
+      {
+        "label": "Print",
+        "output": {
+          "0": 37,
+          "1": 47,
+          "2": 67,
+          "3": 77
+        },
+        "type": "tensor-print",
+        "isOutput": false,
+        "description": "Display tensor values",
+        "color": "#d946ef",
+        "verbose": false,
+        "shape": [
+          2,
+          2
+        ],
+        "dtype": "float32"
+      },
+      890,
+      440,
+      -1,
+      null
+    ],
+    [
+      "tensor-conv-conv2d",
+      {
+        "type": "tensor-conv-conv2d",
+        "label": "Conv2d 2",
+        "operationType": "conv2d",
+        "formula": [
+          "y[i, j] = \\sum_{m=-\\infty}^{\\infty} \\sum_{n=-\\infty}^{\\infty} x[m, n] \\cdot W[i - m, j - n]"
+        ],
+        "operationParams": {
+          "filter": "[[[1]]]",
+          "strides": 1,
+          "pad": "valid",
+          "dataFormat": "NHWC",
+          "dilations": null,
+          "dimRoundingMode": "floor"
+        },
+        "isOutput": false,
+        "output": {
+          "0": null,
+          "1": null
+        },
+        "shape": [
+          1
+        ],
+        "dtype": "float32"
+      },
+      630,
+      420,
+      -1,
+      null
+    ],
+    [
+      "tensor",
+      {
+        "label": "Tensor",
+        "order": 2,
+        "shape": [
+          3,
+          3
+        ],
+        "output": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "dtype": "float32",
+        "type": "tensor",
+        "isOutput": false
+      },
+      280,
+      320,
+      -1,
+      null
+    ],
+    [
+      "tensor",
+      {
+        "label": "Tensor",
+        "order": 2,
+        "shape": [
+          2,
+          2
+        ],
+        "output": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "dtype": "float32",
+        "type": "tensor",
+        "isOutput": false
+      },
+      280,
+      560,
+      -1,
+      null
+    ],
+    [
+      "convolution-visualizer",
+      {
+        "type": "convolution-visualizer",
+        "label": "Convolution Visualizer 5",
+        "arrayA": [],
+        "arrayB": [],
+        "arrayC": [],
+        "isOutput": false,
+        "output": {
+          "0": 0
+        }
+      },
+      1000,
+      620,
+      -1,
+      null
+    ]
+  ],
+  "edges": [
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "input-x",
+      "simple",
+      "d1add5d7-ffdc-4d48-a83f-f61e5bff4d90",
+      {
+        "pre": {
+          "label": "Tensor",
+          "order": 2,
+          "shape": [
+            3,
+            3
+          ],
+          "output": {
+            "0": 1,
+            "1": 2,
+            "2": 3,
+            "3": 4,
+            "4": 5,
+            "5": 6,
+            "6": 7,
+            "7": 8,
+            "8": 9
+          },
+          "dtype": "float32",
+          "type": "tensor",
+          "isOutput": false,
+          "id": "41b7098c-852e-4119-9186-acb0ef21b90a",
+          "position": {
+            "x": 280,
+            "y": 320
+          }
+        },
+        "post": {
+          "type": "tensor-conv-conv2d",
+          "label": "Conv2d 2",
+          "operationType": "conv2d",
+          "formula": [
+            "y[i, j] = \\sum_{m=-\\infty}^{\\infty} \\sum_{n=-\\infty}^{\\infty} x[m, n] \\cdot W[i - m, j - n]"
+          ],
+          "operationParams": {
+            "filter": "[[[1]]]",
+            "strides": 1,
+            "pad": "valid",
+            "dataFormat": "NHWC",
+            "dilations": null,
+            "dimRoundingMode": "floor"
+          },
+          "isOutput": false,
+          "id": "6ea8e251-c18e-4911-aaad-fd3cfb9f2340",
+          "position": {
+            "x": 630,
+            "y": 420
+          },
+          "output": {
+            "0": 0
+          },
+          "shape": [
+            1
+          ],
+          "dtype": "float32"
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "output",
+      "input",
+      "simple",
+      "e18b1ad8-8c50-4172-8298-493c058c5363",
+      {
+        "pre": {
+          "type": "tensor-conv-conv2d",
+          "label": "Conv2d 2",
+          "operationType": "conv2d",
+          "formula": [
+            "y[i, j] = \\sum_{m=-\\infty}^{\\infty} \\sum_{n=-\\infty}^{\\infty} x[m, n] \\cdot W[i - m, j - n]"
+          ],
+          "operationParams": {
+            "filter": "[[[1]]]",
+            "strides": 1,
+            "pad": "valid",
+            "dataFormat": "NHWC",
+            "dilations": null,
+            "dimRoundingMode": "floor"
+          },
+          "isOutput": false,
+          "id": "6ea8e251-c18e-4911-aaad-fd3cfb9f2340",
+          "position": {
+            "x": 630,
+            "y": 420
+          },
+          "output": {
+            "0": 0
+          },
+          "shape": [
+            1
+          ],
+          "dtype": "float32"
+        },
+        "post": {
+          "label": "Print",
+          "output": {
+            "0": 0
+          },
+          "type": "tensor-print",
+          "isOutput": false,
+          "description": "Display tensor values",
+          "color": "#d946ef",
+          "verbose": false,
+          "shape": [
+            1
+          ],
+          "id": "854a9940-ccfa-4f07-b253-b64a82a85f98",
+          "position": {
+            "x": 890,
+            "y": 440
+          },
+          "dtype": "float32"
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "input-filter",
+      "simple",
+      "9dbc0bee-d0c0-4596-af95-4cf58a8b07aa",
+      {
+        "pre": {
+          "id": "6d531632-7696-4b20-aac1-c01076cccb26",
+          "label": "Tensor",
+          "order": 2,
+          "shape": [
+            2,
+            2
+          ],
+          "output": {
+            "0": 1,
+            "1": 2,
+            "2": 3,
+            "3": 4
+          },
+          "dtype": "float32",
+          "type": "tensor",
+          "isOutput": false,
+          "position": {
+            "x": 280,
+            "y": 320
+          }
+        },
+        "post": {
+          "type": "tensor-conv-conv2d",
+          "label": "Conv2d 2",
+          "operationType": "conv2d",
+          "formula": [
+            "y[i, j] = \\sum_{m=-\\infty}^{\\infty} \\sum_{n=-\\infty}^{\\infty} x[m, n] \\cdot W[i - m, j - n]"
+          ],
+          "operationParams": {
+            "filter": "[[[1]]]",
+            "strides": 1,
+            "pad": "valid",
+            "dataFormat": "NHWC",
+            "dilations": null,
+            "dimRoundingMode": "floor"
+          },
+          "isOutput": false,
+          "id": "6ea8e251-c18e-4911-aaad-fd3cfb9f2340",
+          "position": {
+            "x": 630,
+            "y": 420
+          },
+          "output": {
+            "0": 0
+          },
+          "shape": [
+            1
+          ],
+          "dtype": "float32"
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "output",
+      "in-convolution",
+      "simple",
+      "6da2991d-47da-451b-89fa-346126d5b12d",
+      {
+        "pre": {
+          "type": "tensor-conv-conv2d",
+          "label": "Conv2d 2",
+          "operationType": "conv2d",
+          "formula": [
+            "y[i, j] = \\sum_{m=-\\infty}^{\\infty} \\sum_{n=-\\infty}^{\\infty} x[m, n] \\cdot W[i - m, j - n]"
+          ],
+          "operationParams": {
+            "filter": "[[[1]]]",
+            "strides": 1,
+            "pad": "valid",
+            "dataFormat": "NHWC",
+            "dilations": null,
+            "dimRoundingMode": "floor"
+          },
+          "isOutput": false,
+          "output": {
+            "0": null,
+            "1": null
+          },
+          "shape": [
+            1
+          ],
+          "dtype": "float32",
+          "id": "6ea8e251-c18e-4911-aaad-fd3cfb9f2340",
+          "position": {
+            "x": 630,
+            "y": 420
+          }
+        },
+        "post": {
+          "id": "0e087f0a-a773-4040-b517-6f2803de815f",
+          "type": "convolution-visualizer",
+          "label": "Convolution Visualizer 5",
+          "arrayA": [],
+          "arrayB": [],
+          "arrayC": [],
+          "isOutput": false,
+          "output": {}
+        }
+      }
+    ]
+  ],
+  "trainingConfig": {
+    "learningRate": 0.1,
+    "maxEpochs": 100,
+    "targetError": 0.0001,
+    "errorAlgorithm": "meanSquaredError",
+    "errorParams": {},
+    "metricAlgorithm": "meanSquaredError",
+    "metricParams": {},
+    "selectedMetrics": [
+      "meanSquaredError"
+    ],
+    "selectedMetricsTest": [
+      "meanSquaredError"
+    ],
+    "optimizerAlgorithm": "adam",
+    "optimizerParams": {},
+    "adjustmentMode": "batch",
+    "batchSize": 32,
+    "randomizeOnStart": true,
+    "shuffleData": false,
+    "shuffleAlgorithm": "fisher-yates",
+    "shuffleSeed": 1777521615220,
+    "enableVerbose": true
+  },
+  "columnLabelOverrides": {},
+  "testOverrides": {}
+}
