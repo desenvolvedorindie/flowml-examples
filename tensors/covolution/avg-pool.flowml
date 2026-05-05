@@ -1,5 +1,58 @@
 {
-  "version": "1.0.0",
-  "nodes": [],
-  "connections": []
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "f1af3063-2977-4a5f-8458-4013d3ba1d51"
+  ],
+  "nodes": [
+    [
+      "tensor-conv-avgpool",
+      {
+        "type": "tensor-conv-avgpool",
+        "label": "AvgPool 1",
+        "operationType": "avgPool",
+        "formula": [
+          "y[i, j] = \\frac{1}{k_h k_w} \\sum_{m=0}^{k_h-1} \\sum_{n=0}^{k_w-1} x[i \\cdot s_h + m, j \\cdot s_w + n]"
+        ],
+        "operationParams": {
+          "filterSize": 2,
+          "strides": 1,
+          "pad": "valid",
+          "dimRoundingMode": "floor"
+        },
+        "isOutput": false
+      },
+      310,
+      220,
+      -1,
+      null
+    ]
+  ],
+  "edges": [],
+  "trainingConfig": {
+    "learningRate": 0.1,
+    "maxEpochs": 100,
+    "targetError": 0.0001,
+    "errorAlgorithm": "meanSquaredError",
+    "errorParams": {},
+    "metricAlgorithm": "meanSquaredError",
+    "metricParams": {},
+    "selectedMetrics": [
+      "meanSquaredError"
+    ],
+    "selectedMetricsTest": [
+      "meanSquaredError"
+    ],
+    "optimizerAlgorithm": "adam",
+    "optimizerParams": {},
+    "adjustmentMode": "batch",
+    "batchSize": 32,
+    "randomizeOnStart": true,
+    "shuffleData": false,
+    "shuffleAlgorithm": "fisher-yates",
+    "shuffleSeed": 1777521615220,
+    "enableVerbose": true
+  },
+  "columnLabelOverrides": {},
+  "testOverrides": {}
 }

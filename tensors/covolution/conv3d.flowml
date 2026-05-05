@@ -1,0 +1,357 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "a921bbde-ccbc-43f7-b7b2-5a73bcf0b5d2",
+    "2989fdf1-6248-4c2e-aaa6-3ed3203d0ae5",
+    "46ce6579-bdd4-40a7-8e6b-5357e9dae4b7",
+    "ec6e6e2b-ca21-47a6-98b7-14eab6ec10ad"
+  ],
+  "nodes": [
+    [
+      "tensor",
+      {
+        "label": "Tensor",
+        "order": 3,
+        "shape": [
+          3,
+          3,
+          3
+        ],
+        "output": [
+          1,
+          10,
+          19,
+          2,
+          11,
+          20,
+          3,
+          12,
+          21,
+          4,
+          13,
+          22,
+          5,
+          14,
+          23,
+          6,
+          15,
+          24,
+          7,
+          16,
+          25,
+          8,
+          17,
+          26,
+          9,
+          18,
+          27
+        ],
+        "dtype": "float32",
+        "type": "tensor",
+        "isOutput": false
+      },
+      0,
+      145.5,
+      -1,
+      null
+    ],
+    [
+      "tensor",
+      {
+        "label": "Tensor",
+        "order": 3,
+        "shape": [
+          2,
+          2,
+          2
+        ],
+        "output": [
+          1,
+          5,
+          2,
+          6,
+          3,
+          7,
+          4,
+          8
+        ],
+        "dtype": "float32",
+        "type": "tensor",
+        "isOutput": false
+      },
+      5.5,
+      499.5,
+      -1,
+      null
+    ],
+    [
+      "tensor-conv-conv3d",
+      {
+        "type": "tensor-conv-conv3d",
+        "label": "CONV3D",
+        "operationType": "conv3d",
+        "formula": [
+          "y[i, j, k] = \\sum_{m} \\sum_{n} \\sum_{p} x[m, n, p] \\cdot W[i - m, j - n, k - p]"
+        ],
+        "operationParams": {
+          "filter": "[[[1]]]",
+          "strides": 1,
+          "pad": "same",
+          "dataFormat": "NHWC",
+          "dilations": null
+        },
+        "isOutput": false,
+        "output": {
+          "0": 0
+        },
+        "shape": [
+          1
+        ],
+        "dtype": "float32"
+      },
+      361,
+      205.5,
+      -1,
+      null
+    ],
+    [
+      "convolution-visualizer",
+      {
+        "type": "convolution-visualizer",
+        "label": "Convolution Visualizer 4",
+        "arrayA": [],
+        "arrayB": [],
+        "arrayC": [],
+        "isOutput": false,
+        "description": "Discrete Convolution Visualizer",
+        "color": "#10b981",
+        "output": {
+          "0": null
+        }
+      },
+      644,
+      0,
+      -1,
+      null
+    ]
+  ],
+  "edges": [
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "input-x",
+      "simple",
+      "6a91fbf4-50c7-415d-af5f-fcb8f6edce92",
+      {
+        "pre": {
+          "id": "a921bbde-ccbc-43f7-b7b2-5a73bcf0b5d2",
+          "label": "Tensor",
+          "order": 3,
+          "shape": [
+            3,
+            3,
+            3
+          ],
+          "output": [
+            1,
+            10,
+            19,
+            2,
+            11,
+            20,
+            3,
+            12,
+            21,
+            4,
+            13,
+            22,
+            5,
+            14,
+            23,
+            6,
+            15,
+            24,
+            7,
+            16,
+            25,
+            8,
+            17,
+            26,
+            9,
+            18,
+            27
+          ],
+          "dtype": "float32",
+          "type": "tensor",
+          "isOutput": false,
+          "position": {
+            "x": 280,
+            "y": 320
+          }
+        },
+        "post": {
+          "id": "46ce6579-bdd4-40a7-8e6b-5357e9dae4b7",
+          "type": "tensor-conv-conv3d",
+          "label": "CONV3D",
+          "operationType": "conv3d",
+          "formula": [
+            "y[i, j, k] = \\sum_{m} \\sum_{n} \\sum_{p} x[m, n, p] \\cdot W[i - m, j - n, k - p]"
+          ],
+          "operationParams": {
+            "filter": "[[[1]]]",
+            "strides": 1,
+            "pad": "same",
+            "dataFormat": "NHWC",
+            "dilations": null
+          },
+          "isOutput": false,
+          "output": {
+            "0": 0
+          },
+          "shape": [
+            1
+          ],
+          "dtype": "float32"
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "input-filter",
+      "simple",
+      "3700c6f4-9e82-457f-bb76-5ce0e0aa6bf8",
+      {
+        "pre": {
+          "id": "2989fdf1-6248-4c2e-aaa6-3ed3203d0ae5",
+          "label": "Tensor",
+          "order": 3,
+          "shape": [
+            2,
+            2,
+            2
+          ],
+          "output": [
+            1,
+            5,
+            2,
+            6,
+            3,
+            7,
+            4,
+            8
+          ],
+          "dtype": "float32",
+          "type": "tensor",
+          "isOutput": false,
+          "position": {
+            "x": 280,
+            "y": 560
+          }
+        },
+        "post": {
+          "id": "46ce6579-bdd4-40a7-8e6b-5357e9dae4b7",
+          "type": "tensor-conv-conv3d",
+          "label": "CONV3D",
+          "operationType": "conv3d",
+          "formula": [
+            "y[i, j, k] = \\sum_{m} \\sum_{n} \\sum_{p} x[m, n, p] \\cdot W[i - m, j - n, k - p]"
+          ],
+          "operationParams": {
+            "filter": "[[[1]]]",
+            "strides": 1,
+            "pad": "same",
+            "dataFormat": "NHWC",
+            "dilations": null
+          },
+          "isOutput": false,
+          "output": {
+            "0": 0
+          },
+          "shape": [
+            1
+          ],
+          "dtype": "float32"
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "output",
+      "in-convolution",
+      "simple",
+      "fd9cb338-2e86-42d0-98f5-776837f38f42",
+      {
+        "pre": {
+          "id": "46ce6579-bdd4-40a7-8e6b-5357e9dae4b7",
+          "type": "tensor-conv-conv3d",
+          "label": "CONV3D",
+          "operationType": "conv3d",
+          "formula": [
+            "y[i, j, k] = \\sum_{m} \\sum_{n} \\sum_{p} x[m, n, p] \\cdot W[i - m, j - n, k - p]"
+          ],
+          "operationParams": {
+            "filter": "[[[1]]]",
+            "strides": 1,
+            "pad": "same",
+            "dataFormat": "NHWC",
+            "dilations": null
+          },
+          "isOutput": false,
+          "output": {
+            "0": 0
+          },
+          "shape": [
+            1
+          ],
+          "dtype": "float32"
+        },
+        "post": {
+          "id": "ec6e6e2b-ca21-47a6-98b7-14eab6ec10ad",
+          "type": "convolution-visualizer",
+          "label": "Convolution Visualizer 4",
+          "arrayA": [],
+          "arrayB": [],
+          "arrayC": [],
+          "isOutput": false,
+          "description": "Discrete Convolution Visualizer",
+          "color": "#10b981",
+          "output": {}
+        }
+      }
+    ]
+  ],
+  "trainingConfig": {
+    "learningRate": 0.1,
+    "maxEpochs": 100,
+    "targetError": 0.0001,
+    "errorAlgorithm": "meanSquaredError",
+    "errorParams": {},
+    "metricAlgorithm": "meanSquaredError",
+    "metricParams": {},
+    "selectedMetrics": [
+      "meanSquaredError"
+    ],
+    "selectedMetricsTest": [
+      "meanSquaredError"
+    ],
+    "optimizerAlgorithm": "adam",
+    "optimizerParams": {},
+    "adjustmentMode": "batch",
+    "batchSize": 32,
+    "randomizeOnStart": true,
+    "shuffleData": false,
+    "shuffleAlgorithm": "fisher-yates",
+    "shuffleSeed": 1777521615220,
+    "enableVerbose": true
+  },
+  "columnLabelOverrides": {},
+  "testOverrides": {}
+}
