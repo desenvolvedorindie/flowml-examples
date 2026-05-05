@@ -12,7 +12,7 @@
       {
         "label": "Reduction",
         "output": {
-          "0": 0
+          "0": 1
         },
         "operationParams": {
           "keepDims": false
@@ -23,10 +23,11 @@
         "shape": [
           1
         ],
-        "dtype": "float32"
+        "dtype": "float32",
+        "axis": ""
       },
-      270,
-      320,
+      280,
+      47.5,
       -1,
       null
     ],
@@ -48,7 +49,7 @@
         "isOutput": false
       },
       0,
-      260,
+      0,
       -1,
       null
     ],
@@ -56,21 +57,15 @@
       "tensor-print",
       {
         "label": "Print",
-        "output": {
-          "0": 0
-        },
         "type": "tensor-print",
         "isOutput": false,
         "description": "Display tensor values",
         "color": "#d946ef",
         "verbose": false,
-        "shape": [
-          1
-        ],
         "dtype": "float32"
       },
-      530,
-      300,
+      561,
+      49,
       -1,
       null
     ]

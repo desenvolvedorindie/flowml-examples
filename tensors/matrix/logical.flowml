@@ -11,7 +11,7 @@
     [
       "tensor-logical",
       {
-        "label": "Logical Tensor",
+        "label": "LOGICAL",
         "output": [
           1,
           0,
@@ -32,37 +32,37 @@
         ],
         "dtype": "float32"
       },
-      100,
-      400,
+      361,
+      43.5,
       -1,
       null
     ],
     [
       "tensor",
       {
-        "label": "Tensor",
+        "label": "A",
         "order": 2,
         "shape": [
           3,
           3
         ],
-        "output": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9
-        ],
+        "output": {
+          "0": 1,
+          "1": 2,
+          "2": 3,
+          "3": 4,
+          "4": 5,
+          "5": 6,
+          "6": 7,
+          "7": 8,
+          "8": 9
+        },
         "dtype": "float32",
         "type": "tensor",
         "isOutput": false
       },
-      -200,
-      240,
+      0,
+      1,
       -1,
       null
     ],
@@ -92,37 +92,37 @@
         ],
         "dtype": "float32"
       },
-      380,
-      380,
+      685,
+      0,
       -1,
       null
     ],
     [
       "tensor",
       {
-        "label": "Tensor",
+        "label": "B",
         "order": 2,
         "shape": [
           3,
           3
         ],
-        "output": [
-          9,
-          8,
-          7,
-          6,
-          5,
-          4,
-          3,
-          2,
-          1
-        ],
+        "output": {
+          "0": 9,
+          "1": 8,
+          "2": 7,
+          "3": 6,
+          "4": 5,
+          "5": 4,
+          "6": 3,
+          "7": 2,
+          "8": 1
+        },
         "dtype": "float32",
         "type": "tensor",
         "isOutput": false
       },
-      -200,
-      460,
+      0,
+      260,
       -1,
       null
     ]
@@ -262,6 +262,30 @@
       }
     ]
   ],
+  "trainingConfig": {
+    "learningRate": 0.1,
+    "maxEpochs": 100,
+    "targetError": 0.0001,
+    "errorAlgorithm": "meanSquaredError",
+    "errorParams": {},
+    "metricAlgorithm": "meanSquaredError",
+    "metricParams": {},
+    "selectedMetrics": [
+      "meanSquaredError"
+    ],
+    "selectedMetricsTest": [
+      "meanSquaredError"
+    ],
+    "optimizerAlgorithm": "adam",
+    "optimizerParams": {},
+    "adjustmentMode": "batch",
+    "batchSize": 4,
+    "randomizeOnStart": true,
+    "shuffleData": false,
+    "shuffleAlgorithm": "fisher-yates",
+    "shuffleSeed": 1777444224145,
+    "enableVerbose": true
+  },
   "columnLabelOverrides": {},
   "testOverrides": {}
 }

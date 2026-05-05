@@ -1,0 +1,197 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "8294cdf1-61bf-40ad-929b-7ed6bd658f1e",
+    "1bdf6010-81a4-4a94-9928-e2b301d51495",
+    "2d5d28d8-5fe1-4100-8767-cfc523dfbc7b"
+  ],
+  "nodes": [
+    [
+      "tensor",
+      {
+        "label": "Tensor",
+        "order": 1,
+        "shape": [
+          3
+        ],
+        "output": [
+          "Hello",
+          "TensorFlow",
+          "2.x"
+        ],
+        "dtype": "string",
+        "type": "tensor",
+        "isOutput": false,
+        "expanded": true
+      },
+      0,
+      0,
+      -1,
+      null
+    ],
+    [
+      "tensor-print",
+      {
+        "label": "Print",
+        "type": "tensor-print",
+        "isOutput": false,
+        "description": "Display tensor values",
+        "color": "#d946ef",
+        "verbose": true,
+        "dtype": "int32"
+      },
+      786,
+      42.5,
+      -1,
+      null
+    ],
+    [
+      "tensor-string-hash",
+      {
+        "label": "Hash Bucket",
+        "output": {
+          "0": 0,
+          "1": 2,
+          "2": 2
+        },
+        "operationType": "stringToHashBucketFast",
+        "dtype": "int32",
+        "type": "tensor-string-hash",
+        "isOutput": false,
+        "shape": [
+          3
+        ]
+      },
+      349,
+      79.5,
+      -1,
+      null
+    ]
+  ],
+  "edges": [
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "input",
+      "simple",
+      "d5e5f69e-3e9f-4da6-9cbf-0b577641cc59",
+      {
+        "pre": {
+          "label": "Tensor",
+          "order": 1,
+          "shape": [
+            3
+          ],
+          "output": [
+            "Hello",
+            "TensorFlow",
+            "2.x"
+          ],
+          "dtype": "string",
+          "type": "tensor",
+          "isOutput": false,
+          "expanded": true,
+          "id": "8294cdf1-61bf-40ad-929b-7ed6bd658f1e",
+          "position": {
+            "x": 80,
+            "y": 180
+          }
+        },
+        "post": {
+          "id": "2d5d28d8-5fe1-4100-8767-cfc523dfbc7b",
+          "label": "Hash Bucket",
+          "output": {
+            "0": 0,
+            "1": 2,
+            "2": 2
+          },
+          "operationType": "stringToHashBucketFast",
+          "dtype": "int32",
+          "type": "tensor-string-hash",
+          "isOutput": false,
+          "shape": [
+            3
+          ]
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "output",
+      "input",
+      "simple",
+      "ed31b5d6-8565-4b80-96a6-f41e98d5f227",
+      {
+        "pre": {
+          "id": "2d5d28d8-5fe1-4100-8767-cfc523dfbc7b",
+          "label": "Hash Bucket",
+          "output": {
+            "0": 0,
+            "1": 2,
+            "2": 2
+          },
+          "operationType": "stringToHashBucketFast",
+          "dtype": "int32",
+          "type": "tensor-string-hash",
+          "isOutput": false,
+          "shape": [
+            3
+          ]
+        },
+        "post": {
+          "label": "Print",
+          "type": "tensor-print",
+          "isOutput": false,
+          "description": "Display tensor values",
+          "color": "#d946ef",
+          "verbose": true,
+          "dtype": "int32",
+          "id": "1bdf6010-81a4-4a94-9928-e2b301d51495",
+          "output": {
+            "0": 0,
+            "1": 2,
+            "2": 2
+          },
+          "shape": [
+            3
+          ],
+          "position": {
+            "x": 480,
+            "y": 220
+          }
+        }
+      }
+    ]
+  ],
+  "trainingConfig": {
+    "learningRate": 0.1,
+    "maxEpochs": 100,
+    "targetError": 0.0001,
+    "errorAlgorithm": "meanSquaredError",
+    "errorParams": {},
+    "metricAlgorithm": "meanSquaredError",
+    "metricParams": {},
+    "selectedMetrics": [
+      "meanSquaredError"
+    ],
+    "selectedMetricsTest": [
+      "meanSquaredError"
+    ],
+    "optimizerAlgorithm": "adam",
+    "optimizerParams": {},
+    "adjustmentMode": "batch",
+    "batchSize": 4,
+    "randomizeOnStart": true,
+    "shuffleData": false,
+    "shuffleAlgorithm": "fisher-yates",
+    "shuffleSeed": 1777444224145,
+    "enableVerbose": true
+  },
+  "columnLabelOverrides": {},
+  "testOverrides": {}
+}

@@ -1,0 +1,305 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "8278111b-a5f7-4863-883b-91387166b53c",
+    "3f9ba2ce-3d98-44d0-aa8e-342db24233cf",
+    "561acb8d-e34c-4157-81a1-15f96ffa1bd9",
+    "f8cbf0d1-aec0-4e1a-909c-4a2830a81497"
+  ],
+  "nodes": [
+    [
+      "tensor-metric",
+      {
+        "label": "METRIC",
+        "output": {
+          "0": 26.66666603088379
+        },
+        "operationType": "meanSquaredError",
+        "operationParams": {},
+        "type": "tensor-metric",
+        "isOutput": false,
+        "shape": [
+          1
+        ],
+        "dtype": "float32"
+      },
+      361,
+      42.5,
+      -1,
+      null
+    ],
+    [
+      "tensor",
+      {
+        "label": "A",
+        "order": 2,
+        "shape": [
+          3,
+          3
+        ],
+        "output": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "dtype": "float32",
+        "type": "tensor",
+        "isOutput": false
+      },
+      0,
+      0,
+      -1,
+      null
+    ],
+    [
+      "tensor-print",
+      {
+        "label": "Print",
+        "output": {
+          "0": 26.66666603088379
+        },
+        "type": "tensor-print",
+        "isOutput": false,
+        "description": "Display tensor values",
+        "color": "#d946ef",
+        "verbose": false,
+        "shape": [
+          1
+        ],
+        "dtype": "float32"
+      },
+      686,
+      58,
+      -1,
+      null
+    ],
+    [
+      "tensor",
+      {
+        "label": "B",
+        "order": 2,
+        "shape": [
+          3,
+          3
+        ],
+        "output": [
+          9,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        "dtype": "float32",
+        "type": "tensor",
+        "isOutput": false
+      },
+      0,
+      259,
+      -1,
+      null
+    ]
+  ],
+  "edges": [
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "y_true",
+      "simple",
+      "46547063-31d7-4725-9841-7086781c0903",
+      {
+        "pre": {
+          "label": "A",
+          "order": 2,
+          "shape": [
+            3,
+            3
+          ],
+          "output": {
+            "0": 1,
+            "1": 2,
+            "2": 3,
+            "3": 4,
+            "4": 5,
+            "5": 6,
+            "6": 7,
+            "7": 8,
+            "8": 9
+          },
+          "dtype": "float32",
+          "type": "tensor",
+          "isOutput": false,
+          "id": "3f9ba2ce-3d98-44d0-aa8e-342db24233cf",
+          "position": {
+            "x": -260,
+            "y": -160
+          }
+        },
+        "post": {
+          "label": "METRIC",
+          "output": {
+            "0": 0
+          },
+          "operationType": "binaryAccuracy",
+          "operationParams": {},
+          "type": "tensor-metric",
+          "isOutput": false,
+          "shape": [
+            1
+          ],
+          "dtype": "float32",
+          "id": "8278111b-a5f7-4863-883b-91387166b53c",
+          "position": {
+            "x": 80,
+            "y": 0
+          }
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "y_pred",
+      "simple",
+      "c64b1a60-dcc2-4699-a4f4-c288d43d61d7",
+      {
+        "pre": {
+          "label": "B",
+          "order": 2,
+          "shape": [
+            3,
+            3
+          ],
+          "output": {
+            "0": 9,
+            "1": 8,
+            "2": 7,
+            "3": 6,
+            "4": 5,
+            "5": 4,
+            "6": 3,
+            "7": 2,
+            "8": 1
+          },
+          "dtype": "float32",
+          "type": "tensor",
+          "isOutput": false,
+          "id": "f8cbf0d1-aec0-4e1a-909c-4a2830a81497",
+          "position": {
+            "x": -260,
+            "y": 60
+          }
+        },
+        "post": {
+          "label": "METRIC",
+          "output": {
+            "0": 0
+          },
+          "operationType": "binaryAccuracy",
+          "operationParams": {},
+          "type": "tensor-metric",
+          "isOutput": false,
+          "shape": [
+            1
+          ],
+          "dtype": "float32",
+          "id": "8278111b-a5f7-4863-883b-91387166b53c",
+          "position": {
+            "x": 80,
+            "y": 0
+          }
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "tensor-out",
+      "input",
+      "simple",
+      "48729cd2-005b-4992-b1cb-c9d5c0140ccb",
+      {
+        "pre": {
+          "label": "METRIC",
+          "output": {
+            "0": 0
+          },
+          "operationType": "binaryAccuracy",
+          "operationParams": {},
+          "type": "tensor-metric",
+          "isOutput": false,
+          "shape": [
+            1
+          ],
+          "dtype": "float32",
+          "id": "8278111b-a5f7-4863-883b-91387166b53c",
+          "position": {
+            "x": 80,
+            "y": 0
+          }
+        },
+        "post": {
+          "label": "Print",
+          "output": {
+            "0": 0
+          },
+          "type": "tensor-print",
+          "isOutput": false,
+          "description": "Display tensor values",
+          "color": "#d946ef",
+          "verbose": false,
+          "shape": [
+            1
+          ],
+          "dtype": "float32",
+          "id": "561acb8d-e34c-4157-81a1-15f96ffa1bd9",
+          "position": {
+            "x": 420,
+            "y": 20
+          }
+        }
+      }
+    ]
+  ],
+  "trainingConfig": {
+    "learningRate": 0.1,
+    "maxEpochs": 100,
+    "targetError": 0.0001,
+    "errorAlgorithm": "meanSquaredError",
+    "errorParams": {},
+    "metricAlgorithm": "meanSquaredError",
+    "metricParams": {},
+    "selectedMetrics": [
+      "meanSquaredError"
+    ],
+    "selectedMetricsTest": [
+      "meanSquaredError"
+    ],
+    "optimizerAlgorithm": "adam",
+    "optimizerParams": {},
+    "adjustmentMode": "batch",
+    "batchSize": 4,
+    "randomizeOnStart": true,
+    "shuffleData": false,
+    "shuffleAlgorithm": "fisher-yates",
+    "shuffleSeed": 1777444224145,
+    "enableVerbose": true
+  },
+  "columnLabelOverrides": {},
+  "testOverrides": {}
+}

@@ -1,0 +1,388 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "0fda6b76-ac07-448e-b001-d350f7e9ea7f",
+    "a879dc2e-68a6-4c29-88de-ae94cbe73a55",
+    "ea04f42a-176e-4238-85ff-9a5d5a4afe44",
+    "928426e2-9f3d-4ffe-827c-bb362e83da88",
+    "8d9f4426-d197-4e08-8603-2f33fa0acda1"
+  ],
+  "nodes": [
+    [
+      "tensor",
+      {
+        "label": "A",
+        "order": 1,
+        "shape": [
+          4
+        ],
+        "output": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "dtype": "string",
+        "type": "tensor",
+        "isOutput": false,
+        "expanded": true
+      },
+      0,
+      0,
+      -1,
+      null
+    ],
+    [
+      "tensor-print",
+      {
+        "label": "Print",
+        "type": "tensor-print",
+        "isOutput": false,
+        "description": "Display tensor values",
+        "color": "#d946ef",
+        "verbose": false,
+        "dtype": "string"
+      },
+      696,
+      19.5,
+      -1,
+      null
+    ],
+    [
+      "tensor-string-ngrams",
+      {
+        "label": "N-Grams",
+        "output": [
+          "a",
+          "b",
+          "LP|a",
+          "a|b",
+          "b|RP",
+          "c",
+          "d",
+          "LP|c",
+          "c|d",
+          "d|RP"
+        ],
+        "operationType": "stringNGrams",
+        "dtype": "string",
+        "type": "tensor-string-ngrams",
+        "isOutput": false,
+        "operationParams": {
+          "preserveShortSequences": false
+        },
+        "shape": [
+          10
+        ]
+      },
+      349,
+      45,
+      -1,
+      null
+    ],
+    [
+      "tensor",
+      {
+        "label": "TENSOR 4",
+        "order": 1,
+        "shape": [
+          3
+        ],
+        "output": [
+          0,
+          2,
+          4
+        ],
+        "dtype": "float32",
+        "type": "tensor",
+        "isOutput": false
+      },
+      0,
+      333,
+      -1,
+      null
+    ],
+    [
+      "tensor-print",
+      {
+        "label": "Print",
+        "type": "tensor-print",
+        "isOutput": false,
+        "description": "Display tensor values",
+        "color": "#d946ef",
+        "verbose": false,
+        "dtype": "int32"
+      },
+      696,
+      313.5,
+      -1,
+      null
+    ]
+  ],
+  "edges": [
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "data",
+      "simple",
+      "ff54846b-8f09-4499-b615-77d58a608059",
+      {
+        "pre": {
+          "id": "0fda6b76-ac07-448e-b001-d350f7e9ea7f",
+          "label": "A",
+          "order": 1,
+          "shape": [
+            4
+          ],
+          "output": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ],
+          "dtype": "string",
+          "type": "tensor",
+          "isOutput": false,
+          "expanded": true,
+          "position": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "post": {
+          "id": "ea04f42a-176e-4238-85ff-9a5d5a4afe44",
+          "label": "N-Grams",
+          "output": [
+            "a",
+            "b",
+            "LP|a",
+            "a|b",
+            "b|RP",
+            "c",
+            "d",
+            "LP|c",
+            "c|d",
+            "d|RP"
+          ],
+          "operationType": "stringNGrams",
+          "dtype": "string",
+          "type": "tensor-string-ngrams",
+          "isOutput": false,
+          "operationParams": {
+            "preserveShortSequences": false
+          },
+          "shape": [
+            10
+          ]
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "dataSplits",
+      "simple",
+      "400d4db0-81c8-40c6-b4ac-c57e681fa84d",
+      {
+        "pre": {
+          "id": "928426e2-9f3d-4ffe-827c-bb362e83da88",
+          "label": "TENSOR 4",
+          "order": 1,
+          "shape": [
+            3
+          ],
+          "output": {
+            "0": 0,
+            "1": 2,
+            "2": 4
+          },
+          "dtype": "float32",
+          "type": "tensor",
+          "isOutput": false
+        },
+        "post": {
+          "id": "ea04f42a-176e-4238-85ff-9a5d5a4afe44",
+          "label": "N-Grams",
+          "output": [
+            "a",
+            "b",
+            "LP|a",
+            "a|b",
+            "b|RP",
+            "c",
+            "d",
+            "LP|c",
+            "c|d",
+            "d|RP"
+          ],
+          "operationType": "stringNGrams",
+          "dtype": "string",
+          "type": "tensor-string-ngrams",
+          "isOutput": false,
+          "operationParams": {
+            "preserveShortSequences": false
+          },
+          "shape": [
+            10
+          ]
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "nGrams",
+      "input",
+      "simple",
+      "ecf4d02b-dbb3-450a-9b59-d30e13238906",
+      {
+        "pre": {
+          "id": "ea04f42a-176e-4238-85ff-9a5d5a4afe44",
+          "label": "N-Grams",
+          "output": [
+            "a",
+            "b",
+            "LP|a",
+            "a|b",
+            "b|RP",
+            "c",
+            "d",
+            "LP|c",
+            "c|d",
+            "d|RP"
+          ],
+          "operationType": "stringNGrams",
+          "dtype": "string",
+          "type": "tensor-string-ngrams",
+          "isOutput": false,
+          "operationParams": {
+            "preserveShortSequences": false
+          },
+          "shape": [
+            10
+          ]
+        },
+        "post": {
+          "id": "a879dc2e-68a6-4c29-88de-ae94cbe73a55",
+          "label": "Print",
+          "output": [
+            "a",
+            "b",
+            "LP|a",
+            "a|b",
+            "b|RP",
+            "c",
+            "d",
+            "LP|c",
+            "c|d",
+            "d|RP"
+          ],
+          "type": "tensor-print",
+          "isOutput": false,
+          "description": "Display tensor values",
+          "color": "#d946ef",
+          "verbose": false,
+          "shape": [
+            10
+          ],
+          "dtype": "string",
+          "position": {
+            "x": 760,
+            "y": 60
+          }
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "nGramsSplits",
+      "input",
+      "simple",
+      "0b74d7a7-1765-48aa-bd0a-f6e34a476f46",
+      {
+        "pre": {
+          "id": "ea04f42a-176e-4238-85ff-9a5d5a4afe44",
+          "label": "N-Grams",
+          "output": [
+            "a",
+            "b",
+            "LP|a",
+            "a|b",
+            "b|RP",
+            "c",
+            "d",
+            "LP|c",
+            "c|d",
+            "d|RP"
+          ],
+          "operationType": "stringNGrams",
+          "dtype": "string",
+          "type": "tensor-string-ngrams",
+          "isOutput": false,
+          "operationParams": {
+            "preserveShortSequences": false
+          },
+          "shape": [
+            10
+          ]
+        },
+        "post": {
+          "id": "8d9f4426-d197-4e08-8603-2f33fa0acda1",
+          "label": "Print",
+          "output": {
+            "0": 0,
+            "1": 5,
+            "2": 10
+          },
+          "type": "tensor-print",
+          "isOutput": false,
+          "description": "Display tensor values",
+          "color": "#d946ef",
+          "verbose": false,
+          "shape": [
+            3
+          ],
+          "dtype": "int32",
+          "position": {
+            "x": 760,
+            "y": 60
+          }
+        }
+      }
+    ]
+  ],
+  "trainingConfig": {
+    "learningRate": 0.1,
+    "maxEpochs": 100,
+    "targetError": 0.0001,
+    "errorAlgorithm": "meanSquaredError",
+    "errorParams": {},
+    "metricAlgorithm": "meanSquaredError",
+    "metricParams": {},
+    "selectedMetrics": [
+      "meanSquaredError"
+    ],
+    "selectedMetricsTest": [
+      "meanSquaredError"
+    ],
+    "optimizerAlgorithm": "adam",
+    "optimizerParams": {},
+    "adjustmentMode": "batch",
+    "batchSize": 4,
+    "randomizeOnStart": true,
+    "shuffleData": false,
+    "shuffleAlgorithm": "fisher-yates",
+    "shuffleSeed": 1777444224145,
+    "enableVerbose": true
+  },
+  "columnLabelOverrides": {},
+  "testOverrides": {}
+}

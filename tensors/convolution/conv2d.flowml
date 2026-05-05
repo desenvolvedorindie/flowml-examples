@@ -25,8 +25,7 @@
         "color": "#d946ef",
         "verbose": false,
         "shape": [
-          2,
-          2
+          4
         ],
         "dtype": "float32"
       },
@@ -54,8 +53,10 @@
         },
         "isOutput": false,
         "output": {
-          "0": null,
-          "1": null
+          "0": 37,
+          "1": 47,
+          "2": 67,
+          "3": 77
         },
         "shape": [
           1
@@ -70,7 +71,7 @@
     [
       "tensor",
       {
-        "label": "Tensor",
+        "label": "X",
         "order": 2,
         "shape": [
           3,
@@ -99,7 +100,7 @@
     [
       "tensor",
       {
-        "label": "Tensor",
+        "label": "W",
         "order": 2,
         "shape": [
           2,

@@ -12,16 +12,16 @@
     [
       "tensor",
       {
-        "label": "Tensor",
+        "label": "X",
         "order": 1,
         "shape": [
           3
         ],
-        "output": [
-          1,
-          2,
-          3
-        ],
+        "output": {
+          "0": 1,
+          "1": 2,
+          "2": 3
+        },
         "dtype": "float32",
         "type": "tensor",
         "isOutput": false
@@ -34,16 +34,16 @@
     [
       "tensor",
       {
-        "label": "Tensor",
+        "label": "W",
         "order": 1,
         "shape": [
           3
         ],
-        "output": [
-          4,
-          5,
-          6
-        ],
+        "output": {
+          "0": 4,
+          "1": 5,
+          "2": 6
+        },
         "dtype": "float32",
         "type": "tensor",
         "isOutput": false
@@ -57,7 +57,7 @@
       "tensor-conv-conv1d",
       {
         "type": "tensor-conv-conv1d",
-        "label": "Conv1d 3",
+        "label": "CONV1D",
         "operationType": "conv1d",
         "formula": [
           "y[n] = \\sum_{k=-\\infty}^{\\infty} x[k] \\cdot W[n - k]"
@@ -68,7 +68,7 @@
           "pad": "same",
           "dataFormat": "NHWC",
           "dilation": null,
-          "dimRoundingMode": "floor"
+          "dimRoundingMode": ""
         },
         "isOutput": false,
         "output": {

@@ -18,15 +18,16 @@
         "output": [
           "Welsiton",
           "Ferreira",
-          "Yasmin",
-          "Lira"
+          "Lima",
+          "Moraes"
         ],
         "dtype": "string",
         "type": "tensor",
-        "isOutput": false
+        "isOutput": false,
+        "expanded": true
       },
-      60,
-      200,
+      40,
+      140,
       -1,
       null
     ],
@@ -34,21 +35,11 @@
       "tensor-print",
       {
         "label": "Print",
-        "output": [
-          "Welsiton2",
-          "Ferreira",
-          "Yasmin",
-          "Lira"
-        ],
         "type": "tensor-print",
         "isOutput": false,
         "description": "Display tensor values",
         "color": "#d946ef",
         "verbose": true,
-        "shape": [
-          2,
-          2
-        ],
         "dtype": "string"
       },
       440,

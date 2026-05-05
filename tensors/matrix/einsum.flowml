@@ -2,13 +2,14 @@
   "version": 1,
   "c": 2,
   "nodeIds": [
-    "56aad3e2-65ca-4aa3-b386-ba4b0274f05e"
+    "56aad3e2-65ca-4aa3-b386-ba4b0274f05e",
+    "de0fcdef-8218-4aee-9273-ee07f9abbf0e"
   ],
   "nodes": [
     [
       "tensor-einsum",
       {
-        "label": "Einsum 1",
+        "label": "EINSUM",
         "output": [],
         "operationType": "einsum",
         "operationParams": {
@@ -21,9 +22,112 @@
       560,
       -1,
       null
+    ],
+    [
+      "tensor",
+      {
+        "label": "A",
+        "order": 2,
+        "shape": [
+          3,
+          3
+        ],
+        "output": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "dtype": "float32",
+        "type": "tensor",
+        "isOutput": false
+      },
+      340,
+      480,
+      -1,
+      null
     ]
   ],
-  "edges": [],
+  "edges": [
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "input",
+      "simple",
+      "8e3eb1fa-fae7-4b3b-8656-5823c209405d",
+      {
+        "pre": {
+          "id": "de0fcdef-8218-4aee-9273-ee07f9abbf0e",
+          "label": "A",
+          "order": 2,
+          "shape": [
+            3,
+            3
+          ],
+          "output": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "dtype": "float32",
+          "type": "tensor",
+          "isOutput": false
+        },
+        "post": {
+          "label": "EINSUM",
+          "output": [],
+          "operationType": "einsum",
+          "operationParams": {
+            "equation": "ij,jk->ik"
+          },
+          "type": "tensor-einsum",
+          "isOutput": false,
+          "id": "56aad3e2-65ca-4aa3-b386-ba4b0274f05e",
+          "position": {
+            "x": 650,
+            "y": 560
+          }
+        }
+      }
+    ]
+  ],
+  "trainingConfig": {
+    "learningRate": 0.1,
+    "maxEpochs": 100,
+    "targetError": 0.0001,
+    "errorAlgorithm": "meanSquaredError",
+    "errorParams": {},
+    "metricAlgorithm": "meanSquaredError",
+    "metricParams": {},
+    "selectedMetrics": [
+      "meanSquaredError"
+    ],
+    "selectedMetricsTest": [
+      "meanSquaredError"
+    ],
+    "optimizerAlgorithm": "adam",
+    "optimizerParams": {},
+    "adjustmentMode": "batch",
+    "batchSize": 4,
+    "randomizeOnStart": true,
+    "shuffleData": false,
+    "shuffleAlgorithm": "fisher-yates",
+    "shuffleSeed": 1777444224145,
+    "enableVerbose": true
+  },
   "columnLabelOverrides": {},
   "testOverrides": {}
 }

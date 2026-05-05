@@ -14,14 +14,17 @@
         "output": {
           "0": 0
         },
-        "operationParams": {},
+        "operationParams": {
+          "keepDims": false
+        },
         "operationType": "any",
         "type": "tensor-reduce",
         "isOutput": false,
         "shape": [
           1
         ],
-        "dtype": "float32"
+        "dtype": "float32",
+        "axis": ""
       },
       270,
       320,
@@ -31,16 +34,16 @@
     [
       "tensor",
       {
-        "label": "Tensor",
+        "label": "A",
         "order": 1,
         "shape": [
           3
         ],
-        "output": [
-          0,
-          0,
-          0
-        ],
+        "output": {
+          "0": 0,
+          "1": 0,
+          "2": 0
+        },
         "dtype": "boolean",
         "type": "tensor",
         "isOutput": false

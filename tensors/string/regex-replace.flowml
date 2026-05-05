@@ -1,0 +1,192 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "07a89bf1-7b57-4033-b646-1ec867a22d30",
+    "681c7158-89b7-4741-801e-640becea487c",
+    "00ed78e7-b523-4cd4-803b-ffd3e87baa6b"
+  ],
+  "nodes": [
+    [
+      "tensor",
+      {
+        "label": "A",
+        "order": 1,
+        "shape": [
+          1
+        ],
+        "output": [
+          "format       this   spacing      better"
+        ],
+        "dtype": "string",
+        "type": "tensor",
+        "isOutput": false,
+        "expanded": true
+      },
+      0,
+      0,
+      -1,
+      null
+    ],
+    [
+      "tensor-print",
+      {
+        "label": "Print",
+        "type": "tensor-print",
+        "isOutput": false,
+        "description": "Display tensor values",
+        "color": "#d946ef",
+        "verbose": false,
+        "dtype": "string"
+      },
+      768,
+      54,
+      -1,
+      null
+    ],
+    [
+      "tensor-string-regex",
+      {
+        "label": "Regex Replace",
+        "output": [
+          "format this spacing better"
+        ],
+        "operationType": "staticRegexReplace",
+        "dtype": "string",
+        "type": "tensor-string-regex",
+        "isOutput": false,
+        "shape": [
+          1
+        ],
+        "operationParams": {
+          "pattern": " +",
+          "rewrite": " "
+        }
+      },
+      349,
+      51.5,
+      -1,
+      null
+    ]
+  ],
+  "edges": [
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "input",
+      "simple",
+      "9c3b6887-1d4b-4615-9e81-b6a799f0ad28",
+      {
+        "pre": {
+          "id": "07a89bf1-7b57-4033-b646-1ec867a22d30",
+          "label": "Tensor",
+          "order": 2,
+          "shape": [
+            2,
+            2
+          ],
+          "output": [
+            "Welsiton",
+            "Ferreira",
+            "Lima",
+            "Moraes"
+          ],
+          "dtype": "string",
+          "type": "tensor",
+          "isOutput": false,
+          "position": {
+            "x": 60,
+            "y": 200
+          },
+          "expanded": true
+        },
+        "post": {
+          "id": "00ed78e7-b523-4cd4-803b-ffd3e87baa6b",
+          "label": "Regex Replace",
+          "output": [],
+          "operationType": "staticRegexReplace",
+          "dtype": "string",
+          "type": "tensor-string-regex",
+          "isOutput": false
+        }
+      }
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "output",
+      "input",
+      "simple",
+      "60a58644-1192-4811-8d18-efdc317cde36",
+      {
+        "pre": {
+          "id": "00ed78e7-b523-4cd4-803b-ffd3e87baa6b",
+          "label": "Regex Replace",
+          "output": [
+            null
+          ],
+          "operationType": "staticRegexReplace",
+          "dtype": "string",
+          "type": "tensor-string-regex",
+          "isOutput": false,
+          "position": {
+            "x": 240,
+            "y": 280
+          },
+          "shape": [
+            1
+          ]
+        },
+        "post": {
+          "id": "681c7158-89b7-4741-801e-640becea487c",
+          "label": "Print",
+          "output": [
+            null
+          ],
+          "type": "tensor-print",
+          "isOutput": false,
+          "description": "Display tensor values",
+          "color": "#d946ef",
+          "verbose": true,
+          "shape": [
+            1
+          ],
+          "dtype": "string",
+          "position": {
+            "x": 600,
+            "y": 240
+          }
+        }
+      }
+    ]
+  ],
+  "trainingConfig": {
+    "learningRate": 0.1,
+    "maxEpochs": 100,
+    "targetError": 0.0001,
+    "errorAlgorithm": "meanSquaredError",
+    "errorParams": {},
+    "metricAlgorithm": "meanSquaredError",
+    "metricParams": {},
+    "selectedMetrics": [
+      "meanSquaredError"
+    ],
+    "selectedMetricsTest": [
+      "meanSquaredError"
+    ],
+    "optimizerAlgorithm": "adam",
+    "optimizerParams": {},
+    "adjustmentMode": "batch",
+    "batchSize": 4,
+    "randomizeOnStart": true,
+    "shuffleData": false,
+    "shuffleAlgorithm": "fisher-yates",
+    "shuffleSeed": 1777444224145,
+    "enableVerbose": true
+  },
+  "columnLabelOverrides": {},
+  "testOverrides": {}
+}

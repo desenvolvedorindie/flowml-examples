@@ -18,7 +18,7 @@
       "tensor",
       {
         "type": "tensor",
-        "label": "Tensor",
+        "label": "A",
         "order": 0,
         "shape": [
           1
@@ -38,7 +38,7 @@
       "tensor",
       {
         "type": "tensor",
-        "label": "Tensor",
+        "label": "B",
         "order": 0,
         "shape": [
           1
@@ -57,7 +57,7 @@
       "tensor-complex",
       {
         "type": "tensor-complex",
-        "label": "Complex",
+        "label": "COMPLEX_A_B",
         "output": {
           "0": 1,
           "1": 2
@@ -67,7 +67,7 @@
         ],
         "dtype": "complex64"
       },
-      298,
+      280,
       16.5,
       -1,
       null
@@ -75,7 +75,7 @@
     [
       "tensor",
       {
-        "label": "Tensor",
+        "label": "C",
         "order": 0,
         "shape": [
           1
@@ -96,7 +96,7 @@
     [
       "tensor",
       {
-        "label": "Tensor",
+        "label": "D",
         "order": 0,
         "shape": [
           1
@@ -116,7 +116,7 @@
     [
       "tensor-complex",
       {
-        "label": "Complex",
+        "label": "COMPLEX_C_D",
         "output": {
           "0": 3,
           "1": 4
@@ -128,7 +128,7 @@
         ],
         "dtype": "complex64"
       },
-      298,
+      280,
       430.5,
       -1,
       null
@@ -152,7 +152,7 @@
         "dtype": "complex64",
         "expanded": false
       },
-      605,
+      610,
       16.5,
       -1,
       null
@@ -175,7 +175,7 @@
         ],
         "dtype": "complex64"
       },
-      875,
+      888,
       32,
       -1,
       null
@@ -198,8 +198,8 @@
         ],
         "dtype": "complex64"
       },
-      595,
-      477,
+      608,
+      476,
       -1,
       null
     ],
@@ -221,8 +221,8 @@
         ],
         "dtype": "complex64"
       },
-      595,
-      336,
+      608,
+      333,
       -1,
       null
     ]

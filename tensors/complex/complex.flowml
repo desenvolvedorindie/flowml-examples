@@ -16,27 +16,7 @@
       "tensor",
       {
         "type": "tensor",
-        "label": "Tensor",
-        "order": 0,
-        "shape": [
-          1
-        ],
-        "output": [
-          1
-        ],
-        "dtype": "float32",
-        "expanded": false
-      },
-      -360,
-      300,
-      -1,
-      null
-    ],
-    [
-      "tensor",
-      {
-        "type": "tensor",
-        "label": "Tensor",
+        "label": "A",
         "order": 0,
         "shape": [
           1
@@ -44,10 +24,30 @@
         "output": [
           2
         ],
+        "dtype": "float32",
+        "expanded": false
+      },
+      0,
+      0,
+      -1,
+      null
+    ],
+    [
+      "tensor",
+      {
+        "type": "tensor",
+        "label": "B",
+        "order": 0,
+        "shape": [
+          1
+        ],
+        "output": [
+          3
+        ],
         "dtype": "float32"
       },
-      -380,
-      560,
+      0,
+      207,
       -1,
       null
     ],
@@ -57,16 +57,16 @@
         "type": "tensor-complex",
         "label": "Complex",
         "output": {
-          "0": 1,
-          "1": 2
+          "0": 2,
+          "1": 3
         },
         "shape": [
           1
         ],
         "dtype": "complex64"
       },
-      -100,
-      440,
+      280,
+      16.5,
       -1,
       null
     ],
@@ -75,18 +75,11 @@
       {
         "type": "tensor-print",
         "label": "Print",
-        "output": {
-          "0": 1,
-          "1": 2
-        },
-        "shape": [
-          1
-        ],
         "verbose": false,
         "dtype": "complex64"
       },
-      120,
-      340,
+      577,
+      176.5,
       -1,
       null
     ],
@@ -96,15 +89,15 @@
         "type": "tensor-real",
         "label": "Real",
         "output": {
-          "0": 1
+          "0": 2
         },
         "shape": [
           1
         ],
-        "dtype": "boolean"
+        "dtype": "float32"
       },
-      140,
-      480,
+      587,
+      30.5,
       -1,
       null
     ],
@@ -114,15 +107,15 @@
         "type": "tensor-imag",
         "label": "Imag",
         "output": {
-          "0": 2
+          "0": 3
         },
         "shape": [
           1
         ],
         "dtype": "float32"
       },
-      140,
-      660,
+      587,
+      319.5,
       -1,
       null
     ],
@@ -131,17 +124,11 @@
       {
         "type": "tensor-print",
         "label": "Print 4",
-        "output": {
-          "0": 1
-        },
-        "shape": [
-          1
-        ],
         "verbose": false,
-        "dtype": "boolean"
+        "dtype": "float32"
       },
-      360,
-      380,
+      857,
+      32,
       -1,
       null
     ],
@@ -150,17 +137,11 @@
       {
         "type": "tensor-print",
         "label": "Print 4",
-        "output": {
-          "0": 2
-        },
-        "shape": [
-          1
-        ],
         "verbose": false,
         "dtype": "float32"
       },
-      340,
-      640,
+      857,
+      321,
       -1,
       null
     ]

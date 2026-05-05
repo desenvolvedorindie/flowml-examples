@@ -10,7 +10,7 @@
     [
       "tensor",
       {
-        "label": "Tensor",
+        "label": "A",
         "order": 2,
         "shape": [
           3,
@@ -18,21 +18,21 @@
         ],
         "output": [
           1,
-          2,
+          -2,
           3,
-          4,
+          -4,
           5,
-          6,
+          -6,
           7,
-          8,
+          -8,
           9
         ],
         "dtype": "float32",
         "type": "tensor",
         "isOutput": false
       },
-      -1560,
-      100,
+      0,
+      0,
       -1,
       null
     ],
@@ -40,17 +40,17 @@
       "tensor-print",
       {
         "label": "Print",
-        "output": [
-          -1,
-          -2,
-          -3,
-          -4,
-          -5,
-          -6,
-          -7,
-          -8,
-          -9
-        ],
+        "output": {
+          "0": 0,
+          "1": null,
+          "2": null,
+          "3": null,
+          "4": null,
+          "5": null,
+          "6": null,
+          "7": null,
+          "8": null
+        },
         "type": "tensor-print",
         "isOutput": false,
         "description": "Display tensor values",
@@ -62,8 +62,8 @@
         ],
         "dtype": "float32"
       },
-      -1100,
-      140,
+      633,
+      38,
       -1,
       null
     ],
@@ -71,17 +71,17 @@
       "tensor-unary",
       {
         "label": "Unary",
-        "output": [
-          -1,
-          -2,
-          -3,
-          -4,
-          -5,
-          -6,
-          -7,
-          -8,
-          -9
-        ],
+        "output": {
+          "0": 0,
+          "1": null,
+          "2": null,
+          "3": null,
+          "4": null,
+          "5": null,
+          "6": null,
+          "7": null,
+          "8": null
+        },
         "type": "tensor-unary",
         "isOutput": false,
         "shape": [
@@ -89,10 +89,10 @@
           3
         ],
         "dtype": "float32",
-        "operationType": "tanh"
+        "operationType": "abs"
       },
-      -1320,
-      160,
+      361,
+      56.5,
       -1,
       null
     ]
@@ -219,6 +219,30 @@
       }
     ]
   ],
+  "trainingConfig": {
+    "learningRate": 0.1,
+    "maxEpochs": 100,
+    "targetError": 0.0001,
+    "errorAlgorithm": "meanSquaredError",
+    "errorParams": {},
+    "metricAlgorithm": "meanSquaredError",
+    "metricParams": {},
+    "selectedMetrics": [
+      "meanSquaredError"
+    ],
+    "selectedMetricsTest": [
+      "meanSquaredError"
+    ],
+    "optimizerAlgorithm": "adam",
+    "optimizerParams": {},
+    "adjustmentMode": "batch",
+    "batchSize": 4,
+    "randomizeOnStart": true,
+    "shuffleData": false,
+    "shuffleAlgorithm": "fisher-yates",
+    "shuffleSeed": 1777444224145,
+    "enableVerbose": true
+  },
   "columnLabelOverrides": {},
   "testOverrides": {}
 }

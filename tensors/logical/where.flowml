@@ -12,23 +12,23 @@
     [
       "tensor",
       {
-        "label": "Tensor",
+        "label": "A",
         "order": 2,
         "shape": [
           3,
           3
         ],
-        "output": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9
-        ],
+        "output": {
+          "0": 1,
+          "1": 2,
+          "2": 3,
+          "3": 4,
+          "4": 5,
+          "5": 6,
+          "6": 7,
+          "7": 8,
+          "8": 9
+        },
         "dtype": "float32",
         "type": "tensor",
         "isOutput": false
@@ -65,7 +65,7 @@
         "dtype": "float32"
       },
       628,
-      318,
+      297,
       -1,
       null
     ],
@@ -94,30 +94,30 @@
         "dtype": "float32"
       },
       361,
-      304.5,
+      287.5,
       -1,
       null
     ],
     [
       "tensor",
       {
-        "label": "Tensor",
+        "label": "B",
         "order": 2,
         "shape": [
           3,
           3
         ],
-        "output": [
-          9,
-          8,
-          7,
-          6,
-          5,
-          4,
-          3,
-          2,
-          1
-        ],
+        "output": {
+          "0": 9,
+          "1": 8,
+          "2": 7,
+          "3": 6,
+          "4": 5,
+          "5": 4,
+          "6": 3,
+          "7": 2,
+          "8": 1
+        },
         "dtype": "float32",
         "type": "tensor",
         "isOutput": false
@@ -130,20 +130,20 @@
     [
       "tensor",
       {
-        "label": "Tensor",
+        "label": "CONDITION",
         "order": 0,
         "shape": [
           1
         ],
-        "output": [
-          0
-        ],
-        "dtype": "float32",
+        "output": {
+          "0": 0
+        },
+        "dtype": "boolean",
         "type": "tensor",
         "isOutput": false
       },
-      340,
-      -60,
+      21,
+      518,
       -1,
       null
     ]

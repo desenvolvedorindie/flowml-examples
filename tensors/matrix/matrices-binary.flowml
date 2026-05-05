@@ -1,148 +1,45 @@
 {
   "version": 1,
-  "nodes": [
-    {
-      "label": "Tensor",
-      "order": 2,
-      "shape": [
-        3,
-        3
-      ],
-      "output": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9
-      ],
-      "dtype": "float32",
-      "type": "tensor",
-      "isOutput": false,
-      "id": "17e24828-14d6-4300-bb35-ccf646e5dca8",
-      "position": {
-        "x": 120,
-        "y": 400
-      }
-    },
-    {
-      "label": "Matrix Binary",
-      "output": [
-        30,
-        24,
-        18,
-        84,
-        69,
-        54,
-        138,
-        114,
-        90
-      ],
-      "type": "tensor-matrix-binary",
-      "isOutput": false,
-      "shape": [
-        3,
-        3
-      ],
-      "dtype": "float32",
-      "operationType": "matmul",
-      "id": "56234ea7-fd0a-4cd8-a086-206ad6c199c6",
-      "position": {
-        "x": 380,
-        "y": 520
-      }
-    },
-    {
-      "label": "Tensor",
-      "order": 2,
-      "shape": [
-        3,
-        3
-      ],
-      "output": [
-        9,
-        8,
-        7,
-        6,
-        5,
-        4,
-        3,
-        2,
-        1
-      ],
-      "dtype": "float32",
-      "type": "tensor",
-      "isOutput": false,
-      "expanded": false,
-      "id": "04611e20-5dc2-4a67-87b7-fa587c3493f8",
-      "position": {
-        "x": 120,
-        "y": 620
-      }
-    },
-    {
-      "label": "Print",
-      "output": [
-        30,
-        24,
-        18,
-        84,
-        69,
-        54,
-        138,
-        114,
-        90
-      ],
-      "type": "tensor-print",
-      "isOutput": false,
-      "description": "Display tensor values",
-      "color": "#d946ef",
-      "verbose": false,
-      "shape": [
-        3,
-        3
-      ],
-      "dtype": "float32",
-      "id": "41aee214-1206-4615-96cd-5335c1e5632d",
-      "position": {
-        "x": 620,
-        "y": 500
-      }
-    }
+  "c": 2,
+  "nodeIds": [
+    "17e24828-14d6-4300-bb35-ccf646e5dca8",
+    "56234ea7-fd0a-4cd8-a086-206ad6c199c6",
+    "04611e20-5dc2-4a67-87b7-fa587c3493f8",
+    "41aee214-1206-4615-96cd-5335c1e5632d"
   ],
-  "connections": [
-    {
-      "id": "d939087f-ca65-4974-8cab-7415723b7499",
-      "source": "",
-      "target": "",
-      "pre": {
-        "id": "17e24828-14d6-4300-bb35-ccf646e5dca8",
-        "label": "Tensor",
+  "nodes": [
+    [
+      "tensor",
+      {
+        "label": "A",
         "order": 2,
         "shape": [
           3,
           3
         ],
-        "output": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9
-        ],
+        "output": {
+          "0": 1,
+          "1": 2,
+          "2": 3,
+          "3": 4,
+          "4": 5,
+          "5": 6,
+          "6": 7,
+          "7": 8,
+          "8": 9
+        },
         "dtype": "float32",
         "type": "tensor",
         "isOutput": false
       },
-      "post": {
-        "id": "56234ea7-fd0a-4cd8-a086-206ad6c199c6",
+      0,
+      0,
+      -1,
+      null
+    ],
+    [
+      "tensor-matrix-binary",
+      {
         "label": "Matrix Binary",
         "output": [
           30,
@@ -162,96 +59,48 @@
           3
         ],
         "dtype": "float32",
-        "operationType": "matmul"
+        "operationType": "matmul",
+        "transposeA": false,
+        "transposeB": false
       },
-      "sourceHandle": "out",
-      "targetHandle": "input-a",
-      "type": "simple"
-    },
-    {
-      "id": "8d23296c-d92a-492d-a374-f24b2a67040b",
-      "source": "",
-      "target": "",
-      "pre": {
-        "id": "04611e20-5dc2-4a67-87b7-fa587c3493f8",
-        "label": "Tensor",
+      361,
+      42.5,
+      -1,
+      null
+    ],
+    [
+      "tensor",
+      {
+        "label": "B",
         "order": 2,
         "shape": [
           3,
           3
         ],
-        "output": [
-          9,
-          8,
-          7,
-          6,
-          5,
-          4,
-          3,
-          2,
-          1
-        ],
+        "output": {
+          "0": 9,
+          "1": 8,
+          "2": 7,
+          "3": 6,
+          "4": 5,
+          "5": 4,
+          "6": 3,
+          "7": 2,
+          "8": 1
+        },
         "dtype": "float32",
         "type": "tensor",
         "isOutput": false,
         "expanded": false
       },
-      "post": {
-        "id": "56234ea7-fd0a-4cd8-a086-206ad6c199c6",
-        "label": "Matrix Binary",
-        "output": [
-          30,
-          24,
-          18,
-          84,
-          69,
-          54,
-          138,
-          114,
-          90
-        ],
-        "type": "tensor-matrix-binary",
-        "isOutput": false,
-        "shape": [
-          3,
-          3
-        ],
-        "dtype": "float32",
-        "operationType": "matmul"
-      },
-      "sourceHandle": "out",
-      "targetHandle": "input-b",
-      "type": "simple"
-    },
-    {
-      "id": "0511dc4a-3b9f-4428-b7e8-a6e792fd48fd",
-      "source": "",
-      "target": "",
-      "pre": {
-        "id": "56234ea7-fd0a-4cd8-a086-206ad6c199c6",
-        "label": "Matrix Binary",
-        "output": [
-          30,
-          24,
-          18,
-          84,
-          69,
-          54,
-          138,
-          114,
-          90
-        ],
-        "type": "tensor-matrix-binary",
-        "isOutput": false,
-        "shape": [
-          3,
-          3
-        ],
-        "dtype": "float32",
-        "operationType": "matmul"
-      },
-      "post": {
-        "id": "41aee214-1206-4615-96cd-5335c1e5632d",
+      0,
+      259,
+      -1,
+      null
+    ],
+    [
+      "tensor-print",
+      {
         "label": "Print",
         "output": [
           30,
@@ -275,41 +124,212 @@
         ],
         "dtype": "float32"
       },
-      "sourceHandle": "tensor-out",
-      "targetHandle": "input",
-      "type": "simple"
-    }
+      692,
+      38,
+      -1,
+      null
+    ]
   ],
-  "layout": [
-    {
-      "id": "17e24828-14d6-4300-bb35-ccf646e5dca8",
-      "position": {
-        "x": 120,
-        "y": 400
+  "edges": [
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "input-a",
+      "simple",
+      "d939087f-ca65-4974-8cab-7415723b7499",
+      {
+        "pre": {
+          "id": "17e24828-14d6-4300-bb35-ccf646e5dca8",
+          "label": "Tensor",
+          "order": 2,
+          "shape": [
+            3,
+            3
+          ],
+          "output": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "dtype": "float32",
+          "type": "tensor",
+          "isOutput": false
+        },
+        "post": {
+          "id": "56234ea7-fd0a-4cd8-a086-206ad6c199c6",
+          "label": "Matrix Binary",
+          "output": [
+            30,
+            24,
+            18,
+            84,
+            69,
+            54,
+            138,
+            114,
+            90
+          ],
+          "type": "tensor-matrix-binary",
+          "isOutput": false,
+          "shape": [
+            3,
+            3
+          ],
+          "dtype": "float32",
+          "operationType": "matmul"
+        }
       }
-    },
-    {
-      "id": "56234ea7-fd0a-4cd8-a086-206ad6c199c6",
-      "position": {
-        "x": 380,
-        "y": 520
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "out",
+      "input-b",
+      "simple",
+      "8d23296c-d92a-492d-a374-f24b2a67040b",
+      {
+        "pre": {
+          "id": "04611e20-5dc2-4a67-87b7-fa587c3493f8",
+          "label": "Tensor",
+          "order": 2,
+          "shape": [
+            3,
+            3
+          ],
+          "output": [
+            9,
+            8,
+            7,
+            6,
+            5,
+            4,
+            3,
+            2,
+            1
+          ],
+          "dtype": "float32",
+          "type": "tensor",
+          "isOutput": false,
+          "expanded": false
+        },
+        "post": {
+          "id": "56234ea7-fd0a-4cd8-a086-206ad6c199c6",
+          "label": "Matrix Binary",
+          "output": [
+            30,
+            24,
+            18,
+            84,
+            69,
+            54,
+            138,
+            114,
+            90
+          ],
+          "type": "tensor-matrix-binary",
+          "isOutput": false,
+          "shape": [
+            3,
+            3
+          ],
+          "dtype": "float32",
+          "operationType": "matmul"
+        }
       }
-    },
-    {
-      "id": "04611e20-5dc2-4a67-87b7-fa587c3493f8",
-      "position": {
-        "x": 120,
-        "y": 620
+    ],
+    [
+      -1,
+      -1,
+      null,
+      "tensor-out",
+      "input",
+      "simple",
+      "0511dc4a-3b9f-4428-b7e8-a6e792fd48fd",
+      {
+        "pre": {
+          "id": "56234ea7-fd0a-4cd8-a086-206ad6c199c6",
+          "label": "Matrix Binary",
+          "output": [
+            30,
+            24,
+            18,
+            84,
+            69,
+            54,
+            138,
+            114,
+            90
+          ],
+          "type": "tensor-matrix-binary",
+          "isOutput": false,
+          "shape": [
+            3,
+            3
+          ],
+          "dtype": "float32",
+          "operationType": "matmul"
+        },
+        "post": {
+          "id": "41aee214-1206-4615-96cd-5335c1e5632d",
+          "label": "Print",
+          "output": [
+            30,
+            24,
+            18,
+            84,
+            69,
+            54,
+            138,
+            114,
+            90
+          ],
+          "type": "tensor-print",
+          "isOutput": false,
+          "description": "Display tensor values",
+          "color": "#d946ef",
+          "verbose": false,
+          "shape": [
+            3,
+            3
+          ],
+          "dtype": "float32"
+        }
       }
-    },
-    {
-      "id": "41aee214-1206-4615-96cd-5335c1e5632d",
-      "position": {
-        "x": 620,
-        "y": 500
-      }
-    }
+    ]
   ],
+  "trainingConfig": {
+    "learningRate": 0.1,
+    "maxEpochs": 100,
+    "targetError": 0.0001,
+    "errorAlgorithm": "meanSquaredError",
+    "errorParams": {},
+    "metricAlgorithm": "meanSquaredError",
+    "metricParams": {},
+    "selectedMetrics": [
+      "meanSquaredError"
+    ],
+    "selectedMetricsTest": [
+      "meanSquaredError"
+    ],
+    "optimizerAlgorithm": "adam",
+    "optimizerParams": {},
+    "adjustmentMode": "batch",
+    "batchSize": 4,
+    "randomizeOnStart": true,
+    "shuffleData": false,
+    "shuffleAlgorithm": "fisher-yates",
+    "shuffleSeed": 1777444224145,
+    "enableVerbose": true
+  },
   "columnLabelOverrides": {},
   "testOverrides": {}
 }

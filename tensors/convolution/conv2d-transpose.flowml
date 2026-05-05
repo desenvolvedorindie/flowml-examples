@@ -42,15 +42,15 @@
         ],
         "dtype": "float32"
       },
-      940,
-      440,
+      881.5,
+      938,
       -1,
       null
     ],
     [
       "tensor",
       {
-        "label": "Tensor",
+        "label": "X",
         "order": 2,
         "shape": [
           3,
@@ -71,15 +71,15 @@
         "type": "tensor",
         "isOutput": false
       },
-      280,
-      320,
+      0,
+      339.5,
       -1,
       null
     ],
     [
       "tensor",
       {
-        "label": "Tensor",
+        "label": "W",
         "order": 2,
         "shape": [
           2,
@@ -95,8 +95,8 @@
         "type": "tensor",
         "isOutput": false
       },
-      280,
-      560,
+      22,
+      598.5,
       -1,
       null
     ],
@@ -113,8 +113,8 @@
           "0": 0
         }
       },
-      1000,
-      600,
+      791,
+      0,
       -1,
       null
     ],
@@ -122,7 +122,7 @@
       "tensor-conv-conv2dtranspose",
       {
         "type": "tensor-conv-conv2dtranspose",
-        "label": "Conv2dTranspose 5",
+        "label": "CONV2D_TRANSPOSE",
         "operationType": "conv2dTranspose",
         "formula": [
           "y[i, j] = \\sum_{m} \\sum_{n} x[m, n] \\cdot W[m - i, n - j]"
@@ -146,8 +146,8 @@
         ],
         "dtype": "float32"
       },
-      580,
-      540,
+      361,
+      352,
       -1,
       null
     ]
