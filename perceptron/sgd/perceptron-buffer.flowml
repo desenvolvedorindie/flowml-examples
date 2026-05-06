@@ -16,7 +16,7 @@
       {
         "type": "perceptron",
         "label": "Perceptron",
-        "bias": -2.4612514972686768,
+        "bias": -2.1675639152526855,
         "output": 1,
         "netInput": 2.4611074924468994,
         "activationFunction": "step",
@@ -134,12 +134,8 @@
           "X1",
           "Y"
         ],
-        "_augInputCols": [
-          "X1"
-        ],
-        "_augOutputCols": [
-          "Y"
-        ],
+        "_augInputCols": [],
+        "_augOutputCols": [],
         "_datasetId": "BUFFER",
         "target": 0,
         "netInput": 0,
@@ -157,8 +153,8 @@
         "label": "Data",
         "datasetId": "BUFFER",
         "dynamicInputColumns": [
-          "[Input] X1",
-          "[Output] Y"
+          "X1",
+          "Y"
         ]
       },
       -1980,
@@ -171,7 +167,7 @@
     [
       -1,
       -1,
-      -0.0102,
+      -0.0147,
       null,
       "bias",
       "weighted",
@@ -208,7 +204,7 @@
     [
       -1,
       -1,
-      -0.151,
+      -0.0072,
       null,
       "input",
       "weighted",
@@ -246,7 +242,7 @@
     [
       -1,
       -1,
-      -0.0064,
+      0.052,
       null,
       "input",
       "weighted",
@@ -284,7 +280,7 @@
     [
       -1,
       -1,
-      -0.0185,
+      -0.028,
       "out",
       "training",
       "weighted",
@@ -331,7 +327,7 @@
     [
       -1,
       -1,
-      -0.0045,
+      -0.0322,
       "out",
       "test",
       "weighted",
@@ -392,7 +388,7 @@
     [
       -1,
       -1,
-      0.1278,
+      -0.0931,
       "out",
       "dataset",
       "simple",
@@ -436,7 +432,7 @@
     [
       -1,
       -1,
-      0.0073,
+      -0.0292,
       null,
       "input",
       "simple",
@@ -480,9 +476,9 @@
       }
     ],
     [
-      -1,
-      -1,
-      -2.4612514972686768,
+      1,
+      0,
+      -2.1675639152526855,
       null,
       "bias",
       "weighted",
@@ -525,9 +521,9 @@
       }
     ],
     [
-      -1,
-      -1,
-      4.922358989715576,
+      2,
+      0,
+      4.33805513381958,
       null,
       "input",
       "weighted",
@@ -572,9 +568,9 @@
       }
     ],
     [
-      -1,
-      -1,
-      0.03220000118017197,
+      0,
+      3,
+      -0.02500000037252903,
       null,
       "input",
       "weighted",
@@ -620,9 +616,9 @@
       }
     ],
     [
-      -1,
-      -1,
-      -0.07840000092983246,
+      6,
+      5,
+      -0.013899999670684338,
       "out",
       "training",
       "simple",
@@ -680,9 +676,9 @@
       }
     ],
     [
-      -1,
-      -1,
-      -0.05469999834895134,
+      6,
+      4,
+      0.08030000329017639,
       "out",
       "dataset",
       "simple",
@@ -724,9 +720,9 @@
       }
     ],
     [
-      -1,
-      -1,
-      -0.020099999383091927,
+      0,
+      4,
+      -0.0272000003606081,
       null,
       "input",
       "simple",
@@ -788,7 +784,7 @@
     "optimizerAlgorithm": "adam",
     "optimizerParams": {},
     "adjustmentMode": "batch",
-    "batchSize": 4,
+    "batchSize": 2,
     "randomizeOnStart": true,
     "shuffleData": false,
     "shuffleAlgorithm": "fisher-yates",

@@ -28,19 +28,24 @@
     "learningRate": 0.1,
     "maxEpochs": 100,
     "targetError": 0.0001,
-    "errorAlgorithm": "mse",
+    "errorAlgorithm": "meanSquaredError",
     "errorParams": {},
-    "metricAlgorithm": "lms",
+    "metricAlgorithm": "meanSquaredError",
     "metricParams": {},
     "selectedMetrics": [
-      "lms"
+      "meanSquaredError"
     ],
-    "optimizerAlgorithm": "sgd",
+    "selectedMetricsTest": [
+      "meanSquaredError"
+    ],
+    "optimizerAlgorithm": "adam",
     "optimizerParams": {},
-    "adjustmentMode": "stochastic",
+    "adjustmentMode": "batch",
     "batchSize": 32,
     "randomizeOnStart": true,
     "shuffleData": false,
-    "shuffleAlgorithm": "fisher-yates"
+    "shuffleAlgorithm": "fisher-yates",
+    "shuffleSeed": 1778037962037,
+    "enableVerbose": true
   }
 }

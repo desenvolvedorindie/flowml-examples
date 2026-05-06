@@ -4,15 +4,15 @@
   "nodeIds": [
     "449a48a5-c552-402f-952b-9edd9f79d703",
     "7881137e-61f3-41a6-9d89-028c210019be",
-    "e823fc4a-8789-4582-bc1e-d896e0df4613",
-    "a0748efb-ebf6-455b-b4ce-215219e24f09"
+    "a0748efb-ebf6-455b-b4ce-215219e24f09",
+    "8a1567c0-a4f1-4fdc-b0c3-085069cae1f7"
   ],
   "nodes": [
     [
       "file-node",
       {
         "label": "Subgraph File",
-        "selectedFilePath": "D:\\Projetos\\ann-projects\\examples\\perceptron\\sgd\\perceptron-not.flowml"
+        "selectedFilePath": "D:\\Projetos\\ann-projects\\examples\\perceptron\\sgd\\perceptron-and.flowml"
       },
       272,
       0,
@@ -23,21 +23,7 @@
       "input",
       {
         "label": "Input",
-        "output": 0,
-        "type": "input",
-        "isOutput": false,
-        "maxInputs": 0
-      },
-      0,
-      180,
-      -1,
-      null
-    ],
-    [
-      "input",
-      {
-        "label": "Input",
-        "output": 0,
+        "output": 1,
         "type": "input",
         "isOutput": false,
         "maxInputs": 0
@@ -51,7 +37,7 @@
       "output",
       {
         "label": "Output",
-        "output": 0,
+        "output": 1,
         "type": "output",
         "isOutput": true,
         "maxInputs": 1,
@@ -59,6 +45,21 @@
       },
       613,
       30,
+      -1,
+      null
+    ],
+    [
+      "output",
+      {
+        "label": "Output",
+        "output": 0,
+        "type": "output",
+        "isOutput": true,
+        "maxInputs": 1,
+        "maxOutputs": 0
+      },
+      600,
+      -120,
       -1,
       null
     ]
@@ -94,37 +95,8 @@
       }
     ],
     [
+      0,
       2,
-      0,
-      null,
-      "out",
-      "c818c3cf-866b-44d3-b792-22d0db93069b",
-      "simple",
-      "f3fa30e0-8888-4e1c-abbe-f3736a45f576",
-      {
-        "pre": {
-          "id": "e823fc4a-8789-4582-bc1e-d896e0df4613",
-          "label": "Input",
-          "output": 1,
-          "type": "input",
-          "isOutput": false,
-          "maxInputs": 0
-        },
-        "post": {
-          "id": "449a48a5-c552-402f-952b-9edd9f79d703",
-          "label": "Subgraph File",
-          "selectedFilePath": "D:\\Projetos\\ann-projects\\examples\\perceptron\\sgd\\perceptron-and.flowml",
-          "type": "file-node",
-          "isOutput": false,
-          "state": {
-            "selectedFilePath": "D:\\Projetos\\ann-projects\\examples\\perceptron\\sgd\\perceptron-and.flowml"
-          }
-        }
-      }
-    ],
-    [
-      0,
-      3,
       1,
       "0f825f0e-fd42-4599-b0ec-8eda3b656bbb",
       "input",
