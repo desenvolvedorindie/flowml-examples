@@ -1,0 +1,159 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "449a48a5-c552-402f-952b-9edd9f79d703",
+    "7881137e-61f3-41a6-9d89-028c210019be",
+    "a0748efb-ebf6-455b-b4ce-215219e24f09",
+    "8a1567c0-a4f1-4fdc-b0c3-085069cae1f7"
+  ],
+  "nodes": [
+    [
+      "file-node",
+      {
+        "label": "Subgraph File",
+        "selectedFilePath": "D:\\Projetos\\ann-projects\\examples\\perceptron\\sgd\\perceptron-and.flowml"
+      },
+      272,
+      0,
+      -1,
+      null
+    ],
+    [
+      "input",
+      {
+        "label": "Input",
+        "output": 1,
+        "type": "input",
+        "isOutput": false,
+        "maxInputs": 0
+      },
+      0,
+      36,
+      -1,
+      null
+    ],
+    [
+      "output",
+      {
+        "label": "Output",
+        "output": 1,
+        "type": "output",
+        "isOutput": true,
+        "maxInputs": 1,
+        "maxOutputs": 0
+      },
+      613,
+      30,
+      -1,
+      null
+    ],
+    [
+      "output",
+      {
+        "label": "Output",
+        "output": 0,
+        "type": "output",
+        "isOutput": true,
+        "maxInputs": 1,
+        "maxOutputs": 0
+      },
+      600,
+      -120,
+      -1,
+      null
+    ]
+  ],
+  "edges": [
+    [
+      1,
+      0,
+      null,
+      "out",
+      "189d49c1-155b-4e5e-ac0d-49171321ece7",
+      "simple",
+      "08a4ecab-c595-497c-bc45-7c19667275be",
+      {
+        "pre": {
+          "id": "7881137e-61f3-41a6-9d89-028c210019be",
+          "label": "Input",
+          "output": 1,
+          "type": "input",
+          "isOutput": false,
+          "maxInputs": 0
+        },
+        "post": {
+          "id": "449a48a5-c552-402f-952b-9edd9f79d703",
+          "label": "Subgraph File",
+          "selectedFilePath": "D:\\Projetos\\ann-projects\\examples\\perceptron\\sgd\\perceptron-and.flowml",
+          "type": "file-node",
+          "isOutput": false,
+          "state": {
+            "selectedFilePath": "D:\\Projetos\\ann-projects\\examples\\perceptron\\sgd\\perceptron-and.flowml"
+          }
+        }
+      }
+    ],
+    [
+      0,
+      2,
+      1,
+      "0f825f0e-fd42-4599-b0ec-8eda3b656bbb",
+      "input",
+      "weighted",
+      "02d57c22-6ffd-48db-9c91-9aaaac1ed88e",
+      {
+        "pre": {
+          "id": "449a48a5-c552-402f-952b-9edd9f79d703",
+          "label": "Subgraph File",
+          "selectedFilePath": "D:\\Projetos\\ann-projects\\examples\\perceptron\\sgd\\perceptron-and.flowml",
+          "type": "file-node",
+          "isOutput": false,
+          "state": {
+            "selectedFilePath": "D:\\Projetos\\ann-projects\\examples\\perceptron\\sgd\\perceptron-and.flowml"
+          }
+        },
+        "post": {
+          "id": "a0748efb-ebf6-455b-b4ce-215219e24f09",
+          "label": "Output",
+          "output": 0,
+          "type": "output",
+          "isOutput": true,
+          "maxInputs": 1,
+          "maxOutputs": 0
+        }
+      }
+    ]
+  ],
+  "trainingConfig": {
+    "learningRate": 0.01,
+    "maxEpochs": 100,
+    "targetError": 0.0001,
+    "errorAlgorithm": "meanSquaredError",
+    "errorParams": {},
+    "metricAlgorithm": "meanSquaredError",
+    "metricParams": {},
+    "selectedMetrics": [
+      "meanSquaredError"
+    ],
+    "selectedMetricsTest": [
+      "meanSquaredError"
+    ],
+    "optimizerAlgorithm": "adam",
+    "optimizerParams": {
+      "sgd": {
+        "learningRate": 0.01
+      },
+      "adam": {}
+    },
+    "adjustmentMode": "batch",
+    "batchSize": 2,
+    "randomizeOnStart": true,
+    "shuffleData": false,
+    "shuffleAlgorithm": "fisher-yates",
+    "shuffleSeed": 1777444224145,
+    "enableVerbose": true
+  },
+  "columnLabelOverrides": {},
+  "testOverrides": {}
+}

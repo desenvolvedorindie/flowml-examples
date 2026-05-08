@@ -45,7 +45,7 @@
     "randomizeOnStart": true,
     "shuffleData": false,
     "shuffleAlgorithm": "fisher-yates",
-    "shuffleSeed": 1778116293277,
+    "shuffleSeed": 1778200048820,
     "enableVerbose": true
   }
 }

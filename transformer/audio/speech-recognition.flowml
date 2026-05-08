@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "f0149c59-7549-4cdb-9e62-c7e5f917b93f",
+    "713bf624-9821-4f37-a12b-ee21017406a5"
+  ],
+  "nodes": [
+    [
+      "microphone-node",
+      {
+        "label": "Microphone",
+        "output": {
+          "0": null
+        },
+        "shape": [
+          43,
+          232,
+          1
+        ],
+        "operationParams": {
+          "sampleRateHz": 48000,
+          "fftSize": 1024,
+          "columnTruncateLength": 250,
+          "numFramesPerSpectrogram": 50,
+          "smoothingTimeConstant": 0,
+          "includeSpectrogram": true,
+          "includeWaveform": true
+        },
+        "type": "microphone-node",
+        "isOutput": false,
+        "dtype": "float32"
+      },
+      0,
+      155,
+      -1,
+      null
+    ],
+    [
+      "tensor",
+      {
+        "label": "TENSOR 2",
+        "order": 3,
+        "shape": [
+          43,
+          232,
+          1
+        ],
+        "output": [
+          null
+        ],
+        "dtype": "float32",
+        "type": "tensor",
+        "isOutput": false
+      },
+      340,
+      0,
+      -1,
+      null
+    ]
+  ],
+  "edges": [
+    [
+      0,
+      1,
+      null,
+      "out",
+      "in",
+      "simple",
+      "3737c41e-ef6b-4125-936b-c6828d6b9055",
+      {
+        "pre": {
+          "id": "f0149c59-7549-4cdb-9e62-c7e5f917b93f",
+          "label": "Microphone",
+          "output": {
+            "0": null
+          },
+          "shape": [
+            43,
+            232,
+            1
+          ],
+          "operationParams": {
+            "sampleRateHz": 48000,
+            "fftSize": 1024,
+            "columnTruncateLength": 232,
+            "numFramesPerSpectrogram": 43,
+            "smoothingTimeConstant": 0,
+            "includeSpectrogram": true,
+            "includeWaveform": true
+          },
+          "type": "microphone-node",
+          "isOutput": false,
+          "dtype": "float32"
+        },
+        "post": {
+          "id": "713bf624-9821-4f37-a12b-ee21017406a5",
+          "label": "TENSOR 2",
+          "order": 3,
+          "shape": [
+            43,
+            232,
+            1
+          ],
+          "output": {
+            "0": null
+          },
+          "dtype": "float32",
+          "type": "tensor",
+          "isOutput": false
+        }
+      }
+    ]
+  ],
+  "trainingConfig": {
+    "learningRate": 0.1,
+    "maxEpochs": 100,
+    "targetError": 0.0001,
+    "errorAlgorithm": "meanSquaredError",
+    "errorParams": {},
+    "metricAlgorithm": "meanSquaredError",
+    "metricParams": {},
+    "selectedMetrics": [
+      "meanSquaredError"
+    ],
+    "selectedMetricsTest": [
+      "meanSquaredError"
+    ],
+    "optimizerAlgorithm": "adam",
+    "optimizerParams": {},
+    "adjustmentMode": "batch",
+    "batchSize": 32,
+    "randomizeOnStart": true,
+    "shuffleData": false,
+    "shuffleAlgorithm": "fisher-yates",
+    "shuffleSeed": 1778050411679,
+    "enableVerbose": true
+  },
+  "columnLabelOverrides": {},
+  "testOverrides": {}
+}

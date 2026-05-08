@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "1bf60775-9ee3-4d50-9dfc-c5f0fa170939"
+  ],
+  "nodes": [
+    [
+      "transformer-pipeline-automatic-speech-recognition",
+      {
+        "label": "Speech Recognition",
+        "state": {
+          "task": "automatic-speech-recognition",
+          "modelId": "",
+          "quantized": true,
+          "dtype": "q8",
+          "revision": "main"
+        },
+        "type": "transformer-pipeline-automatic-speech-recognition",
+        "description": "HuggingFace Transformers.js Pipeline"
+      },
+      350,
+      400,
+      -1,
+      null
+    ]
+  ],
+  "edges": [],
+  "trainingConfig": {
+    "learningRate": 0.1,
+    "maxEpochs": 100,
+    "targetError": 0.0001,
+    "errorAlgorithm": "meanSquaredError",
+    "errorParams": {},
+    "metricAlgorithm": "meanSquaredError",
+    "metricParams": {},
+    "selectedMetrics": [
+      "meanSquaredError"
+    ],
+    "selectedMetricsTest": [
+      "meanSquaredError"
+    ],
+    "optimizerAlgorithm": "adam",
+    "optimizerParams": {},
+    "adjustmentMode": "batch",
+    "batchSize": 32,
+    "randomizeOnStart": true,
+    "shuffleData": false,
+    "shuffleAlgorithm": "fisher-yates",
+    "shuffleSeed": 1778197384742,
+    "enableVerbose": true
+  },
+  "columnLabelOverrides": {},
+  "testOverrides": {}
+}

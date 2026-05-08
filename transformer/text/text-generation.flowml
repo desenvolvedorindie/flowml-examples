@@ -1,0 +1,275 @@
+{
+  "version": 1,
+  "c": 2,
+  "nodeIds": [
+    "fa38620c-1d4a-457b-b223-16fb45b3e6b7",
+    "a0324ab3-c11d-4bf1-957a-12d926676279",
+    "750372c0-468f-4100-b8e8-c9d84792b95b"
+  ],
+  "nodes": [
+    [
+      "tensor-print",
+      {
+        "label": "Print",
+        "type": "tensor-print",
+        "isOutput": false,
+        "description": "Display tensor values",
+        "color": "#d946ef",
+        "verbose": true,
+        "dtype": "string"
+      },
+      841,
+      139.5,
+      -1,
+      null
+    ],
+    [
+      "transformer-message",
+      {
+        "label": "Messages",
+        "state": {
+          "messages": [
+            {
+              "id": "sys-0",
+              "role": "system",
+              "content": "You are a helpful assistant that solve neural network problems"
+            }
+          ],
+          "history": [
+            {
+              "id": "user-1778096904033",
+              "role": "user",
+              "content": "Can you talk about MLP?"
+            }
+          ]
+        },
+        "type": "transformer-message",
+        "description": "Chat message list for LLM pipelines",
+        "output": {
+          "0": null,
+          "1": null,
+          "2": null
+        },
+        "extraOutputs": {
+          "messages": [
+            "[{\"role\":\"system\",\"content\":\"You are a helpful assistant that solve neural network problems\"},{\"role\":\"user\",\"content\":\"Can you talk about MLP?\"},{\"role\":\"assistant\",\"content\":\"I'm here to help with a wide range of topics, including but not limited to:\\n\\n- Calculus and differential equations\\n- Linear algebra and matrix operations\\n- Probability and statistics\\n- Calculus and differential equations\\n- Linear algebra and matrix operations\\n- Calculus and differential equations\\n- Linear algebra and matrix operations\\n- Calculus and differential equations\\n- Linear algebra and matrix operations\\n- Calculus and differential equations\\n- Linear algebra and matrix operations\\n- Calculus and differential equations\\n- Linear algebra and matrix operations\\n- Calculus and differential equations\\n- Linear algebra and matrix operations\\n- Calculus and differential equations\\n- Linear algebra and matrix operations\\n- Calculus and differential equations\\n- Linear algebra and matrix operations\\n- Calculus and differential equations\\n- Linear algebra and matrix operations\\n- Calculus and differential equations\\n- Linear algebra and matrix operations\\n- Calculus and differential equations\\n- Linear algebra and matrix operations\\n- Calculus and differential equations\\n- Linear algebra and matrix operations\\n- Calculus and differential equations\\n- Linear algebra and matrix operations\\n- Calculus and differential equations\\n- Linear algebra and matrix operations\\n- Calculus and differential equations\\n- Linear algebra and matrix operations\\n- Calculus and differential equations\\n- Linear algebra and matrix operations\\n- Calculus and differential equations\\n- Linear algebra and\"}]"
+          ],
+          "out": [
+            "[{\"role\":\"system\",\"content\":\"You are a helpful assistant that solve neural network problems\"},{\"role\":\"user\",\"content\":\"Can you talk about MLP?\"},{\"role\":\"assistant\",\"content\":\"I'm here to help with a wide range of topics, including but not limited to:\\n\\n- Calculus and differential equations\\n- Linear algebra and matrix operations\\n- Probability and statistics\\n- Calculus and differential equations\\n- Linear algebra and matrix operations\\n- Calculus and differential equations\\n- Linear algebra and matrix operations\\n- Calculus and differential equations\\n- Linear algebra and matrix operations\\n- Calculus and differential equations\\n- Linear algebra and matrix operations\\n- Calculus and differential equations\\n- Linear algebra and matrix operations\\n- Calculus and differential equations\\n- Linear algebra and matrix operations\\n- Calculus and differential equations\\n- Linear algebra and matrix operations\\n- Calculus and differential equations\\n- Linear algebra and matrix operations\\n- Calculus and differential equations\\n- Linear algebra and matrix operations\\n- Calculus and differential equations\\n- Linear algebra and matrix operations\\n- Calculus and differential equations\\n- Linear algebra and matrix operations\\n- Calculus and differential equations\\n- Linear algebra and matrix operations\\n- Calculus and differential equations\\n- Linear algebra and matrix operations\\n- Calculus and differential equations\\n- Linear algebra and matrix operations\\n- Calculus and differential equations\\n- Linear algebra and matrix operations\\n- Calculus and differential equations\\n- Linear algebra and matrix operations\\n- Calculus and differential equations\\n- Linear algebra and\"}]"
+          ]
+        },
+        "extraDtypes": {
+          "messages": "string",
+          "out": "string"
+        }
+      },
+      0,
+      0,
+      -1,
+      null
+    ],
+    [
+      "transformer-pipeline-text-generation",
+      {
+        "label": "Text Generation",
+        "state": {
+          "task": "text-generation",
+          "modelId": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "quantized": true,
+          "dtype": "fp32",
+          "revision": "main"
+        },
+        "type": "transformer-pipeline-text-generation",
+        "description": "HuggingFace Transformers.js Pipeline",
+        "output": {
+          "0": null
+        },
+        "dtype": "float32",
+        "extraOutputs": {
+          "text": [
+            "You've already provided a comprehensive list of topics, including but not limited to:\n\n- Calculus and differential equations\n- Linear algebra and matrix operations\n- Calculus and differential equations\n- Linear algebra and matrix operations\n- Calculus and differential equations\n- Linear algebra and matrix operations\n- Calculus and differential equations\n- Linear algebra and matrix operations\n- Calculus and differential equations\n- Linear algebra and matrix operations\n- Calculus and differential equations\n- Linear algebra and matrix operations\n- Calculus and differential equations\n- Linear algebra and matrix operations\n- Calculus and differential equations\n- Linear algebra and matrix operations\n- Calculus and differential equations\n- Linear algebra and matrix operations\n- Calculus and differential equations\n- Linear algebra and matrix operations\n- Calculus and differential equations\n- Linear algebra and matrix operations\n- Calculus and differential equations\n- Linear algebra and matrix operations\n- Calculus and differential equations\n- Linear algebra and matrix operations\n- Calculus and differential equations\n- Linear algebra and matrix operations\n- Calculus and differential equations\n- Linear algebra and matrix operations\n- Calculus and differential equations\n- Linear algebra and matrix operations\n- Calculus and differential equations\n- Linear algebra and matrix operations\n- Calculus and differential equations\n- Linear algebra and matrix operations\n- Calculus and differential"
+          ]
+        },
+        "extraDtypes": {
+          "text": "string"
+        }
+      },
+      520,
+      100,
+      -1,
+      null
+    ]
+  ],
+  "edges": [
+    [
+      1,
+      2,
+      null,
+      "messages",
+      "messages",
+      "simple",
+      "b580d1d3-bc3d-42bf-a472-1f49cbf2fd9f",
+      {
+        "pre": {
+          "label": "Messages",
+          "state": {
+            "messages": [
+              {
+                "id": "sys-0",
+                "role": "system",
+                "content": "You are a helpful assistant."
+              }
+            ],
+            "history": [
+              {
+                "id": "user-1778090685576",
+                "role": "user",
+                "content": "hi"
+              }
+            ]
+          },
+          "type": "transformer-message",
+          "description": "Chat message list for LLM pipelines",
+          "id": "a0324ab3-c11d-4bf1-957a-12d926676279",
+          "position": {
+            "x": -80,
+            "y": 120
+          }
+        },
+        "post": {
+          "id": "750372c0-468f-4100-b8e8-c9d84792b95b",
+          "label": "Text Generation",
+          "state": {
+            "task": "text-generation",
+            "modelId": "",
+            "quantized": true,
+            "dtype": "q8",
+            "revision": "main"
+          },
+          "type": "transformer-pipeline-text-generation",
+          "description": "HuggingFace Transformers.js Pipeline"
+        }
+      }
+    ],
+    [
+      2,
+      1,
+      null,
+      "text",
+      "text",
+      "simple",
+      "24abbc14-464c-4d07-842e-ebd03f83f465",
+      {
+        "pre": {
+          "id": "750372c0-468f-4100-b8e8-c9d84792b95b",
+          "label": "Text Generation",
+          "state": {
+            "task": "text-generation",
+            "modelId": "",
+            "quantized": true,
+            "dtype": "q8",
+            "revision": "main"
+          },
+          "type": "transformer-pipeline-text-generation",
+          "description": "HuggingFace Transformers.js Pipeline"
+        },
+        "post": {
+          "label": "Messages",
+          "state": {
+            "messages": [
+              {
+                "id": "sys-0",
+                "role": "system",
+                "content": "You are a helpful assistant."
+              }
+            ],
+            "history": [
+              {
+                "id": "user-1778090685576",
+                "role": "user",
+                "content": "hi"
+              }
+            ]
+          },
+          "type": "transformer-message",
+          "description": "Chat message list for LLM pipelines",
+          "id": "a0324ab3-c11d-4bf1-957a-12d926676279",
+          "position": {
+            "x": -80,
+            "y": 120
+          }
+        }
+      }
+    ],
+    [
+      2,
+      0,
+      null,
+      "text",
+      "input",
+      "simple",
+      "2e900f4f-7e30-48f4-af0a-43cbc6e64d98",
+      {
+        "pre": {
+          "id": "750372c0-468f-4100-b8e8-c9d84792b95b",
+          "label": "Text Generation",
+          "state": {
+            "task": "text-generation",
+            "modelId": "",
+            "quantized": true,
+            "dtype": "q8",
+            "revision": "main"
+          },
+          "type": "transformer-pipeline-text-generation",
+          "description": "HuggingFace Transformers.js Pipeline"
+        },
+        "post": {
+          "label": "Print",
+          "type": "tensor-print",
+          "isOutput": false,
+          "description": "Display tensor values",
+          "color": "#d946ef",
+          "verbose": false,
+          "dtype": "float32",
+          "id": "fa38620c-1d4a-457b-b223-16fb45b3e6b7",
+          "output": {
+            "0": 0
+          },
+          "shape": [
+            1
+          ],
+          "position": {
+            "x": 720,
+            "y": 260
+          }
+        }
+      }
+    ]
+  ],
+  "trainingConfig": {
+    "learningRate": 0.1,
+    "maxEpochs": 100,
+    "targetError": 0.0001,
+    "errorAlgorithm": "meanSquaredError",
+    "errorParams": {},
+    "metricAlgorithm": "meanSquaredError",
+    "metricParams": {},
+    "selectedMetrics": [
+      "meanSquaredError"
+    ],
+    "selectedMetricsTest": [
+      "meanSquaredError"
+    ],
+    "optimizerAlgorithm": "adam",
+    "optimizerParams": {},
+    "adjustmentMode": "batch",
+    "batchSize": 32,
+    "randomizeOnStart": true,
+    "shuffleData": false,
+    "shuffleAlgorithm": "fisher-yates",
+    "shuffleSeed": 1778050411679,
+    "enableVerbose": true
+  },
+  "columnLabelOverrides": {},
+  "testOverrides": {}
+}
